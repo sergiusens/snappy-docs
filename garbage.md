@@ -1,4 +1,4 @@
-Multiple snaps version & garbage collection
+Multiple snap versions & garbage collection
 -------------------------------------------
 (from https://developer.ubuntu.com/en/snappy/guides/garbage/) 
 
