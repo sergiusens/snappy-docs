@@ -19,8 +19,7 @@ Explicitly removing a snap from your system will also remove *and purge* all pri
 
 You can disable garbage collection with the `--no-gc` commandline option, or when removing or purging a part, by specifying the version on which to operate explicitly.
 
-Example
--------
+## Example
 
 To illustrate the process take the example of installing and updating `hello-world` through a few versions. If you've version `1.0.1` installed, and do a `snappy update` it downloads version `1.0.2`:
 
