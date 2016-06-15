@@ -11,7 +11,9 @@ Users of Ubuntu Core want to be up to date and have a reliable system. To allow 
 ## Ubuntu Core releases ##
 
 Starting from Ubuntu 16, Ubuntu Core will be published as part of the Ubuntu release process.
+
 You have two choices when tracking Ubuntu Core. Either you stay on a particular release, or you pick rolling: rolling is a channel that will automatically roll forward from series 16 to series 17 and beyond. Think of it as the "trunk" of Ubuntu Core. It will never have a stable channel.
+
 When making a decision about releases, consider:
 
  - **State of enablement**: Do you expect changes to the kernel or plumbing
