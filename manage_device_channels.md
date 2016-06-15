@@ -4,8 +4,8 @@
 
 Users of Ubuntu Core want to be up to date and have a reliable system. To allow maximum flexibility we offer options where you can track just what you need by picking the right:
 
- - Release, which indicates general Ubuntu release is being tracked.
- - Channel, which specifies the expectations for the quality of the
+ - **Release**, which indicates general Ubuntu release is being tracked.
+ - **Channel**, which specifies the expectations for the quality of the
    software.
 
 ## Ubuntu Core releases ##
@@ -21,13 +21,14 @@ When making a decision about releases, consider:
  - **Support options**: If you want to ship your device to customers,
    consider how long the Ubuntu release in question will be supported.
 
-## Channels
+## Available channels
 Channels defined the quality expectations for the release they offer:
 
- - edge - The very latest, very likely to include bugs - useful for
+ - **edge** - The very latest, very likely to include bugs - useful for
    developers of the platform. 
- - beta - Beta quality, includes manual testing by QA. 
- - stable - Rock solid release quality.
+ - **beta** - Beta quality, includes manual testing by QA. 
+ - **candidate** - Release candidate quality.
+ - **stable** - Rock solid release quality.
 
 Within each *release* (16 or rolling) a full set of channels (edge, beta, candidate, and stable) will be available, except for rolling/stable given that rolling always moves to the next release. 
 ## Image promotion ##
