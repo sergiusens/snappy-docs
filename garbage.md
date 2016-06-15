@@ -1,5 +1,5 @@
-Multiple snap versions & garbage collection
--------------------------------------------
+# Multiple snap versions & garbage collection
+
 (from https://developer.ubuntu.com/en/snappy/guides/garbage/) 
 
 As a snap package is updated, the old version is kept. This enables Ubuntu Core to rollback to an old, known to be good version if issues are detected in the updated snap. As these old copies take up disk space, to ensure they don’t take up too much disk space while preserving the ability to rollback, garbage collection is performed automatically.
@@ -10,6 +10,8 @@ A snap present in a system can be:
  - `active`
 
 When a snap is updated, the snap file for the latest version becomes the active snap file. The content from the previous snap version’s writeable area is copied to a new location for use by the updated snap.
+
+![Garbage collection removes older snap files ](https://github.com/CanonicalLtd/snappy-docs/blob/master/media/garbage_collection.png)
 
 Garbage collection then removes and purges any snap files and their writeable areas for the snap versions prior to the one that has just been updated -- meaning that at most two versions of a snap will be present on the system. This saves disk space without compromising the ability to revert your system to a previous known-good state.
 
