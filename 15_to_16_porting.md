@@ -57,9 +57,9 @@ Programs to be launched by the user where previously declared as binaries. They 
 </tr>
 <tr>
 <td align="left">
-<code>binaries:<br />
-&nbsp;&nbsp;ls:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;exec: ls<br /></code>
+<code>binaries:</code><br />
+<code>&nbsp;&nbsp;ls:</code><br />
+<code>&nbsp;&nbsp;&nbsp;&nbsp;exec: ls</code>
 </td>
 <td align="left">
 <code>apps:<br />
@@ -131,7 +131,8 @@ snap<br /></td>
 
 Once the YAML has been modified to take account of the changes described above the snap package can be built using Snapcraft. Each stage can be run one-by-one by passing the name of the stage to the Snapcraft program or the complete process initiated by passing no argument.
 
-`webcam-webui$ snapcraft
+```
+webcam-webui$ snapcraft
 Preparing to pull glue 
 Pulling glue 
 Preparing to pull cam 
@@ -140,7 +141,7 @@ Stripping cam
 Snapping webcam-webui_1_amd64.snap
 Parallel mksquashfs: Using 4 processors
 Creating 4.0 filesystem on webcam-webui_1_amd64.snap, block size 131072.
-[==============================================================================================================================================================================================================================================================================================================|] 124/124 100%`
+[==============================================================================================================================================================================================================================================================================================================|] 124/124 100%
 
 `Exportable Squashfs 4.0 filesystem, xz compressed, data block size 131072
 	compressed data, compressed metadata, compressed fragments, no xattrs
@@ -165,7 +166,8 @@ Number of uids 1
 	root (0)
 Number of gids 1
 	root (0)
-Snapped webcam-webui_1_amd64.snap `
+Snapped webcam-webui_1_amd64.snap 
+```
 
 Once a snap file is produced successfully it can be installed on a system using `devmode`, as described below. Note however, that with no Interface support added the snap isn't yet suitable for submission to the store.
 
@@ -178,8 +180,8 @@ After having built a snap on a classic Ubuntu system, a snap can be installed in
 
 An app can then be executed in the normal fashion. The security system's audit of confinement events will result in messages being appended to the syslog. Compare the following examples of the hello-world snap attempting to create a file in a restricted directory:
 
- - without `devmode`
-
+ - without `devmode`  
+    
     <code>$ sudo snap install hello-world
     $ hello-world.sh
     Launching a shell inside the default app confinement. Navigate to your
