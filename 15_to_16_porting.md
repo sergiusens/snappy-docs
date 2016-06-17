@@ -35,14 +35,15 @@ description: Exposes your webcam over a web UI
 </table>
 
 The icon file to represent the snap, in the store for example,  exists in the setup directory like this:
-
-```user@ubuntu:~/webcam-webui$ tree
+```
+user@ubuntu:~/webcam-webui$ tree
 .
 ├── setup
 │   └── gui
 │       └── icon.png
 ├── snapcraft.yaml
-└── webcam-webui```
+└── webcam-webui
+```
 
 ###Apps
 Series 16 reaffirmed the concept of snap packages shipping “apps” that are run on the device. The Snapcraft schema was updated to match this terminology meaning the keys “binaries” and “services” are now handled by the key “apps”.
