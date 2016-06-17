@@ -16,8 +16,8 @@ The metadata has removed the requirement to specify the vendor as information re
 
 <table>
 <tr>
-<th>Snapcraft 1.x</td>
-<th>Snapcraft 2.x</td>
+<th>Snapcraft 1.x</th>
+<th>Snapcraft 2.x</th>
 </tr>
 <tr>
 <td align="left"><p><code>name: webcam-webui</code></p>
@@ -36,13 +36,13 @@ description: Exposes your webcam over a web UI
 
 The icon file to represent the snap, in the store for example,  exists in the setup directory like this:
 
-`user@ubuntu:~/webcam-webui$ tree
+```user@ubuntu:~/webcam-webui$ tree
 .
 ├── setup
 │   └── gui
 │       └── icon.png
 ├── snapcraft.yaml
-└── webcam-webui`
+└── webcam-webui```
 
 ###Apps
 Series 16 reaffirmed the concept of snap packages shipping “apps” that are run on the device. The Snapcraft schema was updated to match this terminology meaning the keys “binaries” and “services” are now handled by the key “apps”.
@@ -51,8 +51,8 @@ Programs to be launched by the user where previously declared as binaries. They 
 
 <table>
 <tr>
-<th>Snapcraft 1.x</td>
-<th>Snapcraft 2.x</td>
+<th>Snapcraft 1.x</th>
+<th>Snapcraft 2.x</th>
 </tr>
 <tr>
 <td align="left">
@@ -74,8 +74,8 @@ Long running services or daemons are also defined as apps, but the daemon key is
 
 <table>
 <tr>
-<th>Snapcraft 1.x</td>
-<th>Snapcraft 2.x</td>
+<th>Snapcraft 1.x</th>
+<th>Snapcraft 2.x</th>
 </tr>
 <tr>
 <td align="left"><code>services:<br />
@@ -103,8 +103,8 @@ The steps followed during the process of creating a snap were renamed for the 2.
 
 <table>
 <tr>
-<th>Snapcraft 1.x</td>
-<th>Snapcraft 2.x</td>
+<th>Snapcraft 1.x</th>
+<th>Snapcraft 2.x</th>
 </tr>
 <tr>
 <td align="center">pull<br />
@@ -216,8 +216,8 @@ The following links provide some examples of Snapcraft YAML files that have been
 
 <table>
 <tr>
-<th>15.04 / Snapcraft 1.x</td>
-<th>Series 16 / Snapcraft 2.x</td>
+<th>15.04 / Snapcraft 1.x</th>
+<th>Series 16 / Snapcraft 2.x</th>
 </tr>
 <tr>
 <td align="left" colspan="2">webcam-webui - Exposes your webcam over a web UI</td>
