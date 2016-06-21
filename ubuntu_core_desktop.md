@@ -26,4 +26,3 @@ Applications delivered in DEB packages or as snaps. | Applications delivered as 
 
 New versions Ubuntu Core will be released every two years, with each release being referred to a series suffixed with the release year, so for example the current release is Series 16 and the next will be Series 18. 
 
-## File structure
