@@ -1,3 +1,3 @@
 Title: Placeholder
 
-Content for this page to be developed
+Content for this page is to be developed
