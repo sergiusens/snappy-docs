@@ -1,4 +1,5 @@
 Title: The Snappy System
+
 # The Snappy System
 
 In traditional Linux distributions software is distributed in packages:
