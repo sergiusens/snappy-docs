@@ -11,7 +11,7 @@ Practical implementations of Snappy Ubuntu Core consist of:
 - Gabget snap
 - OS snap  
 
-Ubuntu Core is delivered in the OS snap (see [Kinds of Snaps](pages/snappy-dev/kinds_of_snaps "Kinds of Snaps") for more details on these and the other types of snaps: application snaps). 
+Ubuntu Core is delivered in the OS snap (see [Kinds of Snaps](kinds_of_snaps.md "Kinds of Snaps") for more details on these and the other types of snaps: application snaps). 
 
 ## Differences to Ubuntu Desktop
 
