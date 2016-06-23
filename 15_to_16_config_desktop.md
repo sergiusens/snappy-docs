@@ -1,4 +1,5 @@
-# Configuring Ubuntu Desktop for snap development
+Title: Configuring Ubuntu Desktop for Snap Development
+# Configuring Ubuntu Desktop for Snap Development
 
 This sections describes how to configure an Ubuntu 16.04 Desktop install for snapcraft package development. 
 
