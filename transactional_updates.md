@@ -14,6 +14,6 @@ For updated kernel, OS, and gadget snaps as well as application snaps run by a d
 
 ## Rollback
 
-A strenght of the snappy transactional update system is its ability to roll back if the new version of a snap proves faulty. The process is very simple, the `common` symlink for the snap and its writable data area are simply linked back to the old (previously working) version of the snap.
+A strength of the snappy transactional update system is its ability to roll back if the new version of a snap proves faulty. The process is very simple, the `common` symlink for the snap and its writable data area are simply linked back to the old (previously working) version of the snap.
 
 For application snaps the user does this with ??. While for the Kernel and OS snaps, if these fail to start correctly, the snappy system will automatically rollback these snaps.
