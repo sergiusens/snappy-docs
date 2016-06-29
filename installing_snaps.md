@@ -1,27 +1,27 @@
 Title: Installing Snaps
 # Installing Snaps
 
-End users will normally install snaps from a store. At the time of writing the only store available is Ubuntu Store -- so it is used in the following description but in the future other stores should be available.
+End users will normally install snaps from a store, logging in first. They can then search for snaps or install snaps by name. Stores may also provide snaps in various channels and some in a developer mode. Details on installing and using these snaps are provided here. 
 
-| This tutorial assumes you have [Ubuntu 16.04 LTS](http://www.ubuntu.com/download/) installed on your desktop, cloud, VM, or server. You may need to `sudo apt install snapd` before continuing. |
-| ---- |
+**Note**: At the time of writing the only store available is Ubuntu Store and the snap login instruction take you to that store. In the future other stores should be available.
 
-## Log in to the global snap store
+## Log in to a snap store
 
-The snap store holds a public collection of snaps, and delivers them to clouds, devices, and private infrastructure. [Sign-in](https://login.ubuntu.com/+login) and then you'll be able to fetch snaps on demand:
+Snap stores holds a public collection of snaps for delivery to clouds, devices, and private infrastructure. User [sign-in](https://login.ubuntu.com/+login) to the store from a device as follows:
 
     $ snap login me@myself.com
     Password: *********
     2-factor: ******
     Welcome!
 
-Snaps don’t intrinsically depend on the Ubuntu store, that’s just what `snapd` does today, and we expect people will have different stores for their snaps in future.
-
-The store contains both public and private snaps.
 
 ## Finding Snaps
 
-Anybody can publish a snap, but if you search the store you'll only see snaps that have been reviewed and judged to be of good quality, and which can be installed securely. These are the ‘promoted’ snaps, and you can search them for a matching name or description:
+A store can contain both public and private snaps.
+
+Anybody can publish a snap, but store searches will only find snaps that have been reviewed and judged to be of good quality, and which can be installed securely. These are the ‘promoted’ snaps.
+
+Searches look for matches in the snap name or description:
 
     $ snap find hello
     Name           Version  Developer  Notes  Summary
@@ -29,11 +29,11 @@ Anybody can publish a snap, but if you search the store you'll only see snaps th
     hello-huge     1.0      noise      -      A really big snap
     hello-world    6.1      canonical  -      Hello world example
 
-As long as you know the name of the snap you want, and it is public or your own private snap, you can install it using its name directly. But if you search the store, you’ll only see public, promoted results.
+
 
 ## Installing the snap
 
-To install the snap you want, here GNU Hello from the Free Software Foundation is being used as an example, use:
+User can install any public or their own private snaps using the snap name. Here is an example of installing GNU Hello from the Free Software Foundation is being used as an example, use:
 
     $ snap install hello
 
