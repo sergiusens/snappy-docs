@@ -1,13 +1,13 @@
 Title: Installing Snaps
 # Installing Snaps
 
-End users will normally install snaps from a store, logging in first. They can then search for snaps or install snaps by name. Stores may also provide snaps in various channels and some in a developer mode. Details on installing and using these snaps are provided here. 
+Users will normally install snaps from a store, logging in first. They can then search for snaps or install snaps by name. Stores can provide snaps in various [channels](manage_device_channels.md) and snaps that need to be run in developer mode. Details on installing and using these snaps are provided here. 
 
 **Note**: At the time of writing the only store available is Ubuntu Store and the snap login instruction take you to that store. In the future other stores should be available.
 
 ## Log in to a snap store
 
-Snap stores holds a public collection of snaps for delivery to clouds, devices, and private infrastructure. User [sign-in](https://login.ubuntu.com/+login) to the store from a device as follows:
+Snap stores holds a public collection of snaps for delivery to clouds, devices, and private infrastructure. Users [sign-in](https://login.ubuntu.com/+login) to a store (currently Ubuntu Store only) from a device as follows:
 
     $ snap login me@myself.com
     Password: *********
@@ -29,11 +29,9 @@ Searches look for matches in the snap name or description:
     hello-huge     1.0      noise      -      A really big snap
     hello-world    6.1      canonical  -      Hello world example
 
-
-
 ## Installing the snap
 
-User can install any public or their own private snaps using the snap name. Here is an example of installing GNU Hello from the Free Software Foundation is being used as an example, use:
+Users can install any public or their own private snaps using the snap name. Here is an example of installing GNU Hello from the Free Software Foundation:
 
     $ snap install hello
 
@@ -46,10 +44,11 @@ Each snap might include multiple related commands, with a default command that h
     $ hello.universe
     Hello, universe!
 
-Snaps can also install services that run in the background, such as web servers or content management systems. Those will start automatically when you install the snap.
+Snaps can also install services that run in the background, such as web servers or content management systems. Those will start automatically when the snap is installed.
 
-## Viewing installed snaps
-To see a list of snaps installed on your system use `snap list`. This also provides information on the snaps the software version, the unique revision, the developer of the installed snap, and any extra information provided with the snap (such as whether the snap is in developer mode or not).
+## Viewing installed snaps details
+
+To see a list of snaps installed on a system use `snap list`. The list also provides information on the software version, revision number, developer, and any extra notes provided with the snap (such as whether the snap is in developer mode or not).
 
     $ snap list
     Name           Version               Rev  Developer  Notes
@@ -59,33 +58,33 @@ To see a list of snaps installed on your system use `snap list`. This also provi
 
 ## Always fresh -- update fast and reliably
 
-Snaps are updated automatically in the background every day. You can manually get the latest version of all your snaps with `snap refresh` which will bring you completely up to date for all snaps, unless you specify particular snaps to refresh.
+Snaps are updated automatically in the background to the the latest version, every day. This can also be done manually using `snap refresh` for either all installed snaps or by specifying particular snaps to refresh.
 
 ## Release channels -- stable, candidate, beta and edge
 
-Developers can publish stable, release candidate, beta, and edge versions of a snap, at the same time. This enables them to engage with users who are willing to test upcoming changes, and it enables users to decide how close to the leading edge of development they want to be.
+Snaps can be published as stable, release candidate, beta, and edge versions, at the same time. This enables you to engage with users who are willing to test changes, and it help users to decide how close to the leading edge of development they want to be.
 
-By default, snaps are installed from the stable channel, but there is also a candidate channel which by convention will preview the next stable release, a beta channel and an edge channel.
+By default, snaps are installed from the stable channel. Versions of snaps from other channels need to be explicitly selected:
+
+    $ snap install hello --channel-beta
+
+And a snap can be refreshed from a different channel to the one it was originally installed from:
 
     $ snap refresh hello --channel=beta
     Name    Version   Rev   Developer   Notes
     hello   2.10.1    29    canonical   -
     hello  (beta) installed
 
-Run the beta version of the command:
+The beta version is then run in exactly the same way as the stable (or any other) version:
 
     $ hello
     Hello, snap padawan!
 
-Note that you could have directly installed hello from the beta channel via:
-
-    $ snap install hello --channel-beta
-
 ## Developer mode
 
-When a developer is working on a snap, they may want to let it run without the strict security confinement that is expected of stable, published snaps for general consumption. This is done by specifying `--devmode` on installation, to give permission for this snap to be run without that confinement.
+When you're developing a snap, you'll want to let it run without the strict security confinement that is expected of stable, published snaps. This is done by specifying `--devmode` on installation, to give permission for the snap to be run without confinement.
 
-Developers can publish snaps that require `--devmode` to work, but they can only publish those to beta or edge channels, not stable or candidate channels. As a user, you can install those beta or edge versions using `--devmode` as well. Bear in mind that you should NEVER do this unless you absolutely trust the developer with all the information on your system.
+You can publish snaps that require `--devmode` to work, but they can only be published to the beta or edge channels, not the stable or candidate channels. User can then install those beta or edge versions using `--devmode` as well. Because of the risk that installing an unconfined app creates, the user is asked to confirm the installation:
 
     $ snap install flubber --channel=beta
     Error: this version of foo requires devmode.
