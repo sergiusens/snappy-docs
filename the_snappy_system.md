@@ -6,10 +6,10 @@ In traditional Linux distributions software is distributed in packages:
 
 - that rely on the availability of services in the OS or other software.
 - whose data isn't confined, so can be accessed by other software.
-- that can detrimentally effected by system or software upgrade.
+- that can be detrimentally effected by system or software upgrade.
 - that are complex to uninstall or downgrade.
 
-Creating and distributing software can therefore be a time consuming process and the end result doesn't offer the user a high degree of security and manageability.
+Creating and distributing software can therefore be a time consuming process and the end result doesn't offer the user a high degree of security and manageability. 
 
 The Snappy System aims to fix these challenges by offering:
 
@@ -18,6 +18,7 @@ The Snappy System aims to fix these challenges by offering:
 - a confinement and security model that:
  - offers snaps a secure storage area isolated from other snaps.
  - allows snaps to make features available and consume those features over defined interfaces.
+ - a store where developers can easily make their software directly available to users and from which devices can automatically pull updates on a daily basis.
 - a simple transactional update system where snaps can be easily uninstalled (by simply deleting the snap package) or rolled back (by simply reverting to the previous snap image and private storage area). 
 
 ![Snaps are self contained, confined applications that can make use features in other snaps using Interfaces.]( ./media/snap_in_snappy_system.png "Snap in the Snappy System")
