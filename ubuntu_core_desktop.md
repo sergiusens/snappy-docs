@@ -8,7 +8,7 @@ Snappy Ubuntu Core is a lightweight, transactionally updated OS for devices targ
 Practical implementations of Snappy Ubuntu Core consist of:
 
 - Kernel snap
-- Gabget snap
+- Gadget snap
 - OS snap  
 
 Ubuntu Core is delivered in the OS snap (see [Kinds of Snaps](kinds_of_snaps.md "Kinds of Snaps") for more details on these and the other types of snaps). 
@@ -18,10 +18,13 @@ Ubuntu Core is delivered in the OS snap (see [Kinds of Snaps](kinds_of_snaps.md 
 Snappy Ubuntu Core diverges from the standard model of Server and Desktop Ubuntu distributions, the key differences are summarized in the table below:
 
 Ubuntu Desktop | Ubuntu Core
----- | ----
+:---- | :----
+The base rootfs and kernel are delivered as a monolithic package that doesn't enable transactional updates. | OS and kernel delivered as separate snaps, offing transactional updates.
 Can be both a development and target platform. | Acts as a target platform only.
 Applications delivered in DEB packages or as snaps. | Applications delivered as snaps.
-- | Updated transactionally.
+The file system isn't fully RO | 
+The system lives nearby the traditional .deb packages |
+
  
 ## Release cycles
 
