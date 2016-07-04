@@ -25,29 +25,25 @@ You can disable garbage collection with the `--no-gc` commandline option, or whe
 To illustrate the process take the example of installing and updating `hello-world` through a few versions. If you've version `1.0.1` installed, and do a `snap refresh` it downloads version `1.0.2`:
 
     $ sudo snap refresh
-    Installing hello-world.canonical (1.0.2)
-    Starting download of hello-world.canonical
-    30.99 KB / 30.99 KB [======================]
-    Done
-    Name        Date    Version Developer
-    hello-world 1-01-01 1.0.2   canonical
-    $ snappy list | grep hello
-    hello-world 2015-03-31 1.0.2   canonical
-    $ snappy list -v | grep hello
-    hello-world  2015-03-31 1.0.1   canonical
-    hello-world* 2015-03-31 1.0.2   canonical
+    64.00 KB / 64.00 KB [======================] 100.00 % 4.62 KB/s    
+    Name                 Version               Rev  Developer  Notes
+    hello-world          1.0.2                 29   canonical  -
+    
+    $ snap list | grep hello
+    hello-world          1.0.2                 29   canonical  -
+    $ snap list -v | grep hello
+    hello-world          1.0.1                 10   canonical  -
+    hello-world*         1.0.2                 29   canonical  -
 
 so, `1.0.2`, was downloaded and made active, leaving `1.0.1` installed. Doing the upgrade again:
 
-    $ sudo snappy update
-    Installing hello-world.canonical (1.0.3)
-    Starting download of hello-world.canonical
-    30.99 KB / 30.99 KB [======================]
-    Done
-    Name        Date    Version Developer
-    hello-world 1-01-01 1.0.3   canonical
-    $ snappy list -v | grep hello
-    hello-world  2015-03-31 1.0.2   canonical
-    hello-world* 2015-03-31 1.0.3   canonical
+    $ sudo snap refresh
+    64.00 KB / 64.00 KB [======================] 100.00 % 4.62 KB/s
+    Name                 Version               Rev  Developer  Notes
+    hello-world          1.0.3                 15   canonical  -
+
+    $ snap list -v | grep hello
+    hello-world          1.0.2                 29   canonical  -
+    hello-world*         1.0.3                 15   canonical  -
 
 and `1.0.1` is gone.
