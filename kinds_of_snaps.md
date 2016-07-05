@@ -33,7 +33,7 @@ Gadget snaps provide a way to define the specific features of a device. They may
 - which channel the device will load from by default. For example, a device may be made available for beta testing, so should pull snaps from the beta channel (see [Channels](manage_device_channels.md "Channels") for more details).
 - details of the device hardware (for example that the device has a camera) and the interfaces (see [Interfaces](interfaces.md "Interfaces")) available to access that hardware.
 
-Canonical publishes some reference gadget snaps as well as gadget snaps for core Canonical models, as well as general purpose computing images for popular physical devices, such as 64-bit x86 PCs and Raspberry Pi2.
+Canonical publishes some reference gadget snaps as well as gadget snaps for core Canonical models, as well as general purpose computing images for popular physical devices, such as 64-bit x86 PCs and Raspberry Pi2. Full details of the available images are provided in the Get Started section.
 
 ## OS snaps
 
