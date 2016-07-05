@@ -38,10 +38,10 @@ so, `1.0.2`, was downloaded and made active, leaving `1.0.1` installed. Doing th
     $ sudo snap refresh
     64.00 KB / 64.00 KB [======================] 100.00 % 4.62 KB/s
     Name                 Version               Rev  Developer  Notes
-    hello-world          1.0.3                 15   canonical  -
+    hello-world          1.0.3                 32   canonical  -
 
     $ snap list -v | grep hello
     hello-world          1.0.2                 29   canonical  -
-    hello-world*         1.0.3                 15   canonical  -
+    hello-world*         1.0.3                 32   canonical  -
 
 and `1.0.1` is gone.
