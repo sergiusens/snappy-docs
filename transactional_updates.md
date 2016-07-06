@@ -1,6 +1,6 @@
 Title: Transactional Updates
 # Transactional Updates
-Snapd Systems employ a method of transactional update that is available for all snaps: application, gadget, OS, and kernel.
+Snapd systems employ a method of transactional update that is available for all snaps: application, gadget, OS, and kernel.
 
 
 ## Installation
@@ -11,7 +11,9 @@ When the snap is updated (by the user running `$ snap refresh <snap name>`) a ne
 
 ![The lifecycle of a snap's update](./media/transactional_update.png)
 
-Updated kernel, OS, and gadget snaps become available the next time the system is booted. For updated application snaps, new versions become available:
+Updated kernel, OS, and gadget snaps become available the next time the system is booted. 
+
+For updated application snaps, the new versions become available:
 
 - for user executed applications, the next time the command is run.
 - for daemon executed services, immediately, as the daemon is restarted during refresh. 
@@ -20,4 +22,6 @@ Updated kernel, OS, and gadget snaps become available the next time the system i
 
 A strength of the snappy transactional update system is its ability to roll back if the new version of a snap proves faulty. The process is very simple, the `current` symlink for the snap and its writable data area are simply linked back to the old (previously working) version of the snap.
 
-For application snaps the user does this with `snap rollback <snap>`. While for the Kernel and OS snaps, if these fail to start correctly, the snappy system will automatically rollback these snaps the next time the device is booted.
+For application snaps the user does this with `snap rollback <snap>`. As with updates, a rolled back service snap becomes available immediately (its daemon is restarted when the rollback completed) while a rolled back app is available when its commend is run. 
+
+For the gadget, kernel, and OS snaps, if these fail to start correctly, the snappy system will automatically rollback these snaps the next time the device is booted.
