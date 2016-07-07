@@ -6,9 +6,9 @@ This section provides details on how to use Snapcraft to create application snap
 - [Build your first snap](build_apps_first.md)
 - [Migrate from 15.04 to Series 16](15_to_16_introduction.md")
 - [Use parts in your snap](build_apps_parts.md)
+- [Apps as a service](build_apps_services.md)
 - [Debug your snap](build_apps_debugging.md)
 - [Publish your snap](build_apps_publish.md)
-- [Apps: cli, services](build_apps_cli.md)
 - [Build your own plugin](build_apps_plugin.md)
 
 ## Snapcraft tour
