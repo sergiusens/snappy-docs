@@ -1,5 +1,5 @@
 ---
-title: "List of Interfaces"
+title: "List of snapd interfaces"
 ---
 
 # List of Interfaces
