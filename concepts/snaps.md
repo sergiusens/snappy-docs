@@ -10,7 +10,7 @@ There are four kinds of snaps used in a Snapd System:
 
 These snaps form the architecture of a Snapd System as shown below.
 
-![snap architecture](./media/snap_architecture.png)
+![snap architecture](../media/snap_architecture.png)
 
 ## Kernel snaps
 

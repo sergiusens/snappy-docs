@@ -9,7 +9,7 @@ Each snap -- be it a kernel, OS, gadget, or application snap -- is delivered as 
 ## Update (Refresh)
 When the snap is updated (by the user running `$ snap refresh <snap name>`) a new set of directories are created labeled with the snap's revision number (which is incremented each time a snap is added to the store). The read-only image of the new version is stored in the new directory, new writable spaces are created, and the data from the previous version's writable spaces copied to the new ones. Data in the common space isn't altered in any way. The new version's snap and writable areas then are both symlinked to `current`. The process is illustrated below:
 
-![The lifecycle of a snap's update](./media/transactional_update.png)
+![The lifecycle of a snap's update](../media/transactional_update.png)
 
 Updated kernel, OS, and gadget snaps become available the next time the system is booted. 
 
