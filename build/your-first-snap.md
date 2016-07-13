@@ -1,4 +1,7 @@
-Title: Build Your First Snap
+---
+title: "Build Your First Snap"
+---
+
 # Build Your First Snap
 
 Snapcraft uses a single text file to describe the entire build process for a snap: the snapcraft.yaml file. You can see an example in this directory:

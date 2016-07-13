@@ -1,4 +1,7 @@
-Title: Publish Your Snap	
+---
+title: "Publish Your Snap	"
+---
+
 # Publish Your Snap
 
 In order to share your snaps with the world, you'll need to publish them in the Store. This page describes the publication process you will follow.

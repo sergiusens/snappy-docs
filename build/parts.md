@@ -1,4 +1,7 @@
-Title: Parts
+---
+title: "Parts"
+---
+
 #Parts
 
 Parts are reusable components that are the main building block used to create snaps using Snapcraft. Parts have their own private space and lifecycle. Each part uses a plugin, which tells the part how to behave and what to do with the information inside it. Parts are analogous to a library that you would call in your program. There are three types of parts:

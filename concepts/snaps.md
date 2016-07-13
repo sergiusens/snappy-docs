@@ -1,4 +1,7 @@
-Title: The kinds of snaps
+---
+title: "The kinds of snaps"
+---
+
 
 # The kinds of snaps
 There are four kinds of snaps used in a Snapd System:

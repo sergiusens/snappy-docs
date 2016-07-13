@@ -1,4 +1,7 @@
-Title: Snaps Directory Structure	
+---
+title: "Snaps Directory Structure	"
+---
+
 # Snap File Directory Structure
 
 This section describes the directories found within a snap and details their content. If you're building your snaps with snapcraft, after running a build the directory structure can be seen in the `prime/` directory. 

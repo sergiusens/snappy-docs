@@ -1,4 +1,7 @@
-Title: Store
+---
+title: "Store"
+---
+
 # Ubuntu Store
 
 Snaps are distributed to snapd systems through [the Ubuntu Store](https://myapps.developer.ubuntu.com/dev/click-apps/ "Ubuntu store"), where you can customize how your snap is presented, review each new upload, and control publishing.
