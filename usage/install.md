@@ -1,4 +1,7 @@
-Title: Installing Snaps
+---
+title: "Installing Snaps"
+---
+
 # Installing Snaps
 
 Snaps are normally installed from a [store](store.md). You can interact with a store without signing-in, but signing-in offers a number of advantages. These advantages include the ability to access your private snaps and the automatic update of installed snaps (which incidentally doesn't require root on the device).

@@ -1,4 +1,7 @@
-Title: Channels
+---
+title: "Channels"
+---
+
 # Channels 
 
 (from https://developer.ubuntu.com/en/snappy/guides/channels/)

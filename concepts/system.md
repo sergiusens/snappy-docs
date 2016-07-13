@@ -1,4 +1,7 @@
-Title: The Snappy System
+---
+title: "The Snappy System"
+---
+
 
 # The Snapd System
 

@@ -1,4 +1,7 @@
-Title: Ubuntu Core and Ubuntu Desktop
+---
+title: "Ubuntu Core and Ubuntu Desktop"
+---
+
 # Ubuntu Core and Ubuntu Desktop 
 
 ## What is Ubuntu Core?

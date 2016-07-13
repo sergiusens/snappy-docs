@@ -1,4 +1,7 @@
-Title: Interfaces
+---
+title: "Interfaces"
+---
+
 # Interfaces
 Interfaces provide a mechanism to enable snaps to communicate or share resources, according to the protocol established by the interface.
 

@@ -1,4 +1,7 @@
-Title: List of Interfaces
+---
+title: "List of Interfaces"
+---
+
 # List of Interfaces
 
 Interface name | Purpose | Usage | Auto-Connect

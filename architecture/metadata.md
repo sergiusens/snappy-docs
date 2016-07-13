@@ -1,4 +1,7 @@
-Title: Snap Metadata
+---
+title: "Snap Metadata"
+---
+
 
 # Snap Metadata
 

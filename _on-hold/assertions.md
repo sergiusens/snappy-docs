@@ -1,4 +1,7 @@
-Title: Assertions
+---
+title: "Assertions"
+---
+
 # Assertions
 
 Assertions are digitally signed documents that provide the Snap store with knowledge about snaps and users. They are the basis of trust and control between developers of devices, developers of software, anyone managing devices, and the user of a device. 

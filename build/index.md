@@ -1,4 +1,7 @@
-Title: Build Apps
+---
+title: "Build Apps"
+---
+
 # Build Apps
 
 This section provides details on how to use Snapcraft to create application snaps, as well as covering the common and advanced features of snap development. The content includes:

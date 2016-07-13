@@ -1,4 +1,7 @@
-Title: Key Concepts
+---
+title: "Key Concepts"
+---
+
 # Key Concepts
 snapd technology offers a new way to package, distribute, update and run OS components and applications on a Linux system.
 
