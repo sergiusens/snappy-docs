@@ -1,18 +1,20 @@
 ---
-title: "Build Apps"
+title: "Build snaps"
 ---
 
-# Build Apps
+# Build snaps
 
 This section provides details on how to use Snapcraft to create application snaps, as well as covering the common and advanced features of snap development. The content includes:
 
-- [Build your first snap](build_apps_first.md)
-- [Migrate from 15.04 to Series 16](15_to_16_introduction.md")
-- [Use parts in your snap](build_apps_parts.md)
-- [Apps as a service](build_apps_services.md)
-- [Debug your snap](build_apps_debugging.md)
-- [Publish your snap](build_apps_publish.md)
-- [Build your own plugin](build_apps_plugin.md)
+*   [Your first snap](/docs/build/your-first-snap)
+*   [Snapcraft syntax](/docs/build/syntax)
+*   [Parts](/docs/build/parts)
+*   [Plugins](/docs/build/plugins)
+*   [Commands, daemons & assets](/docs/build/metadata)
+*   [Debugging](/docs/build/debugging)
+*   [Publish your snap](/docs/build/publish)
+*   [Advanced features](/docs/build/advanced-features)
+*   [Snap a ROS app](/docs/build/ros)
 
 ## Snapcraft tour
 A number of exercises are included in this section that use the examples included in the Snapcraft tour. To use these examples, you'll need to have Snapcraft 2.11 or later installed. If you've already installed Snapcraft you can check the version as follows:
@@ -50,6 +52,6 @@ Unless you specify a different directory name, the tour will be created in a new
     snapcraft-tour/20-PARTS-PLUGINS:
     01-reusable-part
 
-If you wish to follow the tour, you can cd into each directory and work through the README, or follow the tour on [snapcraft.io](http://snapcraft.io/create/).
+If you wish to follow the tour, you can `cd` into each directory and work through the README, or follow the tour on [snapcraft.io](http://snapcraft.io/create/).
 
 

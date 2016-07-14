@@ -52,5 +52,6 @@ sudo apt install snapd
 ### OpenSuse
 
 ```
-
+sudo zypper addrepo http://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_42.2/ snappy
+sudo zypper install snapd
 ```

@@ -1,21 +1,17 @@
 ---
-title: "Publish Your Snap	"
+title: "Publish Your Snap"
 ---
 
 # Publish Your Snap
 
-In order to share your snaps with the world, you'll need to publish them in the Store. This page describes the publication process you will follow.
+In order to share your snaps with the world, you'll need to publish them in a Store. This page describes the publication process you will follow for the Ubuntu-hosted Store.
 
--------
-The exercises on this page are based on those included with Snapcraft. Install the tour with `$ snapcraft tour` and the relevant exercises are in ./snapcraft-tour/.
-
---------
-
+The exercises on this page are based on those included with Snapcraft. Install the tour with `$ snapcraft tour` and the relevant exercises are in `./snapcraft-tour/`.
 
 ## Your store account
 
 To be able to publish snaps to the Ubuntu Store you will need to create an account
-on [https://myapps.developer.ubuntu.com/](https://myapps.developer.ubuntu.com/). This is your developer portal. Here you can customize how your snap is presented, review each new upload, and control publishing.
+on [myapps.developer.ubuntu.com](https://myapps.developer.ubuntu.com/). This is your developer portal. Here you can customize how your snap is presented, review each new upload, and control publishing.
 
 You'll need to choose a unique developer namespace as part of the account creation process. In a future version, developer branches of reserved name snaps will be referred to by this name (for example firefox@mark).
 
@@ -23,14 +19,20 @@ Once you've confirmed your account, you're ready to start pushing your snaps to 
 
 ### Exercise
 
-Create an account on [https://myapps.developer.ubuntu.com/](https://myapps.developer.ubuntu.com/) and once it is confirmed, sign-in from Snapcraft:
+Create an account on [myapps.developer.ubuntu.com](https://myapps.developer.ubuntu.com/) and once it is confirmed, sign-in from Snapcraft:
  
     $ snapcraft login
     $ snap login you@yourdomain.com
 
 ## Names under which you can publish snaps
 
-You can publish your own version of a snap, provided you do so under a name you have rights to. New names can be registered by clicking **New Snap** on the developer portal, or by visiting: [https://myapps.developer.ubuntu.com/dev/click-apps/register-name/](https://myapps.developer.ubuntu.com/dev/click-apps/register-name/)
+You can publish your own version of a snap, provided you do so under a name you have rights to.
+
+New names can be registered:
+
+* by clicking **New Snap** at the top of the Store
+* by visiting: [the name registration page](https://myapps.developer.ubuntu.com/dev/click-apps/register-name/)
+* or by simply running `$ snapcraft register my-snap-name`
 
 ### Exercise
 
@@ -38,7 +40,7 @@ Use "hello-" suffixed by your name for the exercise (for example `hello-mark`), 
 
 ## Reserving names for software you publish
 
-We can, if needed, rename snaps to ensure they match the expectations of most users. If you're the publisher most users expect for a name, then claim it at: [https://myapps.developer.ubuntu.com/dev/click-apps/register-name-dispute/](https://myapps.developer.ubuntu.com/dev/click-apps/register-name-dispute/)
+We can, if needed, rename snaps to ensure they match the expectations of most users. If you're the publisher most users expect for a name, then claim it on the [snap name dispute](https://myapps.developer.ubuntu.com/dev/click-apps/register-name-dispute/) page.
 
 ## Automatically assigned revision numbers
 
@@ -50,7 +52,7 @@ Once you've registered your snap name, using any of the snaps from the Snapcraft
 
     $ snapcraft upload hello-world_1.0_*.snap
 
-Open the URL that was returned from `snapcraft upload` or open the snap from the developer portal front page: [https://myapps.developer.ubuntu.com](https://myapps.developer.ubuntu.com)
+Open the URL that was returned from `snapcraft upload` or open the snap from the developer portal front page: [myapps.developer.ubuntu.com](https://myapps.developer.ubuntu.com)
 
 You should see the 1.0 version in the lefthand column. Clicking on that link will bring up further details about this revision. 
 

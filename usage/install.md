@@ -61,7 +61,7 @@ To see a list of snaps installed on a system use `snap list`. The list also prov
     ubuntu-core    16.04+20160419.20-55  109  canonical  -
     webdm          0.17                  21   canonical  -
 
-## Always fresh -- update fast and reliably
+## Always fresh -- automated and reliable updates
 
 When you're signed into the store, snaps are updated automatically in the background to the latest version, every day. This can also be done manually using `snap refresh` for either all installed snaps or by specifying particular snaps to refresh.
 
