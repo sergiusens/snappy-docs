@@ -65,26 +65,6 @@ To see a list of snaps installed on a system use `snap list`. The list also prov
 
 When you're signed into the store, snaps are updated automatically in the background to the latest version, every day. This can also be done manually using `snap refresh` for either all installed snaps or by specifying particular snaps to refresh.
 
-## Release channels -- stable, candidate, beta, and edge
-
-Snaps can be published into  stable, release candidate, beta, and edge [channels](channels.md), at the same time. This enables you to engage with users who are willing to test changes, and it helps users decide how close to the leading edge of development they want to be.
-
-By default, snaps are installed from the stable channel. Versions of snaps from other channels need to be explicitly selected:
-
-    $ snap install hello --channel=beta
-
-And a snap can be refreshed from a different channel to the one it was originally installed from:
-
-    $ snap refresh hello --channel=beta
-    Name    Version   Rev   Developer   Notes
-    hello   2.10.1    29    canonical   -
-    hello  (beta) installed
-
-The installed beta version is then run in exactly the same way as the stable (or any other) version:
-
-    $ hello
-    Hello, snap padawan!
-
 ## Developer mode
 
 When you're developing a snap, you'll want to let it run without the strict security confinement that is expected of stable, published snaps. This is done by specifying `--devmode` on installation, to give permission for the snap to be run without confinement.
