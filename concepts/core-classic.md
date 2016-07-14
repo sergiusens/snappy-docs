@@ -1,8 +1,8 @@
 ---
-title: "Ubuntu Core and Ubuntu Desktop"
+title: "Core and Classic"
 ---
 
-# Ubuntu Core and Ubuntu Desktop 
+# Ubuntu Core and Ubuntu Classic 
 
 ## What is Ubuntu Core?
 
@@ -12,15 +12,15 @@ Practical implementations of Ubuntu Core in a snapd system consist of:
 
 - Kernel snap
 - Gadget snap
-- OS snap  
+- OS snap
 
-Ubuntu Core is delivered in the OS snap (see [Kinds of Snaps](kinds_of_snaps.md "Kinds of Snaps") for more details on these and the other types of snaps). 
+Ubuntu Core is delivered in the OS snap (see [Kinds of Snaps](/docs/concepts/snaps.html "Kinds of Snaps") for more details on these and the other types of snaps). 
 
-## Differences to Ubuntu Desktop
+## Differences to Ubuntu Classic
 
-Ubuntu Core diverges from the standard model of server and desktop Ubuntu distributions, the key differences are summarized in the table below:
+Ubuntu Core diverges from the standard model of server and desktop Ubuntu distributions (Ubuntu Classic), the key differences are summarized in the table below:
 
-Ubuntu Desktop | Ubuntu Core
+Ubuntu Classic | Ubuntu Core
 :---- | :----
 The base rootfs and kernel are delivered as a monolithic package that doesn't enable transactional updates. | OS and kernel delivered as separate snaps, offering transactional updates.
 Can be both a development and target platform. | Acts as a target platform only.
