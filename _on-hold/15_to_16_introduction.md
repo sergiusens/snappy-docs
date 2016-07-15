@@ -2,7 +2,6 @@
 title: "Transitioning Snaps from 15.04 to Series 16"
 ---
 
-# Transitioning Snaps from 15.04 to Series 16
 
 During the Ubuntu 16.04 release cycle the Snapd System has undergone significant refinement. This is mainly to ensure the following core features can be supported for the long term:
 

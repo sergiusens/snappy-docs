@@ -2,7 +2,6 @@
 title: "Build your first snap"
 ---
 
-# Build your first snap
 
 Before going through this tutorial, make sure you have followed the **snapcraft tour** setup on the [build](/docs/build) page. If not, run:
 

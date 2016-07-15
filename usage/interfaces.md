@@ -2,7 +2,6 @@
 title: "Using Interfaces"
 ---
 
-# Using Interfaces
 
 Most snaps will use at least one [interface](/docs/concepts/interfaces). They'll use them to get access to OS or device features, or use information or functions offered by another application or service. In using and working with interfaces you need to be able to discover the interfaces available or required by a snap, and connect snaps to their interfaces, when they don't do it automatically.
 

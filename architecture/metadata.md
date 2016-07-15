@@ -3,7 +3,6 @@ title: "Snap Metadata"
 ---
 
 
-# Snap Metadata
 
 Snaps are defined by two sets of metadata specified in YAML files:
 

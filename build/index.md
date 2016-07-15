@@ -2,7 +2,6 @@
 title: "Build snaps"
 ---
 
-# Build snaps
 
 This section provides details on how to use Snapcraft to create application snaps, as well as covering the common and advanced features of snap development. The content includes:
 

@@ -2,7 +2,6 @@
 title: "Snapcraft reference"
 ---
 
-# Snapcraft reference
 
 `snapcraft` comes with a handy help system, just run:
 ```
