@@ -8,9 +8,26 @@ Plugins are pieces of Python code that tell Snapcraft how to build the content o
 
 See the [Plugins reference](/docs/reference/plugins) for the full list of implemented ones.
 
-However, you can add your own plugins for other languages. 
+## Lifecycle
+
+These plugins implement a lifecycle over the following steps:
+
+  - pull:   retrieve the source for the part from the specified location
+  - build:  drive the build system determined by the choice of plugin
+  - stage:  consolidate desireable files from all the parts in one tree
+  - prime:  distill down to only the files which will go into the snap
+  - snap:   compress the prime tree into the installable snap file
+
+These steps correspond to snapcraft commands. So when you initiate a
+'snapcraft pull' you will invoke the respective plugin for each part in
+the snap, in sequence, to handle the source pull. Each part will then have a
+fully populated parts/\<part-name\>/src/ directory. Similarly, if you then say
+'snapcraft build' you will invoke the plugin responsible for each part in
+turn, to build the part.
 
 ## Adding custom plugins
+
+Snapcraft also allows you to add your own plugins written in Python.
 
 You can find a lot of custom plugins in [this repository of examples](https://github.com/ubuntu/snappy-playpen) contributed by the community (such as [Intellij Idea](https://github.com/ubuntu/snappy-playpen/tree/master/idea), [Kylin icon theme](https://github.com/ubuntu/snappy-playpen/tree/master/ubuntukylin-icon-theme), [MirageOS](https://github.com/ubuntu/snappy-playpen/tree/master/mirageos)).
 
