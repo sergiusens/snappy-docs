@@ -1,5 +1,5 @@
 ---
-title: "Removing snaps"
+title: "Remove a snap"
 ---
 
 

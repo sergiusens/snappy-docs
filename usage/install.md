@@ -1,5 +1,5 @@
 ---
-title: "Installing Snaps"
+title: "Install Snaps"
 ---
 
 

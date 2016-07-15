@@ -1,5 +1,5 @@
 ---
-title: "Changing the channel of a snap"
+title: "Change the channel of a snap"
 ---
 
 
