@@ -3,7 +3,7 @@ title: "Store"
 ---
 
 
-There are multiple ways to distribute snaps as the format is not tied to a specific distribution system. Here are the most common ways of doint it.
+There are multiple ways to distribute snaps as the format is not tied to a specific distribution system.
 
 ## The Ubuntu Store
 
