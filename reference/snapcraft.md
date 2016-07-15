@@ -2,7 +2,6 @@
 title: "Snapcraft reference"
 ---
 
-# Snapcraft reference
 
 ## General commands
 

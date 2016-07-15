@@ -2,7 +2,6 @@
 title: "Snaps and Snapcraft documentation"
 ---
 
-# Snaps and snapcraft documentation
 
 This documentation aims at bringing you everything you need to know to build and distribute snaps.
 

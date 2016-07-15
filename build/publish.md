@@ -2,7 +2,6 @@
 title: "Publish Your Snap"
 ---
 
-# Publish Your Snap
 
 In order to share your snaps with the world, you'll need to publish them in a Store. This page describes the publication process you will follow for the Ubuntu-hosted Store.
 

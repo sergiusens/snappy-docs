@@ -3,7 +3,6 @@ title: "The snapd system"
 ---
 
 
-# The snapd system
 
 In traditional Linux distributions, software is made available in packages:
 

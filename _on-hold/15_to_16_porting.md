@@ -1,8 +1,7 @@
 ---
-title: "Porting 15.04 Snaps to "
+title: "Porting 15.04 Snaps to Series 16"
 ---
 
-# Porting 15.04 Snaps to Series 16
 The snapcraft tool has undergone significant development this cycle and version 2.x has been released specifically to produce snaps targeting Series 16 devices.
 
 This chapter describes the changes that need to take place to take a Snapcraft configuration created using version 1.x and targeting 15.04 snappy systems, to version 2.x for Series 16.

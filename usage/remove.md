@@ -2,7 +2,6 @@
 title: "Removing snaps"
 ---
 
-# Removing snaps
 
 You can use `snap list` to browse all installed snaps, then `snap remove <snap>` to remove a specific one.
 

@@ -2,7 +2,6 @@
 title: "Install snapd"
 ---
 
-# Install snapd
 
 ### Arch
 

@@ -2,7 +2,6 @@
 title: "Using Snaps"
 ---
 
-# Using Snaps
 
 This section provides details on how to use snaps on a snapd system. The section covers:
 

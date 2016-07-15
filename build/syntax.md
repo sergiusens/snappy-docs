@@ -2,7 +2,6 @@
 title: "The snapcraft syntax"
 ---
 
-# snapcraft.yaml syntax
 
 The `snapcraft.yaml` file is the main entry point to create a snap through
 Snapcraft. The main building blocks are parts and each defined part is

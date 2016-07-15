@@ -3,7 +3,6 @@ title: "The kinds of snaps"
 ---
 
 
-# The kinds of snaps
 There are four kinds of snaps used in a snapd system:
 
  - Kernel

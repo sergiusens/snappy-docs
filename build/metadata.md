@@ -2,7 +2,6 @@
 title: "Commands, daemons & assets"
 ---
 
-# Commands, daemons & assets
 
 The entire syntax of a `snapcraft.yaml` with all available keys can be
 reviewed in the [snapcraft.yaml syntax section](/docs/build/syntax). Here we will

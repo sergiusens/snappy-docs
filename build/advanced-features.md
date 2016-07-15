@@ -2,7 +2,6 @@
 title: "Advanced features"
 ---
 
-# Snapcraft: Advanced features
 
 Once you have built [your first snap](/docs/build/your-first-snap), you will probably
 want to learn more about snapcraft's more advanced features. Having a look at

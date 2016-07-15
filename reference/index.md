@@ -2,7 +2,6 @@
 title: "Reference"
 ---
 
-# Reference
 
 This section provides reference materials for the following topics:
 
