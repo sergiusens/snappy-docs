@@ -1,27 +1,42 @@
 ---
-title: "List of snapd interfaces"
+title: "Snaps interfaces"
 ---
 
-# List of Interfaces
+# Interfaces
 
-Interface name | Purpose | Usage | Auto-Connect
-----|----|----|----
-`cups-control` | Can access cups control socket. This is restricted because it provides privileged access to configure printing. | reserved | no
-`firewall-control` | Can configure firewall. This is restricted because it gives privileged access to networking and should only be used with trusted apps. | reserved | no
-`gsettings` | Can access global gsettings of the user's session. This is restricted because it gives privileged access to sensitive information stored in gsettings and allows adjusting settings of other applications. | reserved | yes
-`home` | Can access non-hidden files in user's `$HOME` to read/write/lock. This is restricted because it gives file access to the user's `$HOME`. | reserved | yes
-`locale-control` | Can manage locales directly, separate from `log-observe` | Can read system logs and set kernel log rate-limiting. | reserved | no 
-`config ubuntu-core`. | reserved | no
-`mount-observe` | Can query system mount information. This is restricted because it gives privileged read access to mount arguments and should only be used with trusted apps. | reserved | no
-`network` | Can access the network as a client. | common | yes
-`network-bind` | Can access the network as a server. | common | yes
-`network-control` |Can configure networking. This is restricted because it gives wide, privileged access to networking and should only be used with trusted apps. | reserved | no
-`network-observe` | Can query network status information. This is restricted because it gives privileged read-only access to networking information and should only be used with trusted apps. | reserved | no
-`opengl` | Can access the opengl hardware. | reserved | yes
-`pulseaudio` | Can access the PulseAudio sound server. Allows for sound playback in games and media application. It doesn't allow recording. | common | yes
-`snapd-control` | Can manage snaps using snapd. | reserved | no
-`system-observe` |Can query system status information. This is restricted because it gives privileged read access to all processes on the system and should only be used with trusted apps. | reserved | no
-`timeserver-control` | Can manage timeservers directly, separate from `config ubuntu-core`. | reserved | no
-`unity7` | Can access Unity7. Restricted because Unity 7 runs on X and requires access to various DBus services and this environment does not prevent eavesdropping or apps interfering with one another. | reserved | yes
-`x11` | Can access the X server. Restricted because X does not prevent eavesdropping or apps interfering with one another. | reserved | yes
+Interfaces allow snaps to communicate or share resources according to the
+protocol established by the interface.
 
+Each connection has two ends, a "plug" (consumer) and a "slot" (provider).  A
+plug and a slot can be connected if they use the same interface name.  The
+connection grants necessary permissions for snaps to operate according to the
+protocol.
+
+Slots may support multiple connections to plugs.  For example the OS snap
+exposes the ``network`` slot and all applications that can talk over the
+network connect their plugs there.
+
+| Interface name     | Purpose                                                                                                                                                                                                                                    | Usage    | Auto-connect |
+|--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|--------------|
+| network            | Can access the network as a client.                                                                                                                                                                                                        | common   | yes          |
+| network-bind       | Can access the network as a server.                                                                                                                                                                                                        | common   | yes          |
+| unity7             | Can access Unity7. Restricted because Unity 7 runs on X and requires access to various DBus services and this environment does not prevent eavesdropping or apps interfering with one another.                                             | reserved | yes          |
+| x11                | Can access the X server. Restricted because X does not prevent eavesdropping or apps interfering with one another.                                                                                                                         | reserved | yes          |
+| pulseaudio         | Can access the PulseAudio sound server. Allows for sound playback in games and media application. It doesn’t allow recording.                                                                                                              | common   | yes          |
+| opengl             | Can access the opengl hardware.                                                                                                                                                                                                            | reserved | yes          |
+| home               | Can access non-hidden files in user’s $HOME to read/write/lock. This is restricted because it gives file access to the user’s $HOME. This interface is auto-connected on classic systems and manually connected on non-classic.            | reserved | yes          |
+| gsettings          | Can access global gsettings of the user’s session. This is restricted because it gives privileged access to sensitive information stored in gsettings and allows adjusting settings of other applications.                                 | reserved | yes          |
+| optical-drive      | Can access the first optical drive in read-only mode. Suitable for CD/DVD playback.                                                                                                                                                        | common   | yes          |
+| mpris              | Can access media players implementing the Media Player Remote Interfacing Specification (mpris) when the interface is specified as a plug. Media players implementing mpris can be accessed by connected clients when specified as a slot. | common   | no           |
+| camera             | Can access the first video camera. Suitable for programs wanting to use the webcams.                                                                                                                                                       | common   | no           |
+| cups-control       | Can access cups control socket. This is restricted because it provides privileged access to configure printing.                                                                                                                            | reserved | no           |
+| firewall-control   | Can configure firewall. This is restricted because it gives privileged access to networking and should only be used with trusted apps.                                                                                                     | reserved | no           |
+| locale-control     | Can manage locales directly separate from ‘config ubuntu-core’.                                                                                                                                                                            | reserved | no           |
+| log-observe        | Can read system logs and set kernel log rate-limiting.                                                                                                                                                                                     | reserved | no           |
+| mount-observe      | Can query system mount information. This is restricted because it gives privileged read access to mount arguments and should only be used with trusted apps.                                                                               | reserved | no           |
+| network-control    | Can configure networking. This is restricted because it gives wide, privileged access to networking and should only be used with trusted apps.                                                                                             | reserved | no           |
+| network-observe    | Can query network status information. This is restricted because it gives privileged read-only access to networking information and should only be used with trusted apps.                                                                 | reserved | no           |
+| serial-port        | Can access serial ports. This is restricted because it provides privileged access to configure serial port hardware.                                                                                                                       | reserved | no           |
+| snapd-control      | Can manage snaps via snapd.                                                                                                                                                                                                                | reserved | no           |
+| system-observe     | Can query system status information. This is restricted because it gives privileged read access to all processes on the system and should only be used with trusted apps.                                                                  | reserved | no           |
+| timeserver-control | Can manage timeservers directly separate from config ubuntu-core.                                                                                                                                                                          | reserved |no           |
