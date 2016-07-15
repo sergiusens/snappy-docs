@@ -2,14 +2,30 @@
 title: "Store"
 ---
 
-# Ubuntu Store
+# Store
+
+There are multiple ways to distribute snaps as the format is not tied to a specific distribution system. Here are the most common ways of doint it.
+
+## The Ubuntu Store
 
 Snaps are distributed to snapd systems through [the Ubuntu Store](https://myapps.developer.ubuntu.com/dev/click-apps/ "Ubuntu store"), where you can customize how your snap is presented, review each new upload, and control publishing.
 
 You'll choose a unique developer namespace as part of the store account creation process. 
 
-Uploading snaps to the store can be done directly from the [snapcraft](/docs/reference/snapcraft.html "snapcraft upload") tool or on the [store website](https://myapps.developer.ubuntu.com/dev/click-apps/ "Ubuntu store"). Once uploaded you choose the [channel](/docs/usage/channel.html "channels") (stable, candidate, beta, edge) that the snap will be published to (the `snapcraft upload` command returns the URL of the page you need to visit to do this). After you've chosen a channel, your application is sent for review. Most apps are reviewed by way of automated checks, but if your app uses sensitive interfaces it may be manually reviewed -- you can find more details on the review process [here](https://developer.ubuntu.com/en/publish/application-states/). Once your snap has been reviewed and approved, you can publish it when you're ready, making the snap available to users.
+Uploading snaps to the store can be done directly from the [snapcraft](/docs/build/publish "snapcraft upload") tool or on the [store website](https://myapps.developer.ubuntu.com/dev/click-apps/ "Ubuntu store"). Once uploaded you choose the [channel](/docs/usage/channel "channels") (stable, candidate, beta, edge) that the snap will be published to (the `snapcraft upload` command returns the URL of the page you need to visit to do this). After you've chosen a channel, your application is sent for review. Most apps are reviewed by way of automated checks, but if your app uses sensitive interfaces it may be manually reviewed -- you can find more details on the review process [here](https://developer.ubuntu.com/en/publish/application-states/). Once your snap has been reviewed and approved, you can publish it when you're ready, making the snap available to users.
 
 It's also worth noting that each time you upload a snap the store assigns it a revision number of 1. The store then automatically increments this revision number each time you upload a snap.
 
 You can publish a snap under any name you have rights to. Names can be registered by using the `snapcraft register` command, clicking **New Snap** on the developer portal, or by visiting the [Register name](https://myapps.developer.ubuntu.com/dev/click-apps/register-name/ "register name") page. You can also provide other developers with permission to publish versions of the snap, for example as part of an open source project.
+
+## Other stores
+
+Snaps are not tied to a specific type of store and you can host them any way you want.
+
+To integrate with the `snap` command (beyond the `install`/`remove` commands), the server needs to be based on the [Store API specs](https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex). It will allow you to host a collection of snaps for installation on supported platforms.
+
+You can find an example implementation of a custom store [here](https://github.com/noise/snapstore/). You can even deploy it locally by running `$ snap install snapstore-example`.
+
+See the README of the project for details.
+
+

@@ -8,5 +8,5 @@ This section provides you with details about the content and structure of a snap
 
 This section contains details of:
 
-- [the folder structure of content in a snap](snaps_folder_structure.md).
-- [the content of the snap's metadata YAML file](snap_metadata.md). 
+- [the folder structure of content in a snap](/docs/architecture/snaps).
+- [the content of the snap's metadata YAML file](/docs/architecture/metadata). 

@@ -26,9 +26,9 @@ The snapd system aims to fix these challenges by offering:
 
 On a snapd system these features are implemented by:
 
-- **snapd**, a management environment that handles installing and updating snaps using the transactional system, as well as [garbage collection](/docs/concepts/versions.html) of old versions of snaps.
+- **snapd**, a management environment that handles installing and updating snaps using the transactional system, as well as [garbage collection](/docs/concepts/versions) of old versions of snaps.
 - **snapd-confine**, an execution environment for the applications and services delivered in snap packages.
 
 ![Snaps are self contained, confined applications that can make use of features in other snaps using Interfaces.]( ../media/snap_in_snappy_system.png "Snaps in the Snapd System")
 
-The snapd system simplifies the development of devices and their software because, with the exception of a [limited number of OS features](/docs/concepts/core-classic.html "Components in Ubuntu core"), you're in control of all the components in your application. You simply add everything needed to the snap package. You then make the snap available using [the store](/docs/concepts/store.html "the store"), or, if you are the device creator, create your own store. 
+The snapd system simplifies the development of devices and their software because, with the exception of a [limited number of OS features](/docs/concepts/core-classic "Components in Ubuntu core"), you're in control of all the components in your application. You simply add everything needed to the snap package. You then make the snap available using [the store](/docs/concepts/store "the store"), or, if you are the device creator, create your own store. 

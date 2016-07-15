@@ -7,7 +7,7 @@ title: "Snap Metadata"
 
 Snaps are defined by two sets of metadata specified in YAML files:
 
-- snapcraft.yaml, which defines the snap to be built, usually with snapcraft. This file is placed in the root of the directory in which the snap is to be built. It's used solely to define the snap's build and isn't included in the final snap. (For more information see [??](placeholder.md)).
+- snapcraft.yaml, which defines the snap to be built, usually with snapcraft. This file is placed in the root of the directory in which the snap is to be built. It's used solely to define the snap's build and isn't included in the final snap. For more details about snapcraft.yaml files, see the [Build](/docs/build) section.
 - snap.yaml, which defines the content of the built snap and is placed in the root of the compressed snap file.
 
 The content of the two YAML files is similar, however snapcraft.yaml includes a definition of the parts included in a snap and their build systems (which the snap.yaml is missing) and the snap.yaml contains details of the architecture(s) the snap is built for.

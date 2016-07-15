@@ -33,7 +33,7 @@ Gadget snaps provide a way to define the specific features of a device. They may
 - Processes for the lifecycle of the device, such as factory resets.
 - The store the device can access to obtain additional or updated snaps.
 - Which channel the device will load snaps from by default. For example, a device may be made available for beta testing, so should pull snaps from the beta channel.
-- Details of the device hardware (for example that the device has a camera) and the interfaces (see [Interfaces](/docs/concepts/interfaces.html "Interfaces")) available to access that hardware.
+- Details of the device hardware (for example that the device has a camera) and the interfaces (see [Interfaces](/docs/concepts/interfaces "Interfaces")) available to access that hardware.
 
 Canonical publishes some gadget snaps for reference platforms, as well as general purpose computing images for popular physical devices, such as 64-bit x86 PCs and Raspberry Pi2.
 
@@ -41,7 +41,7 @@ Canonical publishes some gadget snaps for reference platforms, as well as genera
 
 The OS snap is a repacked `rootfs` that contains `snapd`; just 'enough' to boot and power the system, and manage snaps. Generally there will also be basic features such as network services, libc, systemd, and others included. OS snaps will be architecture specific, but hardware platform agnostic. As such an OS snap should  run with any kernel that supports the minimum feature set required by the OS.
 
-In every Canonical snappy system the OS snap contains Ubuntu Core (for more details see [Ubuntu Core and Ubuntu Desktop](/docs/concepts/core-classic.html "Ubuntu Core and Ubuntu Desktop")).
+In every Canonical snappy system the OS snap contains Ubuntu Core (for more details see [Ubuntu Core and Ubuntu Desktop](/docs/concepts/core-classic "Ubuntu Core and Ubuntu Desktop")).
 
 Canonical is the publisher of the Ubuntu Core OS snap. It's available for various architectures, such as x86 (32-bit and 64-bit), ARM devices (32-bit and 64-bit), and more. All devices of the same architecture running the same version of the OS use the same snap. The OS is therefore the same for every class of device, whether specialised or general, and developers who target software to a particular snap can be confident it will have access to the same software stack on any snapd system device.
 
@@ -58,7 +58,7 @@ An application snap may also provide multiple commands. To avoid namespace confl
     `$ my_hello_world.run`
     `$ my_hello_world.debug`
 
-Application snaps can also provide [Interfaces](/docs/concepts/interfaces.html "Interfaces") that expose features to other snaps.
+Application snaps can also provide [Interfaces](/docs/concepts/interfaces "Interfaces") that expose features to other snaps.
 
 You can create application snaps manually or use the Snapcraft tool. You can find a guide to getting started with Snapcraft in the [Build Apps](/docs/build/ "Build Apps") section.
 

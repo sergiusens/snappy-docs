@@ -4,9 +4,9 @@ title: "Installing Snaps"
 
 # Installing Snaps
 
-Snaps are normally installed from a [store](store.md). You can interact with a store without signing-in, but signing-in offers a number of advantages. These advantages include the ability to access your private snaps and the automatic update of installed snaps (which incidentally doesn't require root on the device).
+Snaps are normally installed from a [store](/docs/concepts/store). You can interact with a store without signing-in, but signing-in offers a number of advantages. These advantages include the ability to access your private snaps and the automatic update of installed snaps (which incidentally doesn't require root on the device).
 
-In the store you can search for snaps and install snaps by name. The store can provide snaps in various [channels](#release-channels----stable-candidate-beta-and-edge), including snaps that need to be run in developer mode. Details on installing and using these snaps are provided here. 
+In the store you can search for snaps and install snaps by name. The store can provide snaps in various release channels, including snaps that need to be run in developer mode. Details on installing and using these snaps are provided here. 
 
 **Note**: At the time of writing the only store available is Ubuntu Store and the snap login instruction takes you to that store. In the future other stores should be available.
 
@@ -71,9 +71,9 @@ When you're developing a snap, you'll want to let it run without the strict secu
 
 You can publish snaps that require `--devmode` to work, but they can only be published to the beta or edge channels, not the stable or candidate channels. Users can then install those beta or edge versions using `--devmode` as well. Because of the risk that installing an unconfined app creates, the user is asked to confirm the installation:
 
-    $ snap install flubber --channel=beta
+    $ snap install flubber --beta
     Error: this version of foo requires devmode.
-    $ snap install flubber --channel=beta --devmode
+    $ snap install flubber --beta --devmode
     WARNING: snaps installed in devmode are not confined. You are trusting
     all the private data on this system to the developer "frankie".
 
