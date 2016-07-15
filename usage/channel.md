@@ -2,7 +2,6 @@
 title: "Changing the channel of a snap"
 ---
 
-# Changing the channel of a snap
 
 ## Release channels -- stable, candidate, beta, and edge
 

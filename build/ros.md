@@ -2,7 +2,6 @@
 title: "Snap a ROS app"
 ---
 
-# Snap a ROS app
 
 The [Robot Operating System][1] (ROS) is an open-source collection of tools and
 libraries meant to aid in the development of complex robotic systems. ROS is

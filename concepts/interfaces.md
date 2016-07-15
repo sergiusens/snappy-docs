@@ -2,7 +2,6 @@
 title: "Interfaces"
 ---
 
-# Interfaces
 Interfaces provide a mechanism to enable snaps to communicate or share resources, according to the protocol established by the interface.
 
 Each interface connection has two ends, a **plug** (consumer) and a **slot** (provider). A plug and a slot can be connected if they use the same interface name. The connection grants the necessary permissions for snaps to operate according to the protocol.

@@ -2,7 +2,6 @@
 title: "Core and Classic"
 ---
 
-# Ubuntu Core and Ubuntu Classic 
 
 ## What is Ubuntu Core?
 
