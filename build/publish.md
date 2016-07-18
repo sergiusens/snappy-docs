@@ -1,5 +1,5 @@
 ---
-title: "Publish Your Snap"
+title: "Publish your snap"
 ---
 
 
