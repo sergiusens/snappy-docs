@@ -54,7 +54,7 @@ If you wish to follow the tour, you can `cd` into each directory and work throug
 
 ## More examples
 
-Meet the Playpen: an initiative to provide snaps examples and push the boundaries of snapping to cover the widest range of projects possible. Desktop apps, server, CLI, GUI, Gtk, Qt, SDL, Python, Go, Vala, C, C++, Java, etc.
+The Snappy Playpen is an incubator to provide snaps examples and push the boundaries of snapping to cover the widest range of projects possible: desktop apps, server, CLI, GUI, Gtk, Qt, SDL, Python, Go, Vala, C, C++, Java, etc. On its GitHub repo and the associated chat, you will find examples and experts to help you with your snap.
 
-[Browse the repo](https://github.com/ubuntu/snappy-playpen).
+[Get started with the Playpen and browse the repo](https://github.com/ubuntu/snappy-playpen).
 
