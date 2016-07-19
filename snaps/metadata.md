@@ -1,5 +1,5 @@
 ---
-title: "Snap metadata"
+title: "Metadata YAML file"
 ---
 
 
