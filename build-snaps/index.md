@@ -5,15 +5,14 @@ title: "Build snaps"
 
 This section provides details on how to use Snapcraft to create application snaps, as well as covering the common and advanced features of snap development. The content includes:
 
-*   [Your first snap](/docs/build/your-first-snap)
-*   [Snapcraft syntax](/docs/build/syntax)
-*   [Parts](/docs/build/parts)
-*   [Plugins](/docs/build/plugins)
-*   [Commands, daemons & assets](/docs/build/metadata)
-*   [Debugging](/docs/build/debugging)
-*   [Publish your snap](/docs/build/publish)
-*   [Advanced features](/docs/build/advanced-features)
-*   [Snap a ROS app](/docs/build/ros)
+*   [Your first snap](/docs/build-snaps/your-first-snap)
+*   [Snapcraft syntax](/docs/build-snaps/syntax)
+*   [Parts](/docs/build-snaps/parts)
+*   [Plugins](/docs/build-snaps/plugins)
+*   [Commands, daemons & assets](/docs/build-snaps/metadata)
+*   [Debugging](/docs/build-snaps/debugging)
+*   [Publish your snap](/docs/build-snaps/publish)
+*   [Advanced features](/docs/build-snaps/advanced-features)
 
 ## Snapcraft tour
 A number of exercises are included in this section that use the examples included in the Snapcraft tour. To use these examples, you'll need to have Snapcraft 2.11 or later installed. If you've already installed Snapcraft you can check the version as follows:

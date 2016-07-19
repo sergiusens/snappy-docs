@@ -1,3 +1,3 @@
 ---
-title: "What is a snap"
+title: "What is a snap?"
 ---

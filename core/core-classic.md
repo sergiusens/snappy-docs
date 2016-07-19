@@ -13,7 +13,7 @@ Practical implementations of Ubuntu Core in a snapd system consist of:
 - Gadget snap
 - OS snap
 
-Ubuntu Core is delivered in the OS snap (see [Kinds of Snaps](/docs/concepts/snaps "Kinds of Snaps") for more details on these and the other types of snaps). 
+Ubuntu Core is delivered in the OS snap (see [Kinds of Snaps](/docs/core/snaps "Kinds of Snaps") for more details on these and the other types of snaps). 
 
 ## Differences to Ubuntu Classic
 

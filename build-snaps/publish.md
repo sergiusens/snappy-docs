@@ -5,6 +5,8 @@ title: "Publish your snap"
 
 In order to share your snaps with the world, you'll need to publish them in a Store. This page describes the publication process you will follow for the Ubuntu-hosted Store.
 
+Although, snaps are not tied to a specific type of store and you can host them any way you want, see the [Store](/docs/core/store) page for more details.
+
 The exercises on this page are based on those included with Snapcraft. Install the tour with `$ snapcraft tour` and the relevant exercises are in `./snapcraft-tour/`.
 
 ## Your store account

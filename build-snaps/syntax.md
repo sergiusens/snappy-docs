@@ -70,7 +70,7 @@ contain.
 * `parts` (yaml subsection)
   A map of part names to their own part configuration. Order in the file is
   not relevant (to aid copy-and-pasting). Check out the
-  [parts section](/docs/build/parts) for some more concrete examples.
+  [parts section](/docs/build-snaps/parts) for some more concrete examples.
     * `plugin` (string)
       Specifies the plugin name that will manage this part. Snapcraft will pass
       to it all the other user-specified part options. If plugin is not
@@ -114,6 +114,6 @@ The `snapcraft.yaml` in any project is validated to be compliant to these
 keywords, if there is any missing expected component or invalid value,
 `snapcraft` will exit with an error.
 
-Review the [commands, daemons and assets section](/docs/build/metadata) for some more explicit examples on
+Review the [commands, daemons and assets section](/docs/build-snaps/metadata) for some more explicit examples on
 how to define commands, daemons or `config` declarations.
 

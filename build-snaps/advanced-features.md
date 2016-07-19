@@ -3,7 +3,7 @@ title: "Advanced features"
 ---
 
 
-Once you have built [your first snap](/docs/build/your-first-snap), you will probably
+Once you have built [your first snap](/docs/build-snaps/your-first-snap), you will probably
 want to learn more about snapcraft's more advanced features. Having a look at
 our selection of demos is a good idea, as we want it to be a good showcase
 of what is possible and generally relevant.
@@ -275,8 +275,8 @@ add to the snap.
 
 Combining various plugins and parts and using [the wiki][wiki] plugin make
 `snapcraft` incredibly versatile. On top of that, you can write
-[your own plugin](/docs/build/plugins) as well.
+[your own plugin](/docs/build-snaps/plugins) as well.
 
-[plugin]: /docs/build/plugins
+[plugin]: /docs/build-snaps/plugins
 [wiki]: https://wiki.ubuntu.com/snapcraft/parts
 

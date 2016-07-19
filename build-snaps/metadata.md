@@ -4,7 +4,7 @@ title: "Commands, daemons & assets"
 
 
 The entire syntax of a `snapcraft.yaml` with all available keys can be
-reviewed in the [snapcraft.yaml syntax section](/docs/build/syntax). Here we will
+reviewed in the [snapcraft.yaml syntax section](/docs/build-snaps/syntax). Here we will
 discuss the apps metadata in more detail.
 
 ## Defining app commands
