@@ -52,4 +52,9 @@ Unless you specify a different directory name, the tour will be created in a new
 
 If you wish to follow the tour, you can `cd` into each directory and work through the README, or follow the tour on [snapcraft.io](http://snapcraft.io/create/).
 
+## More examples
+
+Meet the Playpen: an initiative to provide snaps examples and push the boundaries of snapping to cover the widest range of projects possible. Desktop apps, server, CLI, GUI, Gtk, Qt, SDL, Python, Go, Vala, C, C++, Java, etc.
+
+[Browse the repo](https://github.com/ubuntu/snappy-playpen).
 
