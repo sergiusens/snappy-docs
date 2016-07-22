@@ -7,7 +7,7 @@ The snapd technology is the core that powers snaps. It offers a new way to packa
 
 This section provides an overview to the key concepts and technologies that enable snapd systems, covering:
 
-* [install snapd on your Linux distribution](/docs/core/install), including the OS snap, transactional updates and application confinement
+* [installing snapd on your Linux distribution](/docs/core/install)
 * the [core principals of the snapd system](/docs/core/snapd), including the OS snap, transactional updates and application confinement
 * a [store](/docs/core/store) where snaps are distributed for both testing and final release
 * [interfaces](/docs/core/interfaces) to enable applications to access OS features or share features with other applications
