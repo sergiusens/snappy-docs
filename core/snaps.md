@@ -1,14 +1,13 @@
 ---
-title: "The kinds of snaps"
+title: The kinds of snaps
 ---
-
 
 There are four kinds of snaps used in a snapd system:
 
- - Kernel
- - Gadget
- - OS
- - Application
+- Kernel
+- Gadget
+- OS
+- Application
 
 These snaps form the architecture of a Snapd System as shown below.
 
@@ -18,9 +17,9 @@ These snaps form the architecture of a Snapd System as shown below.
 
 The kernel makes up the core of all Linux systems, and it's the same with a Snapd System.
 
-The kernel snap contains a system’s hardware abstraction layer (HAL). This layer  consists of the kernel, drivers, firmware, and additional libraries such as OpenGL, OpenCL, and alike. In addition the sandboxing and confinement features are provided through the kernel and their effectiveness depend on the security maintenance level of that kernel.
+The kernel snap contains a system's hardware abstraction layer (HAL). This layer consists of the kernel, drivers, firmware, and additional libraries such as OpenGL, OpenCL, and alike. In addition the sandboxing and confinement features are provided through the kernel and their effectiveness depend on the security maintenance level of that kernel.
 
-Canonical publishes and maintains kernel snaps, offering reliability, trust, and security. 
+Canonical publishes and maintains kernel snaps, offering reliability, trust, and security.
 
 You can also create custom kernel snaps for devices. The snap should be based on a Linux kernel with reasonable baseline versioning. However, aligning with the Ubuntu Core LTS default kernel version (currently 3.18) is recommended. This will ensure that devices built using custom kernel snaps benefit from shared information about the kernel, simplifying support and improving development timelines.
 
@@ -38,7 +37,7 @@ Canonical publishes some gadget snaps for reference platforms, as well as genera
 
 ## OS snaps
 
-The OS snap is a repacked `rootfs` that contains `snapd`; just 'enough' to boot and power the system, and manage snaps. Generally there will also be basic features such as network services, libc, systemd, and others included. OS snaps will be architecture specific, but hardware platform agnostic. As such an OS snap should  run with any kernel that supports the minimum feature set required by the OS.
+The OS snap is a repacked `rootfs` that contains `snapd`; just 'enough' to boot and power the system, and manage snaps. Generally there will also be basic features such as network services, libc, systemd, and others included. OS snaps will be architecture specific, but hardware platform agnostic. As such an OS snap should run with any kernel that supports the minimum feature set required by the OS.
 
 In every Canonical snappy system the OS snap contains Ubuntu Core (for more details see [Ubuntu Core and Ubuntu Desktop](/docs/core/core-classic "Ubuntu Core and Ubuntu Desktop")).
 
@@ -50,14 +49,17 @@ Application snaps add all the other features and functions to a Snapd System, th
 
 An application snap can be run either from a command (that would normally be executed directly or indirectly by the device user) or by a daemon that executes at boot (so effectively offers a service within the device). Generally snaps only need to provide one command, which is run simply by referring to the snap name, for example:
 
-      `$ my_hello_world`
+```
+  `$ my_hello_world`
+```
 
-An application snap may also provide multiple commands. To avoid namespace conflicts, commands are prefixed with the snap’s name, for example the following commands run a normal and debug version of a hello world snap:
+An application snap may also provide multiple commands. To avoid namespace conflicts, commands are prefixed with the snap's name, for example the following commands run a normal and debug version of a hello world snap:
 
-    `$ my_hello_world.run`
-    `$ my_hello_world.debug`
+```bash
+`$ my_hello_world.run`
+`$ my_hello_world.debug`
+```
 
 Application snaps can also provide [Interfaces](/docs/core/interfaces "Interfaces") that expose features to other snaps.
 
 You can create application snaps manually or use the Snapcraft tool. You can find a guide to getting started with Snapcraft in the [Build Apps](/docs/build-snaps/ "Build Apps") section.
-
