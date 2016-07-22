@@ -23,7 +23,7 @@ sudo dnf copr enable zyga/snapcore
 sudo dnf install snapd
 
 # enable the snapd systemd service:
-sudo systemctl enable –now snapd.service
+sudo systemctl enable –-now snapd.service
 
 # SELinux support is in beta, so currently:
 sudo setenforce 0
