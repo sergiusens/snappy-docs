@@ -1,7 +1,6 @@
 ---
-title: "Install snapd"
+title: Install snapd
 ---
-
 
 ### Arch
 
@@ -30,7 +29,6 @@ sudo setenforce 0
 
 # to persist, edit /etc/selinux/config
 to set SELINUX=permissive and reboot.
-
 ```
 
 ### Gentoo
