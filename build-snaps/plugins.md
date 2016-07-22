@@ -9,20 +9,15 @@ See the [Plugins reference](/docs/reference/plugins) for the full list of implem
 
 ## Lifecycle
 
-These plugins implement a lifecycle over the following steps:
+Snapcraft plugins implement a lifecycle over the following steps:
 
-  - pull:   retrieve the source for the part from the specified location
-  - build:  drive the build system determined by the choice of plugin
-  - stage:  consolidate desireable files from all the parts in one tree
-  - prime:  distill down to only the files which will go into the snap
-  - snap:   compress the prime tree into the installable snap file
+  - `pull`:   retrieve the source for the part from the specified location
+  - `build`:  drive the build system determined by the choice of plugin
+  - `stage`:  consolidate desireable files from all the parts in one tree
+  - `prime`:  distill down to only the files which will go into the snap
+  - `snap`:   compress the prime tree into the installable snap file
 
-These steps correspond to snapcraft commands. So when you initiate a
-'snapcraft pull' you will invoke the respective plugin for each part in
-the snap, in sequence, to handle the source pull. Each part will then have a
-fully populated parts/\<part-name\>/src/ directory. Similarly, if you then say
-'snapcraft build' you will invoke the plugin responsible for each part in
-turn, to build the part.
+These steps correspond to snapcraft commands. So when you initiate a `snapcraft pull` you will invoke the respective plugin for each part in the snap, in sequence, to handle the source pull. Each part will then have a fully populated parts/\<part-name\>/src/ directory. Similarly, if you then say `snapcraft build` you will invoke the plugin responsible for each part in turn, to build the part.
 
 ## Adding custom plugins
 

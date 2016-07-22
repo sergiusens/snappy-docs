@@ -2,10 +2,49 @@
 title: "Snapcraft plugins reference"
 ---
 
-## snapcraft's Plugins
+In this section we are going to discuss `snapcraft`'s plugins, their workflow and their options. Note that you can run `$ snapcraft help <plugin>` to access the following documentation from the command-line.
 
-In this section we are going to discuss `snapcraft`'s plugins, their workflow
-and their options.
+Usage snippets can be found in the Playpen GitHub repository. As an example, here is a search that lists [all `cmake` plugin snippets](https://github.com/ubuntu/snappy-playpen/search?utf8=%E2%9C%93&q=%22plugin%3A+cmake%22&type=Code).
+
+## Utilities
+
+*   [The `nil` plugin](#the-nil-plugin)
+*   [The `copy` plugin](#the-copy-plugin)
+
+## Build systems
+
+*   [The `kbuild` plugin](#the-kbuild-plugin)
+*   [The `make` plugin](#the-make-plugin)
+*   [The `qmake` plugin](#the-qmake-plugin)
+*   [The `autotools` plugin](#the-autotools-plugin)
+*   [The `cmake` plugin](#the-cmake-plugin)
+*   [The `scons` plugin](#the-scons-plugin)
+
+## Languages
+
+### Java
+
+*   [The `ant` plugin](#the-ant-plugin)
+*   [The `maven` plugin](#the-maven-plugin)
+
+### Python
+
+*   [The `python2` plugin](#the-python2-plugin)
+*   [The `python3` plugin](#the-python3-plugin)
+
+### Node
+
+*   [The `gulp` plugin](#the-gulp-plugin)
+*   [The `nodejs` plugin](#the-nodejs-plugin)
+
+### Go
+
+*   [The `go` plugin](#the-go-plugin)
+
+## Projects
+
+*   ROS: [The `catkin` plugin](#the-catkin-plugin)
+*   Linux: [The `kernel` plugin](#the-kernel-plugin)
 
 ### The ant plugin
 
