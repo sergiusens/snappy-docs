@@ -34,7 +34,7 @@ The tour includes all the example source code and files in a series of subdirect
     Snapcraft tour initialized in ./snapcraft-tour/
     Instructions are in the README, or https://snapcraft.io/create/#begin
 
-Each stage of the tour is in a separate subdirectory, with number prefixes showing the sequence. In each directory you'll find a README with instructions relevant to that directory.
+Each stage of the tour is in a separate subdirectory, with number prefixes showing the sequence.
 
 Unless you specify a different directory name, the tour will be created in a new `snapcraft-tour` subdirectory in your current working directory. The directory structure will look like this:
 
@@ -50,11 +50,10 @@ Unless you specify a different directory name, the tour will be created in a new
     snapcraft-tour/20-PARTS-PLUGINS:
     01-reusable-part
 
-If you wish to follow the tour, you can `cd` into each directory and work through the README, or follow the tour on [snapcraft.io](http://snapcraft.io/create/).
+You can then follow the tour guide on [snapcraft.io](http://snapcraft.io/create/).
 
 ## More examples
 
 The Snappy Playpen is an incubator to provide snaps examples and push the boundaries of snapping to cover the widest range of projects possible: desktop apps, server, CLI, GUI, Gtk, Qt, SDL, Python, Go, Vala, C, C++, Java, etc. On its GitHub repo and the associated chat, you will find examples and experts to help you with your snap.
 
 [Get started with the Playpen and browse the repo](https://github.com/ubuntu/snappy-playpen).
-
