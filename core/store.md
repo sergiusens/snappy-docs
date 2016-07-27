@@ -1,12 +1,12 @@
 ---
-title: Store
+title: Snap stores
 ---
 
 There are multiple ways to distribute snaps as the format is not tied to a specific distribution system.
 
 ## The Ubuntu Store
 
-The main way of distributing snaps to snapd systems is through [the Ubuntu Store](https://myapps.developer.ubuntu.com/dev/click-apps/ "Ubuntu store"), where you can customize how your snap is presented, review each new upload, and control publishing over several release channels.
+The main way of distributing snaps to snapd systems is through [the Ubuntu Store](https://myapps.developer.ubuntu.com/dev/click-apps/ "Ubuntu store"), where you can customize how your snap is presented, review each new upload, and control publishing over several release channels. Here is the model it follows.
 
 ### Developer namespace
 
@@ -27,6 +27,25 @@ It's worth noting that when you upload a snap, the store assigns it a revision n
 After you've chosen a channel, your application is sent for review. Most apps are reviewed by way of automated checks, but if your app uses sensitive [interfaces](/docs/core/interfaces), it may be manually reviewed -- you can find more details on the review process [here](https://developer.ubuntu.com/en/publish/application-states/).
 
 Once your snap has been reviewed and approved, you can publish it when you're ready, instantly making the snap available to users.
+
+### Release channels
+
+On the store, snaps can be published into different channels at the same time: `stable`, `candidate` (release candidate), `beta`, and `edge`. This enables you to engage with users who are willing to test changes, and it helps users decide how close to the leading edge of development they want to be.
+
+By default, snaps are installed from the `stable` channel. Versions of snaps from other channels need to be explicitly selected:
+
+    $ snap install hello --beta
+    $ hello
+    Hello, snap padawan!
+
+And a snap can be refreshed from a different channel to the one it was originally installed from:
+
+    $ snap refresh hello --beta
+    Name    Version   Rev   Developer   Notes
+    hello   2.10.1    29    canonical   -
+    hello  (beta) installed
+
+This switches the snap to using this channel for future updates.
 
 ## Other stores
 

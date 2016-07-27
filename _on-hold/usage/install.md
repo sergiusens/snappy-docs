@@ -5,7 +5,7 @@ title: "Install snaps"
 
 Snaps are normally installed from a [store](/docs/concepts/store). You can interact with a store without signing-in, but signing-in offers a number of advantages. These advantages include the ability to access your private snaps and the automatic update of installed snaps (which incidentally doesn't require root on the device).
 
-In the store you can search for snaps and install snaps by name. The store can provide snaps in various release channels, including snaps that need to be run in developer mode. Details on installing and using these snaps are provided here. 
+In the store you can search for snaps and install snaps by name. The store can provide snaps in various release channels, including snaps that need to be run in developer mode. Details on installing and using these snaps are provided here.
 
 **Note**: At the time of writing the only store available is Ubuntu Store and the snap login instruction takes you to that store. In the future other stores should be available.
 
