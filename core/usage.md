@@ -80,4 +80,4 @@ You can publish snaps that require `--devmode` to work, but they can only be pub
 
 ## Make your own snaps
 
-Snaps can be easily created with an helper tool called snapcraft. Jump to the [Build snaps](/docs/build-snaps) section to get started.
+Snaps can be easily created with a helper tool called snapcraft. Jump to the [Build snaps](/docs/build-snaps) section to get started.
