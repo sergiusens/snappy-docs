@@ -52,3 +52,7 @@ sudo apt install snapd
 sudo zypper addrepo http://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_42.2/ snappy
 sudo zypper install snapd
 ```
+
+### OpenEmbedded/Yocto
+
+Install the [snap meta layer](https://github.com/morphis/meta-snappy/blob/master/README.md).
