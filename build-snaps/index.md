@@ -14,45 +14,24 @@ This section provides details on how to use Snapcraft to create application snap
 *   [Publish your snap](/docs/build-snaps/publish)
 *   [Advanced features](/docs/build-snaps/advanced-features)
 
-## Snapcraft tour
-A number of exercises are included in this section that use the examples included in the Snapcraft tour. To use these examples, you'll need to have Snapcraft 2.11 or later installed. If you've already installed Snapcraft you can check the version as follows:
+## Install Snapcraft
 
-    $ snapcraft --version
-    2.11
-
-If you haven't installed Snapcraft, it's available on Ubuntu 16.04 LTS:
+If you haven't installed snapcraft, it's available on Ubuntu 16.04 LTS:
 
     $ sudo apt install snapcraft
 
 It will also install and run on any Linux distribution with an up-to-date version of [LXD, the container hypervisor](http://www.ubuntu.com/cloud/lxd).
 
-The tour is used on [snapcraft.io](http://snapcraft.io/create/) to walk you through the making of snaps. Here the examples are used to provide practical illustrations of the snap building processes and principals discussed.
+### Take the tour
 
-The tour includes all the example source code and files in a series of subdirectories, which you load using the Snapcraft tool:
+A number of exercises included in this documentation use the snapcraft tour, a list of examples you load using the `snapcraft tour` command.
 
     $ snapcraft tour
     Snapcraft tour initialized in ./snapcraft-tour/
-    Instructions are in the README, or https://snapcraft.io/create/#begin
 
-Each stage of the tour is in a separate subdirectory, with number prefixes showing the sequence.
+The [Create](http://snapcraft.io/create/) page is an easy-to-use companion to this tour, that will walk you through the creation of snaps.
 
-Unless you specify a different directory name, the tour will be created in a new `snapcraft-tour` subdirectory in your current working directory. The directory structure will look like this:
-
-    $ ls snapcraft-tour/**
-    snapcraft-tour/README.md
-
-    snapcraft-tour/00-SNAPCRAFT:
-    01-easy-start  02-parts
-
-    snapcraft-tour/10-SNAPS:
-    01-service  02-service-confined
-
-    snapcraft-tour/20-PARTS-PLUGINS:
-    01-reusable-part
-
-You can then follow the tour guide on [snapcraft.io](http://snapcraft.io/create/).
-
-## More examples
+## Examples repository
 
 The Snappy Playpen is an incubator to provide snaps examples and push the boundaries of snapping to cover the widest range of projects possible: desktop apps, server, CLI, GUI, Gtk, Qt, SDL, Python, Go, Vala, C, C++, Java, etc. On its GitHub repo and the associated chat, you will find examples and experts to help you with your snap.
 
