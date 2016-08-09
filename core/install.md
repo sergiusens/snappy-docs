@@ -37,7 +37,7 @@ Install [snap-confine.ebuild](https://github.com/zyga/snap-confine-gentoo) and [
 
 ```
 # enable the snapd systemd service:
-sudo systemctl enable –now snapd.service
+sudo systemctl enable --now snapd.service
 ```
 
 ### Ubuntu
