@@ -40,11 +40,9 @@ Install [snap-confine.ebuild](https://github.com/zyga/snap-confine-gentoo) and [
 sudo systemctl enable --now snapd.service
 ```
 
-### Ubuntu
+### OpenEmbedded/Yocto
 
-```
-sudo apt install snapd
-```
+Install the [snap meta layer](https://github.com/morphis/meta-snappy/blob/master/README.md).
 
 ### OpenSuse
 
@@ -53,6 +51,12 @@ sudo zypper addrepo http://download.opensuse.org/repositories/system:/snappy/ope
 sudo zypper install snapd
 ```
 
-### OpenEmbedded/Yocto
+### OpenWrt
 
-Install the [snap meta layer](https://github.com/morphis/meta-snappy/blob/master/README.md).
+Enable the [snap-openwrt feed](https://github.com/teknoraver/snap-openwrt/blob/master/README.md).
+
+### Ubuntu
+
+```
+sudo apt install snapd
+```
