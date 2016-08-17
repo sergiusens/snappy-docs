@@ -83,3 +83,9 @@ hello  2.10     X1
 ```
 
 Congratulations, you've just made and installed your first snap.
+
+## More examples
+
+The Snappy Playpen is an incubator dedicated to providing snaps examples and cover the widest range of projects possible: desktop apps, server, CLI, GUI, Gtk, Qt, SDL, Python, Go, Vala, C, C++, Java, etc. On its GitHub repo and the associated chat, you will find examples and experts to help you with your snaps.
+
+[Browse snap examples &rsaquo;](https://github.com/ubuntu/snappy-playpen)

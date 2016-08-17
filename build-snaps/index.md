@@ -33,6 +33,6 @@ The [Create](http://snapcraft.io/create/) page is an easy-to-use companion to th
 
 ## Examples repository
 
-The Snappy Playpen is an incubator to provide snaps examples and push the boundaries of snapping to cover the widest range of projects possible: desktop apps, server, CLI, GUI, Gtk, Qt, SDL, Python, Go, Vala, C, C++, Java, etc. On its GitHub repo and the associated chat, you will find examples and experts to help you with your snap.
+The Snappy Playpen is an incubator dedicated to providing snaps examples and cover the widest range of projects possible: desktop apps, server, CLI, GUI, Gtk, Qt, SDL, Python, Go, Vala, C, C++, Java, etc. On its GitHub repo and the associated chat, you will find examples and experts to help you with your snaps.
 
-[Get started with the Playpen and browse the repo](https://github.com/ubuntu/snappy-playpen).
+[Browse snap examples &rsaquo;](https://github.com/ubuntu/snappy-playpen)
