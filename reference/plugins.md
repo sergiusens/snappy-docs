@@ -10,7 +10,7 @@ Note that you can run `$ snapcraft help <plugin>` to access the following docume
 
 ## General topics
 
-*   [Builin keywords and common options](#builtin-keywords-and-common-options)
+*   [Built-in keywords and common options](#built-in-keywords-and-common-options)
 *   [Common 'source' keys](#common-source-keys)
 
 ## Build systems
@@ -36,9 +36,9 @@ Note that you can run `$ snapcraft help <plugin>` to access the following docume
 
 &nbsp;
 
-### Builtin keywords and common options
+### Built-in keywords and common options
 
-There are several builtin keywords which can be used in any part regardless
+There are several built-in keywords which can be used in any part regardless
 of the choice of plugin.
 
   - `after: [part, part, part...]`
