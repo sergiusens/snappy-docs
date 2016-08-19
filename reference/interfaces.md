@@ -1,42 +1,48 @@
 ---
-title: "Snaps interfaces"
+title: "Interfaces reference"
 ---
 
+[Interfaces documentation](/docs/core/interfaces)
 
-Interfaces allow snaps to communicate or share resources according to the
-protocol established by the interface.
+### Terminology
 
-Each connection has two ends, a "plug" (consumer) and a "slot" (provider).  A
-plug and a slot can be connected if they use the same interface name.  The
-connection grants necessary permissions for snaps to operate according to the
-protocol.
+* Auto-connect: the interface is connected upon snap install
 
-Slots may support multiple connections to plugs.  For example the OS snap
-exposes the ``network`` slot and all applications that can talk over the
-network connect their plugs there.
+* Transitional: the interface supports traditional desktop features that were not designed with strong application isolation in mind and will be deprecated when a technology more in adequacy with the snap security policy is available.
 
-| Interface name     | Purpose                                                                                                                                                                                                                                    | Usage    | Auto-connect |
-|--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|--------------|
-| network            | Can access the network as a client.                                                                                                                                                                                                        | common   | yes          |
-| network-bind       | Can access the network as a server.                                                                                                                                                                                                        | common   | yes          |
-| unity7             | Can access Unity7. Restricted because Unity 7 runs on X and requires access to various DBus services and this environment does not prevent eavesdropping or apps interfering with one another.                                             | reserved | yes          |
-| x11                | Can access the X server. Restricted because X does not prevent eavesdropping or apps interfering with one another.                                                                                                                         | reserved | yes          |
-| pulseaudio         | Can access the PulseAudio sound server. Allows for sound playback in games and media application. It doesn’t allow recording.                                                                                                              | common   | yes          |
-| opengl             | Can access the opengl hardware.                                                                                                                                                                                                            | reserved | yes          |
-| home               | Can access non-hidden files in user’s $HOME to read/write/lock. This is restricted because it gives file access to the user’s $HOME. This interface is auto-connected on classic systems and manually connected on non-classic.            | reserved | yes          |
-| gsettings          | Can access global gsettings of the user’s session. This is restricted because it gives privileged access to sensitive information stored in gsettings and allows adjusting settings of other applications.                                 | reserved | yes          |
-| optical-drive      | Can access the first optical drive in read-only mode. Suitable for CD/DVD playback.                                                                                                                                                        | common   | yes          |
-| mpris              | Can access media players implementing the Media Player Remote Interfacing Specification (mpris) when the interface is specified as a plug. Media players implementing mpris can be accessed by connected clients when specified as a slot. | common   | no           |
-| camera             | Can access the first video camera. Suitable for programs wanting to use the webcams.                                                                                                                                                       | common   | no           |
-| cups-control       | Can access cups control socket. This is restricted because it provides privileged access to configure printing.                                                                                                                            | reserved | no           |
-| firewall-control   | Can configure firewall. This is restricted because it gives privileged access to networking and should only be used with trusted apps.                                                                                                     | reserved | no           |
-| locale-control     | Can manage locales directly separate from ‘config ubuntu-core’.                                                                                                                                                                            | reserved | no           |
-| log-observe        | Can read system logs and set kernel log rate-limiting.                                                                                                                                                                                     | reserved | no           |
-| mount-observe      | Can query system mount information. This is restricted because it gives privileged read access to mount arguments and should only be used with trusted apps.                                                                               | reserved | no           |
-| network-control    | Can configure networking. This is restricted because it gives wide, privileged access to networking and should only be used with trusted apps.                                                                                             | reserved | no           |
-| network-observe    | Can query network status information. This is restricted because it gives privileged read-only access to networking information and should only be used with trusted apps.                                                                 | reserved | no           |
-| network-manager    | Can operate as the network-manager service. This is restricted because it gives privileged access to the system.                                                                 | reserved | no           |
-| serial-port        | Can access serial ports. This is restricted because it provides privileged access to configure serial port hardware.                                                                                                                       | reserved | no           |
-| snapd-control      | Can manage snaps via snapd.                                                                                                                                                                                                                | reserved | no           |
-| system-observe     | Can query system status information. This is restricted because it gives privileged read access to all processes on the system and should only be used with trusted apps.                                                                  | reserved | no           |
-| timeserver-control | Can manage timeservers directly separate from config ubuntu-core.                                                                                                                                                                          | reserved |no           |
+| Interface name | Purpose | Auto-connect | Transitional | Attributes |
+|----------------|---------|--------------|--------------|------------|
+| `camera` | Can access the first video camera. Suitable for programs wanting to use webcams. | no | no |  |
+| `gsettings` | Can access global gsettings of the user\'s session which gives privileged access to sensitive information stored in gsettings and allows adjusting settings of other applications. | yes | yes |  |
+| `home` | Can access non-hidden files in user\'s `$HOME` and gvfs mounted directories owned by the user to read/write/lock. | yes on classic (traditional distributions), no otherwise | yes |  |
+| `mpris` | Providing snaps implementing the Media Player Remove Interfacing Specification (mpris) may be accessed via their well-known DBus name. | no | no |  |
+| `network` | Can access the network as a client. | yes | no |  |
+| `network-bind` | Can access the network as a server. | yes | no |  |
+| `opengl` | Can access OpenGL hardware. | yes | no |  |
+| `optical-drive` | Can access the first optical drive in read-only mode. Suitable for CD/DVD playback. | yes | no |  |
+| `pulseaudio` | Can access the PulseAudio sound server which allows for sound playback in games and media application. Recording not supported but will be in a future release. | yes | no |  |
+| `unity7` | Can access Unity7. Unity 7 runs on X and requires access to various DBus services. This interface grants privileged access to the user\'s session since the Unity 7 environment does not prevent eavesdropping or apps interfering with one another. | yes | yes |  |
+| `x11` | Can access the X server which gives privileged access to the user\'s session since X does not prevent eavesdropping or apps interfering with one another. | yes | yes |  |
+| `browser-support` | Can access files and IPC needed by modern browsers. This interface is intended to be used when using an embedded Chromium Content API or using the sandboxes in major browsers from vendors like Google and Mozilla. The ``allow-sandbox`` attribute may be used to give the necessary access to use the browser\'s sandbox functionality. | yes | no | `allow-sandbox:` true\|false (defaults to ``false``) |
+| `bluetooth-control` | Allow to manage the kernel side Bluetooth stack. | no | no |  |
+| `bluez` | Can access snaps providing the bluez interface which gives privileged access to bluetooth. | no | no |  |
+| `content` | Can access content from the providing snap from within the consuming snap\'s filesystem area. | yes for snaps from same publisher, no otherwise | no | `read` (slot): read-only paths from providing snap to expose to the consuming snap<br> `write` (slot): read-write paths from providing snap to expose to the consuming snap<br> `target` (plug): path in consuming snap to find providing snap\'s files |
+| `cups-control` | Can access cups control socket which gives privileged access to configure printing. | no | no |  |
+| `firewall-control` | Can configure network firewalling giving privileged access to networking. | no | no |  |
+| `hardware-observe` | Can query hardware information from the system. | no | no |  |
+| `locale-control` | Can manage locales directly separate from ``config core``. | no | no |  |
+| `location-control` | Can access snaps providing the location-control interface which gives privileged access to configure, observe and use location services. | no | no |  |
+| `location-observe` | Can access snaps providing the location-observe interface which gives privileged access to query location services. | no | no |  |
+| `log-observe` | Can read system logs and set kernel log rate-limiting. | no | no |  |
+| `modem-manager` | Can access snaps providing the modem-manager interface which gives privileged access to configure, observe and use modems. | no | no |  |
+| `mount-observe` | Can query system mount information. This is restricted because it gives privileged read access to mount arguments and should only be used with trusted apps. | no | no |  |
+| `network-control` | Can configure networking which gives wide, privileged access to networking. | no | no |  |
+| `network-manager` | Can access snaps providing the network-manager interface which gives privileged access to configure and observe networking. | no | no |  |
+| `network-observe` | Can query network status information which gives privileged read-only access to networking information. | no | no |  |
+| `ppp` | Can access Point-to-Point protocol daemon which gives privileged access to configure and observe PPP networking. | no | no |  |
+| `process-control` | Can manage processes via signals and nice. | no | no |  |
+| `serial-port` | Can access serial ports. This is restricted because it provides privileged access to configure serial port hardware. | no | no | `path` (slot): path to serial device |
+| `snapd-control` | Can manage snaps via snapd. | no | no |  |
+| `system-observe` | Can query system status information which gives privileged read access to all processes on the system. | no | no |  |
+| `system-trace` | Can use kernel tracing facilities. This is restricted because it gives privileged access to all processes on the system and should only be used with trusted apps. | no | no |  |
+| `timeserver-control` | Can manage timeservers directly separate from ``config core``. | no | no |  |
