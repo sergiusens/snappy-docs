@@ -1,0 +1,24 @@
+
+---
+title: "The gulp plugin"
+---
+
+This plugin is used for gulp.js, the streaming build system.
+
+The plugin uses gulp to drive the build. It requires a gulpfile.js in
+the root of the source.
+
+This plugin uses the common plugin keywords as well as those for "sources".
+For more information check the 'plugins' topic for the former and the
+'sources' topic for the latter.
+
+Additionally, this plugin uses the following plugin-specific keywords:
+
+    - gulp-tasks:
+      (list)
+      A list of gulp tasks to run.
+    - node-engine:
+      (string)
+      The version of nodejs to use for the build.
+
+[Examples](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+gulp%22+&s=indexed&type=Code&utf8=%E2%9C%93)
