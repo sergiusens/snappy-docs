@@ -11,10 +11,6 @@ Autotools based projects are the ones that have the usual
 The plugin tries to build using ./configure first, if it is not there
 it will run ./autogen and if autogen is not there it will run autoreconf.
 
-This plugin uses the common plugin keywords as well as those for "sources".
-For more information check the 'plugins' topic for the former and the
-'sources' topic for the latter.
-
 In addition, this plugin uses the following plugin-specific keywords:
 
     - configflags:

@@ -12,11 +12,7 @@ want to do:
     - build a python project that has a setup.py
     - install sources straight from pip
 
-This plugin uses the common plugin keywords as well as those for "sources".
-For more information check the 'plugins' topic for the former and the
-'sources' topic for the latter.
-
-Additionally, this plugin uses the following plugin-specific keywords:
+This plugin uses the following plugin-specific keywords:
 
     - requirements:
       (string)

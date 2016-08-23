@@ -8,11 +8,7 @@ This plugin is used for gulp.js, the streaming build system.
 The plugin uses gulp to drive the build. It requires a gulpfile.js in
 the root of the source.
 
-This plugin uses the common plugin keywords as well as those for "sources".
-For more information check the 'plugins' topic for the former and the
-'sources' topic for the latter.
-
-Additionally, this plugin uses the following plugin-specific keywords:
+This plugin uses the following plugin-specific keywords:
 
     - gulp-tasks:
       (list)

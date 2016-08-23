@@ -8,11 +8,7 @@ The nodejs plugin is useful for node/npm based parts.
 The plugin uses node to install dependencies from `package.json`. It
 also sets up binaries defined in `package.json` into the `PATH`.
 
-This plugin uses the common plugin keywords as well as those for "sources".
-For more information check the 'plugins' topic for the former and the
-'sources' topic for the latter.
-
-Additionally, this plugin uses the following plugin-specific keywords:
+This plugin uses the following plugin-specific keywords:
 
     - node-packages:
       (list)

@@ -9,11 +9,7 @@ These projects have a file containing information about the project's
 dependencies. This file is typically called "dependencies.tsv," but may be
 named anything.
 
-This plugin uses the common plugin keywords as well as those for "sources".
-For more information check the 'plugins' topic for the former and the
-'sources' topic for the latter.
-
-Additionally, this plugin uses the following plugin-specific keywords:
+This plugin uses the following plugin-specific keywords:
 
     - godeps-file:
       (string)
