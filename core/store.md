@@ -49,6 +49,6 @@ This switches the snap to using this channel for future updates.
 
 ## Other stores
 
-Snaps are not tied to a specific type of store and you can host them any way you want. Although, to integrate with the `snap` command (beyond the `install`/`remove` commands), the server needs to be based on the [Store API specs](https://wiki.ubuntu.com/AppStore/Interfaces/ClickPackageIndex).
+Snaps are not tied to a specific type of store and you can host them any way you want.
 
 You can find an example implementation of a custom store [here](https://github.com/noise/snapstore/). You can even deploy it locally by running `$ snap install snapstore-example`. See the README of the project for details.
