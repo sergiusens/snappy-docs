@@ -15,7 +15,7 @@ title: "Interfaces reference"
 | `camera` | Can access the first video camera. Suitable for programs wanting to use webcams. | no | no |  |
 | `gsettings` | Can access global gsettings of the user\'s session which gives privileged access to sensitive information stored in gsettings and allows adjusting settings of other applications. | yes | yes |  |
 | `home` | Can access non-hidden files in user\'s `$HOME` and gvfs mounted directories owned by the user to read/write/lock. | yes on classic (traditional distributions), no otherwise | yes |  |
-| `mpris` | Providing snaps implementing the Media Player Remove Interfacing Specification (mpris) may be accessed via their well-known DBus name. | no | no |  |
+| `mpris` | Providing snaps implementing the Media Player Remove Interfacing Specification (mpris) may be accessed via their well-known DBus name. | no | no | `name` (slot): optional, media player name to use for DBus well-known name |
 | `network` | Can access the network as a client. | yes | no |  |
 | `network-bind` | Can access the network as a server. | yes | no |  |
 | `opengl` | Can access OpenGL hardware. | yes | no |  |
@@ -29,11 +29,14 @@ title: "Interfaces reference"
 | `content` | Can access content from the providing snap from within the consuming snap\'s filesystem area. | yes for snaps from same publisher, no otherwise | no | `read` (slot): read-only paths from providing snap to expose to the consuming snap<br> `write` (slot): read-write paths from providing snap to expose to the consuming snap<br> `target` (plug): path in consuming snap to find providing snap\'s files |
 | `cups-control` | Can access cups control socket which gives privileged access to configure printing. | no | no |  |
 | `firewall-control` | Can configure network firewalling giving privileged access to networking. | no | no |  |
+| `fuse-support` | Can mount fuse filesystems (as root only). | no | no |  |
 | `hardware-observe` | Can query hardware information from the system. | no | no |  |
+| `kernel-module-control` | Can insert kernel modules. This interface gives privileged access to the device. | no | no |  |
 | `locale-control` | Can manage locales directly separate from ``config core``. | no | no |  |
 | `location-control` | Can access snaps providing the location-control interface which gives privileged access to configure, observe and use location services. | no | no |  |
 | `location-observe` | Can access snaps providing the location-observe interface which gives privileged access to query location services. | no | no |  |
 | `log-observe` | Can read system logs and set kernel log rate-limiting. | no | no |  |
+| `lxd-support` | Can access all resources and syscalls on the device for LXD to mediate\naccess for its containers. This interface currently may only be\nestablished with the upstream LXD project. | yes | yes |  |
 | `modem-manager` | Can access snaps providing the modem-manager interface which gives privileged access to configure, observe and use modems. | no | no |  |
 | `mount-observe` | Can query system mount information. This is restricted because it gives privileged read access to mount arguments and should only be used with trusted apps. | no | no |  |
 | `network-control` | Can configure networking which gives wide, privileged access to networking. | no | no |  |
@@ -46,3 +49,4 @@ title: "Interfaces reference"
 | `system-observe` | Can query system status information which gives privileged read access to all processes on the system. | no | no |  |
 | `system-trace` | Can use kernel tracing facilities. This is restricted because it gives privileged access to all processes on the system and should only be used with trusted apps. | no | no |  |
 | `timeserver-control` | Can manage timeservers directly separate from ``config core``. | no | no |  |
+| `tpm` | Can access the tpm device /dev/tpm0. | no | no |  |
