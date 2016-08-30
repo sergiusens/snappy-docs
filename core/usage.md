@@ -10,7 +10,7 @@ Snaps are normally installed from a store. You can interact with a store without
 
 Snap stores hold a collection of snaps for delivery to clouds, devices, and private infrastructure. You [sign-in](https://login.ubuntu.com/+login) to a store as follows:
 
-    $ snap login me@myself.com
+    $ sudo snap login me@myself.com
     Password: *********
     2-factor: ******
     Welcome!
