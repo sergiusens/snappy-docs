@@ -49,7 +49,7 @@ of the choice of plugin.
     subtrees of the part, or just specific files.
 
     Note that the path is relative (even though it is "usr/local") because
-    it refers to content underneath parts/<part-name>/install which is going
+    it refers to content underneath `parts/<part-name>/install` which is going
     to be mapped into the stage and prime areas.
 
   - `filesets`: YAML
