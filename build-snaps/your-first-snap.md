@@ -72,10 +72,10 @@ Here, the snap was built on an amd64 machine, so the architecture used in the fi
 
 Now, everything you need for the hello app is inside the snap file. You can install it locally.
 
-The  `--dangerous` flag needs to be used here because your snap has not been signed.
+The  `--force-dangerous` flag needs to be used here because your snap has not been signed.
 
 ```bash
-$ sudo snap install hello_2.10_*.snap --dangerous
+$ sudo snap install hello_2.10_*.snap --force-dangerous
 hello 2.10 installed
 
 64.64 MB / 64.64 MB [=============================] 100.00 % 3.97 MB/s
