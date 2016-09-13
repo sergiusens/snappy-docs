@@ -33,12 +33,7 @@ to set SELINUX=permissive and reboot.
 
 ### Gentoo
 
-Install [snap-confine.ebuild](https://github.com/zyga/snap-confine-gentoo) and [snapd.ebuild](https://github.com/zyga/snapd-gentoo)
-
-```
-# enable the snapd systemd service:
-sudo systemctl enable --now snapd.service
-```
+Install the [gentoo-snappy overlay](https://github.com/zyga/gentoo-snappy).
 
 ### OpenEmbedded/Yocto
 
