@@ -26,7 +26,7 @@ Snaps come with a set of predefined environment variables:
 * `SNAP_USER_COMMON`: per-user writable area persistent across all revisions of the snap
 * `TMPDIR`: set to `/tmp`
 
-An easy way to list their values for your snap is to add an `env` command to your snap:
+An easy way to list their values is to add an `env` command to your snap:
 
     $ mysnap.env
     [...]
