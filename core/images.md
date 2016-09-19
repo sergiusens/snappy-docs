@@ -5,9 +5,9 @@ This document will walk you through all the steps to build an image for your sna
 
 ## Your signature key
 
-A key is needed to sign your store uploads, this is especially important for device images as it secures the upload of the `ubuntu-core` snap, the most important snap of all, powering all other snaps on a device.
+A key is needed to sign your store uploads.
 
-### Create a signature key
+### Create a key
 
 As a first step, you have to generate a key pair that will be linked to your Ubuntu Store account.
 
@@ -15,23 +15,23 @@ As a first step, you have to generate a key pair that will be linked to your Ubu
 
 This will ask you for a password to protect the key and will take some time to finish (it's creating a 4096 bit long key and needs some entropy to complete: you can move the mouse, type on the keyboard, etc.)
 
-You can see your key with:
+You can list your keys with:
 
     $ snap keys
 
 ### Upload the key to the store
 
-Next, you have to upload the key to the store, effectively linking it to your account. During this step, you will be asked to login with your store account.
+Next, you have to upload it to the store, effectively linking it to your account. During this step, you will be asked to login with your store account credentials.
 
 Note that this step requires at least snapcraft 2.17.
 
     $ snapcraft register-key
 
-The key is now registered with the store and we can start the actual image building.
+The key is now registered with the store and you can start the actual image building.
 
 ## Image building
 
-An ubuntu-core image is composed of at least three snaps: OS, gadget and kernel. These are declared by a "model assertion", a signed JSON document defining your image.
+An `ubuntu-core` image is composed of at least three snaps: OS, gadget and kernel. THis composition is declared through a "model assertion", a signed JSON document defining your image.
 
 ### Create a model assertion
 
