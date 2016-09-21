@@ -22,6 +22,7 @@ title: "Interfaces reference"
 | `opengl` | Can access OpenGL hardware. | yes | no |  |
 | `optical-drive` | Can access the first optical drive in read-only mode. Suitable for CD/DVD playback. | yes | no |  |
 | `pulseaudio` | Can access the PulseAudio sound server which allows for sound playback in games and media application. Recording not supported but will be in a future release. | yes | no |  |
+| `removable-media` | Can access files from removable media in /media and /run/media | no | no |  |
 | `screen-inhibit-control` | Can access desktop session manager screen inhibit and uninhibit functionality. | yes | no |  |
 | `unity7` | Can access Unity7. Unity 7 runs on X and requires access to various DBus services. This interface grants privileged access to the user\'s session since the Unity 7 environment does not prevent eavesdropping or apps interfering with one another. | yes | yes |  |
 | `x11` | Can access the X server which gives privileged access to the user\'s session since X does not prevent eavesdropping or apps interfering with one another. | yes | yes |  |
@@ -34,7 +35,9 @@ title: "Interfaces reference"
 | `fuse-support` | Can mount fuse filesystems (as root only). | no | no |  |
 | `fwupd` | Can access snaps providing the fwupd interface which gives privileged access to update UEFI capsule format firmware. | no | no |  |
 | `hardware-observe` | Can query hardware information from the system. | no | no |  |
+| `hidraw` | Can access hidraw devices. This is restricted because it provides privileged access to hardware devices. | no | no |  |
 | `kernel-module-control` | Can insert kernel modules. This interface gives privileged access to the device. | no | no |  |
+| `libvirt` | Can access the libvirt control socket, which gives privileged access to control libvirtd on the host. This is commonly used to create and manage QEMU/KVM instances on the host. | no | no |  |
 | `locale-control` | Can manage locales directly separate from ``config core``. | no | no |  |
 | `location-control` | Can access snaps providing the location-control interface which gives privileged access to configure, observe and use location services. | no | no |  |
 | `location-observe` | Can access snaps providing the location-observe interface which gives privileged access to query location services. | no | no |  |
@@ -47,10 +50,11 @@ title: "Interfaces reference"
 | `network-observe` | Can query network status information which gives privileged read-only access to networking information. | no | no |  |
 | `ppp` | Can access Point-to-Point protocol daemon which gives privileged access to configure and observe PPP networking. | no | no |  |
 | `process-control` | Can manage processes via signals and nice. | no | no |  |
-| `serial-port` | Can access serial ports. This is restricted because it provides privileged access to configure serial port hardware. | no | no | `path` (slot): path to serial device |
+| `serial-port` | Can access serial ports. This is restricted because it provides privileged access to configure serial port hardware. | no | no | Should specify a single path attribute:<br>`path` (slot): path to hidraw device node e.g. /dev/hidraw0<br><br>Or three attributes:<br>`usb-vendor` (slot): integer representing the USB Vendor ID, must be in range 0 < vid <= 65535,<br>`usb-product` (slot): integer representing the USB Product ID, must be in range 0 <= vid <= 65535,<br>`path` (slot): path where a symlink will be created to the device e.g. /dev/hidraw-mydevice  |
 | `snapd-control` | Can manage snaps via snapd. | no | no |  |
 | `system-observe` | Can query system status information which gives privileged read access to all processes on the system. | no | no |  |
 | `system-trace` | Can use kernel tracing facilities. This is restricted because it gives privileged access to all processes on the system and should only be used with trusted apps. | no | no |  |
 | `timeserver-control` | Can manage timeservers directly separate from ``config core``. | no | no |  |
 | `tpm` | Can access the tpm device /dev/tpm0. | no | no |  |
+| `udisks2` | Can access snaps providing the udisks2 interface which gives privileged access to storage on the device | no | no |  |
 | `upower-observe` | Can query UPower for power devices, history and statistics. | yes | no |  |

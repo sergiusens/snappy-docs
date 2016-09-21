@@ -3,16 +3,16 @@ title: "Parts"
 ---
 
 
-Parts are reusable components that are the main building block used to create snaps using Snapcraft. Parts have their own private space and lifecycle. Each part uses a plugin, which tells the part how to behave and what to do with the information inside it. Parts are analogous to a library that you would call in your program. There are three types of parts:
+Parts are reusable components that are the main building blocks used to create snaps using Snapcraft. Parts have their own private space and lifecycle. Each part uses a plugin, which tells the part how to behave and what to do with the information inside it. Parts are analogous to a library that you would call in your program. There are three types of parts:
 
-- Parts from local source that use local files on your machine. For example (as seen in `10-SNAPS/01-service/`<sup>1</sup>):
+- Parts that use local files on your machine. For example:
 
          parts:
            hello:
              plugin: nodejs
-               source:
+               source: .
 
-- Parts from online sources, such as `git`, `bzr`, `tarball`, or any code repository you like. For example (as seen in `00-SNAPCRAFT/01-easy-start/`):
+- Parts from online sources, such as `git`, `bzr`, a tarball, or any code repository you like. For example:
 
         parts:
           godd:
@@ -22,7 +22,7 @@ Parts are reusable components that are the main building block used to create sn
            plugin: autotools
             source: http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz
 
-- Parts built and shared by others through the [Ubuntu Wiki](https://wiki.ubuntu.com/snapcraft/parts). For example, using a part for curl defined in the wiki:
+- Parts built and shared by others through the [remote parts repository](https://wiki.ubuntu.com/snapcraft/parts). For example, using a part for `curl` defined in this repository:
 
         parts:
             client:
@@ -32,27 +32,33 @@ Parts are reusable components that are the main building block used to create sn
 
 ## Defining parts in snapcraft.yaml
 
-The snapcraft.yaml key `parts` defines a map of the parts you want to include in your snap. Sub-keys enable you to define how those parts are configured when your snap is build. The sub-keys as as follows: 
+The snapcraft.yaml `parts` key defines a map of the parts you want to include in your snap. Each plugin used for a part provides his own set of rules and sub-keys, but also relies on a common set of sub-keys:
 
 Key | Type | Purpose
 :----- | :---- | :-----
-`plugin` | (string) | Specifies the plugin that will manage this part.  Snapcraft will pass the plugin all the other user-specified part options, those options defined with the other keys below. There are three way in which the plugin can be defined: a plugin name to use a build-in plug-in, a local path such as `parts/plugins/x-plugin_name.py` to use a local (custom defined) plugin and if `plugin` is not defined locally, the plugin defined for the part in the [Ubuntu Wiki](https://wiki.ubuntu.com/snapcraft/parts).
-`after` | (list of strings) | Specifies any parts that should be built before this part, which Snapcraft then stages before trying to build this part.  This is useful when a part needs a library or build tool built by another part. If the part defined in `after` is not defined locally, the part will be searched for in the [wiki](https://wiki.ubuntu.com/snapcraft/parts).
+`plugin` | (string) | Specifies the plugin that will manage this part.  Snapcraft will pass the plugin all the other user-specified part options, those options defined with the other keys below. There are three way in which the plugin can be defined: a plugin name to use a built-in plug-in (for details, see the [list of built-in plugins](/docs/reference/plugins)), a local path such as `parts/plugins/x-plugin_name.py` to use a local (custom defined) plugin and if `plugin` is not defined locally, the plugin defined for the part in the [remote parts repository](https://wiki.ubuntu.com/snapcraft/parts).
+`after` | (list of strings) | Specifies any parts that should be built before this part, which Snapcraft then stages before trying to build this part.  This is useful when a part needs a library or build tool built by another part. If the part defined in `after` is not defined locally, the part will be searched for in the [remote parts repository](https://wiki.ubuntu.com/snapcraft/parts).
 `stage-packages` | (list of strings) | A list of Ubuntu packages to use that are needed to support the part creation.
 `filesets` | (yaml subsection) | A dictionary with filesets, the key being a recognizable user defined string and its value a list of strings of files to be included or excluded. Globbing is achieved with `*` for either inclusions or exclusion. Exclusions are denoted by a `-`. Globbing is computed from the private sections of the part.
 `organize` | (yaml subsection) | A dictionary exposing replacements. The key is the internal name while the value the exposed (replacement) name (for example, `source_name: map_name`). **Note**: `filesets` refer to the exposed names of files, after the organization has been applied.
 `stage` | (list of strings) | A list of files from a part’s installation to expose in stage. Rules applying to the list here are the same as those of filesets. Referencing of fileset keys is done with a `$` prefixing the fileset key, which will expand with the value of such key.
-snap | (list of strings) | A list of files from a part’s installation to expose in the snap. Rules applying to the list here are the same as those of filesets. Referencing of fileset keys is done with a `$` prefixing the fileset key, which will expand with the value of such key.
+`snap` or `prime` | (list of strings) | A list of files from a part’s installation to expose in the snap. Rules applying to the list here are the same as those of filesets. Referencing of fileset keys is done with a `$` prefixing the fileset key, which will expand with the value of such key.
 
 You can define your parts in any order, `after` takes care of any required build order.
 
+Usage examples for these sub-keys are available in the [common keywords](/docs/reference/plugins/common) reference documentation.
+
 ## Working with Snapcraft parts
 
-You've a number of ways in which to incorporate parts into you snaps. For example, you may want to enhance your part’s functionality using `stage-packages` to bring Ubuntu deb-based packages into your part, `filesets` to declare inclusion and exclusion sets, `organize` so make the artifact output for your part neater, `stage` and `snap` to make certain only the right set of files is seen at each stage (making use of filesets or not). An example integrating these concepts for a part called `example-part` using a plugin called `null` would look like:
+You've a number of ways in which to organize and include parts into you snaps. For example, you may want to enhance your part’s functionality using `stage-packages` to bring Ubuntu deb-based packages into your part, `filesets` to declare inclusion and exclusion sets, `organize` so make the artifact output for your part neater, `stage` and `snap` to make certain only the right set of files is seen at each stage (making use of filesets or not).
+
+### Advanced example
+
+An example integrating all these concepts for a part called `example-part` using a plugin called `nil` would look like:
 
      parts:
        example-part:
-         type: null
+         type: nil
          stage-packages:
            - gnupg
            - wget
@@ -71,24 +77,24 @@ You've a number of ways in which to incorporate parts into you snaps. For exampl
            - $headers
          snap:
            - $binaries
- 
-In this example, the `null` plugin builds something in its private build location using its private source directory as a base, and it installs the usual set of files to the file, except it will install the part’s private install directory.
 
-This `null` plugin makes use of `stage-packages`, these packages are fetched from the Ubuntu deb archive using the series (release, i.e.; trusty, vivid, wily, …) that is being used on the host. In this case, the part will be enhanced by the `gpg` and `wget` deb packages and its necessary dependencies to work isolated inside the part.
+In this example
 
-When reaching the stage phase, the components in the private part’s install directory will be exposed there, but since the `organize` key is being used the contents in the install directory will be exposed to other parts in a cleaner form if desired or required; it is important to notice that when using `filesets` they will follow the organized files and not the internal layout.
+* the [`nil`](/docs/reference/plugins/nil) plugin makes use of `stage-packages`, these packages are fetched from the Ubuntu deb archive using the release (eg. 16.04) that is being used on the host. In this case, the part will be enhanced by the `gpg` and `wget` deb packages and its necessary dependencies to work isolated inside the part.
 
-The concept of `filesets` enables the creation of sets named after the keywords defined within, in this case binaries and headers, these are not necessarily needed but allow for variable expansion in the common targets: stage and snap. An inclusion is defined by just listing the target file, it can be globbed with * and a file can be explicitly excluded by prepending a - (when using * at the beginning of a path it needs to be quoted).
+* when reaching the stage phase, the components in the part’s install directory will be exposed there, but since the `organize` key is being used, the contents in the install directory will be exposed to other parts in a cleaner form if desired or required; it is important to notice that when using `filesets` they will follow the organized files and not the initial layout.
 
-The `stage` key then:
+* the concept of `filesets` enables the creation of sets named after the keywords defined within, in this case binaries and headers, these are not necessarily needed but allow for variable expansion in the common targets: stage and snap. An inclusion is defined by just listing the target file, it can be globbed with "\*" and a file can be explicitly excluded by prepending a "-".
 
-- replaces `$binaries` will be the binaries defined in filesets.
-- Adds `test/bin/test_app` to the stage file set.
-- `$headers` will include all the header files, except those from `include` as it is suffixed with -, indicating these files should be excluded.
+* The `stage` key then:
 
-These are the files that will be moved to the stage directory.
+    - replaces `$binaries` with the binaries defined in filesets.
+    - Adds `test/bin/test_app` to the stage directory.
+    - `$headers` will include all the header files, except those from `include` as it is suffixed with -, indicating these files should be excluded.
 
-The behavior for the snap step is identical to stage except that the file manipulation is applied to the snap directory, which is the final file/content layout for the snap. This is where everything should look clean and crisp for a good quality snap.
+    These are the files that will be moved to the stage directory.
+
+    The behavior for the snap step is identical to stage except that the file manipulation is applied to the snap directory, which is the final file/content layout for the snap. This is where everything should look clean and crisp for a good quality snap.
 
 ## Snapcraft for Python with PIP
 
@@ -108,6 +114,8 @@ A Python part will typically make sure that the required Python packages are ins
 The proper **PYTHONPATH** environment variable will also be set in the wrapper scripts generated by Snapcraft or when running your app locally.
 
 Python parts support standard Snapcraft options and the requirements option to point PIP at its requirements file.
+
+For details, see the complete reference and real-world examples of the [`python2`](/docs/reference/plugins/python2) and [`python3`](/docs/reference/plugins/python3) plugins.
 
 ### Embedding a Python runtime
 
@@ -132,44 +140,4 @@ An Ant part works similarly, except it runs ant and sets the proper **CLASSPATH*
 
 If you only need to embed a Java runtime, add a part with the `jdk` type. This will pull a relocatable OpenJDK via the default-jdk Ubuntu package and will set the proper **JAVA_HOME** and **PATH** environment variables in wrapper scripts generated by Snapcraft or when running the app locally.
 
-## Exercise
-
-The features of parts shared through the [wiki](https://wiki.ubuntu.com/snapcraft/parts) is the focus of the exercise:
-
-    $ cd ../../20-PARTS-PLUGINS/01-reusable-part
-    $ snapcraft
-    $ sudo snap install hello-world-desktop_0.1_*.snap
-
-Which can be run with the `hello-world-desktop` command as defined in the `snapcraft.yaml`:
-
-    apps:
-        hello-world-desktop:
-          command: qt5-launch hello-world-desktop
-
-But notice this involves an extra tool `qt5-launch`, which prepares the environment for launching the real application. These `qt5-launch` and `hello-world-desktop` commands come from:
-
-    parts:
-      hello-world:
-        plugin: cmake
-        source: src/
-        build-packages:
-          - qtbase5-dev
-        stage-packages:
-          # Here for the plugins-- they're not linked in automatically.
-          - libqt5gui5
-        after: [qt5conf] # A part in the cloud
-
-In this part definition:
-
-*   `build-packages` lists the dependencies needed to build the contents of the snap. These aren't packed into the final snap. `qtbase5-dev` has been specified here since that package contains the headers, libraries, and tools needed to build the app
-*   `stage-packages` lists the dependencies needed to actually run the contents of the snap. They'll be packed into the final snap. Here, the requirement is for the hello-world part to download and unpack `libqt5gui5` with all its dependencies. This method can reuse any of the 48000 .deb packages that traditional Ubuntu provides. It's really that easy: just specify the packages you need embedded into your snap
-*   `after:` [`qt5conf`] lists the parts that must be staged before this part can be built. However, you may have noticed that this YAML doesn't actually contain the `qt5conf` part. That's because it's a part in the cloud, which is a way for collaborating, reusing, and sharing already-written parts. The previously mentioned `qt5-launch` tool comes from the `qt5conf` part, without any additional effort from you. This way you can make use of and build upon what others have created
-
-## Sharing your parts with other developers
-
-If you would like to publish your own parts, you can contribute them on the [Ubuntu Wiki](https://wiki.ubuntu.com/snapcraft/parts).
-
--------
-(1) Examples on this page are from the Snapcraft tour, which is installed by running `$ snapcraft tour`.
-
-
+For details, see the complete reference and real-world examples of the [`maven`](/docs/reference/plugins/maven) and [`ant`](/docs/reference/plugins/ant) plugins.
