@@ -1,6 +1,5 @@
-
 ---
-title: "The godeps plugin"
+title: The godeps plugin
 ---
 
 The godeps plugin can be used for godeps-enabled go projects.
@@ -9,7 +8,7 @@ These projects have a file containing information about the project's
 dependencies. This file is typically called "dependencies.tsv," but may be
 named anything.
 
-This plugin uses the following plugin-specific keywords:
+### Plugin-specific keywords
 
     - godeps-file:
       (string)

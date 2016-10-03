@@ -1,6 +1,5 @@
-
 ---
-title: "The autotools plugin"
+title: The autotools plugin
 ---
 
 The autotools plugin is used for autotools based parts.
@@ -11,7 +10,7 @@ Autotools based projects are the ones that have the usual
 The plugin tries to build using ./configure first, if it is not there
 it will run ./autogen and if autogen is not there it will run autoreconf.
 
-In addition, this plugin uses the following plugin-specific keywords:
+### Plugin-specific keywords
 
     - configflags:
       (list of strings)

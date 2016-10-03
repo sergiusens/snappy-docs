@@ -1,6 +1,5 @@
-
 ---
-title: "The gulp plugin"
+title: The gulp plugin
 ---
 
 This plugin is used for gulp.js, the streaming build system.
@@ -8,7 +7,7 @@ This plugin is used for gulp.js, the streaming build system.
 The plugin uses gulp to drive the build. It requires a gulpfile.js in
 the root of the source.
 
-This plugin uses the following plugin-specific keywords:
+### Plugin-specific keywords
 
     - gulp-tasks:
       (list)

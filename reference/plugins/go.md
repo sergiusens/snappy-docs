@@ -1,11 +1,10 @@
-
 ---
-title: "The go plugin"
+title: The go plugin
 ---
 
 The go plugin can be used for go projects using `go get`.
 
-This plugin uses the following plugin-specific keywords:
+### Plugin-specific keywords
 
     - go-packages:
       (list of strings)

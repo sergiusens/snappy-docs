@@ -1,15 +1,13 @@
-
 ---
-title: "The gradle plugin"
+title: The gradle plugin
 ---
 
 This plugin is useful for building parts that use gradle.
 
 The gradle build system is commonly used to build Java projects.
-
 The plugin requires a pom.xml in the root of the source tree.
 
-This plugin uses the following plugin-specific keywords:
+### Plugin-specific keywords
 
     - gradle-options:
       (list of strings)

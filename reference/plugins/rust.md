@@ -1,13 +1,12 @@
-
 ---
-title: "The rust plugin"
+title: The rust plugin
 ---
 
 This rust plugin is useful for building rust based parts.
 
 Rust uses cargo to drive the build.
 
-This plugin uses the following plugin-specific keywords:
+### Plugin-specific keywords
 
     - rust-channel
       (string)

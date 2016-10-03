@@ -1,13 +1,12 @@
-
 ---
-title: "The qmake plugin"
+title: The qmake plugin
 ---
 
 The qmake plugin is useful for building qmake-based parts.
 
 These are projects that are built using .pro files.
 
-This plugin uses the following plugin-specific keywords:
+### Plugin-specific keywords
 
     - options:
       (list of strings)

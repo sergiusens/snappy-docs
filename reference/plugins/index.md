@@ -20,7 +20,7 @@ Note that you can run `$ snapcraft help <plugin>` to access the following docume
 ## Languages
 
 *   Java: [ant](/docs/reference/plugins/ant), [gradle](/docs/reference/plugins/gradle), [maven](/docs/reference/plugins/maven)
-*   Python: [python2](/docs/reference/plugins/python2), [python3](/docs/reference/plugins/python3)
+*   Python: [python](/docs/reference/plugins/python), [python2](/docs/reference/plugins/python2), [python3](/docs/reference/plugins/python3)
 *   Node: [gulp](/docs/reference/plugins/gulp), [nodejs](/docs/reference/plugins/nodejs)
 *   Go: [go](/docs/reference/plugins/go), [godeps](/docs/reference/plugins/godeps)
 *   Rust: [rust](/docs/reference/plugins/rust)

@@ -1,9 +1,10 @@
-
 ---
-title: "The python3 plugin"
+title: The python3 plugin (deprecated)
 ---
 
 The python3 plugin can be used for python 3 based parts.
+
+This plugin is DEPRECATED in favor of the python plugin.
 
 The python3 plugin can be used for python 3 projects where you would
 want to do:
@@ -12,11 +13,17 @@ want to do:
     - build a python project that has a setup.py
     - install sources straight from pip
 
-This plugin uses the following plugin-specific keywords:
+### Plugin-specific keywords
 
     - requirements:
       (string)
-      path to a requirements.txt file
+      Path to a requirements.txt file
+    - constraints:
+      (string)
+      Path to a constraints file
+    - process-dependency-links:
+      (bool; default: false)
+      Enable the processing of dependency links.
     - python-packages:
       (list)
       A list of dependencies to get from PyPi

@@ -1,6 +1,5 @@
-
 ---
-title: "The kernel plugin"
+title: The kernel plugin
 ---
 
 The kernel plugin refines the generic kbuild plugin to allow building

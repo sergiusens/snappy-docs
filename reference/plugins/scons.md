@@ -1,13 +1,12 @@
-
 ---
-title: "The scons plugin"
+title: The scons plugin
 ---
 
 The scons plugin is useful for building parts that build with scons.
 
 These are projects that have a SConstruct that drives the build.
 
-This plugin uses the following plugin-specific keywords:
+### Plugin-specific keywords
 
     - scons-options:
       (list of strings)

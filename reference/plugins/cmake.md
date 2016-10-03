@@ -1,6 +1,5 @@
-
 ---
-title: "The cmake plugin"
+title: The cmake plugin
 ---
 
 The cmake plugin is useful for building cmake based parts.
@@ -8,7 +7,7 @@ The cmake plugin is useful for building cmake based parts.
 These are projects that have a CMakeLists.txt that drives the build.
 The plugin requires a CMakeLists.txt in the root of the source tree.
 
-This plugin uses the following plugin-specific keywords:
+### Plugin-specific keywords
 
     - configflags:
       (list of strings)

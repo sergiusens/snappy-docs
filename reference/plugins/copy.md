@@ -1,13 +1,12 @@
-
 ---
-title: "The copy plugin"
+title: The copy plugin (deprecated)
 ---
 
 The copy plugin is useful for assets or other sources with no build system.
 
 This plugin is DEPRECATED in favor of the `dump` plugin.
 
-This plugin uses the following plugin-specific keywords:
+### Plugin-specific keywords
 
     - files:
       (object)

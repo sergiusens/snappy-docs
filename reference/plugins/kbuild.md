@@ -1,6 +1,5 @@
-
 ---
-title: "The kbuild plugin"
+title: The kbuild plugin
 ---
 
 The kbuild plugin is used for building kbuild based projects as snapcraft

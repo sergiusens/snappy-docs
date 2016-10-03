@@ -1,11 +1,10 @@
-
 ---
-title: "The catkin plugin"
+title: The catkin plugin
 ---
 
 The catkin plugin is useful for building ROS parts.
 
-This plugin uses the following plugin-specific keywords:
+### Plugin-specific keywords
 
     - catkin-packages:
       (list of strings)

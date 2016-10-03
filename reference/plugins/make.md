@@ -1,6 +1,5 @@
-
 ---
-title: "The make plugin"
+title: The make plugin
 ---
 
 The make plugin is useful for building make based parts.
@@ -8,10 +7,10 @@ The make plugin is useful for building make based parts.
 Make based projects are projects that have a Makefile that drives the
 build.
 
-This plugin always runs `make` followed by `make install`, except when
-the `artifacts` keyword is used.
+This plugin always runs 'make' followed by 'make install', except when
+the 'artifacts' keyword is used.
 
-This plugin uses the following plugin-specific keywords:
+### Plugin-specific keywords
 
     - artifacts:
       (list)

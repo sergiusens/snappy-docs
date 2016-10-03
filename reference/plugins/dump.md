@@ -1,9 +1,8 @@
-
 ---
-title: "The dump plugin"
+title: The dump plugin
 ---
 
-This plugin just dumps the content from a specified `source`.
+This plugin just dumps the content from a specified source.
 
 In the cases where dumping the content needs some mangling or organizing
 one would take advantage of the core functionalities available to plugins
