@@ -52,6 +52,16 @@ The Ubuntu Store can, if needed, rename snaps to ensure they match the expectati
 
 ## 3. Upload your snap
 
+Before you upload your snap, have a quick look at your `snapcraft.yaml` file again. Two settings (`grade` and `confinement`) will define which channels you can release your snap to.
+
+|                 | `confinement: strict`  | `confinement: devmode` |
+| --------------- | ---------------------- | ---------------------- |
+| `grade: stable` | *all* channels         | `beta` and `edge` only |
+| `grade: devel`  | `beta` and `edge` only | `beta` and `edge` only |
+
+It's worth noting that the user of your snaps will have to use `--devmode` to install a snap using `confinement: devmode`. This means that they have to willingly accept that the snap is breaking out of confinement.
+
+### Pushing the snap
 Snap upload to the store can be done either from the Ubuntu Store web interface or directly by using the command-line.
 
 Once you have a working snap, you can run `snapcraft push snap-name.snap` to push it to the store.
