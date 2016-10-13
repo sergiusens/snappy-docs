@@ -52,7 +52,7 @@ The Ubuntu Store can, if needed, rename snaps to ensure they match the expectati
 
 ## 3. Upload your snap
 
-Before you upload your snap, have a quick look at your `snapcraft.yaml` file again. Two settings (`grade` and `confinement`) will define which channels you can release your snap to.
+Before you upload your snap, have a quick look at your `snapcraft.yaml` file again. Two settings (`grade` and `confinement`) will define which [channels](#release-channels) you can release your snap to.
 
 |                 | `confinement: strict`  | `confinement: devmode` |
 | --------------- | ---------------------- | ---------------------- |
