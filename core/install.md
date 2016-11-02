@@ -6,6 +6,9 @@ title: Install snapd
 
 ```
 sudo pacman -S snapd
+
+# enable the snapd systemd service:
+sudo systemctl enable --now snapd.socket
 ```
 
 ### Debian
