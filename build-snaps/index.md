@@ -2,36 +2,19 @@
 title: "Build snaps"
 ---
 
+## Install snapcraft
 
-This section provides details on how to use Snapcraft to create application snaps, as well as covering the common and advanced features of snap development. The content includes:
+`snapcraft` is the tool to create snaps. It's available on Ubuntu 16.04 LTS and above. To install it, simply run:
 
-*   [Your first snap](/docs/build-snaps/your-first-snap)
-*   [Snapcraft syntax](/docs/build-snaps/syntax)
-*   [Parts](/docs/build-snaps/parts)
-*   [Plugins](/docs/build-snaps/plugins)
-*   [Commands, daemons & assets](/docs/build-snaps/metadata)
-*   [Debugging](/docs/build-snaps/debugging)
-*   [Publish your snap](/docs/build-snaps/publish)
-*   [Advanced features](/docs/build-snaps/advanced-features)
+    sudo apt install snapcraft
 
-## Install Snapcraft
+It will also install and run on any Linux distribution using an up-to-date version of [LXD, the container hypervisor](http://www.ubuntu.com/cloud/lxd).
 
-If you haven't installed snapcraft, it's available on Ubuntu 16.04 LTS:
+### Build your first snap
 
-    $ sudo apt install snapcraft
+A concise, step by step, snap example is the best way to get started! Heads on to [Your first snap](/docs/build-snaps/your-first-snap).
 
-It will also install and run on any Linux distribution with an up-to-date version of [LXD, the container hypervisor](http://www.ubuntu.com/cloud/lxd).
-
-### Take the tour
-
-A number of exercises included in this documentation use the snapcraft tour, a list of examples you load using the `snapcraft tour` command.
-
-    $ snapcraft tour
-    Snapcraft tour initialized in ./snapcraft-tour/
-
-The [Create](http://snapcraft.io/create/) page is an easy-to-use companion to this tour, that will walk you through the creation of snaps.
-
-## Examples repository
+### Examples repository
 
 The Snappy Playpen is an incubator dedicated to providing snaps examples and cover the widest range of projects possible: desktop apps, server, CLI, GUI, Gtk, Qt, SDL, Python, Go, Vala, C, C++, Java, etc. On its GitHub repo and the associated chat, you will find examples and experts to help you with your snaps.
 

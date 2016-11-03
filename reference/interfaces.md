@@ -31,11 +31,14 @@ title: "Interfaces reference"
 | `bluez` | Can access snaps providing the bluez interface which gives privileged access to bluetooth. | no | no |  |
 | `content` | Can access content from the providing snap from within the consuming snap\'s filesystem area. | yes for snaps from same publisher, no otherwise | no | `read` (slot): read-only paths from providing snap to expose to the consuming snap<br> `write` (slot): read-write paths from providing snap to expose to the consuming snap<br> `target` (plug): path in consuming snap to find providing snap\'s files |
 | `cups-control` | Can access cups control socket which gives privileged access to configure printing. | no | no |  |
+| `dcdbas-control` | Can interact with the Dell Systems Management Base Driver which provides a sysfs interface for systems management software such as Dell OpenManage to perform system management interrupts and host control actions (system power cycle or power off after OS shutdown) on certain Dell systems.  | no | no |  |
+| `docker` | Can access snaps providing the docker interface which gives privileged access to the system. | no | no |  |
+| `docker-support` | Can access resources and syscalls necessary to run Docker application containers. The ``privileged-containers`` attribute may be used to give the necessary access to run privileged containers. Providing snaps specifying this interface currently may only be established with the Docker project. | no | no | `privileged-containers` (plug): true\|false (defaults to ``false``) |
 | `firewall-control` | Can configure network firewalling giving privileged access to networking. | no | no |  |
 | `fuse-support` | Can mount fuse filesystems (as root only). | no | no |  |
 | `fwupd` | Can access snaps providing the fwupd interface which gives privileged access to update UEFI capsule format firmware. | no | no |  |
 | `hardware-observe` | Can query hardware information from the system. | no | no |  |
-| `hidraw` | Can access hidraw devices. This is restricted because it provides privileged access to hardware devices. | no | no |  |
+| `hidraw` | Can access hidraw devices. This is restricted because it provides privileged access to hardware devices. | no | no | Should specify a single path attribute:<br>`path` (slot): path to hidraw device node e.g. /dev/hidraw0<br><br>Or three attributes:<br>`usb-vendor` (slot): integer representing the USB Vendor ID, must be in range 0 < vid <= 65535,<br>`usb-product` (slot): integer representing the USB Product ID, must be in range 0 <= vid <= 65535,<br>`path` (slot): path where a symlink will be created to the device e.g. /dev/hidraw-mydevice |
 | `kernel-module-control` | Can insert kernel modules. This interface gives privileged access to the device. | no | no |  |
 | `libvirt` | Can access the libvirt control socket, which gives privileged access to control libvirtd on the host. This is commonly used to create and manage QEMU/KVM instances on the host. | no | no |  |
 | `locale-control` | Can manage locales directly separate from ``config core``. | no | no |  |
@@ -48,13 +51,17 @@ title: "Interfaces reference"
 | `network-control` | Can configure networking which gives wide, privileged access to networking. | no | no |  |
 | `network-manager` | Can access snaps providing the network-manager interface which gives privileged access to configure and observe networking. | no | no |  |
 | `network-observe` | Can query network status information which gives privileged read-only access to networking information. | no | no |  |
+| `network-setup-observe` | Can read network setup configuration files. This is restricted because it gives access to system network configuration which can contain network security details. | no | no |  |
 | `ppp` | Can access Point-to-Point protocol daemon which gives privileged access to configure and observe PPP networking. | no | no |  |
 | `process-control` | Can manage processes via signals and nice. | no | no |  |
-| `serial-port` | Can access serial ports. This is restricted because it provides privileged access to configure serial port hardware. | no | no | Should specify a single path attribute:<br>`path` (slot): path to hidraw device node e.g. /dev/hidraw0<br><br>Or three attributes:<br>`usb-vendor` (slot): integer representing the USB Vendor ID, must be in range 0 < vid <= 65535,<br>`usb-product` (slot): integer representing the USB Product ID, must be in range 0 <= vid <= 65535,<br>`path` (slot): path where a symlink will be created to the device e.g. /dev/hidraw-mydevice  |
+| `serial-port` | Can access serial ports. This is restricted because it provides privileged access to configure serial port hardware. | no | no | Should specify a single path attribute:<br>`path` (slot): path to serial device node e.g. /dev/ttyS1<br><br>Or three attributes:<br>`usb-vendor` (slot): integer representing the USB Vendor ID, must be in range 0 < vid <= 65535,<br>`usb-product` (slot): integer representing the USB Product ID, must be in range 0 <= vid <= 65535,<br>`path` (slot): path where a symlink will be created to the device e.g. /dev/serial-port-mydevice  |
+| `shutdown` | Can control the system power state and rebooting, powering off or halting the system. | no | no |  |
 | `snapd-control` | Can manage snaps via snapd. | no | no |  |
 | `system-observe` | Can query system status information which gives privileged read access to all processes on the system. | no | no |  |
 | `system-trace` | Can use kernel tracing facilities. This is restricted because it gives privileged access to all processes on the system and should only be used with trusted apps. | no | no |  |
-| `timeserver-control` | Can manage timeservers directly separate from ``config core``. | no | no |  |
+| `time-control` | Can set system time and date and query systemd-timedated for time information. | no | no |  |
+| `timeserver-control` | Can manage timeservers via systemd-timedated and directly separate from ``config core`` | no | no |  |
+| `timezone-control` | Can manage timezone via systemd-timedated and directly separate from ``config core`` | no | no |  |
 | `tpm` | Can access the tpm device /dev/tpm0. | no | no |  |
 | `udisks2` | Can access snaps providing the udisks2 interface which gives privileged access to storage on the device | no | no |  |
 | `upower-observe` | Can query UPower for power devices, history and statistics. | yes | no |  |
