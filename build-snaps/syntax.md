@@ -9,7 +9,11 @@ independent from each other. In addition to parts, there are attributes
 that define the metadata for the snap package.
 
 What follows is a list of all the attributes the `snapcraft.yaml` file can
-contain.
+contain. They are separated by categories to make this document clearer, but can be declared in any order in the `yaml` file.
+
+### General metadata
+
+The following keys are used to declare the general metadata of your snap: how it will be presented to users, its version, development status and how the store should consider it (ready for a release in the `stable` channel or not).
 
 * `name` (string)
   The name of the resulting snap.
@@ -24,6 +28,11 @@ contain.
   The type of confinement supported by the snap. Can be either "devmode" (i.e.
   this snap doesn't support running under confinement) or "strict" (i.e. full
   confinement supported via interfaces).
+* `grade` (string)
+  This defines the quality grade of the snap. It can be either "devel" (i.e.
+  a development version of the snap, so not to be published to the "stable" or
+  "candidate" channels) or "stable" (i.e. a stable release or release
+  candidate, which can be released to all channels).
 * `assumes` (list of strings)
   A list of features that must be supported by the core in order for this snap
   to install.
@@ -31,6 +40,13 @@ contain.
   The epoch to which this revision of the snap belongs. This is used to specify
   upgrade paths. For example, `0` is epoch 0; `1*` is the upgrade path from 0 to
   1; `1` is epoch 1, etc.
+* `icon` (string)
+  Path to the icon that will be used for the snap.
+
+### Apps and commands
+
+Snaps can ship multiple applications and commands. The following keys allow you to declare them, making them available to users once the snap is installed. The [commands, daemons and assets section](/docs/build-snaps/metadata) contains examples of commands and daemons declarations.
+
 * `apps` (yaml subsection)
   A map of keys for applications. These are either daemons or command line
   accessible binaries.
@@ -39,9 +55,14 @@ contain.
       command is used to start the service.
     * `daemon` (string)
       If present, integrates the runnable as a system service. Valid values are
-      `forking` and `simple`.
+      `forking`, `oneshot` and `simple`.
+
       If set to `simple`, it is expected that the command configured is the main
       process.
+
+      If set to `oneshot`, it is expected that the command configured
+      will exit once it's done (won't be a long-lasting process).
+
       If set to `forking`, it is expected that the configured command will call
       fork() as part of its start-up. The parent process is expected to exit
       when start-up is complete and all communication channels are set up.
@@ -54,23 +75,15 @@ contain.
       Requires `daemon` to be specified. It is the length of time in seconds
       that the system will wait for the service to stop before terminating it
       via `SIGTERM` (and `SIGKILL` if that doesn't work).
-* `icon` (string)
-  Path to the icon that will be used for the snap.
-* `license` (string)
-  Path to a license file.
-* `license-agreement` (string)
-  Requires `license` to be set. The only valid value for this entry is
-  `explicit` which requires the license to be accepted for the snap to
-  install.
-  A good example for this one is the Sun JRE/JDK being bundled in a snap.
-* `license-version` (string)
-  Requires `license` to be set. The version for the license.
-  A change in version when `license-accept` is set to `explicit` requires
-  a license to be reaccepted.
+
+### Parts
+
+Parts are the main building blocks of snaps: source code, packages, tarballs or organizational steps that are used to create your snap content. Check out the
+[parts section](/docs/build-snaps/parts) for concrete examples.
+
 * `parts` (yaml subsection)
   A map of part names to their own part configuration. Order in the file is
-  not relevant (to aid copy-and-pasting). Check out the
-  [parts section](/docs/build-snaps/parts) for some more concrete examples.
+  not relevant (to aid copy-and-pasting).
     * `plugin` (string)
       Specifies the plugin name that will manage this part. Snapcraft will pass
       to it all the other user-specified part options. If plugin is not
@@ -113,7 +126,3 @@ contain.
 The `snapcraft.yaml` in any project is validated to be compliant to these
 keywords, if there is any missing expected component or invalid value,
 `snapcraft` will exit with an error.
-
-Review the [commands, daemons and assets section](/docs/build-snaps/metadata) for some more explicit examples on
-how to define commands, daemons or `config` declarations.
-
