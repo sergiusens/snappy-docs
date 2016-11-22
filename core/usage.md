@@ -4,11 +4,9 @@ title: "Use the snap command"
 
 ## Log in to a snap store
 
-Snaps are normally installed from a store. You can interact with a store without signing-in, but signing-in offers a number of advantages. These advantages include the ability to access your private snaps and the automatic update of installed snaps (which incidentally doesn't require root on the device).
+Snaps are normally installed from a [store](/docs/core/store). You can interact with a store without signing-in, but signing-in offers a number of advantages. These advantages include the ability to access your private snaps and managing your snaps without requiring root on the device.
 
-**Note**: At the time of writing the only store available is the cross-distro Ubuntu Store and the `snap login` instructions take you to that store. In the future, [other stores](/docs/core/store) should be available.
-
-Snap stores hold a collection of snaps for delivery to clouds, devices, and private infrastructure. You [sign-in](https://login.ubuntu.com/+login) to a store as follows:
+Snap stores hold a collection of snaps for delivery to clouds, devices, and private infrastructures. You sign-in to a store as follows, using your [Ubuntu SSO account](https://login.ubuntu.com/+login):
 
     $ sudo snap login me@myself.com
     Password: *********
@@ -21,7 +19,7 @@ When you are not logged in, most `snap` commands will require you to run them as
 
 A store can contain both public and private snaps.
 
-Anybody can publish a snap, but store searches will only find snaps that are published to the `stable` release channel (and therefore have been reviewed and judged to be of good quality -- so users can install them without concern).
+Anybody can publish a snap, but doing a store search will only find snaps that are published to the `stable` release channel (and therefore have been reviewed and judged to be of good quality -- so users can install them without concerns).
 
 Searches look for matches in the snap name or description:
 
@@ -48,11 +46,11 @@ Each snap might include multiple related commands, with a default command that h
     $ hello.universe
     Hello, universe!
 
-Snaps can also install services that run in the background, such as web servers or content management systems. Those will start automatically when the snap is installed.
+Snaps can also install services that run in the background, such as web servers, daemons... Those will start automatically when the snap is installed. The `snap disable <snap name>` and `snap enable <snap name>` commands allow you to keep full control over snaps installed on your system, regardless of the way they are started.
 
 ## View details about installed snaps
 
-To see a list of snaps installed on a system use `snap list`. The list also provides information on the software version, revision number, developer, and any extra notes provided with the snap (such as whether the snap is in developer mode or not).
+To see a list of all snaps installed on a system use `snap list`. The list also provides information on the software version, revision number, developer, and any extra notes provided with the snap (such as whether the snap is in developer mode or not).
 
     $ snap list
     Name           Version               Rev  Developer  Notes
@@ -60,9 +58,15 @@ To see a list of snaps installed on a system use `snap list`. The list also prov
     ubuntu-core    16.04+20160419.20-55  109  canonical  -
     webdm          0.17                  21   canonical  -
 
-## Automated updates
+## Automated updates and channels
 
-When you're signed into the store, snaps are updated automatically in the background to the latest version, every day. This can also be done manually using `snap refresh` for either all installed snaps or by specifying a particular snap to refresh.
+Snaps are updated automatically in the background to the latest version, every day. This can also be done manually using `snap refresh` for either all installed snaps or by specifying a particular snap to refresh.
+
+You can also switch to another version of a snap by refreshing into another release channel, if the developer has published the snap in multiple channels.
+
+Valid release channels are `stable`, `candidate`, `beta`, `edge` and their name reflect the development status of snaps they contain.
+
+    $ snap refresh <snap name> --beta
 
 ## Developer mode
 
