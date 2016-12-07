@@ -30,6 +30,8 @@ Parts are reusable components that are the main building blocks used to create s
                source: .
                after: [curl]
 
+**Tip** Run `snapcraft-update` to keep synchronized with the remote parts wiki page.
+
 ## Defining parts in snapcraft.yaml
 
 The snapcraft.yaml `parts` key defines a map of the parts you want to include in your snap. Each plugin used for a part provides his own set of rules and sub-keys, but also relies on a common set of sub-keys:
