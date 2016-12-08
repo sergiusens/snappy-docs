@@ -32,9 +32,9 @@ Parts are reusable components that are the main building blocks used to create s
 
 **Tips**
 
-* Run `snapcraft update` to keep synchronized with the remote parts wiki page
-* Run `snapcraft search` to list all parts
-* Run `snapcraft define PART` to show a part, including help for the part
+* Run `snapcraft update` to keep your parts list synchronized with the remote parts repository
+* Run `snapcraft search` to list all remote parts
+* Run `snapcraft define PART` to show a remote part, including help for the part
 
 ## Defining parts in snapcraft.yaml
 
