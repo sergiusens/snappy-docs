@@ -1,5 +1,5 @@
 ---
-title: "Snapcraft reference"
+title: "snapcraft: command reference"
 ---
 
 
@@ -56,8 +56,8 @@ Authenticate session against Ubuntu One SSO.
     $ snapcraft login
     Enter your Ubuntu One SSO credentials.
     Email: foo@bar.com
-    Password: 
-    One-time password (just press enter if you don't use two-factor authentication): 
+    Password:
+    One-time password (just press enter if you don't use two-factor authentication):
     123456
     Authenticating against Ubuntu One SSO.
     Login successful.
@@ -133,7 +133,7 @@ Whe used with  `-s <step>` or `--step <step>`, only cleans the specified step an
 
 #### cleanbuild
 
-Create a snap using a pristine environment managed by lxd. 
+Create a snap using a pristine environment managed by lxd.
 
 This command requires a properly setup lxd environment that can connect to external networks. Refer to the "Ubuntu Desktop and Ubuntu Server" section in the [lxd documentation](https://linuxcontainers.org/lxd/getting-started-cli) to get started.
 
@@ -204,7 +204,7 @@ Usage:
     application global menu and gsettings integration.
     It also brings basics ubuntu dependency packages.
 
-    Usage : 
+    Usage :
       1. add "after: [desktop/<technology>]" to your launcher:
          - gtk2, gtk3, qt4 and qt5 corresponds to their respective toolkit
            main dependencies and default choices.
@@ -221,7 +221,3 @@ Enables geoip for the pull step if stage-packages are used.
     --no-parallel-build
 
   Use only a single build job per part (the default number of jobs per part is equal to the number of CPUs)
-
-
-
-

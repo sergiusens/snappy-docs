@@ -7,8 +7,8 @@ As a snap package is updated, the old version is kept. This enables a snapd syst
 
 A snap present in a system can be:
 
- - `installed` (but not active)
- - `active`
+ - `installed` (but not enabled)
+ - `enabled`
 
 When a snap is updated, the snap file for the latest version becomes the active snap file. The content from the previous snap version’s writeable areas (`SNAP_USER_DATA` and `SNAP_DATA`) are copied to a new location, for use by the updated snap.
 
@@ -26,7 +26,7 @@ To illustrate the process take the example of installing and updating `hello-wor
     64.00 KB / 64.00 KB [======================] 100.00 % 4.62 KB/s    
     Name                 Version               Rev  Developer  Notes
     hello-world          1.0.2                 29   canonical  -
-    
+
     $ snap list | grep hello
     hello-world          1.0.2                 29   canonical  -
     $ snap list -v | grep hello

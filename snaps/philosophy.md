@@ -15,7 +15,7 @@ and then fallback to global ones.
 
 This will have the net benefit as well to enable your application working from your development directory, enabling as
 well testers to only download it from your VCS to test a new feature, without relying on any global installation. The
-write-debug-fix cycle just become way easier!
+write-debug-fix cycle just became way easier!
 
 Note that you can use environment variables as well to influence the paths your application is looking at. Then, just
 ship a wrapper script that you point your snap commands to, which is setting those environment variables based on `$SNAP`,
@@ -24,7 +24,7 @@ ship a wrapper script that you point your snap commands to, which is setting tho
 ## Ship (and refer!) to your own dependencies
 
 Another important concept of snaps is that you are in control of your dependencies. You won’t have anymore other updates
-on the system breaking you as long as you ship everything you need, and update them at your own pace. 
+on the system breaking you as long as you ship everything you need, and update them at your own pace.
 
 Generally speaking, your snap will only see libraries and 3rd party dependencies from your snap itself and the **core**
 snap. Do not rely on this latter apart from some system library like access to the network, device nodes and such. Ship
@@ -83,4 +83,3 @@ Some interfaces autoconnect while the snaps are installed, some don’t. That me
 the greater chance you have for people to install your snap. For interfaces that don’t autoconnect, try to make them
 optional and have your code fallback to proper messages explaining why this feature is good to enable them, or why
 it is required.
-
