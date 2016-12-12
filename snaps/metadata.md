@@ -10,6 +10,7 @@ title: "The snap format"
 [Interfaces](#interfaces)  
 [Desktop files](#desktop-files)  
 
+
 <a name="intro">
 ## Introduction
 
