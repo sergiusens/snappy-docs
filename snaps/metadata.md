@@ -1,44 +1,177 @@
 ---
-title: "Metadata YAML file"
+title: "The snap format"
 ---
 
+<!--- These entries need two spaces at the end of line to be properly formatted. -->
+
+[Introduction](#intro)  
+[Setup files](#files)  
+[snap.yaml](#snap.yaml)  
+[Interfaces](#interfaces)  
+[Desktop files](#desktop-files)  
+
+<a name="intro">
+## Introduction
+
+A snap is a squashfs file carrying content and a bit of metadata that tells the system how to manipulate it. When installed the squashfs file is mounted read-only under
+
+  * `/snap/<snap name>/<revision>/`
+
+This means fast and extremely predictable installations, with no leftovers and no way for the content to be mutated over traditional means. Either it's all installed and available as originally built, or it is not available at all.
+
+Applications declared in the snap become commands at
+
+  * `/snap/bin/<snap name>[.<app name>]`
+
+The suffix is omitted if `<app name>` matches `<snap name>`. That file is not the actual application, though, but rather a command that will trigger the real application to be run under the proper isolation and confinement rules, based on the default restricted environment plus any allowances granted to it via the interface system.
+
+<a name="files">
+## Setup files
+
+The following files control the behavior of a snap:
+
+- `meta/snap.yaml` - Basic snap details (see below).
+- `meta/hooks/` - Hooks called on specific events (see below).
+- `meta/gui/icon.svg` - Icon for the snap.
+- `meta/gui/*.desktop` - Desktop files for the snap (see below).
+
+<a name="snap.yaml">
+## snap.yaml
+
+The `meta/snap.yaml` file contains the basic metadata and is a requirement for all snaps.
+
+Most of its allowed content is optional. In fact, the simplest snap possible may have as little as this inside `snap.yaml`:
+```
+name: simplest
+version: 1.0
+```
+
+A snap that offers an application to run is still very simple:
+```
+name: simple
+version: 1.0
+apps:
+    hello:
+        command: bin/hello --world
+```
+
+The following specification defines what is supported inside it:
+```
+# The suggested snap name, constrained to the [a-z0-9] charset and inner
+# dashes. The final name when the snap is installed is defined by the
+# snap-declaration assertion associated with the snap, if any.
+name: <name>
+
+# Version of the software packed inside the snap. Has no semantic value
+# in the system (no greater/lower-than rules are ever applied to it).
+version: <version>
+
+# More details about what is contained in the snap.
+summary: <line>
+description: <text>
+
+# Type of snap, defaults to "app".
+type: app | core | gadget | kernel
+
+# List of architectures the snap may run on. Defaults to [all].
+architectures:
+    - all | amd64 | i386 | armhf
+
+# List of applications (commands, binaries, daemons) in the snap.
+apps:
+
+  <app name>:
+
+      # Path to executable (relative to snap base) and arguments to use
+      # when this application is run.
+      command: <command line>
+
+      # List of plug names this application is associated with.
+      # When a plug is connected to one of these slots, this application
+      # will be granted the permissions specified for that interface.
+      # If attributes are required or the plug name does not match the
+      # interface name, more details must be declared under the top-level
+      # "plugs" field (see below).
+      plugs:
+          - <plug name>
+
+      # List of slot names this application is associated with.
+      # Same details as described above, but for slots.
+      slots:
+          - <slot name>
+
+      # If daemon is set, the command is a daemon to run as specified.
+      # See systemd documentation for details on those kinds.
+      daemon: simple | forking | oneshot
+
+      # Optional command to use for stopping a daemon.
+      stop-command: <command line>
+
+      # Optional time to wait for daemon to stop.
+      stop-timeout: <n>ns | <n>us | <n>ms | <n>s | <n>m
+
+      # Optional command to run after daemon stops.
+      post-stop-command: <command line>
+
+      # Condition to restart the daemon under. Defaults to on-failure.
+      # See the systemd.service manual on Restart for details.
+      restart-condition: \
+          on-failure | on-success | on-abnormal | on-abort | always | never
+
+      # Optional stream abstract socket name or socket path.
+      # When defined as a path, it should normally be in one of the snap
+      # writable directories. For an abstract socket it must start with
+      # @<snap name> or @<snap name>_.
+      listen-stream: <path> | @<snap name> | @<snap name>_<suffix>
+
+      # Whether the daemon is socket activated. Defaults to false, and
+      # must be defined together with listen-stream if true.
+      socket: true | false
+
+```
 
 
-Snaps, when they are installed or manually created (eg. without using the `snapcraft` command) are defined by a set of metadata specified in `meta/snap.yaml`:
+## Interfaces
 
-## Purpose of snap.yaml
+Interfaces allow snaps to communicate or share resources according to the
+protocol established by the interface and play an important part in security
+policy configuration. See [Interfaces](/docs/core/interfaces) for details.
 
-This file describes the snap package and is essential for defining the content and usable features of the snap. 
 
-## Keys used in the snap.yaml 
+## Desktop files
 
-Key | Required | Description 
-:---- | ---- | :---- 
-<code>name</code> | Yes | The name of the snap. The name may use any combination of lower case letters and numbers plus the '-' character but must start with a letter.
-<code>version</code> | Yes | The version of the snap. The version can be defined with any combination of upper and lower case letters, number and the '.', '+', '~', and '-' characters.
-<code>summary</code> | No | A short summary of the snap.
-<code>description</code> | No | A long description of the snap.
-<code>license-agreement</code> | No | Set to `explicit` if the user needs to accept the content of the `meta/license.txt` file before the snap can be installed.
-<code>license-version</code> | No | A string defining the version of the licence text. When its value changes and `license-agreement` is `explicit` it causes the user to be prompted to accept the content of `meta/license.txt` again.
-<code>type</code> | No |  The type of the snap, can be:  `app`, the default if `type` is omitted or empty; or `gadget`, a special snap that Gadgets can use to customize snappy for their hardware.
-<code>architectures</code> | No | A YAML list of supported architectures,  defaults to  `["all"]` if omitted or empty.
-<code>apps</code> | No | The map of apps (binaries and services) that a snap provides.
-<code>&nbsp;&nbsp;&nbsp;&lt;app name></code> | Yes | The name of the app or service.
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;command</code> | Yes |The command to start the application or service.
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;daemon</code>| Yes | The type of daemon that will run the application (as a service): `simple`, `forking`, `oneshot`, or `dbus`
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stop-command</code> | No |  The command to stop the service.
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stop-timeout</code> | No |  The time in seconds to wait for the service to stop
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;restart-condition</code> | No |  Specifies the restart       condition. Can be one of `on-failure` (default), `never`, `on-success`,       `on-abnormal`, `on-abort`,  and `always`. See `systemd.service(5)` (search for `Restart=`) for details.
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;post-stop-command</code> | No |  A command that runs after the service has stopped.
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;slots</code> | No | A map of interfaces.
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ports</code> | No |  Defines which ports the service will work.
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;internal</code> | Yes | The ports the service will to connect to.
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tagname</code> | Yes | A free form name.
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;port</code> | No |  Number/protocol, for example `80/tcp`.
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;negotiable</code> | No |  `Y` if the app can use a different port.
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;external</code> | Yes | The ports the service offers to the world.
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tagname</code> | Yes | A free form name, some names have meaning like "ui".
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;port</code> | No |  Number/protocol, for example `80/tcp`.
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;negotiable</code> | No |  `Y` if the app can use a different port.
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;socket</code> | No |  Set to `true` if the service is socket activated. Must be specified with `listen-stream`.
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;listen-stream</code> | No |  The full path of the stream socket or an abstract socket. When specifying an absolute path, it should normally be in one of the app-specific writable directories. <br />When specifying an abstract socket, it must start with `@` and typically be followed by either the snap package name or the snap package name followed by `\_` and any other characters, for example  `@name` or `@name\_something`.
+The `meta/gui/` directory may contain `*.desktop` files for the snap.
+Those desktop files may contain all valid desktop entries from the
+XDG Desktop Entry Specification version 1.1 with some exceptions listed
+below. If there is a line with an unknown key or an unofficial key
+that line is silently removed from the desktop file on install.
+
+The `Exec=` line must necessarily look like the following to be valid:
+
+  * `Exec=<snap name>[.<app name>] [<argument> ...]`
+
+As in the executables contained under `/snap`, the `.<app name>` suffix is
+omitted if the application name and snap name are the same.
+
+For example, assuming this content in `snap.yaml`:
+```
+name: http
+version: 1.0
+apps:
+    get:
+        command: bin/my-downloader
+```
+
+This desktop file is valid:
+```
+[Desktop Entry]
+Name=My Downloader
+Exec=http.get %U
+```
+
+
+### Unsupported desktop keys
+
+The `DBusActivatable`, `TryExec` and `Implements` keys are currently
+not supported and will be silently removed from the desktop file on
+install.
