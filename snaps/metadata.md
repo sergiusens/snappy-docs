@@ -25,7 +25,7 @@ Key | Required | Description
 <code>apps</code> | No | The map of apps (binaries and services) that a snap provides.
 <code>&nbsp;&nbsp;&nbsp;&lt;app name></code> | Yes | The name of the app or service.
 <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;command</code> | Yes |The command to start the application or service.
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;daemon</code>| Yes | The type of daemon that will run the application (as a service): `simple`, `forking`, `oneshot`, or `dbus`
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;daemon</code>| Yes | The type of daemon that will run the application (as a service): `simple`, `forking` or `oneshot`
 <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stop-command</code> | No |  The command to stop the service.
 <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stop-timeout</code> | No |  The time in seconds to wait for the service to stop
 <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;restart-condition</code> | No |  Specifies the restart       condition. Can be one of `on-failure` (default), `never`, `on-success`,       `on-abnormal`, `on-abort`,  and `always`. See `systemd.service(5)` (search for `Restart=`) for details.
