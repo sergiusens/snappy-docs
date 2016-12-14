@@ -72,17 +72,26 @@ Valid release channels are `stable`, `candidate`, `beta`, `edge` and their name 
 
 ## Developer mode
 
-When you're developing a snap, you'll want to let it run without the strict security confinement that is expected of stable, published snaps. This is done by specifying `--devmode` on installation, to give permission for the snap to be run without confinement.
+When you're developing a snap, you will probably want to run it without the strict security confinement that is expected of stable, published snaps. This is done by using the `--devmode` flag on installation.
 
-You can publish snaps that require `--devmode` to work, but they can only be published to the `beta` or `edge` release channels, not the stable or candidate channels. Users can then install those beta or edge versions using `--devmode` as well. Because of the risk that installing an unconfined app creates, the user is asked to confirm the installation:
+You can even publish snaps that require `--devmode` to work, but they can only be published to the `beta` or `edge` [release channels](/docs/reference/channels), not the stable or candidate channels. Users can then install these versions using `--devmode` as well. Because of the risk installing an unconfined app creates, installing a snap in `devmode` is not recommended unless you trust its developer.
 
     $ snap install flubber --beta
-    Error: this version of foo requires devmode.
+    error: cannot install "flubber": snap not found
     $ snap install flubber --beta --devmode
-    WARNING: snaps installed in devmode are not confined. You are trusting
-    all the private data on this system to the developer "frankie".
+    Download snap "flubber" (12) from channel "beta"
+    ...
 
-    Do you still want to install ‘flubber’? [y/N] N
+To know the right channel and confinement mode to request when installing a package, you can use the `snap info` command prior to installation:
+
+    $ snap info flubber
+    name:      flubber
+    summary:   ...
+    publisher: flubber-dev
+    description: ...
+    channels:
+      beta:   1.3 (16)
+      edge:   1.4 (17) devmode
 
 ## Make your own snaps
 
