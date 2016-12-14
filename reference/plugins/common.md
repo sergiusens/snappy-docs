@@ -28,7 +28,6 @@ of the choice of plugin.
   - `stage-packages`: [deb, deb, deb...]
 
     A list of Ubuntu packages must be unpacked in the `stage/` directory.
-    XXX before build? Before stage?
 
   - `organize`: YAML
 
