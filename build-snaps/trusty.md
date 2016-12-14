@@ -5,7 +5,7 @@ title: "Building and testing snaps on Ubuntu 14.04"
 
 In the near future snapcraft will be offered as a snap, giving you the same experience regardless of Linux distribution or release. Until then, you can build snaps on Ubuntu 14.04 using LXD or Docker.
 
-If you're already running Ubuntu 16.04 or later, you can skip this guide and run snapcraft directly.
+If you're already running Ubuntu 16.04 or later, you can skip this guide and [run snapcraft directly](/docs/build-snaps/your-first-snap).
 
 ### LXD
 
