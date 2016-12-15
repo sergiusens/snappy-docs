@@ -8,12 +8,16 @@ title: "Build snaps"
 
     sudo apt install snapcraft
 
-It will also install and run on any Linux distribution using an up-to-date version of [LXD, the container hypervisor](http://www.ubuntu.com/cloud/lxd).
 
-### Build your first snap
+## Build your first snap
 
 A concise, step by step, snap example is the best way to get started! Heads on to [Your first snap](/docs/build-snaps/your-first-snap).
 
-### Examples
+### Building from Ubuntu 14.04 or another Linux distribution
+
+If you're running the older Ubuntu 14.04 LTS or another Linux distribution, you can still build snaps using LXD or Docker. Just
+follow [these instructions](/docs/build-snaps/trusty).
+
+## Examples
 
 The snapcraft source code provides examples for a [wide range of project types](https://github.com/snapcore/snapcraft/tree/master/demos).
