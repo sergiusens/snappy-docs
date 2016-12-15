@@ -12,6 +12,9 @@ The catkin plugin is useful for building ROS parts.
     - source-space:
       (string)
       The source space containing Catkin packages. By default this is 'src'.
+    - rosdistro:
+      (string)
+      The ROS distro required by this system. Defaults to 'indigo'.
     - include-roscore:
       (boolean)
       Whether or not to include roscore with the part. Defaults to true.
