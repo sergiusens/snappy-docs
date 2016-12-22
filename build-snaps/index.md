@@ -14,6 +14,10 @@ It will also install and run on any Linux distribution using an up-to-date versi
 
 A concise, step by step, snap example is the best way to get started! Heads on to [Your first snap](/docs/build-snaps/your-first-snap).
 
+### Automatically building from Git
+
+You can set up your repository to automatically produce and publish snaps using [these instructions](/docs/build-snaps/ci-integration).
+
 ### Building from Ubuntu 14.04
 
 If you're running the older Ubuntu 14.04 LTS, you can still build snaps. Just
