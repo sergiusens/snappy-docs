@@ -1,9 +1,11 @@
 ---
-title: "Building and testing snaps on Ubuntu 14.04"
+title: "Build on LXD or Docker"
 ---
 
 
-In the near future snapcraft will be offered as a snap, giving you the same experience regardless of Linux distribution or release. Until then, you can build snaps on Ubuntu 14.04 using LXD or Docker.
+In the near future, snapcraft will be offered as a snap, giving you the same experience regardless of Linux distribution or release. Until then, you can build snaps using LXD or Docker.
+
+The following instructions are targeted at Ubuntu 14.04, but you should be able to easily adapt them to your own use case.
 
 If you're already running Ubuntu 16.04 or later, you can skip this guide and [run snapcraft directly](/docs/build-snaps/your-first-snap).
 
@@ -39,7 +41,7 @@ Using Docker, you'll map the current directory into the container, then build a 
 
 First, install Docker using these abridged instructions. A more compherensive guide can be found on the [Docker website](https://docs.docker.com/engine/installation/linux/ubuntulinux/).
 
-       echo “deb https://apt.dockerproject.org/repo ubuntu-trusty main” | sudo tee /etc/apt/sources.list.d/docker.list
+       echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" | sudo tee /etc/apt/sources.list.d/docker.list
        sudo apt-key adv \
                --keyserver hkp://ha.pool.sks-keyservers.net:80 \
                --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
@@ -52,4 +54,4 @@ Next, make sure Docker is running:
 
 You're all set. Any time you want to build a snap, type the following command to run snapcraft relative to the current directory:
 
-       sudo docker run -v $PWD:/c snapcore/snapcraft sh -c "cd /c; snapcraft"
+       sudo docker run -v $PWD:$PWD -w $PWD snapcore/snapcraft snapcraft

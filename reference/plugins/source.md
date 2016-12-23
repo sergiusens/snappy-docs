@@ -20,12 +20,22 @@ code for that part, and how to unpack it if necessary.
     control system or compression algorithm. The source-type key can tell
     snapcraft exactly how to treat that content.
 
-  - `source-branch`: <branch-name>
+  - `source-depth`: `<integer>`
+
+    By default clones or branches with full history, specifying a depth
+    will truncate the history to the specified number of commits.
+
+  - `source-branch`: `<branch-name>`
 
     Snapcraft will checkout a specific branch from the source tree. This
     only works on multi-branch repositories from git and hg (mercurial).
 
-  - `source-tag`: <tag>
+  - `source-commit`: `<commit>`
+
+    Snapcraft will checkout the specific commit from the source tree revision
+    control system.
+
+  - `source-tag`: `<tag>`
 
     Snapcraft will checkout the specific tag from the source tree revision
     control system.

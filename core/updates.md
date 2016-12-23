@@ -13,17 +13,17 @@ When the snap is updated (by the user running `$ snap refresh <snap name>`) a ne
 
 ![The lifecycle of a snap's update](../media/transactional_update.png)
 
-Updated kernel, OS, and gadget snaps become available the next time the system is booted. 
+Updated kernel, OS, and gadget snaps become available the next time the system is booted.
 
 For updated application snaps, the new versions become available:
 
 - for user executed applications, the next time the command is run.
-- for daemon executed services, immediately, as the daemon is restarted during refresh. 
+- for daemon executed services, immediately, as the daemon is restarted during refresh.
 
 ## Revert
 
 A strength of the snappy transactional update system is its ability to roll back if the new version of a snap proves faulty. The process is very simple, the `current` symlink for the snap and its writable data area are simply linked back to the old (previously working) version of the snap.
 
-For application snaps the user does this with `snap revert <snap>`. As with updates, a rolled back service snap becomes available immediately (its daemon is restarted when the rollback completed) while a rolled back app is available when its commend is run. 
+For application snaps the user does this with `snap revert <snap>`. As with updates, a rolled back service snap becomes available immediately (its daemon is restarted when the rollback completed) while a rolled back app is available when its command is run.
 
 For the gadget, kernel, and OS snaps, if these fail to start correctly, the snappy system will automatically revert these snaps the next time the device is booted.

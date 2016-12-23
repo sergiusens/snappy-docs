@@ -1,4 +1,3 @@
-
 ---
 title: "Common keywords"
 ---
@@ -16,18 +15,23 @@ of the choice of plugin.
     If such a dependency part is not defined in this snapcraft.yaml, it must
     be defined in the cloud parts library, and snapcraft will retrieve the
     definition of the part from the cloud. In this way, a shared library of
-    parts is available to every snap author - just say 'after' and list the
+    parts is available to every snap author - just say `after` and list the
     parts you want that others have already defined.
 
   - `build-packages`: [deb, deb, deb...]
 
     A list of Ubuntu packages to install on the build host before building
-    the part. The files from these packages will not go into the final snap
-    unless they are also explicitly described in stage-packages.
+    the part. The files from these packages typically will not go into the
+    final snap unless they contain libraries that are direct dependencies of
+    binaries within the snap (in which case they'll be discovered via `ldd`),
+    or they are explicitly described in stage-packages.
 
   - `stage-packages`: [deb, deb, deb...]
 
-    A list of Ubuntu packages must be unpacked in the `stage/` directory.
+    A list of Ubuntu packages to be downloaded and unpacked to join the part
+    before it's built. Note that these packages are not installed on the host.
+    Like the rest of the part, all files from these packages will make it into
+    the final snap unless filtered out via the `snap` keyword.
 
   - `organize`: YAML
 
@@ -40,8 +44,8 @@ of the choice of plugin.
     file structure. For example:
 
         organize:
-            usr/oldfilename: usr/newfilename
-            usr/local/share/: usr/share/
+          usr/oldfilename: usr/newfilename
+          usr/local/share/: usr/share/
 
     The key is the internal part filename, the value is the exposed filename
     that will be used during the staging process. You can rename whole
@@ -74,8 +78,8 @@ of the choice of plugin.
     For example you could add usr/local/* then remove usr/local/man/*:
 
         filesets:
-            allbutman: [ usr/local/*, -usr/local/man/* ]
-            manpages: [ usr/local/man ]
+          allbutman: [ usr/local/*, -usr/local/man/* ]
+          manpages: [ usr/local/man ]
 
     Filenames are relative to the part install directory in
     `parts/<part-name>/install`. If you have used 'organize' to rename files
@@ -91,11 +95,11 @@ of the choice of plugin.
     For example:
 
         stage:
-            - usr/lib/*   #### Everything under parts/<part-name>/install/usr/lib
-            - -usr/lib/libtest.so   #### Excludng libtest.so
-            - $manpages             #### Including the 'manpages' fileset
+          - usr/lib/*   # Everything under parts/<part-name>/install/usr/lib
+          - -usr/lib/libtest.so   # Excludng libtest.so
+          - $manpages                 # Including the 'manpages' fileset
 
-  - `prime`: YAML file and fileset list
+  - `snap`: YAML file and fileset list
 
     A list of files from a part install directory to copy into `prime/`.
     This section takes exactly the same form as the 'stage' section  but the

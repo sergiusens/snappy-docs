@@ -8,9 +8,8 @@ title: "Build snaps"
 
     sudo apt install snapcraft
 
-It will also install and run on any Linux distribution using an up-to-date version of [LXD, the container hypervisor](http://www.ubuntu.com/cloud/lxd).
 
-### Build your first snap
+## Build your first snap
 
 A concise, step by step, snap example is the best way to get started! Heads on to [Your first snap](/docs/build-snaps/your-first-snap).
 
@@ -18,13 +17,11 @@ A concise, step by step, snap example is the best way to get started! Heads on t
 
 You can set up your repository to automatically produce and publish snaps using [these instructions](/docs/build-snaps/ci-integration).
 
-### Building from Ubuntu 14.04
+### Building from Ubuntu 14.04 or another Linux distribution
 
-If you're running the older Ubuntu 14.04 LTS, you can still build snaps. Just
+If you're running the older Ubuntu 14.04 LTS or another Linux distribution, you can still build snaps using LXD or Docker. Just
 follow [these instructions](/docs/build-snaps/trusty).
 
-### Examples repository
+## Examples
 
-The Snappy Playpen is an incubator dedicated to providing snaps examples and cover the widest range of projects possible: desktop apps, server, CLI, GUI, Gtk, Qt, SDL, Python, Go, Vala, C, C++, Java, etc. On its GitHub repo and the associated chat, you will find examples and experts to help you with your snaps.
-
-[Browse snap examples &rsaquo;](https://github.com/ubuntu/snappy-playpen)
+The snapcraft source code provides examples for a [wide range of project types](https://github.com/snapcore/snapcraft/tree/master/demos).
