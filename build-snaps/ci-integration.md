@@ -2,11 +2,11 @@
 title: "Building and publishing snaps from Git"
 ---
 
-You can build an publish snaps of commits to your Git repository so that other developers or early adopters can try the latest changes to your application.
+You can build and publish snaps of commits to your Git repository so that other developers or early adopters can try the latest changes to your application.
 
 This is an entirely automated process. Once set up, you should not need to touch it again.
 
-## Travis
+## Using Travis
 
 Extending your [Travis CI](https://travis-ci.org/) configuration to build and publish snaps on branch commits is easy. Run `snapcraft enable-ci travis` and you will be guided through the process.
 
@@ -15,7 +15,7 @@ Note that you should already have the following:
 - A [`.travis.yml`](https://docs.travis-ci.com/user/getting-started/) file in your project directory.
 - Travis [enabled for your repository](https://travis-ci.org/profile/) and configured to "build pushes."
 
-## Launchpad
+## Using Launchpad
 
 Travis does not currently support open source projects building on [non-x86 architectures](https://docs.travis-ci.com/user/ci-environment/#Virtualization-environments) or builds that take longer than [50 minutes](https://docs.travis-ci.com/user/customizing-the-build#Build-Timeouts). Launchpad can be set up as an alternative with no restrictions placed on build time and support for the following architectures:
  - AMD x86-64 (amd64)
@@ -30,7 +30,7 @@ First, create an account on Launchpad and a project to host the build:
 
 Once registered, you can find your project listed under [your account](https://launchpad.net/~/+related-projects).
 
-Now we'll configure the project to point at your existing Git repository:
+Now, configure the project to point at your existing Git repository:
 
 1. From your project's main page, follow the "Code" link under "Configuration options"
 1. Select "Git" under "Version control system"
@@ -41,7 +41,7 @@ Now we'll configure the project to point at your existing Git repository:
 
 Launchpad will now schedule an import of your GitHub repo. This will only take a few minutes. Grab a coffee, refresh the page, and you should see each of your branches listed.
 
-Finally, we'll tell Launchpad to build and publish snaps for this repository:
+Finally, tell Launchpad to build and publish snaps for this repository:
 
 1. Under the "Branches" heading, click on the branch you would like to publish snaps for
 1. In a new tab or window, go to the [snap name registration page](https://myapps.developer.ubuntu.com/dev/click-apps/register-name/), signing in with the acount you created at Launchpad
@@ -56,6 +56,6 @@ Finally, we'll tell Launchpad to build and publish snaps for this repository:
 1. Under "Store channels" select "Edge"
 1. Click "Create snap package"
 
-Congratulations, you're all set. Four times a day Launchpad will check to see if any new commits have been pushed to your GitHub repository and will both build and publish snaps of them to the edge channel.
+Congratulations, you're all set. Four times a day Launchpad will check to see if any new commits have been pushed to your GitHub repository and will both build and publish snaps of them to the [edge channel](/docs/reference/channels).
 
-Your system can automatically fetch and install these, up to four times a day. To set that up, run `snap install --edge your_application`.
+Your system can then automatically refresh this snap to the latest version, up to four times a day. To set that up, run `snap install --edge <snap name>`.
