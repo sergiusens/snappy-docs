@@ -22,6 +22,7 @@ Travis does not currently support open source projects building on [non-x86 arch
  - ARM ARMv8 (arm64)
  - ARM ARMv7 Hard Float (armhf)
  - Intel x86 (i386)
+ - PowerPC64 Little-Endian (ppc64el)
 
 First, create an account on Launchpad and a project to host the build:
 1. Fill in the form for a [new account](https://launchpad.net/+login)
@@ -34,11 +35,11 @@ Now we'll configure the project to point at your existing Git repository:
 1. From your project's main page, follow the "Code" link under "Configuration options"
 1. Select "Git" under "Version control system"
 1. Select "Import a Git repository hosted somewhere else" under "Link or import an existing repository"
-1. In a new tab or window, go to your Github repository page and click the button for "Clone or download"
+1. In a new tab or window, go to your GitHub repository page and click the button for "Clone or download"
 1. Select "Use HTTPS" and then click the "copy to clickboard" button
-1. Back on the Launchpad page, paste the text from Github in the "Git repository URL" box and click the "update" button
+1. Back on the Launchpad page, paste the text from GitHub in the "Git repository URL" box and click the "update" button
 
-Launchpad will now schedule an import of your Github repo. This will only take a few minutes. Grab a coffee, refresh the page, and you should see each of your branches listed.
+Launchpad will now schedule an import of your GitHub repo. This will only take a few minutes. Grab a coffee, refresh the page, and you should see each of your branches listed.
 
 Finally, we'll tell Launchpad to build and publish snaps for this repository:
 
@@ -55,6 +56,6 @@ Finally, we'll tell Launchpad to build and publish snaps for this repository:
 1. Under "Store channels" select "Edge"
 1. Click "Create snap package"
 
-Congratulations, you're all set. Four times a day Launchpad will check to see if any new commits have been pushed to your Github repository and will both build and publish snaps of them to the edge channel.
+Congratulations, you're all set. Four times a day Launchpad will check to see if any new commits have been pushed to your GitHub repository and will both build and publish snaps of them to the edge channel.
 
 Your system can automatically fetch and install these, up to four times a day. To set that up, run `snap install --edge your_application`.
