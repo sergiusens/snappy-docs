@@ -15,7 +15,7 @@ A concise, step by step, snap example is the best way to get started! Heads on t
 
 ### Automatically building from Git
 
-You can set up your repository to automatically produce and publish snaps using [these instructions](/docs/build-snaps/ci-integration).
+You can set up your repository to automatically build and publish snaps using [these instructions](/docs/build-snaps/ci-integration).
 
 ### Building from Ubuntu 14.04 or another Linux distribution
 
