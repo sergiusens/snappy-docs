@@ -25,9 +25,7 @@ The following keys are used to declare the general metadata of your snap: how it
   The description for the snap, this can and is expected to be a longer
   explanation for the snap.
 * `confinement` (string)
-  The type of confinement supported by the snap. Can be either "devmode" (i.e.
-  this snap doesn't support running under confinement) or "strict" (i.e. full
-  confinement supported via interfaces).
+  The type of confinement supported by the snap. Can be "strict" , "devmode" or "classic". See [Confinement](/docs/reference/confinement) for details.
 * `grade` (string)
   This defines the quality grade of the snap. It can be either "devel" (i.e.
   a development version of the snap, so not to be published to the "stable" or

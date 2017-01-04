@@ -22,6 +22,8 @@ title: "snap: command reference"
 * [`revert:`](#revert)      Reverts the given snap to the previous state
 * [`disable:`](#disable)     Disables a snap in the system
 * [`enable:`](#enable)      Enables a snap in the system
+* [`alias:`](#alias)      Enables the given aliases
+* [`unalias:`](#unalias)       Disables the given aliases
 
 ## Manage interfaces connections
 
@@ -96,8 +98,9 @@ The install command installs the named snap in the system.
  * `--beta`:             Install from the beta channel
  * `--candidate`:        Install from the candidate channel
  * `--stable`:           Install from the stable channel
- * `--devmode`:          Request non-enforcing security
- * `--jailmode`:         Override a snap's request for non-enforcing security
+ * `--devmode`:          Put snap in development mode and disable security confinement
+ * `--jailmode`:         Put snap in enforced confinement mode
+ * `--classic`:          Put snap in classic mode and disable security confinement
  * `--revision=`:        Install the given revision of a snap, to which you must have developer access
  * `--dangerous`:        Install the given snap file even if there are no pre-acknowledged signatures for it, meaning it was not verified and could be dangerous (`--devmode` implies this)
 
@@ -148,8 +151,9 @@ The refresh command refreshes (updates) the named snap.
  *         `--beta`:               Install from the beta channel
  *         `--candidate`:          Install from the candidate channel
  *         `--stable`:             Install from the stable channel
- *         `--devmode`:            Request non-enforcing security
- *         `--jailmode`:           Override a snap's request for non-enforcing security
+ *         `--devmode`:            Put snap in development mode and disable security confinement
+ *         `--jailmode`:           Put snap in enforced confinement mode
+ *         `--classic`:            Put snap in classic mode and disable security confinement
  *         `--revision=`:          Refresh to the given revision
  *         `--list`:               Show available snaps for refresh
  *         `--ignore-validation`:  Ignore validation by other snaps blocking the refresh
@@ -167,9 +171,10 @@ an exception, data which the snap explicitly chooses to share across
 revisions is not touched by the revert process.
 
 [revert command options]
- *         `--devmode`:   Request non-enforcing security
- *         `--jailmode`:  Override a snap's request for non-enforcing security
- *         `--revision=`: Revert to the given revision
+* `--devmode`:          Put snap in development mode and disable security confinement
+* `--jailmode`:         Put snap in enforced confinement mode
+* `--classic`:          Put snap in classic mode and disable security confinement
+* `--revision=`:        Revert to the given revision
 
 ### disable
 
@@ -186,6 +191,26 @@ Usage:
    `snap enable <snap>`
 
 The enable command enables a snap that was previously disabled.
+
+
+### alias
+
+Usage:
+   `snap alias <snap>`
+
+The alias command enables the given application aliases defined by the snap.
+
+Once enabled the respective application commands can be invoked just using the aliases.
+
+#### Command options
+ *         `--reset=`:           Reset the aliases to their default state, enabled for automatic aliases, disabled otherwise
+
+### unalias
+
+Usage:
+    `snap unalias <snap> <alias>`
+
+The unalias command disables explicitly the given application aliases defined by the snap.
 
 ### interfaces
 
@@ -295,8 +320,9 @@ either snapcraft.yaml file and prime directory or meta/snap.yaml file can be
 found relative to current working directory.
 
 #### Command options
- *         `--devmode`:     Request non-enforcing security
- *         `--jailmode`:    Override a snap's request for non-enforcing security
+* `--devmode`:          Put snap in development mode and disable security confinement
+* `--jailmode`:         Put snap in enforced confinement mode
+* `--classic`:          Put snap in classic mode and disable security confinement
 
 ### run
 
