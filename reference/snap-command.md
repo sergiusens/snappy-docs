@@ -126,7 +126,7 @@ The list command displays a summary of snaps installed in the current system.
 
 #### Command options
 
- *           `--all`
+ *           `--all`: Show all revisions
 
 ### info
 
