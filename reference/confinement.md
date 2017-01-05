@@ -22,15 +22,17 @@ See the list of [environment variables](/docs/reference/env) for more details on
 
 ### devmode
 
-Developer mode, also known as `devmode`, uses the same security policies as `strict` confinement, but security denials are turned into warnings in `/var/log/syslog` (see [Debugging](/docs/build-snaps/debugging)). This is useful when snapping a traditional application, to discover which [interfaces](/docs/core/interfaces) need to be declared. Snaps in developer mode can **not** be released into the stable and candidate store [channels](/docs/reference/channels).
+Developer mode, also known as `devmode`, uses the same security policies as `strict` confinement, but security denials are turned into warnings in `/var/log/syslog` (see [Debugging](/docs/build-snaps/debugging)). This is useful when snapping an application, to discover which [interfaces](/docs/core/interfaces) need to be declared. Snaps in developer mode can **not** be released into the stable and candidate store [channels](/docs/reference/channels).
 
 ### classic
 
-A snap in classic confinement behaves as a traditionally packaged application, with full access to the system. As opposed to strict and devmode, a classic snap "`/`" is the host system's "`/`" and not the `core` snap's "`/`". Snaps using this fully open security policy are manually reviewed in the store and are only allowed on systems where `snapd` is installed [on top of a traditional Linux distribution](/docs/core/install), as opposed to system booting from an [Ubuntu Core image](https://docs.ubuntu.com/core/en/guides/build-device/image-building). They can be released in all store [channels](/docs/reference/channels).
+A snap in `classic` confinement behaves as a traditionally packaged application, with full access to the system. As opposed to `strict` and `devmode`, what a `classic` snap sees as "`/`" is the host system's "`/`" and not the `core` snap's "`/`". Snaps using this fully open security policy are manually reviewed in the store and are only allowed on systems where `snapd` is installed [on top of a traditional Linux distribution](/docs/core/install), as opposed to system booting from an [Ubuntu Core image](https://docs.ubuntu.com/core/en/guides/build-device/image-building). They can be released in all store [channels](/docs/reference/channels).
 
 ## Declaring confinement
 
-The confinement policy of your snap is declared in the [`confinement` field](/docs/build-snaps/syntax) of your snapcraft.yaml. To [`install`](/docs/reference/snap-command#install) or [`try`](/docs/reference/snap-command#try) a snap that is not using `strict` confinement, you need to pass the `--devmode` or `--classic` flags to the `snap install` or `snap try` commands.
+The confinement policy of your snap is declared in the [`confinement` field](/docs/build-snaps/syntax) of your snapcraft.yaml.
+
+To [`install`](/docs/reference/snap-command#install) or [`try`](/docs/reference/snap-command#try) a snap that is not using `strict` confinement, you need to pass the `--devmode` or `--classic` flag to the `snap install` or `snap try` command.
 
 ### Enforcing strict confinement
 
