@@ -6,7 +6,7 @@ Snaps can be setup to follow three different confinement policies. By default, a
 
 ## strict
 
-This is the default security policy applied to snaps. The snap has read and/or write rights only in its own install space and selected areas. It has access to libraries it bundles and/or provided by the `core` or `ubuntu-core` snap. Extended rights can be granted with [interfaces](/docs/core/interfaces), which are connected either at install time or by the user with the [`snap connect`]() command. For example, the `home` interface will grant read rights in the user's `home`.
+This is the default security policy applied to snaps. The snap has read and/or write rights only in its own install space and selected areas. It has access to libraries it bundles and/or provided by the `core` or `ubuntu-core` snap. Extended rights can be granted with [interfaces](/docs/core/interfaces), which are connected either at install time or by the user with the [`snap connect`](/docs/reference/snap-command#connect) command. For example, the `home` interface will grant read rights in the user's `home`.
 
 Strict confinement gives you the following readable and/or writable paths:
 
