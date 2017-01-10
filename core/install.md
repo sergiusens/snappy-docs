@@ -42,7 +42,7 @@ Install the [gentoo-snappy overlay](https://github.com/zyga/gentoo-snappy).
 
 Install the [snap meta layer](https://github.com/morphis/meta-snappy/blob/master/README.md).
 
-### OpenSuse
+### openSUSE
 
 ```
 sudo zypper addrepo http://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_42.2/ snappy
