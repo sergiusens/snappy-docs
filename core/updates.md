@@ -2,7 +2,7 @@
 title: "Transactional updates"
 ---
 
-Snapd systems employ a method of transactional update that is available for all snaps: application, gadget, OS, and kernel.
+Snapd systems employ a method of transactional updates that is available for all snaps: application, gadget, OS, and kernel.
 
 
 ## Installation
