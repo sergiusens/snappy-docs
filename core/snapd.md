@@ -26,7 +26,7 @@ The snapd system aims to fix these challenges by offering:
 On a snapd system these features are implemented by:
 
 - **snapd**, a management environment that handles installing and updating snaps using the transactional system, as well as [garbage collection](/docs/core/versions) of old versions of snaps.
-- **snapd-confine**, an execution environment for the applications and services delivered in snap packages.
+- **snap-confine**, an execution environment for the applications and services delivered in snap packages.
 
 ![Snaps are self contained, confined applications that can make use of features in other snaps using Interfaces.](../media/snap_in_snappy_system.png "Snaps in the Snapd System")
 
