@@ -19,14 +19,14 @@ The snapd system aims to fix these challenges by offering:
 
   - Offers snaps a secure storage area isolated from other snaps.
   - Enables snaps to make features available to other snaps and for other snaps to consume those features over defined interfaces.
-  - A store where developers can easily make their software directly available to users and from which devices can automatically pull updates on a daily basis.
 
+- A store where developers can easily make their software directly available to users and from which devices can automatically pull updates on a daily basis.
 - A simple transactional update system where snaps can be easily uninstalled (by deleting the snap package) or rolled back (by reverting to the previous snap image and private storage area).
 
 On a snapd system these features are implemented by:
 
 - **snapd**, a management environment that handles installing and updating snaps using the transactional system, as well as [garbage collection](/docs/core/versions) of old versions of snaps.
-- **snapd-confine**, an execution environment for the applications and services delivered in snap packages.
+- **snap-confine**, an execution environment for the applications and services delivered in snap packages.
 
 ![Snaps are self contained, confined applications that can make use of features in other snaps using Interfaces.](../media/snap_in_snappy_system.png "Snaps in the Snapd System")
 
