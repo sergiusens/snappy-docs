@@ -1,7 +1,6 @@
 ---
 title: DN1
 ---
-## DN1
 
 **The `snap` keyword has been replaced by `prime`.**
 

@@ -1,7 +1,6 @@
 ---
 title: Deprecation notices
 ---
-## Deprecation notices
 
 This document contains a list of deprecation notices and recommendations.
 
