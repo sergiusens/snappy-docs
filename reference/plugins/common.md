@@ -2,7 +2,7 @@
 title: "Common keywords"
 ---
 
-There are several built-in keywords which can be used in any part regardless
+There are several builtin keywords which can be used in any part regardless
 of the choice of plugin.
 
   - `after`: [part, part, part...]
@@ -15,7 +15,7 @@ of the choice of plugin.
     If such a dependency part is not defined in this snapcraft.yaml, it must
     be defined in the cloud parts library, and snapcraft will retrieve the
     definition of the part from the cloud. In this way, a shared library of
-    parts is available to every snap author - just say `after` and list the
+    parts is available to every snap author - just say 'after' and list the
     parts you want that others have already defined.
 
   - `build-packages`: [deb, deb, deb...]
@@ -52,7 +52,7 @@ of the choice of plugin.
     subtrees of the part, or just specific files.
 
     Note that the path is relative (even though it is "usr/local") because
-    it refers to content underneath `parts/<part-name>/install` which is going
+    it refers to content underneath parts/<part-name>/install which is going
     to be mapped into the stage and prime areas.
 
   - `filesets`: YAML
@@ -106,3 +106,41 @@ of the choice of plugin.
     files identified here will go into the ultimate snap (because the
     `prime/` directory reflects the file structure of the snap with no
     extraneous content).
+
+  - `prepare`: shell script
+
+    If present, the shell script defined here is run before the `build` step
+    of the plugin starts. The working directory is the base build
+    directory for the given part. The defined script is run with `/bin/sh`.
+
+    For example:
+
+        prepare: |
+          cd scripts
+          ./bootstrap.sh
+
+  - `build`: shell script
+
+    If present, the shell script defined here is run instead of the `build`
+    step of the plugin. The working directory is the base build directory
+    for the given part. The defined script is run with `/bin/sh`.
+
+    For example:
+
+        plugin: make
+        build: |
+          make project
+          make test
+          make special-install
+
+  - `install`: shell script
+
+    If present, the shell script defined here is run after the `build` step
+    of the plugin has finished. The working directory is the base build
+    directory for the given part. The defined script is run with `/bin/sh`.
+
+    For example:
+
+        install: |
+          sed -i 's|/usr/bin|$SNAP/usr/bin|g' my-bin-artifact.sh
+          mv my-bin-artifact.sh $SNAPCRAFT_PART_INSTALL/bin/my-bin-build.sh

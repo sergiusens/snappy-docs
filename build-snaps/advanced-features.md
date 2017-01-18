@@ -8,7 +8,7 @@ want to learn more about snapcraft's more advanced features. Having a look at
 our selection of demos is a good idea, as we want it to be a good showcase
 of what is possible and generally relevant.
 
-## Examples
+## Demos
 
 Our showcase can be found in the actual source of `snapcraft` itself. Check
 it out by simply running:
@@ -279,4 +279,3 @@ Combining various plugins and parts and using [the wiki][wiki] plugin make
 
 [plugin]: /docs/build-snaps/plugins
 [wiki]: https://wiki.ubuntu.com/snapcraft/parts
-
