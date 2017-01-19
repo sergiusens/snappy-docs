@@ -80,7 +80,27 @@ complete and all communication channels are set up. The child continues to
 run as the main daemon process. This is the behavior of traditional UNIX
 daemons.
 
-## Package icon
+## Fixed assets
+
+### Desktop files
+
+You can declare a desktop file from your app within an `apps` entry using a path relative to the `prime` directory pointing to a desktop file, snapcraft will take care of the rest. If your project already has a desktop file, say in `/usr/share/applications/my-app.desktop` all you need to do is the following:
+
+```yaml
+apps:
+    my-app:
+        command: my-app
+        desktop: usr/share/applications/my-app.desktop
+```
+
+Alternatively, you can create a `setup/gui/` directory at the root of your snapcraft project to host a desktop file:
+
+    setup/gui/<app-name>.desktop
+    snapcraft.yaml
+
+Where `<app-name>` is the entry corresponding to `apps` in `snapcraft.yaml`.
+
+### Package icons
 
 Providing an icon for your snap is important, even for command-line
 applications, if for nothing else than discoverability from management
@@ -89,47 +109,3 @@ interfaces such as store fronts like snapweb.
 To use an icon to represent the snap, just declare a PNG or SVG in
 `snapcraft.yaml` through an `icon` entry with a path relative
 to the icon inside the snap.
-
-## Fixed assets
-
-Some metadata is provided in the form of conventions, such as license files,
-icons and desktop files among others. For these fixed files to make it into
-your final snap they need to be in a `setup` directory at the same level of
-your `snapcraft.yaml`.
-
-### Desktop file
-
-The desktop file is the entry point to your snap for end users in GUI
-environments.
-
-    setup/gui/<app-name>.desktop
-    snapcraft.yaml
-
-Where `<app-name>` is the entry corresponding to `apps` in `snapcraft.yaml`.
-
-As an example, consider the reduced `snapcraft.yaml`:
-
-```yaml
-name: my-snap
-
-apps:
-    my-app:
-        command: my-app.sh
-```
-
-Given this `snapcraft.yaml` the desktop file path should be
-`setup/gui/my-app.desktop` and the contents should be:
-
-```ini
-[Desktop Entry]
-Name=My App
-Comment=Comment for My App
-GenericName=My App
-Exec=my-snap.my-app %U
-Icon=${SNAP}/meta/gui/icon.png
-Type=Application
-StartupNotify=true
-StartupWMClass=MyApp
-Categories=<category>;
-MimeType=x-scheme-handler/my-app;
-```

@@ -26,6 +26,8 @@ The following keys are used to declare the general metadata of your snap: how it
   explanation for the snap.
 * `confinement` (string)
   The type of confinement supported by the snap. Can be "strict" , "devmode" or "classic". See [Confinement](/docs/reference/confinement) for details.
+* `icon` (string)
+  Path to the icon that will be used for the snap.
 * `grade` (string)
   This defines the quality grade of the snap. It can be either "devel" (i.e.
   a development version of the snap, so not to be published to the "stable" or
@@ -38,8 +40,6 @@ The following keys are used to declare the general metadata of your snap: how it
   The epoch to which this revision of the snap belongs. This is used to specify
   upgrade paths. For example, `0` is epoch 0; `1*` is the upgrade path from 0 to
   1; `1` is epoch 1, etc.
-* `icon` (string)
-  Path to the icon that will be used for the snap.
 
 ### Apps and commands
 
@@ -51,9 +51,11 @@ Snaps can ship multiple applications and commands. The following keys allow you 
     * `command` (string)
       Specifies the internal command to expose. If it is a `daemon` this
       command is used to start the service.
+    * `desktop` (string)
+       Path to the desktop file, see [Commands, daemons & assets](/docs/build-snaps/metadata#fixed-assets) for details.  
     * `daemon` (string)
       If present, integrates the runnable as a system service. Valid values are
-      `forking`, `oneshot` and `simple`.
+      `forking`, `oneshot`, `notify` and `simple`.
 
       If set to `simple`, it is expected that the command configured is the main
       process.
@@ -63,9 +65,10 @@ Snaps can ship multiple applications and commands. The following keys allow you 
 
       If set to `forking`, it is expected that the configured command will call
       fork() as part of its start-up. The parent process is expected to exit
-      when start-up is complete and all communication channels are set up.
-      The child continues to run as the main daemon process. This is the
+      when start-up is complete and all communication channels are set up. The child continues to run as the main daemon process. This is the
       behavior of traditional UNIX daemons.
+
+      If set to `notify`, it is expected that the command configured will send a signal to systemd to indicate that it's running.
     * `stop-command` (string)
       Requires `daemon` to be specified and represents the command to run to
       stop the service.
@@ -115,11 +118,16 @@ Parts are the main building blocks of snaps: source code, packages, tarballs or 
       applying to the list here are the same as those of filesets. Referencing
       of fileset keys is done with a $ prefixing the fileset key, which will
       expand with the value of such key.
-    * `snap` (list of strings)
-      A list of files from a part's installation to expose in snap. Rules
+    * `prime` (list of strings)
+      A list of files from a part's installation to expose in the snap. Rules
       applying to the list here are the same as those of filesets. Referencing
       of fileset keys is done with a `$` prefixing the fileset key, which will
       expand with the value of such key.
+
+    * `build-attributes` (list of strings)
+      A list of special attributes that affect the build of this specific part. Supported attributes:
+
+        * `no-system-libraries`: Do not automatically copy required libraries from the system to satisfy the dependencies of this part. This might be useful if one knows these dependencies will be satisfied in other manner, e.g. via content sharing from other snaps.
 
 The `snapcraft.yaml` in any project is validated to be compliant to these
 keywords, if there is any missing expected component or invalid value,

@@ -48,7 +48,7 @@ Key | Type | Purpose
 `filesets` | (yaml subsection) | A dictionary with filesets, the key being a recognizable user defined string and its value a list of strings of files to be included or excluded. Globbing is achieved with `*` for either inclusions or exclusion. Exclusions are denoted by a `-`. Globbing is computed from the private sections of the part.
 `organize` | (yaml subsection) | A dictionary exposing replacements. The key is the internal name while the value the exposed (replacement) name (for example, `source_name: map_name`). **Note**: `filesets` refer to the exposed names of files, after the organization has been applied.
 `stage` | (list of strings) | A list of files from a part’s installation to expose in stage. Rules applying to the list here are the same as those of filesets. Referencing of fileset keys is done with a `$` prefixing the fileset key, which will expand with the value of such key.
-`snap` or `prime` | (list of strings) | A list of files from a part’s installation to expose in the snap. Rules applying to the list here are the same as those of filesets. Referencing of fileset keys is done with a `$` prefixing the fileset key, which will expand with the value of such key.
+`prime` | (list of strings) | A list of files from a part’s installation to expose in the snap. Rules applying to the list here are the same as those of filesets. Referencing of fileset keys is done with a `$` prefixing the fileset key, which will expand with the value of such key.
 
 You can define your parts in any order, `after` takes care of any required build order.
 
@@ -56,7 +56,7 @@ Usage examples for these sub-keys are available in the [common keywords](/docs/r
 
 ## Working with Snapcraft parts
 
-You've a number of ways in which to organize and include parts into you snaps. For example, you may want to enhance your part’s functionality using `stage-packages` to bring Ubuntu deb-based packages into your part, `filesets` to declare inclusion and exclusion sets, `organize` so make the artifact output for your part neater, `stage` and `snap` to make certain only the right set of files is seen at each stage (making use of filesets or not).
+You've a number of ways in which to organize and include parts into you snaps. For example, you may want to enhance your part’s functionality using `stage-packages` to bring Ubuntu deb-based packages into your part, `filesets` to declare inclusion and exclusion sets, `organize` so make the artifact output for your part neater, `stage` and `prime` to make certain only the right set of files is seen at each stage (making use of filesets or not).
 
 ### Advanced example
 
@@ -81,7 +81,7 @@ An example integrating all these concepts for a part called `example-part` using
            - $binaries
            - test/bin/test_app
            - $headers
-         snap:
+         prime:
            - $binaries
 
 In this example
@@ -100,7 +100,7 @@ In this example
 
     These are the files that will be moved to the stage directory.
 
-    The behavior for the snap step is identical to stage except that the file manipulation is applied to the snap directory, which is the final file/content layout for the snap. This is where everything should look clean and crisp for a good quality snap.
+    The behavior for the `prime` step is identical to `stage` except that the file manipulation is applied to the `prime` directory, which is the final file/content layout for the snap. This is where everything should look clean and crisp for a good quality snap.
 
 ## Snapcraft for Python with PIP
 
