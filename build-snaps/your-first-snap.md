@@ -162,10 +162,10 @@ refreshed: 2016-12-23 17:03:55 +0100 CET
 <br>
 ## More tutorials
 
-A growing collection of tutorials is available packaged up as a snap.
+[Ubuntu Tutorials](https://tutorials.ubuntu.com/) are just like learning from pair programming except you can do it on your own.
 
-To get started, install the snap:
+Recommended snap tutorials to get started:
 
-    sudo snap install snap-codelabs
-
-You can then access tutorials on your [local machine](http://localhost:8123/) at port 8123.
+* [Basic snap usage](https://tutorials.ubuntu.com/tutorial/basic-snap-usage?utm_source=snapcraft.io&utm_medium=buildfirstsnap&utm_campaign=tutorials)
+* [Create your first snap](https://tutorials.ubuntu.com/tutorial/create-first-snap?utm_source=snapcraft.io&utm_medium=buildfirstsnap&utm_campaign=tutorials)
+* [Snap a nodejs service](https://tutorials.ubuntu.com/tutorial/build-a-nodejs-service?utm_source=snapcraft.io&utm_medium=buildfirstsnap&utm_campaign=tutorials)
