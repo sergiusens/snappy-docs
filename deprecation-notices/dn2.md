@@ -3,6 +3,7 @@ title: DN2
 ---
 
 **Custom plugins should now be placed in snap/plugins.**
+
 _introduced in snapcraft 2.26_
 
 Originally snapcraft custom plugins were designed to be put in `parts/plugins`
