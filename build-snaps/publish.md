@@ -54,10 +54,10 @@ The Ubuntu Store can, if needed, rename snaps to ensure they match the expectati
 
 Before you upload your snap, have a quick look at your `snapcraft.yaml` file again. Two settings (`grade` and `confinement`) will define which [channels](#release-channels) you can release your snap to.
 
-|                 | `confinement: strict`  | `confinement: devmode` |
-| --------------- | ---------------------- | ---------------------- |
-| `grade: stable` | *all* channels         | `beta` and `edge` only |
-| `grade: devel`  | `beta` and `edge` only | `beta` and `edge` only |
+|                 | `confinement: strict`  | `confinement: classic` | `confinement: devmode` |
+| --------------- | ---------------------- | ---------------------- | ---------------------- |
+| `grade: stable` | *all* channels         | *all* channels         | `beta` and `edge` only |
+| `grade: devel`  | `beta` and `edge` only | `beta` and `edge` only | `beta` and `edge` only |
 
 It's worth noting that the user of your snaps will have to use `--devmode` to install a snap using `confinement: devmode`. This means that they have to willingly accept that the snap is breaking out of confinement.
 
