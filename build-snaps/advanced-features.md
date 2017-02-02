@@ -25,7 +25,7 @@ as well.)
 
 If you just cloned the `snapcraft` source and inspect the demos, you
 can start off your explorations by reading the accompanying `snapcraft.yaml`
-file and running:
+file inside the `snap` directory and running:
 
 	../../bin/snapcraft snap
 
@@ -57,7 +57,7 @@ app. It merely makes sure you have all the relevant build tools installed.
 ### Pulling and building
 
 If you just intend to pull and build the source, take a look at the `gopaste`
-example. In its `snapcraft.yaml` file you can find just this one `parts`
+example. In its `snap/snapcraft.yaml` file you can find just this one `parts`
 paragraph:
 
 ```yaml

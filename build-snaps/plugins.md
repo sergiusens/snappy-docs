@@ -26,7 +26,7 @@ You can find a lot of custom plugins in [this repository of examples](https://gi
 
 To illustrate how a plugin is created, let's consider adding support for a custom build-tool named "Crafty". The goal of this plugin is to pass a configurable target to the `crafty sometarget` command inside the `src/crafty` source directory.
 
-Relative to the directory of `snapcraft.yaml`, create `parts/plugins/x-crafty.yaml` containing:
+Relative to the directory of `snapcraft.yaml`, create `snap/plugins/x-crafty.yaml` containing:
 
 ```yaml
       options:
@@ -39,7 +39,7 @@ Relative to the directory of `snapcraft.yaml`, create `parts/plugins/x-crafty.ya
               required: true
 ```
 
-and `parts/plugins/x_crafty.py` containing:
+and `snap/plugins/x_crafty.py` containing:
 
 ```python
     import snapcraft
@@ -72,7 +72,7 @@ If you would like to explore plugins further, here are a couple of plugin exampl
 
 ### autotools, make: the standard "configure, make, make install" plugins
 
-[See them used](https://github.com/ubuntu-core/snapcraft/blob/master/demos/libpipeline/snapcraft.yaml).
+[See them used](https://github.com/ubuntu-core/snapcraft/blob/master/demos/libpipeline/snap/snapcraft.yaml).
 
 Get more info from:
 
@@ -83,7 +83,7 @@ Get more info from:
 
 ### go: the Golang plugin
 
-[See it used](https://github.com/ubuntu-core/snapcraft/blob/master/demos/godd/snapcraft.yaml).
+[See it used](https://github.com/ubuntu-core/snapcraft/blob/master/demos/godd/snap/snapcraft.yaml).
 
 Get more info from:
 

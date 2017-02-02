@@ -8,10 +8,11 @@ Snapcraft uses a single text file to describe the entire build process for a sna
 
 To get started with a template, you can run `snapcraft init`.
 
-It will create a new file named `snapcraft.yaml` in the current directory. Let's have a look inside:
+It will create a new directory `snap` with a file named `snapcraft.yaml` in the current directory.
+Let's have a look inside:
 
 ```yaml
-$ cat snapcraft.yaml
+$ cat snap/snapcraft.yaml
 name: my-snap-name # you probably want to 'snapcraft register <name>'
 version: '0.1' # just for humans, typically '1.2+git' or '1.3.2'
 summary: Single-line elevator pitch for your amazing snap # 79 char long summary
@@ -118,7 +119,7 @@ The snap is now available in your directory (along with new `parts`, `prime`, an
 
 ```bash
 $ ls
-hello_2.10_amd64.snap  parts  snap  snapcraft.yaml  prime
+hello_2.10_amd64.snap  parts  snap  prime
 ```
 <br>
 The name of the `.snap` file is based on information in the `snapcraft.yaml` (its name and version) and the architecture you're building on: `<name>_<version>_<arch>.snap`. Here, the snap was built on an amd64 machine, so the architecture used in the file name reflects that.
