@@ -30,7 +30,7 @@ In your `snapcraft.yaml`, you can declare the development status of your snap wi
 
 Depending on these, your snap can be restricted to certain channels.
 
-|                 | `confinement: strict`  | `confinement: devmode` |
-| --------------- | ---------------------- | ---------------------- |
-| `grade: stable` | *all* channels         | `beta` and `edge` only |
-| `grade: devel`  | `beta` and `edge` only | `beta` and `edge` only |
+|                 | `confinement: strict`  | `confinement: classic` | `confinement: devmode` |
+| --------------- | ---------------------- | ---------------------- | ---------------------- |
+| `grade: stable` | *all* channels         | *all* channels         | `beta` and `edge` only |
+| `grade: devel`  | `beta` and `edge` only | `beta` and `edge` only | `beta` and `edge` only |
