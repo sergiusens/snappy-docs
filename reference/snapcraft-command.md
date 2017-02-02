@@ -29,7 +29,7 @@ Initialize a snapcraft project.
   Usage:
 
     $ snapcraft init
-    Created snapcraft.yaml.
+    Created snap/snapcraft.yaml.
     Edit the file to your liking or run `snapcraft` to get started
 
 
