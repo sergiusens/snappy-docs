@@ -7,7 +7,7 @@ The entire syntax of a `snapcraft.yaml` with all available keys can be
 reviewed in the [snapcraft.yaml syntax section](/docs/build-snaps/syntax). Here we will
 discuss the apps metadata in more detail.
 
-## Defining app commands
+## Declaring app commands
 
 For every app you build in your snap, you can define which commands or
 daemons are shipped. Declaring them in `snapcraft.yaml` will expose them in
@@ -30,27 +30,7 @@ So in the example, *app1* will declare its **command** to the relative path
 different **command** being `opt/bin/app2` and using the *network*
 interface.
 
-
-### The Snapcraft wrapper script explained
-
-It's customary to use within your app small wrappers that will launch the
-real binaries. For instance, to select the binaries for the correct
-architecture or to set runtime variables such as the application state
-directory.
-
-The typical wrapper is a small shell script that sets `PATH`,
-`LD_LIBRARY_PATH` or other runtime specific environment variables.
-
-For `PATH` to work properly, it's necessary not to hardcode any pathname in
-your code. For instance, don’t rely on `/usr/bin/python` or on
-`/usr/bin/java` but instead run `python` or `java`.
-
-While using snapcraft, proper wrappers will be generated for binaries
-declared for your app. Snapcraft will also adjust symlinks to be relative
-and work for your snap.
-
-
-## Adding daemons
+## Declaring daemons
 
 Every app may build a binary that may need to be exposed in the system, with
 that in mind, the way to expose a daemon is by using the **daemon**
@@ -79,6 +59,39 @@ part of its start-up. The parent process is expected to exit when start-up is
 complete and all communication channels are set up. The child continues to
 run as the main daemon process. This is the behavior of traditional UNIX
 daemons.
+
+The `daemon` key values follow systemd service types (`forking`, `oneshot`, `notify` and `simple`). See the [apps and daemons syntax](/docs/build-snaps/syntax#apps-and-commands) for details on these types.
+
+### Stopping daemons
+
+To provide a clean way to stop a daemon, you can provide a `stop-command` with an additional `stop-timeout` in seconds. In case the `stop-command` does not successfully terminate the daemon in the timeout duration, it will be terminated with `SIGTERM` (and ultimately with `SIGKILL` if `SIGTERM` fails).
+
+```yaml
+apps:
+  daemon1:
+    command: bin/app1
+    daemon: simple
+    stop-command: bin/app1-stop
+    stop-timeout: 10
+```
+
+In this example, when snapd needs to stop `daemon1` (eg. if the user disables or removes the snap), `bin/app1-stop` will be executed.
+
+## Using wrappers
+
+It's customary to use within your app small wrappers that will launch the
+real binaries. For instance, to select the binaries for the correct
+architecture or to set runtime variables such as the application state
+directory.
+
+The typical wrapper is a small shell script that sets `PATH`,
+`LD_LIBRARY_PATH` or other runtime specific environment variables.
+
+For `PATH` to work properly, it's necessary not to hardcode any pathname in
+your code. For instance, don’t rely on `/usr/bin/python` or on
+`/usr/bin/java` but instead run `python` or `java`.
+
+Snapcraft already generates a wrapper for each declared command, that adjusts symlinks to be relative and work for your snap. These wrappers are named after commands: `command-<command>.wrapper` and can be found in the `prime/` directory after a snapcraft build or in the  `/snap/<snap-name>/current/` directory after a snap install.
 
 ## Fixed assets
 
