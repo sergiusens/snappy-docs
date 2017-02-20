@@ -6,9 +6,9 @@ The tracks and channels mechanism provided by the store allow you to distribute 
 
 ## Tracks
 
-Tracks allow you to publish different series of your software and let users stick to a specific release.
+Tracks allow you to publish different series of your software and let users follow a specific one.
 
-* By default, snaps are published to a track called `latest`. This is also the default for users when they install a snap.
+* By default, snaps are published to a track called `latest`. This is also the default for users when they install a snap, for example `snap install my-app --beta` implies `--channel=latest/beta`.
 * In each track, you can publish your snap in the following channels: `stable`, `candidate`, `beta` and `edge`.
 * Users do not get automatically moved between tracks: it is a conscious decision to not install snaps from the `latest` track and it's conscious decision to move back to it or to any other track.
 
@@ -16,9 +16,9 @@ As of now, you can [ask store developers](/community), to open a new track for y
 
 ### Example
 
-The most common use case for opening a new track is to host a previous stable release for users to install.
+The most common use case for opening a new track is to host a specific stable release for users to install.
 
-Eg. when you release the 2.0 version of your software in the `latest` track, opening a track called `1.0` for users wanting to stay on 1.0.
+Eg. when you release the 2.0 version of your software in the `latest` track, opening a track called `2.0` for users wanting to stay on 2.0 and subsequent 2.* releases.
 
 ![Tracks and channels - example](../media/tracks_channels_example.png)
 
