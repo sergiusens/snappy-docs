@@ -18,7 +18,7 @@ As of now, you can [ask store developers](/community), to open a new track for y
 
 The most common use case for opening a new track is to host a specific stable release for users to install.
 
-Eg. when you release the 2.0 version of your software in the `latest` track, opening a track called `2.0` for users wanting to stay on 2.0 and subsequent 2.* releases.
+Eg. when you release the 2.0 version of your software in the `latest` track, open a track called `2.0` for users wanting to stay on 2.0 and subsequent 2.* releases.
 
 ![Tracks and channels - example](../media/tracks_channels_example.png)
 
