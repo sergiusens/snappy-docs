@@ -19,7 +19,7 @@ title: "Interfaces reference"
 | `dbus` | Providing snaps implementing a DBus API may be accessed via their well-known DBus connection name _(snapd 2.20+)._ | no | no | `name` (slot): well-known DBus connection name for the service (eg, `org.foo.bar`)<br> `bus` (slot): DBus bus to use (ie, `session` or `system`)<br> `name` (plug): well-known DBus connection name of the service from the providing snap<br> `bus` (plug): DBus bus to use for providing snap |
 | `gsettings` | Can access global gsettings of the user\'s session which gives privileged access to sensitive information stored in gsettings and allows adjusting settings of other applications. | yes | yes |  |
 | `home` | Can access non-hidden files in user\'s `$HOME` and gvfs mounted directories owned by the user to read/write/lock. | yes on classic (traditional distributions), no otherwise | yes |  |
-| `mpris` | Providing snaps implementing the Media Player Remove Interfacing Specification (mpris) may be accessed via their well-known DBus name. | no | no | `name` (slot): optional, media player name to use for DBus well-known name |
+| `mpris` | Providing snaps implementing the Media Player Remote Interfacing Specification (mpris) may be accessed via their well-known DBus name. | no | no | `name` (slot): optional, media player name to use for DBus well-known name |
 | `network` | Can access the network as a client. | yes | no |  |
 | `network-bind` | Can access the network as a server. | yes | no |  |
 | `opengl` | Can access OpenGL hardware. | yes | no |  |
