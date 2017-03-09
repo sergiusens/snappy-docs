@@ -6,7 +6,7 @@ title: DN4
 
 _introduced in snapcraft 2.28_
 
-Snapcraft has a `history command`, the output of which looks something like this:
+Snapcraft has a `history` command, the output of which looks something like this:
 
 ```
 $ snapcraft history my-snap
