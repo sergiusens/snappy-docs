@@ -74,7 +74,7 @@ Typical value `/home/zyga/snap/hello-world/common`
 
 Directory for system data of a snap.
 
-This directory is owned and writable by `root` and is meant to be used by background applications (daemons, services). Unlike `SNAP_COMMON` this directory i backed up and restored across `snap refresh` and `snap revert` operations.
+This directory is owned and writable by `root` and is meant to be used by background applications (daemons, services). Unlike `SNAP_COMMON` this directory is backed up and restored across `snap refresh` and `snap revert` operations.
 
 Typical value `/var/snap/hello-world/27`
 

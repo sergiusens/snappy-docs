@@ -42,7 +42,7 @@ The snapcraft.yaml `parts` key defines a map of the parts you want to include in
 
 Key | Type | Purpose
 :----- | :---- | :-----
-`plugin` | (string) | Specifies the plugin that will manage this part.  Snapcraft will pass the plugin all the other user-specified part options, those options defined with the other keys below. There are three way in which the plugin can be defined: a plugin name to use a built-in plug-in (for details, see the [list of built-in plugins](/docs/reference/plugins)), a local path such as `parts/plugins/x-plugin_name.py` to use a local (custom defined) plugin and if `plugin` is not defined locally, the plugin defined for the part in the [remote parts repository](https://wiki.ubuntu.com/snapcraft/parts).
+`plugin` | (string) | Specifies the plugin that will manage this part.  Snapcraft will pass the plugin all the other user-specified part options, those options defined with the other keys below. There are three ways in which the plugin can be defined: a plugin name to use a built-in plug-in (for details, see the [list of built-in plugins](/docs/reference/plugins)), a local path such as `parts/plugins/x-plugin_name.py` to use a local (custom defined) plugin and if `plugin` is not defined locally, the plugin defined for the part in the [remote parts repository](https://wiki.ubuntu.com/snapcraft/parts).
 `after` | (list of strings) | Specifies any parts that should be built before this part, which Snapcraft then stages before trying to build this part.  This is useful when a part needs a library or build tool built by another part. If the part defined in `after` is not defined locally, the part will be searched for in the [remote parts repository](https://wiki.ubuntu.com/snapcraft/parts).
 `stage-packages` | (list of strings) | A list of Ubuntu packages to use that are needed to support the part creation.
 `filesets` | (yaml subsection) | A dictionary with filesets, the key being a recognizable user defined string and its value a list of strings of files to be included or excluded. Globbing is achieved with `*` for either inclusions or exclusion. Exclusions are denoted by a `-`. Globbing is computed from the private sections of the part.
@@ -56,7 +56,7 @@ Usage examples for these sub-keys are available in the [common keywords](/docs/r
 
 ## Working with Snapcraft parts
 
-You've a number of ways in which to organize and include parts into you snaps. For example, you may want to enhance your part’s functionality using `stage-packages` to bring Ubuntu deb-based packages into your part, `filesets` to declare inclusion and exclusion sets, `organize` so make the artifact output for your part neater, `stage` and `prime` to make certain only the right set of files is seen at each stage (making use of filesets or not).
+You've a number of ways in which to organize and include parts into you snaps. For example, you may want to enhance your part’s functionality using `stage-packages` to bring Ubuntu deb-based packages into your part, `filesets` to declare inclusion and exclusion sets, `organize` to make the artifact output for your part neater, `stage` and `prime` to make certain only the right set of files is seen at each stage (making use of filesets or not).
 
 ### Advanced example
 

@@ -48,7 +48,7 @@ Each snap might include multiple related commands, with a default command that h
     $ hello.universe
     Hello, universe!
 
-Snaps can also install services that run in the background, such as web servers, daemons... Those will start automatically when the snap is installed. The `snap disable <snap name>` and `snap enable <snap name>` commands allow you to keep full control over snaps installed on your system, regardless of the way they are started.
+Snaps can also install services that run in the background, such as web servers and daemons. Those will start automatically when the snap is installed. The `snap disable <snap name>` and `snap enable <snap name>` commands allow you to keep full control over snaps installed on your system, regardless of the way they are started.
 
 ## View details about installed snaps
 
@@ -66,7 +66,7 @@ Snaps are updated automatically in the background to the latest version, every d
 
 You can also switch to another version of a snap by refreshing into another release channel, if the developer has published the snap in multiple channels.
 
-Valid release channels are `stable`, `candidate`, `beta`, `edge` and their name reflect the development status of snaps they contain.
+Valid release channels are `stable`, `candidate`, `beta`, `edge` and their name reflects the development status of snaps they contain.
 
     $ snap refresh <snap name> --beta
 
@@ -74,13 +74,15 @@ Valid release channels are `stable`, `candidate`, `beta`, `edge` and their name 
 
 When you're developing a snap, you will probably want to run it without the strict security confinement that is expected of stable, published snaps. This is done by using the `--devmode` flag on installation.
 
-You can even publish snaps that require `--devmode` to work, but they can only be published to the `beta` or `edge` [release channels](/docs/reference/channels), not the stable or candidate channels. Users can then install these versions using `--devmode` as well. Because of the risk installing an unconfined app creates, installing a snap in `devmode` is not recommended unless you trust its developer.
+You can even publish snaps that require `--devmode` to work, but they can only be published to the `beta` or `edge` [release channels](/docs/reference/channels). Users need to install these versions using the `--devmode` flag as well.
 
     $ snap install flubber --beta
     error: cannot install "flubber": snap not found
     $ snap install flubber --beta --devmode
     Download snap "flubber" (12) from channel "beta"
     ...
+
+Because of the risk installing an unconfined app creates, installing a snap in `devmode` is not recommended unless you trust its developer. As a safeguard, snaps installed using the `devmode` flag are not automatically refreshed and require the user to manually refresh them.
 
 To know the right channel and confinement mode to request when installing a package, you can use the `snap info` command prior to installation:
 
