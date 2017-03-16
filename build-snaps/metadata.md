@@ -64,7 +64,7 @@ The `daemon` key values follow systemd service types (`forking`, `oneshot`, `not
 
 ### Stopping daemons
 
-To provide a clean way to stop a daemon, you can provide a `stop-command` with an additional `stop-timeout` in seconds. In case the `stop-command` does not successfully terminate the daemon in the timeout duration, it will be terminated with `SIGTERM` (and ultimately with `SIGKILL` if `SIGTERM` fails).
+To provide a clean way to stop a daemon, you can provide a `stop-command` with an additional `stop-timeout`. In case the `stop-command` does not successfully terminate the daemon in the timeout duration, it will be terminated with `SIGTERM` (and ultimately with `SIGKILL` if `SIGTERM` fails).
 
 ```yaml
 apps:
@@ -72,7 +72,7 @@ apps:
     command: bin/app1
     daemon: simple
     stop-command: bin/app1-stop
-    stop-timeout: 10
+    stop-timeout: 10s
 ```
 
 In this example, when snapd needs to stop `daemon1` (eg. if the user disables or removes the snap), `bin/app1-stop` will be executed.
