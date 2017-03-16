@@ -29,9 +29,9 @@ To illustrate the process take the example of installing and updating `hello-wor
 
     $ snap list | grep hello
     hello-world          1.0.2                 29   canonical  -
-    $ snap list -v | grep hello
-    hello-world          1.0.1                 10   canonical  -
-    hello-world*         1.0.2                 29   canonical  -
+    $ snap list --all | grep hello
+    hello-world          1.0.1                 10   canonical  disabled
+    hello-world          1.0.2                 29   canonical  -
 
 so, `1.0.2`, was downloaded and made active, leaving `1.0.1` installed. Doing the upgrade again:
 
@@ -40,8 +40,8 @@ so, `1.0.2`, was downloaded and made active, leaving `1.0.1` installed. Doing th
     Name                 Version               Rev  Developer  Notes
     hello-world          1.0.3                 32   canonical  -
 
-    $ snap list -v | grep hello
-    hello-world          1.0.2                 29   canonical  -
-    hello-world*         1.0.3                 32   canonical  -
+    $ snap list --all | grep hello
+    hello-world          1.0.2                 29   canonical  disabled
+    hello-world          1.0.3                 32   canonical  -
 
 and `1.0.1` is gone.

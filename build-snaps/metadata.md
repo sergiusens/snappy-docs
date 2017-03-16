@@ -60,7 +60,7 @@ complete and all communication channels are set up. The child continues to
 run as the main daemon process. This is the behavior of traditional UNIX
 daemons.
 
-The `daemon` key values follow systemd service types (`forking`, `oneshot`, `notify` and `simple`). See the [apps and daemons syntax](/docs/build-snaps/syntax#apps-and-commands) for details on these types.
+The `daemon` key values follow systemd service types (`forking`, `oneshot`, `notify` and `simple`). See the [apps and commands syntax](/docs/build-snaps/syntax#apps-and-commands) for details on these types.
 
 ### Stopping daemons
 
@@ -76,6 +76,12 @@ apps:
 ```
 
 In this example, when snapd needs to stop `daemon1` (eg. if the user disables or removes the snap), `bin/app1-stop` will be executed.
+
+See the [apps and commands syntax](/docs/build-snaps/syntax#apps-and-commands) for details on how to automatically restart a daemon.
+
+### Tutorial
+
+To get a first experience with snapping a service, the ["Build a nodejs service" tutorial](https://tutorials.ubuntu.com/tutorial/build-a-nodejs-service) will guide you through building, confining and general good practices to snap a simple web server.
 
 ## Using wrappers
 

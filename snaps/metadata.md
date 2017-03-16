@@ -61,7 +61,7 @@ The following specification defines what is supported inside it:
 # The suggested snap name, constrained to the [a-z0-9] charset and inner
 # dashes. The final name when the snap is installed is defined by the
 # snap-declaration assertion associated with the snap, if any.
-name: <name>
+name: <snap name>
 
 # Version of the software packed inside the snap. Has no semantic value
 # in the system (no greater/lower-than rules are ever applied to it).
@@ -151,7 +151,7 @@ The `Exec=` line must necessarily look like the following to be valid:
 
   * `Exec=<snap name>[.<app name>] [<argument> ...]`
 
-As in the executables contained under `/snap`, the `.<app name>` suffix is
+As in the executables contained under `/snap/bin`, the `.<app name>` suffix is
 omitted if the application name and snap name are the same.
 
 For example, assuming this content in `snap.yaml`:
