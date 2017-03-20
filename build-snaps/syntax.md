@@ -54,7 +54,7 @@ Snaps can ship multiple applications and commands. The following keys allow you 
       Specifies the internal command to expose. If it is a `daemon` this
       command is used to start the service.
     * `plugs` (list of strings)
-      The list of interfaces the app should have access to. See [Interfaces](docs/core/interfaces) for details on plugs and the [list of available interfaces](/docs/reference/interfaces).
+      The list of interfaces the app should have access to. See [Interfaces](/docs/core/interfaces) for details on plugs and the [list of available interfaces](/docs/reference/interfaces).
     * `desktop` (string)
        Path to the desktop file, see [Commands, daemons & assets](/docs/build-snaps/metadata#fixed-assets) for details.  
     * `daemon` (string)

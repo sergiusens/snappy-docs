@@ -108,7 +108,8 @@ Snapcraft includes support for Python 2.x and Python 3.x parts; here’s how a s
 
      parts:
        spongeshaker:
-         plugin: python3
+         plugin: python
+         python-version: python3
          source: git://github.com/markokr/spongeshaker.git
 
 A Python part will typically make sure that the required Python packages are installed on the build host and embed the following pieces in your snap:
@@ -121,11 +122,11 @@ The proper **PYTHONPATH** environment variable will also be set in the wrapper s
 
 Python parts support standard Snapcraft options and the requirements option to point PIP at its requirements file.
 
-For details, see the complete reference and real-world examples of the [`python2`](/docs/reference/plugins/python2) and [`python3`](/docs/reference/plugins/python3) plugins.
+For details, see the complete reference and real-world examples of the [`python`](/docs/reference/plugins/python) plugin.
 
 ### Embedding a Python runtime
 
-While the Snapd System include a Python runtime, this might not be the one you need, and it might be updated to a different version or removed in a Snapd System update. This is why applications using Python should embed their copy of the Python runtime.
+While the Core snap includes a Python runtime, this might not be the one you need, and it might be updated to a different version or removed in a Core snap update. This is why applications using Python can embed their copy of the Python runtime.
 
 ## Snapcraft for Java, Maven or Ant
 
