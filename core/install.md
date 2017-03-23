@@ -2,59 +2,43 @@
 title: Install snapd
 ---
 
-### Arch
+snapd is available on many different distributions. This page gives an overview
+over which are supported and what their current status is. Also it has installation
+instructions for each of these distributions.
 
-```
-sudo pacman -S snapd
+# Installation instructions
 
-# enable the snapd systemd service:
-sudo systemctl enable --now snapd.socket
-```
+ * [Arch Linux](install-arch-linux.md)
+ * [Debian](install-debian.md)
+ * [Fedora](install-fedora.md)
+ * [Gentoo](install-gentoo.md)
+ * [OpenEmbedded/Yocto](install-oe-yocto.md)
+ * [openSUSE](install-opensuse.md)
+ * [OpenWRT](install-openwrt.md)
+ * [Ubuntu](install-ubuntu.md)
 
-### Debian
+# Support Overview
 
-```
-# On Sid:
-sudo apt install snapd
-```
+The following overview shows which version of snapd is available in each of the
+listed distributions.
 
-### Fedora
+| Operating System    | Status      | Version | Notes                   |
+| ------------------- |:-----------:| ------- | ----------------------- |
+| Ubuntu 14.04 LTS    | Supported   | 2.23    |                         |
+| Ubuntu 16.04 LTS    | Supported   | 2.23    |                         |
+| Debian (testing)    | Supported   | 2.21    | _devmode_               |
+| Debian (unstable)   | Supported   | 2.21    | _devmode_               |
+| Fedora 25           | In progress | 2.16    | _devmode_, _no-classic_ |
+| CentOS 7            | In progress | N/A     | _devmode_, _no-classic_ |
+| RHEL 7.3            | Unsupported | N/A     | N/A                     |
+| Arch Linux          | Outdated    | 2.16    | _devmode_               |
+| Gentoo              | Outdated    | 2.15    | _devmode_               |
+| OpenSUSE Leap 42.2  | Unsupported | 2.23.5  | N/A                     |
+| OpenSUSE Tumbleweed | Unsupported | 2.23.5  | N/A                     |
+| Yocto               | Unsupported | 2.21    | _devmode_               |
 
-```
-sudo dnf copr enable zyga/snapcore
-sudo dnf install snapd
+_devmode_: confinement technology is not fully supported and all snaps are
+installed in development mode.
 
-# enable the snapd systemd service:
-sudo systemctl enable --now snapd.service
-
-# SELinux support is in beta, so currently:
-sudo setenforce 0
-
-# to persist, edit /etc/selinux/config
-to set SELINUX=permissive and reboot.
-```
-
-### Gentoo
-
-Install the [gentoo-snappy overlay](https://github.com/zyga/gentoo-snappy).
-
-### OpenEmbedded/Yocto
-
-Install the [snap meta layer](https://github.com/morphis/meta-snappy/blob/master/README.md).
-
-### openSUSE
-
-```
-sudo zypper addrepo http://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_42.2/ snappy
-sudo zypper install snapd
-```
-
-### OpenWrt
-
-Enable the [snap-openwrt feed](https://github.com/teknoraver/snap-openwrt/blob/master/README.md).
-
-### Ubuntu
-
-```
-sudo apt install snapd
-```
+_no-classic_: because of distribution policy to remove `/snap` directory, snaps
+using classic confinement are not supported.
