@@ -2,22 +2,22 @@
 title: Install snapd
 ---
 
-snapd is available on many different distributions. This page gives an overview
-over which are supported and what their current status is. Also it has installation
+snapd, the service you need to install to run and manage snaps, is available on many distributions. This page gives an overview
+of which ones are supported and what their current status is. It also provides installation
 instructions for each of these distributions.
 
-# Installation instructions
+## Installation instructions
 
- * [Arch Linux](install-arch-linux.md)
- * [Debian](install-debian.md)
- * [Fedora](install-fedora.md)
- * [Gentoo](install-gentoo.md)
- * [OpenEmbedded/Yocto](install-oe-yocto.md)
- * [openSUSE](install-opensuse.md)
- * [OpenWRT](install-openwrt.md)
- * [Ubuntu](install-ubuntu.md)
+ * [Arch Linux](install-arch-linux)
+ * [Debian](install-debian)
+ * [Fedora](install-fedora)
+ * [Gentoo](install-gentoo)
+ * [OpenEmbedded/Yocto](install-oe-yocto)
+ * [openSUSE](install-opensuse)
+ * [OpenWrt](install-openwrt)
+ * [Ubuntu](install-ubuntu)
 
-# Support Overview
+## Support Overview
 
 The following overview shows which version of snapd is available in each of the
 listed distributions.
@@ -33,12 +33,12 @@ listed distributions.
 | RHEL 7.3            | Unsupported | N/A     | N/A                     |
 | Arch Linux          | Outdated    | 2.16    | _devmode_               |
 | Gentoo              | Outdated    | 2.15    | _devmode_               |
-| OpenSUSE Leap 42.2  | Unsupported | 2.23.5  | N/A                     |
-| OpenSUSE Tumbleweed | Unsupported | 2.23.5  | N/A                     |
+| openSUSE Leap 42.2  | Unsupported | 2.23.5  | N/A                     |
+| openSUSE Tumbleweed | Unsupported | 2.23.5  | N/A                     |
 | Yocto               | Unsupported | 2.23.5  | _devmode_               |
 
 _devmode_: confinement technology is not fully supported and all snaps are
-installed in development mode.
+installed in [development mode](/docs/reference/confinement).
 
-_no-classic_: because of distribution policy to remove `/snap` directory, snaps
-using classic confinement are not supported.
+_no-classic_: because of distribution policy to remove the `/snap` directory, snaps
+using [classic confinement](/docs/reference/confinement) are not supported.

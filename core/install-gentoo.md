@@ -7,4 +7,4 @@ further instructions are available as part of the repository [here](https://gith
 
 ## Next Steps
 
- * [Using snaps](usage.md)
+ * [Using snaps](usage)

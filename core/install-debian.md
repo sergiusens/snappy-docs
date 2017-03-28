@@ -16,4 +16,4 @@ Afterwards everything is setup to get you started with snaps.
 
 ## Next Steps
 
- * [Using snaps](usage.md)
+ * [Using snaps](usage)
