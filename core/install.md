@@ -35,7 +35,7 @@ listed distributions.
 | Gentoo              | Outdated    | 2.15    | _devmode_               |
 | OpenSUSE Leap 42.2  | Unsupported | 2.23.5  | N/A                     |
 | OpenSUSE Tumbleweed | Unsupported | 2.23.5  | N/A                     |
-| Yocto               | Unsupported | 2.21    | _devmode_               |
+| Yocto               | Unsupported | 2.23.5  | _devmode_               |
 
 _devmode_: confinement technology is not fully supported and all snaps are
 installed in development mode.
