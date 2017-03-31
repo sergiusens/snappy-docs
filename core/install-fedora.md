@@ -8,12 +8,29 @@ repository in [copr](https://copr.fedorainfracloud.org/). In the
 near future snapd will be available in the official Fedora
 distribution repositories.
 
+## Enable the repository
+
+There are separate repos for Fedora 24 and Fedora 25/26. Once enabled, continue to install snapd below.
+
+### Fedora 24
+
 To install snapd from the community repository you have to enable
 it first:
 
 ```
 $ sudo dnf copr enable zyga/snapcore
 ```
+
+### Fedora 25 / 26 & Rawhide
+
+To install snapd from the community repository you have to enable
+it first:
+
+```
+$ sudo dnf copr enable mrmorph/snapcore
+```
+
+## Install snapd
 
 Now you can install the snapd package with:
 
