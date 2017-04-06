@@ -112,9 +112,9 @@ apps:
         desktop: usr/share/applications/my-app.desktop
 ```
 
-Alternatively, you can create a `setup/gui/` directory at the root of your snapcraft project to host a desktop file:
+Alternatively, you can create a `snap/gui/` directory at the root of your snapcraft project to host a desktop file:
 
-    setup/gui/<app-name>.desktop
+    snap/gui/<app-name>.desktop
     snapcraft.yaml
 
 Where `<app-name>` is the entry corresponding to `apps` in `snapcraft.yaml`.
