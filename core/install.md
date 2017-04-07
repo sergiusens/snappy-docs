@@ -28,7 +28,10 @@ listed distributions.
 | Ubuntu 16.04 LTS    | Supported   | 2.23    |                         |
 | Debian (testing)    | Supported   | 2.21    | _devmode_               |
 | Debian (unstable)   | Supported   | 2.21    | _devmode_               |
-| Fedora 25           | In progress | 2.16    | _devmode_, _no-classic_ |
+| Fedora 24           | Supported   | 2.23.6  | _devmode_, _no-classic_ |
+| Fedora 25           | Supported   | 2.23.6  | _devmode_, _no-classic_ |
+| Fedora 26           | Supported   | 2.23.6  | _devmode_, _no-classic_ |
+| Fedora Rawhide      | Supported   | 2.23.6  | _devmode_, _no-classic_ |
 | CentOS 7            | In progress | N/A     | _devmode_, _no-classic_ |
 | RHEL 7.3            | Unsupported | N/A     | N/A                     |
 | Arch Linux          | Outdated    | 2.16    | _devmode_               |
