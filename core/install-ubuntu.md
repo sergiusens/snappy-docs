@@ -11,6 +11,14 @@ include snapd by default, you have to install it manually from the archive:
 $ sudo apt install snapd
 ```
 
+Snaps which use the pusleaudio interface to playback sounds & music also require pulseaudio to be installed. This is already installed for the majority of Ubuntu flavours, however Lubuntu does not ship pulseaudio, so it must be installed manually if audio is desired from those snaps.
+
+```
+$ sudo apt install pulseaudio
+```
+Once installed, logout and back in to ensure pulseaudio is running.
+
+
 Afterwards everything is setup to get you started with snaps.
 
 ## Next Steps
