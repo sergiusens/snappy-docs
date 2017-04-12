@@ -128,3 +128,8 @@ interfaces such as store fronts like snapweb.
 To use an icon to represent the snap, just declare a PNG or SVG in
 `snapcraft.yaml` through an `icon` entry with a path relative
 to the icon inside the snap.
+
+
+```yaml
+icon: project/src/images/icon.png
+```
