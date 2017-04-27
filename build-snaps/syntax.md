@@ -125,16 +125,48 @@ Parts are the main building blocks of snaps: source code, packages, tarballs or 
       an 'else' clause is considered satisfied even if no selector matched. The
       'else fail' form allows erroring out if an 'on' clause was not matched.
 
+      For example, to fetch the `hello` package only when building on amd64:
+
+          - on amd64:
+            - my-package
+
+      To fetch something else on other architectures:
+
+          - on amd64:
+            - my-package
+          - else:
+            - something-else
+
+       You could also use `else fail` instead to cause the build to fail on
+       architectures other than amd64.
+
           - try:
             - ...
           - else:
             - ...
 
       The body of the 'try' clause is taken into account only when all packages
-      contained within it are valid. If not, if it's immediately followed by
-      'else' clauses they are tried in order, and one of them must be satisfied.
-      A 'try' clause with no 'else' clause is considered satisfied even if it
-      contains invalid packages.
+      contained within it are valid (i.e. available in the archive for the given
+      architecture). If not, if it's immediately followed by 'else' clauses they
+      are tried in order, and one of them must be satisfied. A 'try' clause with
+      no 'else' clause is considered satisfied even if it contains invalid
+      packages.
+
+      For example, let's say a stage-package isn't available for all
+      architectures. You could make it an optional stage-package like so:
+
+          - try:
+            - my-optional-package
+
+      This would cause `my-optional-package` to be staged only when it's
+      available in the archive for the architecture being built. You could also
+      provide alternatives:
+
+          - try:
+            - my-optional-package
+          - else
+            - try-this-one
+
     * `build-packages` (list of strings)
       A list of Ubuntu packages to be installed on the host to aid in building
       the part. These packages will not go into the final snap.
