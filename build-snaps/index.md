@@ -11,7 +11,7 @@ title: "Build snaps"
 
 ## Build your first snap
 
-A concise, step by step, snap example is the best way to get started! Heads on to [Your first snap](/docs/build-snaps/your-first-snap).
+A concise, step by step, snap example is the best way to get started! Head on to [Your first snap](/docs/build-snaps/your-first-snap).
 
 ### Automatically building from Git
 
