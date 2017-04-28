@@ -128,12 +128,12 @@ Parts are the main building blocks of snaps: source code, packages, tarballs or 
       For example, to fetch the `hello` package only when building on amd64:
 
           - on amd64:
-            - my-package
+            - hello
 
       To fetch something else on other architectures:
 
           - on amd64:
-            - my-package
+            - hello
           - else:
             - something-else
 
