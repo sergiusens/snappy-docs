@@ -8,6 +8,7 @@ For the older 14.04 LTS (trusty) release or any flavour (e.g. Lubuntu) which doe
 include snapd by default, you have to install it manually from the archive:
 
 ```
+$ sudo apt update
 $ sudo apt install snapd
 ```
 
