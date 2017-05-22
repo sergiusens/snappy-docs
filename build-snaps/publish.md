@@ -3,7 +3,7 @@ title: "Share your snap"
 ---
 
 
-In order to share your snaps with the world, you need to push them to store, and release them. This page describes the process you will follow for the Ubuntu-hosted Store.
+In order to share your snaps with the world, you need to push them to a store, and release them. This page describes the process you will follow for the Ubuntu-hosted Store.
 
 Although, snaps are not tied to a specific type of store and you can host them any way you want, see the [Store](/docs/core/store) page for more details.
 
