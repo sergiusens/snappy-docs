@@ -10,7 +10,7 @@ Although, snaps are not tied to a specific type of store and you can host them a
 ## 1. Create a store account
 
 To release snaps in the Ubuntu Store you will need to create an account
-on [ashboard.snapcraft.io](https://myapps.developer.ubuntu.com/). This is your developer portal where you can customize how your snaps are presented, review your uploads, and control the releasing process.
+on [dashboard.snapcraft.io](https://myapps.developer.ubuntu.com/). This is your developer portal where you can customize how your snaps are presented, review your uploads, and control the releasing process.
 
 You'll need to choose a unique "developer namespace" as part of the account creation process. This name will be visible by users and associated with your snaps.
 
