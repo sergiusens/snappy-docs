@@ -3,16 +3,16 @@ title: "Publish your snap"
 ---
 
 
-In order to share your snaps with the world, you need to publish them in a store. This page describes the publication process you will follow for the Ubuntu-hosted Store.
+In order to share your snaps with the world, you need to push them to a store, and release them. This page describes the process you will follow for the Ubuntu-hosted Store.
 
 Although, snaps are not tied to a specific type of store and you can host them any way you want, see the [Store](/docs/core/store) page for more details.
 
 ## 1. Create a store account
 
-To publish snaps to the Ubuntu Store you will need to create an account
-on [dashboard.snapcraft.io](https://dashboard.snapcraft.io). This is your developer portal where you can customize how your snaps are presented, review your uploads, and control publishing.
+To release snaps in the Ubuntu Store you will need to create an account
+on [dashboard.snapcraft.io](https://myapps.developer.ubuntu.com/). This is your developer portal where you can customize how your snaps are presented, review your uploads, and control the releasing process.
 
-You'll need to choose a unique "developer namespace" as part of the account creation process. This name will be visible by users and associated with your published snaps.
+You'll need to choose a unique "developer namespace" as part of the account creation process. This name will be visible by users and associated with your snaps.
 
 Once you've confirmed your account, you're ready to start pushing your snaps to the Store.
 
@@ -28,7 +28,7 @@ Note that `logout` commands are available as well.
 
 ## 2. Reserve a name for your snap
 
-You can publish your own version of a snap, provided you do so under a name you have rights to.
+You can push your own version of a snap, provided you do so under a name you have rights to.
 
 New names can be registered:
 
@@ -48,7 +48,7 @@ You are now the only developer able to use this name in the store. Note that the
 
 ### Name disputes
 
-The Ubuntu Store can, if needed, rename snaps to ensure they match the expectations of most users. If you're the publisher most users expect for a name, then claim it with the [snap name registration](https://dashboard.snapcraft.io/dev/snaps/register-name/) form. If the name is already taken, the form will let you submit a name dispute.
+The Ubuntu Store can, if needed, rename snaps to ensure they match the expectations of most users. If you're the developer or publisher most users expect for a snap name, then claim it with the [snap name registration](https://dashboard.snapcraft.io/dev/snaps/register-name/) form. If the name is already taken, the form will let you submit a name dispute.
 
 ## 3. Upload your snap
 
@@ -79,7 +79,7 @@ Note that `snapcraft push` will return an error if you try to push a snap with a
 
 ### Revisions
 
-Each time you upload a snap, the store will assigned a revision number to it, starting at 1. This revision number will be incremented each time you upload a new version of your snap.
+Each time you upload a snap, the store will assigned a revision number to it, starting at 1. This revision number will be incremented each time you upload a new version of your snap. The revision number also increments when uploading a build for a new architecture. 
 
 ## 4. Release your snap
 
@@ -94,7 +94,7 @@ There are four channels available for your snap:
 *   `beta` is used to provide preview releases of semi-stable changes. Snaps requiring the `devmode` flag to work are allowed in this channel.
 *   `edge` is for your most recent changes, probably untested and with no guarantees attached. Snaps requiring the `devmode` flag to work are allowed in this channel.
 
-The same revision of a snap can be published into several channels at once.
+The same revision of a snap can be released into several channels at once.
 
 ### Release process
 
