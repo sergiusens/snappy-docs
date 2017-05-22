@@ -10,7 +10,7 @@ Although, snaps are not tied to a specific type of store and you can host them a
 ## 1. Create a store account
 
 To release snaps in the Ubuntu Store you will need to create an account
-on [myapps.developer.ubuntu.com](https://myapps.developer.ubuntu.com/). This is your developer portal where you can customize how your snaps are presented, review your uploads, and control releasing.
+on [ashboard.snapcraft.io](https://myapps.developer.ubuntu.com/). This is your developer portal where you can customize how your snaps are presented, review your uploads, and control the releasing process.
 
 You'll need to choose a unique "developer namespace" as part of the account creation process. This name will be visible by users and associated with your snaps.
 
@@ -33,7 +33,7 @@ You can push your own version of a snap, provided you do so under a name you hav
 New names can be registered:
 
 * by clicking **New Snap** at the top of the Store
-* by visiting: [the name registration page](https://myapps.developer.ubuntu.com/dev/click-apps/register-name/)
+* by visiting: [the name registration page](https://dashboard.snapcraft.io/dev/snaps/register-name/)
 * or by running `snapcraft register snap-name`
 
 
@@ -48,7 +48,7 @@ You are now the only developer able to use this name in the store. Note that the
 
 ### Name disputes
 
-The Ubuntu Store can, if needed, rename snaps to ensure they match the expectations of most users. If you're the developer most users expect for a name, then claim it with the [snap name registration](https://myapps.developer.ubuntu.com/dev/click-apps/register-name) form. If the name is already taken, the form will let you submit a name dispute.
+The Ubuntu Store can, if needed, rename snaps to ensure they match the expectations of most users. If you're the developer or publisher most users expect for a snap name, then claim it with the [snap name registration](https://dashboard.snapcraft.io/dev/snaps/register-name/) form. If the name is already taken, the form will let you submit a name dispute.
 
 ## 3. Upload your snap
 

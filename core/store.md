@@ -6,7 +6,7 @@ There are multiple ways to distribute snaps as the format is not tied to a speci
 
 ## The Ubuntu Store
 
-The main way of distributing snaps to snapd systems is through [the Ubuntu Store](https://myapps.developer.ubuntu.com/dev/click-apps/ "Ubuntu store"), where you can customize how your snap is presented, review each new pushed snap, and control their release process over several release channels. Here is the model it follows.
+The main way of distributing snaps to snapd systems is through [the Ubuntu Store](https://dashboard.snapcraft.io "Ubuntu store"), where you can customize how your snap is presented, review each new pushed snap, and control their release process over several release channels. Here is the model it follows.
 
 ### Developer namespace
 
@@ -14,11 +14,11 @@ You'll choose a unique developer namespace as part of the store account creation
 
 ### Naming
 
-You can release a snap under any name you have rights to. Names can be registered by using the `snapcraft register` command, clicking **New Snap** on the developer portal, or by visiting the [Register name](https://myapps.developer.ubuntu.com/dev/click-apps/register-name/ "register name") page. You can also grant other developers permission to release versions of a snap you own, for example as part of an open source project.
+You can release a snap under any name you have rights to. Names can be registered by using the `snapcraft register` command, clicking **New Snap** on the developer portal, or by visiting the [Register name](https://dashboard.snapcraft.io/dev/snaps/register-name/ "register name") page. You can also grant other developers permission to release versions of a snap you own, for example as part of an open source project.
 
 ### Pushing
 
-Pushing snaps to the store can be done directly with the [`snapcraft push`](/docs/build-snaps/publish "snapcraft upload") command or on the [store website](https://myapps.developer.ubuntu.com/dev/click-apps/ "Ubuntu store") itself. Once pushed, you choose the release channel(s) (`stable`, `candidate`, `beta`, `edge`) that the snap will be released into.
+Pushing snaps to the store can be done directly with the [`snapcraft push`](/docs/build-snaps/publish "snapcraft push") command or on the [store website](https://dashboard.snapcraft.io "Ubuntu store") itself. Once pushed, you choose the release channel(s) (`stable`, `candidate`, `beta`, `edge`) that the snap will be released into.
 
 It's worth noting that when you push a snap, the store assigns it a revision number of 1\. The store then automatically increments this revision number each time you push a new version.
 

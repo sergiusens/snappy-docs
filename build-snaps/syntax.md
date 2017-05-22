@@ -110,8 +110,75 @@ Parts are the main building blocks of snaps: source code, packages, tarballs or 
       be searched for in [the wiki](https://wiki.ubuntu.com/Snappy/Parts).
       *If a part is supposed to run after another, the prerequisite part will
       be staged before the dependent part starts its lifecycle.*
-    * `stage-packages` (list of strings)
-      A list of Ubuntu packages to use that would support the part creation.
+    * `stage-packages` (list of strings and/or sublists)
+      A set of Ubuntu packages to be downloaded and unpacked to join the part
+      before it's built. Note that these packages are not installed on the host.
+      Like the rest of the part, all files from these packages will make it into
+      the final snap unless filtered out via the `snap` keyword.
+
+      One may simply specify packages in a flat list, in which case the packages
+      will be fetched and unpacked regardless of build environment. In addition,
+      a specific grammar made up of sub-lists is supported here that allows one
+      to filter stage packages depending on various selectors (e.g. the target
+      arch), as well as specify optional packages. The grammar is made up of two
+      nestable statements: 'on' and 'try'.
+
+          - on <selector>[,<selector>...]:
+            - ...
+          - else[ fail]:
+            - ...
+
+      The body of the 'on' clause is taken into account if every (AND, not OR)
+      selector is true for the target build environment. Currently the only
+      selectors supported are target architectures (e.g. amd64).
+
+      If the 'on' clause doesn't match and it's immediately followed by an
+      'else' clause, the 'else' clause must be satisfied. An 'on' clause without
+      an 'else' clause is considered satisfied even if no selector matched. The
+      'else fail' form allows erroring out if an 'on' clause was not matched.
+
+      For example, to fetch the `hello` package only when building on amd64:
+
+          - on amd64:
+            - hello
+
+      To fetch something else on other architectures:
+
+          - on amd64:
+            - hello
+          - else:
+            - something-else
+
+       You could also use `else fail` instead to cause the build to fail on
+       architectures other than amd64.
+
+          - try:
+            - ...
+          - else:
+            - ...
+
+      The body of the 'try' clause is taken into account only when all packages
+      contained within it are valid (i.e. available in the archive for the given
+      architecture). If not, if it's immediately followed by 'else' clauses they
+      are tried in order, and one of them must be satisfied. A 'try' clause with
+      no 'else' clause is considered satisfied even if it contains invalid
+      packages.
+
+      For example, let's say a stage-package isn't available for all
+      architectures. You could make it an optional stage-package like so:
+
+          - try:
+            - my-optional-package
+
+      This would cause `my-optional-package` to be staged only when it's
+      available in the archive for the architecture being built. You could also
+      provide alternatives:
+
+          - try:
+            - my-optional-package
+          - else
+            - try-this-one
+
     * `build-packages` (list of strings)
       A list of Ubuntu packages to be installed on the host to aid in building
       the part. These packages will not go into the final snap.
