@@ -12,7 +12,7 @@ title: "Interfaces reference"
 
 ## Interfaces
 
-| Interface name | Purpose | Auto-connect | Transitional | Attributes |
+| Name | Purpose | Auto-connect | Transitional | Attributes |
 |----------------|---------|--------------|--------------|------------|
 | `account-control` | Can add users and change password. Suitable for administration tools. | no | no |  |
 | `camera` | Can access the first video camera. Suitable for programs wanting to use webcams. | no | no |  |
@@ -93,4 +93,4 @@ title: "Interfaces reference"
 | `unity8` | Can access Unity8 (_snapd 2.22+_). This interface is in active development and should not yet be used in production and its use is therefore restricted. | yes | no |  |
 | `unity8-calendar` | Can access snaps providing the Unity8 calendar interface which gives access to the Unity8 global calendar. | no | no |  |
 | `unity8-contacts` | Can access snaps providing the Unity8 contacts interface which gives access to the Unity8 global contacts list. | no | no |  |
-| `upower-observe` | Can access snaps providing the UPower interface for power devices, history and statistics. | yes' | no |  |
+| `upower-observe` | Can access snaps providing the UPower interface for power devices, history and statistics. | yes | no |  |
