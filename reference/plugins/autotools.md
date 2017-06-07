@@ -21,4 +21,4 @@ it will run ./autogen and if autogen is not there it will run autoreconf.
       Whether to install via DESTDIR or by using --prefix (default is
       'destdir')
 
-[Examples](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+autotools%22+&s=indexed&type=Code&utf8=%E2%9C%93)
+[Examples on GitHub](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+autotools%22+&s=indexed&type=Code&utf8=%E2%9C%93)

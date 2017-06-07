@@ -17,4 +17,4 @@ This plugin is DEPRECATED in favor of the `dump` plugin.
       works like `cp -r <key> <value>`. Note that globbing is supported for the
       key, allowing one to use *, ?, and character ranges expressed with [].
 
-[Examples](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+copy%22+&s=indexed&type=Code&utf8=%E2%9C%93)
+[Examples on GitHub](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+copy%22+&s=indexed&type=Code&utf8=%E2%9C%93)

@@ -16,4 +16,4 @@ the root of the source.
       (string)
       The version of nodejs to use for the build.
 
-[Examples](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+gulp%22+&s=indexed&type=Code&utf8=%E2%9C%93)
+[Examples on GitHub](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+gulp%22+&s=indexed&type=Code&utf8=%E2%9C%93)

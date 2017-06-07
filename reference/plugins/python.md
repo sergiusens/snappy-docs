@@ -28,4 +28,4 @@ It can be used for python projects where you would want to do:
       (string; default: python3)
       The python version to use. Valid options are: python2 and python3
 
-[Examples](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+python%22+&s=indexed&type=Code&utf8=%E2%9C%93)
+[Examples on GitHub](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+python%22+&s=indexed&type=Code&utf8=%E2%9C%93)

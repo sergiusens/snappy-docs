@@ -22,4 +22,4 @@ See [common keywords](/docs/reference/plugins/common) for more information about
         snap:
           - usr
 
-[More examples](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+dump%22+&s=indexed&type=Code&utf8=%E2%9C%93)
+[More Examples on GitHub](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+dump%22+&s=indexed&type=Code&utf8=%E2%9C%93)

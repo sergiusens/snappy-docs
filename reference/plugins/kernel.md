@@ -43,4 +43,4 @@ The following kernel specific options are provided by this plugin:
       (array of string)
       list of device trees to build, the format is <device-tree-name>.dts.
 
-[Examples](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+kernel%22+&s=indexed&type=Code&utf8=%E2%9C%93)
+[Examples on GitHub](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+kernel%22+&s=indexed&type=Code&utf8=%E2%9C%93)

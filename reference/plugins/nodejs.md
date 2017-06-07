@@ -20,4 +20,4 @@ also sets up binaries defined in `package.json` into the `PATH`.
       A list of targets to `npm run`.
       These targets will be run in order, after `npm install`
 
-[Examples](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+nodejs%22+&s=indexed&type=Code&utf8=%E2%9C%93)
+[Examples on GitHub](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+nodejs%22+&s=indexed&type=Code&utf8=%E2%9C%93)

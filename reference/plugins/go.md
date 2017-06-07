@@ -25,4 +25,4 @@ The go plugin can be used for go projects using `go get`.
       (list of strings)
       Tags to use during the go build. Default is not to use any build tags.
 
-[Examples](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+go%22+&s=indexed&type=Code&utf8=%E2%9C%93)
+[Examples on GitHub](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+go%22+&s=indexed&type=Code&utf8=%E2%9C%93)

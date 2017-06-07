@@ -18,4 +18,4 @@ The plugin requires a build.xml in the root of the source tree.
       (list of strings)
       Run the given ant targets.
 
-[Examples](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+ant%22+&s=indexed&type=Code&utf8=%E2%9C%93)
+[Examples on GitHub](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+ant%22+&s=indexed&type=Code&utf8=%E2%9C%93)

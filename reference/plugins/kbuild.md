@@ -42,4 +42,4 @@ wholesale as the starting point instead of make $kdefconfig. In case user
 configures both a kdefconfig as well as kconfigfile, kconfigfile approach will
 be used.
 
-[Examples](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+kbuild%22+&s=indexed&type=Code&utf8=%E2%9C%93)
+[Examples on GitHub](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+kbuild%22+&s=indexed&type=Code&utf8=%E2%9C%93)

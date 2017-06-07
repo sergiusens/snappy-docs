@@ -30,4 +30,4 @@ the 'artifacts' keyword is used.
       (string; default: DESTDIR)
       Use this variable to redirect the installation into the snap.
 
-[Examples](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+make%22+&s=indexed&type=Code&utf8=%E2%9C%93)
+[Examples on GitHub](https://github.com/search?o=desc&q=filename%3Asnapcraft.yaml+%22plugin%3A+make%22+&s=indexed&type=Code&utf8=%E2%9C%93)
