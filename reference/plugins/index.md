@@ -15,7 +15,7 @@ Note that you can run `$ snapcraft help <plugin>` to access the following docume
 
 ## Build systems
 
-[kbuild](/docs/reference/plugins/kbuild), [make](/docs/reference/plugins/make), [qmake](/docs/reference/plugins/qmake), [autotools](/docs/reference/plugins/autotools), [cmake](/docs/reference/plugins/cmake), [scons](/docs/reference/plugins/scons), [waf](/docs/reference/plugins/waf)
+[kbuild](/docs/reference/plugins/kbuild), [make](/docs/reference/plugins/make), [qmake](/docs/reference/plugins/qmake), [autotools](/docs/reference/plugins/autotools), [cmake](/docs/reference/plugins/cmake), [scons](/docs/reference/plugins/scons), [meson](/docs/reference/plugins/meson), [waf](/docs/reference/plugins/waf)
 
 ## Languages
 
