@@ -135,6 +135,7 @@ summary: Official Go implementation of the Ethereum protocol
 description: |
     Official Go implementation of the Ethereum protocol
  
+grade: devel
 confinement: devmode
  
 apps:

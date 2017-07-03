@@ -29,6 +29,7 @@ description: |
   OfflineIMAP is software that downloads your email mailbox(es) as local
   Maildirs. OfflineIMAP will synchronize both sides via IMAP.
  
+grade: devel
 confinement: devmode
  
 apps:
@@ -134,6 +135,8 @@ summary: YouTube Downloader.
 description: |
   youtube-dl is a small command-line program to download videos from
   YouTube.com and a few more sites.
+
+grade: devel
 confinement: devmode
  
 parts:

@@ -33,6 +33,7 @@ description: |
   Get current weather in imperial units
     $ wethr --imperial
  
+grade: devel
 confinement: devmode
  
 apps:
