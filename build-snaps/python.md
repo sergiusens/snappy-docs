@@ -58,7 +58,7 @@ description: |
  
 ### Confinement
  
-To get started we won’t confine this application. Unconfined applications, specified with `devmode`, can only be published to the hidden “edge” channel where you and other developers can install them.
+To get started we won’t confine this application. Unconfined applications, specified with `devmode`, can only be released to the hidden “edge” channel where you and other developers can install them.
  
 ```yaml
 confinement: devmode
