@@ -106,15 +106,21 @@ If the snapcraft command cannot be found, make sure your PATH contains /snap/bin
 
 The resulting snap can be installed locally. This requires the `--dangerous` flag because the snap is not signed by the snap store:
 
-   sudo snap install httplab_*.snap --devmode --dangerous
+```
+sudo snap install httplab_*.snap --devmode --dangerous
+```
 
 You can then try it out
 
-   httplab
+```
+httplab
+```
 
 Removing the snap is simple too:
 
-   sudo snap remove httplab
+```
+sudo snap remove httplab
+```
 
 Jump ahead to [Share with your friends](#share-with-your-friends) or continue to read another example.
 
@@ -226,15 +232,21 @@ snapcraft
 
 The resulting snap can be installed locally, or shared with others to test. Installing locally requires the `--dangerous` flag because the snap is not signed by the store.
 
-   sudo snap install geth_*.snap --devmode --dangerous
+```
+sudo snap install geth_*.snap --devmode --dangerous
+```
 
 Run the command:
 
-   geth account new
+```
+geth account new
+```
 
 Removing the snap is simple too:
 
-   sudo snap remove geth
+```
+sudo snap remove geth
+```
 
 ## Share with your friends
 
