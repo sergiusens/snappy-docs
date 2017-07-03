@@ -1,0 +1,319 @@
+# Go
+
+Snapcraft builds on top of `go build` and tools familiar to any Go developer to create snaps for people to install on Linux.
+
+## What problems do snaps solve for Go applications?
+
+Often Linux install documentation for Go applications consists of downloading pre-built binaries (or running `go get`). When distributed this way, getting updates is an exercise left to the reader. With snapcraft it’s just one command to produce a bundle that works anywhere and can be automatically updated. 
+Here are some snap advantages that will benefit many Go projects:
+
+ * Simplify installation instructions, regardless of distribution, to `snap install mygoapp`.
+ * Directly control the delivery of application updates.
+ * Extremely simple creation of daemons.
+
+# Getting started
+
+Let's take a look at `httplab` and `go-ethereum` by way of examples. Both are command line applications. `httplab` is a very simple example of a typical Go snap. `go-ethereum` (geth) requires a specific version of Go, and contains multiple commands.
+
+## httplab
+
+Snaps are defined in a single yaml file, placed in the root of your project. The `httplab` example shows how `snapcraft.yaml` can be added to the source repository of an existing project. Here is the entire `snapcraft.yaml` for `httplab`. We'll break this down.
+
+```
+name: httplab
+version: git
+summary: An interactive web server.
+description: |
+  HTTPLab let you inspect HTTP requests and forge responses.
+ 
+grade: devel
+confinement: devmode
+ 
+parts:
+  httplab:
+    source: .
+    plugin: go
+ 
+ 
+apps:
+  httplab:
+    command: httplab
+```
+
+### Metadata
+
+The `snapcraft.yaml` starts with a small amount of human-readable metadata, which usually can be lifted from the GitHub description or project README.md. This data is used in the presentation of your app in the snap store. The `summary:` can not exceed 79 characters. You can use a pipe with the `description:` to declare a multi-line description.
+
+```
+name: httplab
+version: git
+summary: An interactive web server.
+description: |
+  HTTPLab let you inspect HTTP requests and forge responses.
+```
+
+### Confinement
+
+To get started we won’t confine this application. Unconfined applications, specified with `devmode`, can only be published to the hidden “edge” channel where you and other developers can install them.
+
+```
+confinement: devmode
+```
+
+### Parts
+
+Parts define how to build your app. Parts can be anything: programs, libraries, or other assets needed to create and run your application. In this case we have one: the httplab source code. In other cases these can point to local directories, remote git repositories, or tarballs.
+
+The Go plugin will build using the version of Go on the system running snapcraft. We’ll cover building using different versions of Go in the geth example further down.
+
+```
+parts:
+  httplab:
+    source: .
+    plugin: go
+```
+
+### Apps
+
+Apps are the commands and services exposed to end users. If your command name matches the snap `name`, users will be able run the command directly. If they differ, then apps are prefixed with the snap `name`. For example, `httplab.command-name`. This is to avoid conflicting with apps with the same name defined by other installed snaps.
+
+If you don’t want your command prefixed you can request an alias for it on the [Snapcraft forum](https://forum.snapcraft.io). These are set up automatically when your snap is installed from the snap store.
+
+```
+apps:
+  httplab:
+    command: httplab
+```
+
+If your application is intended to run as a service you simply add the line `daemon: simple` after the command keyword. This will automatically keep the the service running on install, update, and reboot.
+
+## Building the snap
+
+You’ll first need to [install snap support](https://snapcraft.io/docs/core/install), and then install the snapcraft tool:
+```
+sudo snap install --beta --classic snapcraft
+```
+
+You can then build this example yourself:
+
+```
+git clone https://github.com/popey/httplab-demo.git
+cd httplab-demo
+snapcraft
+```
+
+If the snapcraft command cannot be found, make sure your PATH contains /snap/bin (`echo $PATH`). This is done by the installation of snap support, but that change isn’t picked up until you start a new shell.
+
+The resulting snap can be installed locally. This requires the `--dangerous` flag because the snap is not signed by the snap store:
+
+   sudo snap install httplab_*.snap --devmode --dangerous
+
+You can then try it out
+
+   httplab
+
+Removing the snap is simple too:
+
+   sudo snap remove httplab
+
+Jump ahead to [Share with your friends](#share-with-your-friends) or continue to read another example.
+
+## go-ethereum (geth)
+
+The `geth` example shows a `snapcraft.yaml` using a different version of Go than the one shipped in the distribution archive on the machine building the snap. Here is the entire `snapcraft.yaml` for `geth`. We'll break this down.
+
+```
+name: geth
+version: git
+summary: Official Go implementation of the Ethereum protocol
+description: |
+    Official Go implementation of the Ethereum protocol
+ 
+confinement: devmode
+ 
+apps:
+  abigen:
+    command: bin/abigen
+  bootnode:
+    command: bin/bootnode
+  evm:
+    command: bin/evm
+  faucet:
+    command: bin/faucet
+  geth:
+    command: bin/geth --datadir "$SNAP_USER_COMMON/.ethereum"
+  puppeth:
+    command: bin/puppeth
+  rlpdump:
+    command: bin/rlpdump
+  swarm:
+    command: bin/swarm
+  wnode:
+    command: bin/wnode
+ 
+parts:
+  go:
+    source-tag: go1.7.5
+  geth:
+    after: [go]
+    plugin: go
+    source: .
+    source-type: git
+    go-importpath: github.com/ethereum/go-ethereum
+```
+
+### Parts
+
+In the `geth` example we have two parts, one for geth itself, and a second which pulls a newer version of Go.
+
+The geth part specifies that it must be run 'after' the 'go' part. This ensures that when geth is built, it is done so with the newer release of Go.
+
+```
+geth:
+  after: [go]
+  plugin: go
+  source: .
+  source-type: git
+  go-importpath: github.com/ethereum/go-ethereum
+```
+
+The Go part specifies no source which means it's a "remote part". Remote parts are community-contributed reusable components which can be used by anyone when building a snap. You can use ```snapcraft search``` to find remote reusable parts to incorporate in your projects.
+
+In this case the go part requires only that we specify what version of Go we wish to build with for geth. As this part is not '`after`' anything else, it will be done first. 
+
+```
+go:
+  source-tag: go1.7.5
+```
+
+## Commands
+
+Unlike the httplab example, geth contains multiple commands.
+
+By default geth stores the blockchain in the home directory, which inside a snap would be mapped to $SNAP_USER_DATA, typically in the ~/snap/geth/current directory. This directory is versioned, so when the snap is updated it will get copied to a new version, for example ~/snap/geth/1 to ~/snap/geth/2. As the blockchain data can be quite large, we override this by specifying a `datadir` under $SNAP_USER_COMMON which maps to ~/snap/geth/common which is not a versioned directory.
+
+```
+apps:
+  abigen:
+    command: bin/abigen
+  bootnode:
+    command: bin/bootnode
+  evm:
+    command: bin/evm
+  faucet:
+    command: bin/faucet
+  geth:
+    command: bin/geth --datadir "$SNAP_USER_COMMON/.ethereum"
+  puppeth:
+    command: bin/puppeth
+  rlpdump:
+    command: bin/rlpdump
+  swarm:
+    command: bin/swarm
+  wnode:
+    command: bin/wnode
+```
+
+## Building the snap
+
+You can build this example yourself by running the following:
+
+```
+git clone https://github.com/popey/geth-demo.git
+cd geth-demo
+snapcraft
+```
+
+The resulting snap can be installed locally, or shared with others to test. Installing locally requires the `--dangerous` flag because the snap is not signed by the store.
+
+   sudo snap install geth_*.snap --devmode --dangerous
+
+Run the command:
+
+   geth account new
+
+Removing the snap is simple too:
+
+   sudo snap remove geth
+
+## Share with your friends
+
+To share your snaps you need to publish them in the snap store. The first step of this is to create an account on [dashboard.snapcraft.io](https://dashboard.snapcraft.io). Here you can customize how your snaps are presented, review your uploads and control publishing.
+
+You’ll need to choose a unique “developer namespace” as part of the account creation process. This name will be visible by users and associated with your published snaps.
+
+Make sure the `snapcraft` and `snap` commands are authenticated using the email address attached to your store account.
+
+```
+snapcraft login
+sudo snap login
+```
+
+### Reserve a name for your snap
+
+You can publish your own version of a snap, provided you do so under a name you have registered.
+
+```
+snapcraft register mygosnap
+```
+
+### Upload your snap
+
+Use snapcraft to push the snap to the store.
+
+```
+snapcraft push --release=edge mygosnap_amd64.snap
+```
+
+If you’re happy with the result, you can commit the snapcraft.yaml to your GitHub repo and [turn on automatic builds](https://build.snapcraft.io) so any further commits automatically get released to edge, without requiring you to manually build locally.
+
+## Further customisations
+
+Here are all the Go plugin-specific keywords
+
+```
+    - go-packages:
+      (list of strings)
+      Go packages to fetch, these must be a "main" package. Dependencies
+      are pulled in automatically by `go get`.
+      Packages that are not "main" will not cause an error, but would
+      not be useful either.
+      If the package is a part of the go-importpath the local package
+      corresponding to those sources will be used.
+ 
+    - go-importpath:
+      (string)
+      This entry tells the checked out `source` to live within a certain path
+      within `GOPATH`.
+      This is not needed and does not affect `go-packages`.
+ 
+    - go-buildtags:
+      (list of strings)
+      Tags to use during the go build. Default is not to use any build tags.
+```
+
+### Extending and overriding behaviour
+
+You can extend the behaviour of any part in your `snapcraft.yaml` with shell commands. These can be run after pulling the source code but before building by using the `prepare` keyword. The build process can be overridden entirely using the `build` keyword and shell commands. The `install` keyword is used to run shell commands after building your code, useful for making post build modifications such as relocating build assets.
+
+Using the geth example above, we can run the test suite at the end of the build. If this fails, the snap creation will be terminated:
+
+```
+parts:
+  go:
+    source-tag: go1.7.5
+  geth:
+    after: [go]
+    plugin: go
+    source: http://github.com/ethereum/go-ethereum
+    source-type: git
+    go-importpath: github.com/ethereum/go-ethereum
+    install: |
+      make test
+```
+
+## Next steps
+
+Congratulations on finishing, you have an app in edge ready to share with other developers.
+
+What to learn more? Continue on to learn how to get your app ready for a wider audience.
