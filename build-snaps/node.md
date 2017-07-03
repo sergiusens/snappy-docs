@@ -21,7 +21,7 @@ Let's take a look at `wethr` by way of an example.
 
 Snaps are defined in a single yaml file, placed in the root of your project. The `wethr` example shows how `snapcraft.yaml` can be added to the source repository of an existing project, leverage an existing `package.json` to satisfy runtime requirements. Here is the entire `snapcraft.yaml` for `wethr`. We'll break this down.
 
-```
+```yaml
 name: wethr
 version: git
 summary: Command line weather tool.
@@ -49,7 +49,7 @@ parts:
 
 The `snapcraft.yaml` starts with a small amount of human-readable metadata, which usually can just be lifted from the GitHub description or project README.md. This data is used in the presentation of your app in the snap store. The `summary:` can not exceed 79 characters. You can use a pipe with the `description:` to declare a multi-line description.
 
-```
+```yaml
 name: wethr
 version: git
 summary: Command line weather tool.
@@ -66,7 +66,7 @@ description: |
 
 To get started we won’t confine this application. Unconfined applications, specified with `devmode`, can only be published to the hidden “edge” channel where you and other developers can install them.
 
-```
+```yaml
 confinement: devmode
 ```
 
@@ -76,7 +76,7 @@ Parts define how to build your app. Parts can be anything: programs, libraries, 
 
 The Node plugin will also bundle Node in the snap, so you can be sure that the version of Node you test against is included with your app. Dependencies from your package.json will also be bundled.
 
-```
+```yaml
 parts:
   wethr:
     plugin: nodejs
@@ -89,7 +89,7 @@ Apps are the commands and services exposed to end users. If your command name ma
 
 If you don’t want your command prefixed you can request an alias for it on the Snapcraft [Snapcraft forum](https://forum.snapcraft.io). These are set up automatically when your snap is installed from the snap store.
 
-```
+```yaml
 apps:
   wethr:
     command: wethr
@@ -191,7 +191,7 @@ You can extend the behaviour of any part in your `snapcraft.yaml` with shell com
 
 Using the wethr example above, we can run the test suite at the end of the build. If this fails, the snap creation will be terminated:
 
-```
+```yaml
 parts:
   wethr:
     plugin: nodejs

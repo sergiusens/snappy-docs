@@ -19,7 +19,7 @@ Let's take a look at `httplab` and `go-ethereum` by way of examples. Both are co
 
 Snaps are defined in a single yaml file, placed in the root of your project. The `httplab` example shows how `snapcraft.yaml` can be added to the source repository of an existing project. Here is the entire `snapcraft.yaml` for `httplab`. We'll break this down.
 
-```
+```yaml
 name: httplab
 version: git
 summary: An interactive web server.
@@ -44,7 +44,7 @@ apps:
 
 The `snapcraft.yaml` starts with a small amount of human-readable metadata, which usually can be lifted from the GitHub description or project README.md. This data is used in the presentation of your app in the snap store. The `summary:` can not exceed 79 characters. You can use a pipe with the `description:` to declare a multi-line description.
 
-```
+```yaml
 name: httplab
 version: git
 summary: An interactive web server.
@@ -56,7 +56,7 @@ description: |
 
 To get started we won’t confine this application. Unconfined applications, specified with `devmode`, can only be published to the hidden “edge” channel where you and other developers can install them.
 
-```
+```yaml
 confinement: devmode
 ```
 
@@ -66,7 +66,7 @@ Parts define how to build your app. Parts can be anything: programs, libraries, 
 
 The Go plugin will build using the version of Go on the system running snapcraft. We’ll cover building using different versions of Go in the geth example further down.
 
-```
+```yaml
 parts:
   httplab:
     source: .
@@ -79,7 +79,7 @@ Apps are the commands and services exposed to end users. If your command name ma
 
 If you don’t want your command prefixed you can request an alias for it on the [Snapcraft forum](https://forum.snapcraft.io). These are set up automatically when your snap is installed from the snap store.
 
-```
+```yaml
 apps:
   httplab:
     command: httplab
@@ -128,7 +128,7 @@ Jump ahead to [Share with your friends](#share-with-your-friends) or continue to
 
 The `geth` example shows a `snapcraft.yaml` using a different version of Go than the one shipped in the distribution archive on the machine building the snap. Here is the entire `snapcraft.yaml` for `geth`. We'll break this down.
 
-```
+```yaml
 name: geth
 version: git
 summary: Official Go implementation of the Ethereum protocol
@@ -174,7 +174,7 @@ In the `geth` example we have two parts, one for geth itself, and a second which
 
 The geth part specifies that it must be run 'after' the 'go' part. This ensures that when geth is built, it is done so with the newer release of Go.
 
-```
+```yaml
 geth:
   after: [go]
   plugin: go
@@ -187,7 +187,7 @@ The Go part specifies no source which means it's a "remote part". Remote parts a
 
 In this case the go part requires only that we specify what version of Go we wish to build with for geth. As this part is not '`after`' anything else, it will be done first. 
 
-```
+```yaml
 go:
   source-tag: go1.7.5
 ```
@@ -198,7 +198,7 @@ Unlike the httplab example, geth contains multiple commands.
 
 By default geth stores the blockchain in the home directory, which inside a snap would be mapped to $SNAP_USER_DATA, typically in the ~/snap/geth/current directory. This directory is versioned, so when the snap is updated it will get copied to a new version, for example ~/snap/geth/1 to ~/snap/geth/2. As the blockchain data can be quite large, we override this by specifying a `datadir` under $SNAP_USER_COMMON which maps to ~/snap/geth/common which is not a versioned directory.
 
-```
+```yaml
 apps:
   abigen:
     command: bin/abigen
@@ -310,7 +310,7 @@ You can extend the behaviour of any part in your `snapcraft.yaml` with shell com
 
 Using the geth example above, we can run the test suite at the end of the build. If this fails, the snap creation will be terminated:
 
-```
+```yaml
 parts:
   go:
     source-tag: go1.7.5

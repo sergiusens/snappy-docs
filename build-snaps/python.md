@@ -21,7 +21,7 @@ Let's take a look at `offlineimap` and `youtube-dl` by way of examples. Both are
  
 Snaps are defined in a single yaml file, placed in the root of your project. The `offlineimap` example shows how this `snapcraft.yaml` can be added to the source repository of an existing project, leverage existing `requirements.txt` to satisfy runtime requirements. Here is the entire `snapcraft.yaml` for `offlineimap`. We'll break this down.
  
-```
+```yaml
 name: offlineimap
 version: git
 summary: OfflineIMAP
@@ -46,7 +46,7 @@ parts:
  
 The `snapcraft.yaml` starts with a small amount of human-readable metadata, which usually can be lifted from the GitHub description or project README.md. This data is used in the presentation of your app in the snap store. The `summary:` can not exceed 79 characters. You can use a pipe with the `description:` to declare a multi-line description.
  
-```
+```yaml
 name: offlineimap
 version: git
 summary: OfflineIMAP
@@ -59,7 +59,7 @@ description: |
  
 To get started we won’t confine this application. Unconfined applications, specified with `devmode`, can only be published to the hidden “edge” channel where you and other developers can install them.
  
-```
+```yaml
 confinement: devmode
 ```
  
@@ -70,7 +70,7 @@ Parts define how to build your app. Parts can be anything: programs, libraries, 
  
 The Python plugin will also bundle Python in the snap, so you can be sure that the version of Python you test against is included with your app. Dependencies from your requirements.txt will also be bundled.
  
-```
+```yaml
 parts:
   offlineimap:
     plugin: python
@@ -84,7 +84,7 @@ Apps are the commands and services exposed to end users. If your command name ma
  
 If you don’t want your command prefixed you can request an alias for it on the [Snapcraft forum](https://forum.snapcraft.io). These command aliases are set up automatically when your snap is installed from the snap store.
  
-```
+```yaml
 apps:
   offlineimap:
     command: bin/offlineimap
@@ -127,7 +127,7 @@ Jump ahead to [Share with your friends](#share-with-your-friends) or continue to
  
 The `youtube-dl` example shows a `snapcraft.yaml` using a tarball of a Python application and using `stage-packages:` to bundle `ffmpeg` in the snap to satisfy the runtime requirements. Here is the entire `snapcraft.yaml` for `youtube-dl`. We'll break this down.
  
-```
+```yaml
 name: youtube-dl
 version: 2017.06.18
 summary: YouTube Downloader.
@@ -156,7 +156,7 @@ In this example we use the `$SNAPCRAFT_PROJECT_VERSION` variable derived from th
  
 `youtube-dl` makes use of `ffmpeg` to transcode or otherwise convert the audio and video file is downloads, therefore `ffmpeg` is included in the `staged-packages`. This instructs `snapcraft` to download `ffmpeg` package, and it's dependencies, from the Ubuntu package repository and bundle them in the `youtube-dl` snap.
  
-```
+```yaml
 parts:
   youtube-dl:
     source: https://github.com/rg3/youtube-dl/archive/$SNAPCRAFT_PROJECT_VERSION.tar.gz
@@ -245,7 +245,7 @@ You can extend the behaviour of any part in your `snapcraft.yaml` with shell com
  
 Using the youtube-dl example above, we can run the test suite at the end of the build. If this fails, the snap creation will be terminated:
  
-```
+```yaml
 parts:
   youtube-dl:
     source: https://github.com/rg3/youtube-dl/archive/$SNAPCRAFT_PROJECT_VERSION.tar.gz
