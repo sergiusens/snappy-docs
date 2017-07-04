@@ -109,8 +109,8 @@ sudo snap install --beta --classic snapcraft
 You can then build this example yourself:
 
 ```
-git clone https://github.com/popey/wethr-demo
-cd wethr-demo
+git clone https://github.com/snapcraft-docs/wethr
+cd wethr
 snapcraft
 ```
 

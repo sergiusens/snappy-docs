@@ -97,8 +97,8 @@ sudo snap install --beta --classic snapcraft
 You can then build this example yourself:
 
 ```
-git clone https://github.com/popey/httplab-demo.git
-cd httplab-demo
+git clone https://github.com/snapcraft-docs/httplab
+cd httplab
 snapcraft
 ```
 
@@ -226,8 +226,8 @@ apps:
 You can build this example yourself by running the following:
 
 ```
-git clone https://github.com/popey/geth-demo.git
-cd geth-demo
+git clone https://github.com/snapcraft-docs/go-ethereum
+cd go-ethereum
 snapcraft
 ```
 

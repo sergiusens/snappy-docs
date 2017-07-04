@@ -103,8 +103,8 @@ sudo snap install --beta --classic snapcraft
 You can then build this example yourself:
  
 ```
-git clone https://github.com/flexiondotorg/offlineimap-demo.git
-cd offlineimap-demo
+git clone https://github.com/snapcraft-docs/offlineimap
+cd offlineimap
 snapcraft
 ```
  
@@ -173,8 +173,8 @@ parts:
 You can build this example yourself by running the following:
  
 ```
-git clone https://github.com/flexiondotorg/youtube-dl-demo.git
-cd youtube-dl-demo
+git clone https://github.com/snapcraft-docs/youtube-dl
+cd youtube-dl
 snapcraft
 ```
  
