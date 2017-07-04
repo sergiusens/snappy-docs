@@ -313,6 +313,12 @@ Here are all the Go plugin-specific keywords
       Tags to use during the go build. Default is not to use any build tags.
 ```
 
+You can view them locally by running
+
+```
+snapcraft help go
+```
+
 ### Extending and overriding behaviour
 
 You can extend the behaviour of any part in your `snapcraft.yaml` with shell commands. These can be run after pulling the source code but before building by using the `prepare` keyword. The build process can be overridden entirely using the `build` keyword and shell commands. The `install` keyword is used to run shell commands after building your code, useful for making post build modifications such as relocating build assets.
