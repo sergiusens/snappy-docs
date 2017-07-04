@@ -33,6 +33,7 @@ parts:
   httplab:
     source: https://github.com/gchaincl/httplab
     source-type: git
+    source-tag: 'v0.3.0'
     plugin: go
     go-importpath: github.com/httplab/httplab
  
@@ -73,6 +74,7 @@ parts:
   httplab:
     source: https://github.com/gchaincl/httplab
     source-type: git
+    source-tag: 'v0.3.0'
     plugin: go
     go-importpath: github.com/httplab/httplab
 ```
@@ -169,6 +171,7 @@ parts:
     after: [go]
     source: https://github.com/ethereum/go-ethereum
     source-type: git
+    source-tag: 'v1.6.6'
     plugin: go
     go-importpath: github.com/ethereum/go-ethereum
 ```
@@ -184,6 +187,7 @@ geth:
   after: [go]
   source: https://github.com/ethereum/go-ethereum
   source-type: git
+  source-tag: 'v1.6.6'
   plugin: go
   go-importpath: github.com/ethereum/go-ethereum
 ```
@@ -323,6 +327,7 @@ parts:
     after: [go]
     source: http://github.com/ethereum/go-ethereum
     source-type: git
+    source-tag: 'v1.6.6'
     plugin: go
     go-importpath: github.com/ethereum/go-ethereum
     install: |

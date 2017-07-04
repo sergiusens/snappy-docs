@@ -42,6 +42,7 @@ parts:
     python-version: python2
     source: https://github.com/OfflineIMAP/offlineimap
     source-type: git
+    source-tag: 'v7.1.1'
 ```
  
 ### Metadata
@@ -79,6 +80,7 @@ parts:
     python-version: python2
     source: https://github.com/OfflineIMAP/offlineimap
     source-type: git
+    source-tag: 'v7.1.1'
 ```
  
 ### Apps

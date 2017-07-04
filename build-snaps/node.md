@@ -45,6 +45,7 @@ parts:
     plugin: nodejs
     source: https://github.com/twobucks/wethr
     source-type: git
+    source-tag: 'v1.4.0'
 ```
 
 ### Metadata
@@ -84,6 +85,7 @@ parts:
     plugin: nodejs
     source: https://github.com/twobucks/wethr
     source-type: git
+    source-tag: 'v1.4.0'
 ```
 
 ### Apps
@@ -200,6 +202,7 @@ parts:
     plugin: nodejs
     source: https://github.com/twobucks/wethr
     source-type: git
+    source-tag: 'v1.4.0'
     install: |
       npm test
 ```
