@@ -34,6 +34,7 @@ parts:
     source: https://github.com/gchaincl/httplab
     source-type: git
     plugin: go
+    go-importpath: github.com/httplab/httplab
  
  
 apps:
@@ -73,6 +74,7 @@ parts:
     source: https://github.com/gchaincl/httplab
     source-type: git
     plugin: go
+    go-importpath: github.com/httplab/httplab
 ```
 
 ### Apps
@@ -165,9 +167,9 @@ parts:
     source-tag: go1.7.5
   geth:
     after: [go]
-    plugin: go
     source: https://github.com/ethereum/go-ethereum
     source-type: git
+    plugin: go
     go-importpath: github.com/ethereum/go-ethereum
 ```
 
@@ -180,9 +182,9 @@ The geth part specifies that it must be run 'after' the 'go' part. This ensures 
 ```yaml
 geth:
   after: [go]
-  plugin: go
   source: https://github.com/ethereum/go-ethereum
   source-type: git
+  plugin: go
   go-importpath: github.com/ethereum/go-ethereum
 ```
 
@@ -319,9 +321,9 @@ parts:
     source-tag: go1.7.5
   geth:
     after: [go]
-    plugin: go
     source: http://github.com/ethereum/go-ethereum
     source-type: git
+    plugin: go
     go-importpath: github.com/ethereum/go-ethereum
     install: |
       make test
