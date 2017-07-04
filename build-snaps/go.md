@@ -154,7 +154,7 @@ apps:
   faucet:
     command: bin/faucet
   geth:
-    command: bin/geth --datadir "$SNAP_USER_COMMON/.ethereum"
+    command: bin/geth --datadir "$SNAP_USER_COMMON/ethereum"
   puppeth:
     command: bin/puppeth
   rlpdump:
@@ -218,7 +218,7 @@ apps:
   faucet:
     command: bin/faucet
   geth:
-    command: bin/geth --datadir "$SNAP_USER_COMMON/.ethereum"
+    command: bin/geth --datadir "$SNAP_USER_COMMON/ethereum"
   puppeth:
     command: bin/puppeth
   rlpdump:
