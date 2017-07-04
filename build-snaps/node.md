@@ -43,7 +43,8 @@ apps:
 parts:
   wethr:
     plugin: nodejs
-    source: https://github.com/twobucks/wethr.git
+    source: https://github.com/twobucks/wethr
+    source-type: git
 ```
 
 ### Metadata
@@ -81,7 +82,8 @@ The Node plugin will also bundle Node in the snap, so you can be sure that the v
 parts:
   wethr:
     plugin: nodejs
-    source: https://github.com/twobucks/wethr.git
+    source: https://github.com/twobucks/wethr
+    source-type: git
 ```
 
 ### Apps
@@ -196,7 +198,8 @@ Using the wethr example above, we can run the test suite at the end of the build
 parts:
   wethr:
     plugin: nodejs
-    source: .
+    source: https://github.com/twobucks/wethr
+    source-type: git
     install: |
       npm test
 ```

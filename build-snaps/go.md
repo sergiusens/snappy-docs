@@ -31,7 +31,8 @@ confinement: devmode
  
 parts:
   httplab:
-    source: .
+    source: https://github.com/gchaincl/httplab
+    source-type: git
     plugin: go
  
  
@@ -69,7 +70,8 @@ The Go plugin will build using the version of Go on the system running snapcraft
 ```yaml
 parts:
   httplab:
-    source: .
+    source: https://github.com/gchaincl/httplab
+    source-type: git
     plugin: go
 ```
 
@@ -164,7 +166,7 @@ parts:
   geth:
     after: [go]
     plugin: go
-    source: .
+    source: https://github.com/ethereum/go-ethereum
     source-type: git
     go-importpath: github.com/ethereum/go-ethereum
 ```
@@ -179,7 +181,7 @@ The geth part specifies that it must be run 'after' the 'go' part. This ensures 
 geth:
   after: [go]
   plugin: go
-  source: .
+  source: https://github.com/ethereum/go-ethereum
   source-type: git
   go-importpath: github.com/ethereum/go-ethereum
 ```

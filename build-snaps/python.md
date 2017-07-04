@@ -40,7 +40,8 @@ parts:
   offlineimap:
     plugin: python
     python-version: python2
-    source: .
+    source: https://github.com/OfflineIMAP/offlineimap
+    source-type: git
 ```
  
 ### Metadata
@@ -76,7 +77,8 @@ parts:
   offlineimap:
     plugin: python
     python-version: python2
-    source: .
+    source: https://github.com/OfflineIMAP/offlineimap
+    source-type: git
 ```
  
 ### Apps
