@@ -153,6 +153,8 @@ You can publish your own version of a snap, provided you do so under a name you 
 snapcraft register mynodesnap
 ```
 
+Be sure to update the `name:` field in your `snapcraft.yaml` to match this registered name.
+
 ### Upload your snap
 
 Use snapcraft to push the snap to the store.
