@@ -266,6 +266,6 @@ parts:
  
 ## Next steps
  
-Congratulations on finishing, you have an app in edge ready to share with other developers.
+Congratulations, you have an app in edge ready to share with other developers.
  
 What to learn more? Continue on to learn how to get your app ready for a wider audience.
