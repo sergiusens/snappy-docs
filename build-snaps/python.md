@@ -157,7 +157,7 @@ In the `youtube-dl` example the only part contains a URL to a release of the Pyt
  
 In this example we use the `$SNAPCRAFT_PROJECT_VERSION` variable derived from the `version:` stanza to reference the release tarball. `snapcraft` is instructed that this part is a Python application by specifying the `python` plugin and because `youtube-dl` is Python 3.x compatible the Python version required is specified with the `python-version:` stanza.
  
-`youtube-dl` makes use of `ffmpeg` to transcode or otherwise convert the audio and video file it downloads, therefore `ffmpeg` is included in the `staged-packages`. This instructs `snapcraft` to download `ffmpeg` package, and it's dependencies, from the Ubuntu package repository and bundle them in the `youtube-dl` snap.
+`youtube-dl` makes use of `ffmpeg` to transcode or otherwise convert the audio and video file it downloads, therefore `ffmpeg` is included in the `staged-packages`. This instructs `snapcraft` to download the `ffmpeg` package and its dependencies from the Ubuntu package repository and bundle them in the `youtube-dl` snap.
  
 ```yaml
 parts:
