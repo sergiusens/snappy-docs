@@ -196,10 +196,9 @@ To share your snaps you need to publish them in the snap store. The first step o
  
 You’ll need to choose a unique “developer namespace” as part of the account creation process. This name will be visible by users and associated with your published snaps.
  
-Make sure the `snapcraft` and `snap` commands are authenticated using the email address attached to your store account.
+Make sure the `snapcraft` command is authenticated using the email address attached to your store account.
 ```
 snapcraft login
-sudo snap login
 ```
  
 ### Reserve a name for your snap
