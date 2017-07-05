@@ -102,7 +102,6 @@ If your application is intended to run as a service you simply add the line `dae
 
 You’ll first need to [install snap support](https://snapcraft.io/docs/core/install), and then install the snapcraft tool:
 ```
-sudo snap install lxd
 sudo snap install --beta --classic snapcraft
 ```
 
