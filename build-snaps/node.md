@@ -48,7 +48,7 @@ parts:
 
 ### Metadata
 
-The `snapcraft.yaml` starts with a small amount of human-readable metadata, which usually can just be lifted from the GitHub description or project README.md. This data is used in the presentation of your app in the snap store. The `summary:` can not exceed 79 characters. You can use a pipe with the `description:` to declare a multi-line description.
+The `snapcraft.yaml` starts with a small amount of human-readable metadata, which usually can be lifted from the GitHub description or project README.md. This data is used in the presentation of your app in the snap store. The `summary:` can not exceed 79 characters. You can use a pipe with the `description:` to declare a multi-line description.
 
 ```yaml
 name: wethr
@@ -73,7 +73,7 @@ confinement: devmode
 
 ### Parts
 
-Parts define how to build your app. Parts can be anything: programs, libraries, or other assets needed to create and run your application. In this case we just have one: the wethr source code. In other cases these can point to local directories, remote git repositories, or tarballs.
+Parts define how to build your app. Parts can be anything: programs, libraries, or other assets needed to create and run your application. In this case we have one: the wethr source code. In other cases these can point to local directories, remote git repositories, or tarballs.
 
 The Node plugin will also bundle Node in the snap, so you can be sure that the version of Node you test against is included with your app. Dependencies from your package.json will also be bundled.
 
