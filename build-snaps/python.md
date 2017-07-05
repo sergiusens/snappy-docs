@@ -28,21 +28,19 @@ summary: OfflineIMAP
 description: |
   OfflineIMAP is software that downloads your email mailbox(es) as local
   Maildirs. OfflineIMAP will synchronize both sides via IMAP.
- 
+
 grade: devel
 confinement: devmode
- 
+
 apps:
   offlineimap:
     command: bin/offlineimap
- 
+
 parts:
   offlineimap:
     plugin: python
     python-version: python2
-    source: https://github.com/OfflineIMAP/offlineimap
-    source-type: git
-    source-tag: 'v7.1.1'
+    source: .
 ```
  
 ### Metadata
@@ -78,9 +76,7 @@ parts:
   offlineimap:
     plugin: python
     python-version: python2
-    source: https://github.com/OfflineIMAP/offlineimap
-    source-type: git
-    source-tag: 'v7.1.1'
+    source: .
 ```
  
 ### Apps
@@ -142,14 +138,14 @@ description: |
 
 grade: devel
 confinement: devmode
- 
+
 parts:
   youtube-dl:
     source: https://github.com/rg3/youtube-dl/archive/$SNAPCRAFT_PROJECT_VERSION.tar.gz
     plugin: python
     python-version: python3
     stage-packages: [ffmpeg]
- 
+
 apps:
   youtube-dl:
     command: bin/youtube-dl

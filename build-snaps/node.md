@@ -32,20 +32,18 @@ description: |
     $ wethr --metric
   Get current weather in imperial units
     $ wethr --imperial
- 
+
 grade: devel
 confinement: devmode
- 
+
 apps:
   wethr:
     command: wethr
- 
+
 parts:
   wethr:
     plugin: nodejs
-    source: https://github.com/twobucks/wethr
-    source-type: git
-    source-tag: 'v1.4.0'
+    source: .
 ```
 
 ### Metadata
@@ -83,9 +81,7 @@ The Node plugin will also bundle Node in the snap, so you can be sure that the v
 parts:
   wethr:
     plugin: nodejs
-    source: https://github.com/twobucks/wethr
-    source-type: git
-    source-tag: 'v1.4.0'
+    source: .
 ```
 
 ### Apps
@@ -206,9 +202,7 @@ Using the wethr example above, we can run the test suite at the end of the build
 parts:
   wethr:
     plugin: nodejs
-    source: https://github.com/twobucks/wethr
-    source-type: git
-    source-tag: 'v1.4.0'
+    source: .
     install: |
       npm test
 ```
