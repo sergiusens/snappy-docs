@@ -96,7 +96,7 @@ apps:
     command: wethr
 ```
 
-If your application is intended to run as a service you simply add the line `daemon: simple` after the command keyword. This will automatically keep the the service running on install, update and reboot.
+If your application is intended to run as a service you simply add the line `daemon: simple` after the command keyword. This will automatically keep the service running on install, update and reboot.
 
 ## Building the snap
 

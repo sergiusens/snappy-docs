@@ -91,7 +91,7 @@ apps:
     command: bin/offlineimap
 ```
  
-If your application is intended to run as a service, add the line `daemon: simple` after the command keyword. This will automatically keep the the service running on install, update and reboot.
+If your application is intended to run as a service, add the line `daemon: simple` after the command keyword. This will automatically keep the service running on install, update and reboot.
  
 ## Building the snap
  
@@ -155,7 +155,7 @@ apps:
  
 In the `youtube-dl` example the only part contains a URL to a release of the Python application.
  
-In this example we use the `$SNAPCRAFT_PROJECT_VERSION` variable derived from the `version:` stanza to reference the release tarball. `snapcraft` is instructed that this part is a Python application by specifying the the `python` plugin and because `youtube-dl` is Python 3.x compatible the Python version required is specified with the `python-version:` stanza.
+In this example we use the `$SNAPCRAFT_PROJECT_VERSION` variable derived from the `version:` stanza to reference the release tarball. `snapcraft` is instructed that this part is a Python application by specifying the `python` plugin and because `youtube-dl` is Python 3.x compatible the Python version required is specified with the `python-version:` stanza.
  
 `youtube-dl` makes use of `ffmpeg` to transcode or otherwise convert the audio and video file is downloads, therefore `ffmpeg` is included in the `staged-packages`. This instructs `snapcraft` to download `ffmpeg` package, and it's dependencies, from the Ubuntu package repository and bundle them in the `youtube-dl` snap.
  
