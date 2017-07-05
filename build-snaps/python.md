@@ -4,7 +4,7 @@ Python has rich tools for packaging, distributing and sandboxing applications. S
  
 ## What problems do snaps solve for Python applications?
  
-Often Linux install documentation for Python applications is complicated, requiring software to be installed via `apt`, `rpm` and `pip` or make use of `virtualenv` to prevent module dependencies from different Python applications clashing with modules in the host operating system. With snapcraft it’s one command to produce a bundle that works anywhere.
+Linux install instructions for Python applications often get complicated. System dependencies, which differ from distribution to distribution, must be separately installed. To prevent modules from different Python applications clashing with each other, developer tools like `virtualenv` or `venv` must be used. With snapcraft it's one command to produce a bundle that works anywhere.
  
 Here are some snap advantages that will benefit many Python projects:
  
