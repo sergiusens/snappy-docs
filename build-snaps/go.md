@@ -10,6 +10,7 @@ Here are some snap advantages that will benefit many Go projects:
  * Simplify installation instructions, regardless of distribution, to `snap install mygoapp`.
  * Directly control the delivery of application updates.
  * Extremely simple creation of daemons.
+ * Deliver assets such as images or static web content inside the snap.
 
 # Getting started
 
