@@ -223,7 +223,7 @@ If you’re happy with the result, you can commit the snapcraft.yaml to your Git
  
 ## Further customisations
  
-Here are all the Python plugin-specific keywords
+Here are all the Python plugin-specific keywords:
  
 ```
 - requirements:
@@ -243,7 +243,7 @@ Here are all the Python plugin-specific keywords
   The python version to use. Valid options are: python2 and python3
 ```
  
-You can view them locally by running
+You can view them locally by running:
 
 ```
 snapcraft help python

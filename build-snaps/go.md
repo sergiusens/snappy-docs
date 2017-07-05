@@ -283,7 +283,7 @@ If you’re happy with the result, you can commit the snapcraft.yaml to your Git
 
 ## Further customisations
 
-Here are all the Go plugin-specific keywords
+Here are all the Go plugin-specific keywords:
 
 ```
     - go-packages:
@@ -306,7 +306,7 @@ Here are all the Go plugin-specific keywords
       Tags to use during the go build. Default is not to use any build tags.
 ```
 
-You can view them locally by running
+You can view them locally by running:
 
 ```
 snapcraft help go

@@ -167,7 +167,7 @@ If you’re happy with the result, you can commit the snapcraft.yaml to your Git
 
 ## Further customisations
 
-Here are all the Node plugin-specific keywords
+Here are all the Node plugin-specific keywords:
 
 ```
     - node-packages:
@@ -186,7 +186,7 @@ Here are all the Node plugin-specific keywords
       of node packages. Can be either `npm` (default) or `yarn`.
 ```
 
-You can view them locally by running
+You can view them locally by running:
 
 ```
 snapcraft help nodejs
