@@ -1,6 +1,6 @@
 # Go
 
-Snapcraft builds on top of `go build` and tools familiar to any Go developer to create snaps for people to install on Linux.
+Snapcraft builds on top of the `go` tool, familiar to any Go developer, to create snaps for people to install on Linux.
 
 ## What problems do snaps solve for Go applications?
 
