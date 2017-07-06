@@ -167,4 +167,4 @@ You can extend the behaviour of any part in your `snapcraft.yaml` with shell com
 
 Congratulations, you have an app in edge ready to share with other developers.
 
-What to learn more? Continue on to learn how to get your app ready for a wider audience.
+Want to learn more? Continue on to learn how to get your app ready for a wider audience.
