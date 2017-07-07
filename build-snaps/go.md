@@ -34,7 +34,7 @@ parts:
   httplab:
     source: .
     plugin: go
-    go-importpath: github.com/httplab/httplab
+    go-importpath: github.com/gchaincl/httplab
  
 apps:
   httplab:
@@ -72,7 +72,7 @@ parts:
   httplab:
     source: .
     plugin: go
-    go-importpath: github.com/httplab/httplab
+    go-importpath: github.com/gchaincl/httplab
 ```
 
 ### Apps
