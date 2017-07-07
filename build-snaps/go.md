@@ -67,6 +67,8 @@ Parts define how to build your app. Parts can be anything: programs, libraries, 
 
 The Go plugin will build using the version of Go on the system running snapcraft. We’ll cover building using different versions of Go in the geth example further down.
 
+When using local sources, snapcraft needs to construct a suitable `GOPATH`. For this it uses `go-importpath` to know where the sources should live within `GOPATH/src`.
+
 ```yaml
 parts:
   httplab:
