@@ -163,8 +163,10 @@ This plugin dumps the content from a specified source. In the cases where dumpin
 
 You can extend the behaviour of any part in your `snapcraft.yaml` with shell commands. These can be run after pulling the source code but before building by using the `prepare` keyword. The build process can be overridden entirely using the `build` keyword and shell commands. The `install` keyword is used to run shell commands after building your code, useful for making post build modifications such as relocating build assets.
 
+<!--
 ## Next steps
 
 Congratulations, you have an app in edge ready to share with other developers.
 
 Want to learn more? Continue on to learn how to get your app ready for a wider audience.
+-->
