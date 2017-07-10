@@ -278,7 +278,7 @@ Be sure to update the `name:` in your `snapcraft.yaml` to match this registered 
 Use snapcraft to push the snap to the store.
 
 ```
-snapcraft push --release=edge mygosnap_amd64.snap
+snapcraft push --release=edge mygosnap_*.snap
 ```
 
 If you’re happy with the result, you can commit the snapcraft.yaml to your GitHub repo and [turn on automatic builds](https://build.snapcraft.io) so any further commits automatically get released to edge, without requiring you to manually build locally.
