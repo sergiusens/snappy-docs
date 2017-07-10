@@ -126,7 +126,7 @@ Jump ahead to [Share with your friends](#share-with-your-friends) or continue to
  
 ## youtube-dl
  
-The youtube-dl example shows a `snapcraft.yaml` using a tarball of a Python application and using `stage-packages:` to bundle `ffmpeg` in the snap to satisfy the runtime requirements. Here is the entire `snapcraft.yaml` for youtube-dl. We'll break this down.
+The youtube-dl example shows a `snapcraft.yaml` using a tarball of a Python application and `ffmpeg` bundled in the snap to satisfy the runtime requirements. Here is the entire `snapcraft.yaml` for youtube-dl. We'll break this down.
  
 ```yaml
 name: youtube-dl
@@ -144,7 +144,7 @@ parts:
     source: https://github.com/rg3/youtube-dl/archive/$SNAPCRAFT_PROJECT_VERSION.tar.gz
     plugin: python
     python-version: python3
-    stage-packages: [ffmpeg]
+    after: [ffmpeg]
 
 apps:
   youtube-dl:
@@ -153,11 +153,9 @@ apps:
  
 ### Parts
  
-In the youtube-dl example the only part contains a URL to a release of the Python application.
+The `$SNAPCRAFT_PROJECT_VERSION` variable is derived from the `version:` stanza and used here to reference the matching release tarball. Because the `python` plugin is used, snapcraft will bundle a copy of Python in the snap using the version specified in the `python-version:` stanza, in this case Python 3.
  
-In this example we use the `$SNAPCRAFT_PROJECT_VERSION` variable derived from the `version:` stanza to reference the release tarball. `snapcraft` is instructed that this part is a Python application by specifying the `python` plugin and because youtube-dl is Python 3.x compatible the Python version required is specified with the `python-version:` stanza.
- 
-youtube-dl makes use of `ffmpeg` to transcode or otherwise convert the audio and video file it downloads, therefore `ffmpeg` is included in the `staged-packages`. This instructs `snapcraft` to download the `ffmpeg` package and its dependencies from the Ubuntu package repository and bundle them in the youtube-dl snap.
+youtube-dl makes use of `ffmpeg` to transcode or otherwise convert the audio and video file it downloads. In this example, youtube-dl is told to build after the ffmpeg part. Because the ffmpeg part is not defined in this `snapcraft.yaml`, snapcraft will treat it as a "remote part." Remote parts are community-contributed reusable components which can be used by anyone when building a snap. You can use ```snapcraft search``` to find remote reusable parts to incorporate in your projects.
  
 ```yaml
 parts:
@@ -165,7 +163,7 @@ parts:
     source: https://github.com/rg3/youtube-dl/archive/$SNAPCRAFT_PROJECT_VERSION.tar.gz
     plugin: python
     python-version: python3
-    stage-packages: [ffmpeg]
+    after: [ffmpeg]
 ```
  
 ## Building the snap
