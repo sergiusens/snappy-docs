@@ -15,11 +15,11 @@ Here are some snap advantages that will benefit many Node projects:
 
 # Getting started
 
-Let's take a look at `wethr` by way of an example.
+Let's take a look at wethr by way of an example.
 
 ## wethr
 
-Snaps are defined in a single yaml file placed in the root of your project. The `wethr` example shows the entire `snapcraft.yaml` for an existing project, leveraging the existing `package.json` to satisfy runtime requirements. We'll break this down.
+Snaps are defined in a single yaml file placed in the root of your project. The wethr example shows the entire `snapcraft.yaml` for an existing project, leveraging the existing `package.json` to satisfy runtime requirements. We'll break this down.
 
 ```yaml
 name: wethr
@@ -121,7 +121,7 @@ The resulting snap can be installed locally. This requires the `--dangerous` fla
 sudo snap install wethr_*.snap --devmode --dangerous
 ```
 
-You can then try running `wethr`.
+You can then try running wethr.
 
 ```
 wethr

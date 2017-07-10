@@ -15,11 +15,11 @@ Here are some snap advantages that will benefit many Python projects:
  
 # Getting started
  
-Let's take a look at `offlineimap` and `youtube-dl` by way of examples. Both are command line applications. `offlineimap` uses Python 2 and only has Python module requirements. `youtube-dl` uses Python 3 and has system package requirements, in this case `ffmpeg`.
+Let's take a look at offlineimap and youtube-dl by way of examples. Both are command line applications. offlineimap uses Python 2 and only has Python module requirements. youtube-dl uses Python 3 and has system package requirements, in this case `ffmpeg`.
  
 ## offlineimap
  
-Snaps are defined in a single yaml file placed in the root of your project. The `offlineimap` example shows the entire `snapcraft.yaml` for an existing project, leveraging the existing `requirements.txt` to satisfy runtime requirements. We'll break this down.
+Snaps are defined in a single yaml file placed in the root of your project. The offlineimap example shows the entire `snapcraft.yaml` for an existing project, leveraging the existing `requirements.txt` to satisfy runtime requirements. We'll break this down.
  
 ```yaml
 name: offlineimap
@@ -126,7 +126,7 @@ Jump ahead to [Share with your friends](#share-with-your-friends) or continue to
  
 ## youtube-dl
  
-The `youtube-dl` example shows a `snapcraft.yaml` using a tarball of a Python application and using `stage-packages:` to bundle `ffmpeg` in the snap to satisfy the runtime requirements. Here is the entire `snapcraft.yaml` for `youtube-dl`. We'll break this down.
+The youtube-dl example shows a `snapcraft.yaml` using a tarball of a Python application and using `stage-packages:` to bundle `ffmpeg` in the snap to satisfy the runtime requirements. Here is the entire `snapcraft.yaml` for youtube-dl. We'll break this down.
  
 ```yaml
 name: youtube-dl
@@ -153,11 +153,11 @@ apps:
  
 ### Parts
  
-In the `youtube-dl` example the only part contains a URL to a release of the Python application.
+In the youtube-dl example the only part contains a URL to a release of the Python application.
  
-In this example we use the `$SNAPCRAFT_PROJECT_VERSION` variable derived from the `version:` stanza to reference the release tarball. `snapcraft` is instructed that this part is a Python application by specifying the `python` plugin and because `youtube-dl` is Python 3.x compatible the Python version required is specified with the `python-version:` stanza.
+In this example we use the `$SNAPCRAFT_PROJECT_VERSION` variable derived from the `version:` stanza to reference the release tarball. `snapcraft` is instructed that this part is a Python application by specifying the `python` plugin and because youtube-dl is Python 3.x compatible the Python version required is specified with the `python-version:` stanza.
  
-`youtube-dl` makes use of `ffmpeg` to transcode or otherwise convert the audio and video file it downloads, therefore `ffmpeg` is included in the `staged-packages`. This instructs `snapcraft` to download the `ffmpeg` package and its dependencies from the Ubuntu package repository and bundle them in the `youtube-dl` snap.
+youtube-dl makes use of `ffmpeg` to transcode or otherwise convert the audio and video file it downloads, therefore `ffmpeg` is included in the `staged-packages`. This instructs `snapcraft` to download the `ffmpeg` package and its dependencies from the Ubuntu package repository and bundle them in the youtube-dl snap.
  
 ```yaml
 parts:

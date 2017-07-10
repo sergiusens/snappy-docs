@@ -14,11 +14,11 @@ Here are some snap advantages that will benefit many Go projects:
 
 # Getting started
 
-Let's take a look at `httplab` and `go-ethereum` by way of examples. Both are command line applications. `httplab` is a very simple example of a typical Go snap. `go-ethereum` (geth) requires a specific version of Go, and contains multiple commands.
+Let's take a look at httplab and go-ethereum by way of examples. Both are command line applications. httplab is a very simple example of a typical Go snap. go-ethereum (geth) requires a specific version of Go, and contains multiple commands.
 
 ## httplab
 
-Snaps are defined in a single yaml file placed in the root of your project. The `httplab` example shows the entire `snapcraft.yaml` for an existing project. We'll break this down.
+Snaps are defined in a single yaml file placed in the root of your project. The httplab example shows the entire `snapcraft.yaml` for an existing project. We'll break this down.
 
 ```yaml
 name: httplab
@@ -130,7 +130,7 @@ Jump ahead to [Share with your friends](#share-with-your-friends) or continue to
 
 ## go-ethereum (geth)
 
-The `geth` example shows a `snapcraft.yaml` using a different version of Go than the one shipped in the distribution archive on the machine building the snap. Here is the entire `snapcraft.yaml` for `geth`. We'll break this down.
+The geth example shows a `snapcraft.yaml` using a different version of Go than the one shipped in the distribution archive on the machine building the snap. Here is the entire `snapcraft.yaml` for geth. We'll break this down.
 
 ```yaml
 name: geth
@@ -174,7 +174,7 @@ parts:
 
 ### Parts
 
-In the `geth` example we have two parts, one for geth itself, and a second which pulls a newer version of Go.
+In the geth example we have two parts, one for geth itself, and a second which pulls a newer version of Go.
 
 The geth part specifies that it must be run 'after' the 'go' part. This ensures that when geth is built, it is done so with the newer release of Go.
 
