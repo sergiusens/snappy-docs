@@ -19,7 +19,7 @@ Let's take a look at `geekbench` by way of an example.
 
 ## geekbench
 
-Snaps are defined in a single yaml file, placed in the root of your project. Here is the entire `snapcraft.yaml` for `geekbench`. We'll break this down.
+Snaps are defined in a single yaml file placed in the root of your project. The `geekbench` example shows the entire `snapcraft.yaml` for an existing project. We'll break this down.
 
 ```yaml
 name: geekbench4

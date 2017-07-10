@@ -18,7 +18,7 @@ Let's take a look at `httplab` and `go-ethereum` by way of examples. Both are co
 
 ## httplab
 
-Snaps are defined in a single yaml file, placed in the root of your project. The `httplab` example shows how `snapcraft.yaml` can be added to the source repository of an existing project. Here is the entire `snapcraft.yaml` for `httplab`. We'll break this down.
+Snaps are defined in a single yaml file placed in the root of your project. The `httplab` example shows the entire `snapcraft.yaml` for an existing project. We'll break this down.
 
 ```yaml
 name: httplab

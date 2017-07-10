@@ -19,7 +19,7 @@ Let's take a look at `wethr` by way of an example.
 
 ## wethr
 
-Snaps are defined in a single yaml file, placed in the root of your project. The `wethr` example shows how `snapcraft.yaml` can be added to the source repository of an existing project, leveraging the existing `package.json` to satisfy runtime requirements. Here is the entire `snapcraft.yaml` for `wethr`. We'll break this down.
+Snaps are defined in a single yaml file placed in the root of your project. The `wethr` example shows the entire `snapcraft.yaml` for an existing project, leveraging the existing `package.json` to satisfy runtime requirements. We'll break this down.
 
 ```yaml
 name: wethr

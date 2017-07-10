@@ -19,7 +19,7 @@ Let's take a look at `offlineimap` and `youtube-dl` by way of examples. Both are
  
 ## offlineimap
  
-Snaps are defined in a single yaml file, placed in the root of your project. The `offlineimap` example shows how this `snapcraft.yaml` can be added to the source repository of an existing project, leveraging the existing `requirements.txt` to satisfy runtime requirements. Here is the entire `snapcraft.yaml` for `offlineimap`. We'll break this down.
+Snaps are defined in a single yaml file placed in the root of your project. The `offlineimap` example shows the entire `snapcraft.yaml` for an existing project, leveraging the existing `requirements.txt` to satisfy runtime requirements. We'll break this down.
  
 ```yaml
 name: offlineimap
