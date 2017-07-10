@@ -113,7 +113,7 @@ cd wethr
 snapcraft
 ```
 
-If the command cannot be found, make sure your PATH contains /snap/bin (`echo $PATH`). This is done by the installation of snap support, but that change isn’t picked up until you start a new shell.
+If the command cannot be found, make sure your `PATH` contains /snap/bin (`echo $PATH`). This is done by the installation of snap support, but that change isn’t picked up until you start a new shell.
 
 The resulting snap can be installed locally. This requires the `--dangerous` flag because the snap is not signed by the snap store:
 
