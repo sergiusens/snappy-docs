@@ -110,7 +110,7 @@ snapcraft
  
 If the snapcraft command cannot be found, make sure your `PATH` contains /snap/bin (`echo $PATH`). This is done by the installation of snap support, but that change isn’t picked up until you start a new shell.
  
-The resulting snap can be installed locally. This requires the `--dangerous` flag because the snap is not signed by the snap store:
+The resulting snap can be installed locally. This requires the `--dangerous` flag because the snap is not signed by the snap store. The `--devmode` flag acknowledges that you are installing an unconfined application:
  
     sudo snap install offlineimap_*.snap --devmode --dangerous
  
@@ -176,7 +176,7 @@ cd youtube-dl
 snapcraft
 ```
  
-The resulting snap can be installed locally, or shared with others to test. Installing locally requires the `--dangerous` flag because the snap is not signed by the store.
+The resulting snap can be installed locally. This requires the `--dangerous` flag because the snap is not signed by the snap store. The `--devmode` flag acknowledges that you are installing an unconfined application:
  
     sudo snap install youtube-dl_*.snap --devmode --dangerous
  
