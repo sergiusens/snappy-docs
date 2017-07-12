@@ -155,7 +155,7 @@ apps:
  
 The `$SNAPCRAFT_PROJECT_VERSION` variable is derived from the `version:` stanza and used here to reference the matching release tarball. Because the `python` plugin is used, snapcraft will bundle a copy of Python in the snap using the version specified in the `python-version:` stanza, in this case Python 3.
  
-youtube-dl makes use of `ffmpeg` to transcode or otherwise convert the audio and video file it downloads. In this example, youtube-dl is told to build after the ffmpeg part. Because the ffmpeg part is not defined in this `snapcraft.yaml`, snapcraft will treat it as a "remote part." Remote parts are community-contributed reusable components which can be used by anyone when building a snap. You can use ```snapcraft update``` to get the latest list of shared parts followed by a ```snapcraft search``` to find reusable parts to incorporate in your projects.
+youtube-dl makes use of `ffmpeg` to transcode or otherwise convert the audio and video file it downloads. In this example, youtube-dl is told to build after the `ffmpeg` part. Because the `ffmpeg` part specifies no plugin, it will be fetched from the parts repository. This is a collection of community-contributed definitions which can be used by anyone when building a snap, saving you from needing to specify the source and build rules for each system dependency. You can use `snapcraft search` to find more parts to use and `snapcraft define <part-name>` to verify how the part is defined.
  
 ```yaml
 parts:
