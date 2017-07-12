@@ -186,7 +186,7 @@ geth:
   go-importpath: github.com/ethereum/go-ethereum
 ```
 
-The Go part specifies no source which means it's a "remote part". Remote parts are community-contributed reusable components which can be used by anyone when building a snap. You can use ```snapcraft search``` to find remote reusable parts to incorporate in your projects.
+The Go part specifies no source which means it's a "remote part". Remote parts are community-contributed reusable components which can be used by anyone when building a snap. You can use ```snapcraft update``` to get the latest list of shared parts followed by a ```snapcraft search``` to find reusable parts to incorporate in your projects.
 
 In this case the go part requires only that we specify what version of Go we wish to build with for geth. As this part is not '`after`' anything else, it will be done first. 
 
