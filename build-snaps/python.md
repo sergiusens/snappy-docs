@@ -69,7 +69,7 @@ confinement: devmode
  
 Parts define how to build your app. Parts can be anything: programs, libraries, or other assets needed to create and run your application. In this case we have one: the offlineimap source code. In other cases these can point to local directories, remote git repositories, or tarballs.
  
-The Python plugin will also bundle Python in the snap, so you can be sure that the version of Python you test against is included with your app. Dependencies from your requirements.txt will also be bundled.
+The Python plugin will also bundle Python in the snap, so you can be sure that the version of Python you test against is included with your app. Dependencies from your `requirements.txt` will also be bundled.
  
 ```yaml
 parts:
