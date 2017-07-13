@@ -20,7 +20,7 @@ You can set up your repository to automatically build and publish snaps using [t
 ### Building from Ubuntu 14.04 or another Linux distribution
 
 If you're running the older Ubuntu 14.04 LTS or another Linux distribution, you can still build snaps using LXD or Docker. Just
-follow [these instructions](/docs/build-snaps/trusty).
+follow [these instructions](/docs/build-snaps/build-on-lxd-docker).
 
 ## Demos
 
