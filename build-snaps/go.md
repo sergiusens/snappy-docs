@@ -14,7 +14,7 @@ Here are some snap advantages that will benefit many Go projects:
  * Extremely simple creation of daemons.
  * Deliver assets such as images or static web content inside the snap.
 
-# Getting started
+## Getting started
 
 Let's take a look at httplab and go-ethereum by way of examples. Both are command line applications. httplab is a very simple example of a typical Go snap. go-ethereum (geth) requires a specific version of Go, and contains multiple commands.
 

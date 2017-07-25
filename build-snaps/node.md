@@ -15,7 +15,7 @@ Here are some snap advantages that will benefit many Node projects:
   * Directly control the delivery of automatic application updates.
   * Extremely simple creation of services.
 
-# Getting started
+## Getting started
 
 Let's take a look at wethr by way of an example.
 

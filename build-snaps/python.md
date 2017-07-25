@@ -15,7 +15,7 @@ Here are some snap advantages that will benefit many Python projects:
   * Directly control the delivery of automatic application updates.
   * Extremely simple creation of daemons.
  
-# Getting started
+## Getting started
  
 Let's take a look at offlineimap and youtube-dl by way of examples. Both are command line applications. offlineimap uses Python 2 and only has Python module requirements. youtube-dl uses Python 3 and has system package requirements, in this case `ffmpeg`.
  
