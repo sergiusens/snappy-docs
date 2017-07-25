@@ -17,7 +17,7 @@ Here are some snap advantages that will benefit many projects distributing pre-b
 
 ## Getting started
 
-Let's take a look at geekbench by way of an example.
+By way of an example, let's take a look at how a snap is created for the geekbench app.
 
 ### geekbench
 

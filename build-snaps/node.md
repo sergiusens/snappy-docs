@@ -17,7 +17,7 @@ Here are some snap advantages that will benefit many Node projects:
 
 ## Getting started
 
-Let's take a look at wethr by way of an example.
+By way of an example, let's take a look at how a snap is created for the wethr app.
 
 ### wethr
 
