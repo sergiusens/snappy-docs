@@ -159,7 +159,7 @@ If you’re happy with the result, you can commit the snapcraft.yaml to your Git
 
 ## Further customisations
 
-This plugin dumps the content from a specified source. In the cases where dumping the content needs some mangling or organizing one would take advantage of the core functionalities available to plugins such as: `filesets`, `stage`, `snap` and `organize`.
+This plugin dumps the content from a specified source. In the cases where dumping the content needs some mangling or organizing one would take advantage of the core functionalities available to plugins such as: `filesets`, `stage`, `prime` and `organize`.
 
 ### Extending and overriding behaviour
 

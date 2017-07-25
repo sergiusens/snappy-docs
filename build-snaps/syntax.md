@@ -114,7 +114,7 @@ Parts are the main building blocks of snaps: source code, packages, tarballs or 
       A set of Ubuntu packages to be downloaded and unpacked to join the part
       before it's built. Note that these packages are not installed on the host.
       Like the rest of the part, all files from these packages will make it into
-      the final snap unless filtered out via the `snap` keyword.
+      the final snap unless filtered out via the `prime` keyword.
 
       One may simply specify packages in a flat list, in which case the packages
       will be fetched and unpacked regardless of build environment. In addition,
