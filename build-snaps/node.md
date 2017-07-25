@@ -1,4 +1,6 @@
-# Node
+---
+title: Node
+---
 
 Node has rich tools for packaging, distributing and sandboxing applications. Snapcraft builds on top of these familiar tools such as `npm` and `yarn` to create snaps. 
 

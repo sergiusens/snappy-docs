@@ -1,4 +1,6 @@
-# Go
+---
+title: Go
+---
 
 Snapcraft builds on top of the `go` tool, familiar to any Go developer, to create snaps for people to install on Linux.
 

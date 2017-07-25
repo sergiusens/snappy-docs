@@ -1,4 +1,6 @@
-# Pre-built binaries
+---
+title: Pre-built binaries
+---
 
 Shipping pre-built binaries makes getting up and running with your application easy, without limiting the number of Linux distributions you support. Snapcraft can ingest these binaries to create snaps that still work on any major Linux distribution.
 
