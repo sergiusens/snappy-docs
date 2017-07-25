@@ -197,7 +197,7 @@ go:
   source-tag: go1.7.5
 ```
 
-## Commands
+#### Commands
 
 Unlike the httplab example, geth contains multiple commands.
 
