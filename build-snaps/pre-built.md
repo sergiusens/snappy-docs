@@ -105,15 +105,13 @@ You’ll first need to [install snap support](https://snapcraft.io/docs/core/ins
 sudo snap install --beta --classic snapcraft
 ```
 
-You can then build this example yourself:
+If you have just installed snap support, start a new shell so your `PATH` is updated to include `/snap/bin`. You can then build this example yourself:
 
 ```
 git clone https://github.com/snapcraft-docs/geekbench4
 cd geekbench4
 snapcraft
 ```
-
-If the command cannot be found, make sure your `PATH` contains /snap/bin (`echo $PATH`). This is done by the installation of snap support, but that change isn’t picked up until you start a new shell.
 
 The resulting snap can be installed locally. This requires the `--dangerous` flag because the snap is not signed by the snap store. The `--devmode` flag acknowledges that you are installing an unconfined application:
 
