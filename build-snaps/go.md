@@ -201,7 +201,7 @@ go:
 
 Unlike the httplab example, geth contains multiple commands.
 
-By default geth stores the blockchain in the home directory, which inside a snap would be mapped to $SNAP_USER_DATA, typically in the ~/snap/geth/current directory. This directory is versioned, so when the snap is updated it will get copied to a new version, for example ~/snap/geth/1 to ~/snap/geth/2. As the blockchain data can be quite large, we override this by specifying a `datadir` under $SNAP_USER_COMMON which maps to ~/snap/geth/common which is not a versioned directory.
+By default geth stores the blockchain in the home directory. Inside a snap this would be mapped to `$SNAP_USER_DATA`, the `~/snap/geth/current` directory. This directory is versioned. When the snap is updated the directory contents will be copied to a new revision, for example `~/snap/geth/1` to `~/snap/geth/2`. As the blockchain data can be quite large, we specify a `datadir` under `$SNAP_USER_COMMON`, the unversioned `~/snap/geth/common` directory.
 
 ```yaml
 apps:
