@@ -19,7 +19,7 @@ Here are some snap advantages that will benefit many projects distributing pre-b
 
 Let's take a look at geekbench by way of an example.
 
-## geekbench
+### geekbench
 
 Snaps are defined in a single yaml file placed in the root of your project. The geekbench example shows the entire `snapcraft.yaml` for an existing project. We'll break this down.
 

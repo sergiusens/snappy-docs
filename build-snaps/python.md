@@ -19,7 +19,7 @@ Here are some snap advantages that will benefit many Python projects:
  
 Let's take a look at offlineimap and youtube-dl by way of examples. Both are command line applications. offlineimap uses Python 2 and only has Python module requirements. youtube-dl uses Python 3 and has system package requirements, in this case `ffmpeg`.
  
-## offlineimap
+### offlineimap
  
 Snaps are defined in a single yaml file placed in the root of your project. The offlineimap example shows the entire `snapcraft.yaml` for an existing project. We'll break this down.
  
@@ -126,7 +126,7 @@ Removing the snap is simple too:
  
 Jump ahead to [Share with your friends](#share-with-your-friends) or continue to read another example.
  
-## youtube-dl
+### youtube-dl
  
 The youtube-dl example shows a `snapcraft.yaml` using a tarball of a Python application and `ffmpeg` bundled in the snap to satisfy the runtime requirements. Here is the entire `snapcraft.yaml` for youtube-dl. We'll break this down.
  

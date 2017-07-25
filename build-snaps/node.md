@@ -19,7 +19,7 @@ Here are some snap advantages that will benefit many Node projects:
 
 Let's take a look at wethr by way of an example.
 
-## wethr
+### wethr
 
 Snaps are defined in a single yaml file placed in the root of your project. The wethr example shows the entire `snapcraft.yaml` for an existing project, leveraging the existing `package.json` to satisfy runtime requirements. We'll break this down.
 
