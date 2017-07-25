@@ -10,7 +10,7 @@ Linux install instructions for Python applications often get complicated. System
  
 Here are some snap advantages that will benefit many Python projects:
  
-  * Bundle all the runtime requirements, including the exact versions of system libraries.
+  * Bundle all the runtime requirements, including the exact versions of system libraries and the Python interpreter.
   * Simplify installation instructions, regardless of distribution, to `snap install mypythonapp`.
   * Directly control the delivery of automatic application updates.
   * Extremely simple creation of daemons.
