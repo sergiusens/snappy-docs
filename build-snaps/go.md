@@ -43,7 +43,7 @@ apps:
     command: httplab
 ```
 
-### Metadata
+#### Metadata
 
 The `snapcraft.yaml` starts with a small amount of human-readable metadata, which usually can be lifted from the GitHub description or project README.md. This data is used in the presentation of your app in the snap store. The `summary:` can not exceed 79 characters. You can use a pipe with the `description:` to declare a multi-line description.
 
@@ -55,7 +55,7 @@ description: |
   HTTPLab let you inspect HTTP requests and forge responses.
 ```
 
-### Confinement
+#### Confinement
 
 To get started we won’t confine this application. Unconfined applications, specified with `devmode`, can only be released to the hidden “edge” channel where you and other developers can install them.
 
@@ -63,7 +63,7 @@ To get started we won’t confine this application. Unconfined applications, spe
 confinement: devmode
 ```
 
-### Parts
+#### Parts
 
 Parts define how to build your app. Parts can be anything: programs, libraries, or other assets needed to create and run your application. In this case we have one: the httplab source code. In other cases these can point to local directories, remote git repositories, or tarballs.
 
@@ -79,7 +79,7 @@ parts:
     go-importpath: github.com/gchaincl/httplab
 ```
 
-### Apps
+#### Apps
 
 Apps are the commands and services exposed to end users. If your command name matches the snap `name`, users will be able run the command directly. If the names differ, then apps are prefixed with the snap `name` (`httplab.command-name`, for example). This is to avoid conflicting with the apps defined by other installed snaps.
 
@@ -174,7 +174,7 @@ parts:
     go-importpath: github.com/ethereum/go-ethereum
 ```
 
-### Parts
+#### Parts
 
 In the geth example we have two parts, one for geth itself, and a second which pulls a newer version of Go.
 

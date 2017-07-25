@@ -45,7 +45,7 @@ parts:
     source: .
 ```
  
-### Metadata
+#### Metadata
  
 The `snapcraft.yaml` starts with a small amount of human-readable metadata, which usually can be lifted from the GitHub description or project README.md. This data is used in the presentation of your app in the snap store. The `summary:` can not exceed 79 characters. You can use a pipe with the `description:` to declare a multi-line description.
  
@@ -58,7 +58,7 @@ description: |
   Maildirs. OfflineIMAP will synchronize both sides via IMAP.
 ```
  
-### Confinement
+#### Confinement
  
 To get started we won’t confine this application. Unconfined applications, specified with `devmode`, can only be released to the hidden “edge” channel where you and other developers can install them.
  
@@ -67,7 +67,7 @@ confinement: devmode
 ```
  
  
-### Parts
+#### Parts
  
 Parts define how to build your app. Parts can be anything: programs, libraries, or other assets needed to create and run your application. In this case we have one: the offlineimap source code. In other cases these can point to local directories, remote git repositories, or tarballs.
  
@@ -81,7 +81,7 @@ parts:
     source: .
 ```
  
-### Apps
+#### Apps
  
 Apps are the commands and services exposed to end users. If your command name matches the snap `name`, users will be able run the command directly. If the names differ, then apps are prefixed with the snap `name` (`offlineimap.command-name`, for example). This is to avoid conflicting with the apps defined by other installed snaps.
  
@@ -153,7 +153,7 @@ apps:
     command: bin/youtube-dl
 ```
  
-### Parts
+#### Parts
  
 The `$SNAPCRAFT_PROJECT_VERSION` variable is derived from the `version:` stanza and used here to reference the matching release tarball. Because the `python` plugin is used, snapcraft will bundle a copy of Python in the snap using the version specified in the `python-version:` stanza, in this case Python 3.
  

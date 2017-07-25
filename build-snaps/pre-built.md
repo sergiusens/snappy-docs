@@ -45,7 +45,7 @@ apps:
     command: geekbench4
 ```
 
-### Metadata
+#### Metadata
 
 The `snapcraft.yaml` starts with a small amount of human-readable metadata, which usually can be lifted from the GitHub description or project README.md. This data is used in the presentation of your app in the snap store. The `summary:` can not exceed 79 characters. You can use a pipe with the `description:` to declare a multi-line description.
 
@@ -60,7 +60,7 @@ description: |
   questions that Geekbench can answer.
 ```
 
-### Confinement
+#### Confinement
 
 To get started we won’t confine this application. Unconfined applications, specified with `devmode`, can only be published to the hidden “edge” channel where you and other developers can install them.
 
@@ -69,7 +69,7 @@ confinement: devmode
 ```
 
 
-### Parts
+#### Parts
 
 Parts define how to build your app. Parts can be anything: programs, libraries, or other assets needed to create and run your application. In this case we just have one: a tarball containing the geekbench binary. In other cases these can point to local or remote zips files, deb files, or tarballs.
 
@@ -82,7 +82,7 @@ parts:
     source: http://cdn.primatelabs.com/Geekbench-$SNAPCRAFT_PROJECT_VERSION-Linux.tar.gz
 ```
 
-### Apps
+#### Apps
 
 Apps are the commands and services exposed to end users. If your command name matches the snap `name`, users will be able run the command directly. If the names differ, then apps are prefixed with the snap `name` (`geekbench4.command-name`, for example). This is to avoid conflicting with the apps defined by other installed snaps.
 
