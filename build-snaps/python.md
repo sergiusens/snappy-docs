@@ -95,7 +95,7 @@ apps:
  
 If your application is intended to run as a service, add the line `daemon: simple` after the command keyword. This will automatically keep the service running on install, update and reboot.
  
-## Building the snap
+### Building the snap
  
 You’ll first need to [install snap support](https://snapcraft.io/docs/core/install), and then install the snapcraft tool:
 ```
@@ -168,7 +168,7 @@ parts:
     after: [ffmpeg]
 ```
  
-## Building the snap
+### Building the snap
  
 You can build this example yourself by running the following:
  
