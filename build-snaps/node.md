@@ -4,7 +4,7 @@ title: Node
 
 Node has rich tools for packaging, distributing and sandboxing applications. Snapcraft builds on top of these familiar tools such as `npm` and `yarn` to create snaps. 
 
-## What problems does using snaps solve for Node applications
+## What problems do snaps solve for Node applications?
 
 Often Linux install documentation for Node applications is complicated, requiring software to be installed via `apt`, `rpm` and `npm` or care taken to run with the right version of Node. With snapcraft it’s just one command to produce a bundle that works anywhere.
 

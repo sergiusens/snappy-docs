@@ -1,10 +1,10 @@
 ---
-title: Pre-built binaries
+title: Pre-built apps
 ---
 
 Shipping pre-built binaries makes getting up and running with your application easy, without limiting the number of Linux distributions you support. Snapcraft can ingest these binaries to create snaps that still work on any major Linux distribution.
 
-## What problems does using snaps solve for distributing pre-built binaries
+## What problems do snaps solve for pre-built applications?
 
 Distributed binaries rarely include a mechanism to self-update, and in some case require specific versions of system libraries not consistently available in every Linux distribution’s repositories. With snapcraft it’s just one command to produce a bundle that works anywhere and can be automatically updated.
 
