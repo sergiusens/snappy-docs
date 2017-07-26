@@ -2,6 +2,8 @@
 title: Node
 ---
 
+<iframe height="450" src="https://www.youtube.com/embed/S3YvRALc2C0?rel=0&showinfo=0" allowfullscreen></iframe>
+
 Node has rich tools for packaging, distributing and sandboxing applications. Snapcraft builds on top of these familiar tools such as `npm` and `yarn` to create snaps. 
 
 ## What problems do snaps solve for Node applications?
