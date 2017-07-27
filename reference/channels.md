@@ -6,6 +6,8 @@ The tracks and channels mechanism provided by the store allow you to distribute 
 
 ## Tracks
 
+<iframe height="450" src="https://www.youtube.com/embed/S3xRFnbVkvs?rel=0&showinfo=0" allowfullscreen></iframe>
+
 Tracks allow you to publish different series of your software and let users follow a specific one.
 
 * By default, snaps are published to a track called `latest`. This is also the default for users when they install a snap, for example `snap install my-app --beta` implies `--channel=latest/beta`.
@@ -23,6 +25,8 @@ Eg. when you release the 2.0 version of your software in the `latest` track, ope
 ![Tracks and channels - example](../media/tracks_channels_example.png)
 
 ## Channels
+
+<iframe height="450" src="https://www.youtube.com/embed/-3b9qkl9Z_k?rel=0&showinfo=0" allowfullscreen></iframe>
 
 There are four risk-based channels available for your snaps, that denote the stability of your software.
 
