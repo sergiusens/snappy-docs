@@ -2,6 +2,8 @@
 title: "Build snaps"
 ---
 
+<iframe height="450" src="https://www.youtube.com/embed/ZsUV9xnrkTA?rel=0&showinfo=0" allowfullscreen></iframe>
+
 ## Install snapcraft
 
 `snapcraft` is the tool to create snaps. It's available on Ubuntu 16.04 LTS and above. To install it, simply run:
