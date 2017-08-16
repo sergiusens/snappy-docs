@@ -5,6 +5,12 @@ title: Install snapd on Solus
 snapd packages for Solus are available from the official
 distribution repositories.
 
+## Solus 3 (and above)
+
+Solus includes snapd by default starting with the Solus 3 release. No installation steps are required and you can use snapd directly.
+
+### For older versions
+
 Ensure your packages are up to date and install the snapd package with:
 
 ```
