@@ -15,6 +15,7 @@ instructions for each of these distributions.
  * [OpenEmbedded/Yocto](install-oe-yocto)
  * [openSUSE](install-opensuse)
  * [OpenWrt](install-openwrt)
+ * [Solus](install-solus)
  * [Ubuntu](install-ubuntu)
 
 ## Support Overview
