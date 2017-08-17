@@ -32,6 +32,7 @@ listed distributions.
 | Fedora 24           | End of Life | 2.26.3  | _devmode_, _no-classic_ |
 | Fedora 25           | Supported   | 2.27.2  | _devmode_, _no-classic_ |
 | Fedora 26           | Supported   | 2.27.2  | _devmode_, _no-classic_ |
+| Fedora 27           | Supported   | 2.27.2  | _devmode_, _no-classic_ |
 | Fedora Rawhide      | Supported   | 2.27.2  | _devmode_, _no-classic_ |
 | CentOS 7            | In progress | N/A     | _devmode_, _no-classic_ |
 | RHEL 7.3            | Unsupported | N/A     | N/A                     |
