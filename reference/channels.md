@@ -2,9 +2,9 @@
 title: Channels
 ---
 
-Release channels allow you to distribute multiple versions of a snap at the same time.
+Channels allow users to subscribe to different release cadences for an app, be it by major version bumps or in-development releases.
 
-It allows users to follow and get automated upgrades for [daily releases](https://build.snapcraft.io/), beta, candidate or stable releases. It also provides a way for your users to follow a specific software series and benefit from fixes released for this series.
+You can provide users with automated upgrades for [daily releases](https://build.snapcraft.io/), beta, candidate or stable releases. They also let you manage major software series and provide fixes to users wishing to stay on a specific series.
 
 ## Structure of a channel
 
@@ -34,7 +34,7 @@ Nevertheless, if you know the name of a snap, the `snap info <snap>` command wil
 
 ## Track
 
-Tracks allow you to publish different series of your software (1.0, 2.0, etc.) and let users follow and get automated upgrades from specific one.
+Tracks allow you to publish different series of your software (1.0, 2.0, etc.) and let users follow and get automated upgrades from a specific one.
 
 ### Overview
 
@@ -46,7 +46,7 @@ Tracks allow you to publish different series of your software (1.0, 2.0, etc.) a
 
 ## Risk level
 
-There are four risk levels available for snaps, that denote the stability of the revision they contain.
+There are four risk levels available for snaps, that denote the stability of revisions they contain.
 
 ### Overview
 
@@ -54,9 +54,9 @@ There are four risk levels available for snaps, that denote the stability of the
 
 * Note that in developer discussions and some documentation, the "risk level" is often referred as the "channel", since most snaps only use the default track and no branches.
 * By default, the `snap install` command installs snaps from the `stable` level.
-* When a channel is explicitely closed with the `snapcraft close` command, users following this channel are automatically moved to the channel with the safest opened risk level in the same track. For example, if you run `snapcraft close my-app 1.0/edge`, users following this channel will be moved to the `1.0/beta` channel.
+* When a channel is explicitly closed with the `snapcraft close` command, users following this channel are automatically moved to the channel with the next safest risk level in the same track. For example, if you run `snapcraft close my-app 1.0/edge`, users following this channel will be moved to the `1.0/beta` channel.
 
-### Levels meaning
+### Risk levels meaning
 
 * `stable`: what most users will consume and as the name suggests, should be your most polished, stable and tested versions.
 * `candidate`: used to vet uploads that should require no further code changes before moving to stable.
@@ -65,7 +65,7 @@ There are four risk levels available for snaps, that denote the stability of the
 
 Make sure you follow these guidelines, as they have an impact on the [discoverability of snaps](#discoverability-of-snaps) in search results.
 
-### Level restrictions: confinement and grade
+### Risk level restrictions: confinement and grade
 
 In your [`snapcraft.yaml`](/docs/build-snaps/syntax), you can declare the development status of your snap with the `grade` keyword and its confinement policy with the `confinement` one.
 
@@ -118,7 +118,7 @@ To release a snap revision to a channel, the command to use is:
          $ snapcraft release my-app 12 1.0
       Or $ snapcraft release my-app 12 1.0/stable
 
-* Releasing revision 12 of "my-app" to the "fix-for-bug123" branch on top of the "stable" level of the "latest" track:
+* Releasing revision 12 of "my-app" to the "fix-for-bug123" branch of the "stable" level of the "latest" track:
 
   Channel syntax: `latest/stable/fix-for-bug123`
 
@@ -152,7 +152,7 @@ To install a snap from a specific channel, the command to use is:
   Channel syntax: `latest/stable/fix-for-bug123`
 
          $ snap install my-app --channel=stable/fix-for-bug123
-      Or $ snap install --channel=latest/stable/fix-for-bug123
+      Or $ snap install my-app --channel=latest/stable/fix-for-bug123
 
 ### Viewing the channel mapping of a snap
 
