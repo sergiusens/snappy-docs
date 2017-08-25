@@ -147,7 +147,7 @@ To install a snap from a specific channel, the command to use is:
 
        $ snap install my-app --channel=1.0/beta
 
-* Installing "my-app" from the fix-for-bug123 branch on top of the "stable" level of the "latest" track:
+* Installing "my-app" from the fix-for-bug123 branch of the "stable" level of the "latest" track:
 
   Channel syntax: `latest/stable/fix-for-bug123`
 
