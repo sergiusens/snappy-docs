@@ -22,7 +22,7 @@ A release channel is created and named using the following tuple:
 
 In practice, you will use this syntax when releasing or installing software from the command-line.
 
-At any time, you can see the channel mapping your own snaps with the `snapcraft status <snap>` command.
+At any time, you can see the channel mapping of your own published snaps with the `snapcraft status <snap>` command.
 
 See the [command-line usage](#command-line-usage) section for practical examples.
 
