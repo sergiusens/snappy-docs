@@ -96,7 +96,7 @@ In this example
 
     - replaces `$binaries` with the binaries defined in filesets.
     - Adds `test/bin/test_app` to the stage directory.
-    - `$headers` will include all the header files, except those from `include` as it is suffixed with -, indicating these files should be excluded.
+    - `$headers` will include all the header files, except those from `include` as it is prefixed with -, indicating these files should be excluded.
 
     These are the files that will be moved to the stage directory.
 
