@@ -1,0 +1,26 @@
+---
+title: DN2
+---
+
+**Aliases are now handled by the store, and shouldn't be placed in the snap.**
+
+_introduced in snapcraft 2.35_
+
+Originally aliases were something declared by the snap developer by actually
+coding it into the snap. A few problems manifested with this approach:
+
+1. Users could not add aliases that were not explicitly added by the snap
+   author.
+2. Aliases could be selected piecemeal by the store and by users, which was
+   flexible but too heavy for the common case of just getting software to work.
+
+To solve these issues, aliases are no longer carried within the snap itself
+with the `aliases` property, but handled completely by the store. Users are
+free to setup aliases under their control (via `snap alias`), and automatic
+aliases are also handled as a block, being enabled or disabled together.
+
+Since the aliases are all store-side, in order to obtain them the snap
+developer much create a new topic in the [store category of the forum][1]
+requesting them.
+
+[1]: https://forum.snapcraft.io/c/store
