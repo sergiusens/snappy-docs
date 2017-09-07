@@ -19,8 +19,8 @@ with the `aliases` property, but handled completely by the store. Users are
 free to setup aliases under their control (via `snap alias`), and automatic
 aliases are also handled as a block, being enabled or disabled together.
 
-Since the aliases are all store-side, in order to obtain them the snap
-developer much create a new topic in the [store category of the forum][1]
-requesting them.
+To get aliases in the store, the developer needs to request them and get
+approval from the developer community. This process happens in the Snapcraft
+forum; see the [request guidelines][1].
 
-[1]: https://forum.snapcraft.io/c/store
+[1]: https://forum.snapcraft.io/t/process-for-reviewing-aliases-auto-connections-and-track-requests
