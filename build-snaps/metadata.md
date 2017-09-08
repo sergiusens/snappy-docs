@@ -121,11 +121,7 @@ Where `<app-name>` is the entry corresponding to `apps` in `snapcraft.yaml`.
 
 ### Package icons
 
-Providing an icon for your snap is important, even for command-line
-applications, if for nothing else than discoverability from management
-interfaces such as store fronts like snapweb.
-
-To use an icon to represent the snap, just declare a PNG or SVG in
+To use an icon to represent your snap, just declare a PNG or SVG in
 `snapcraft.yaml` through an `icon` entry with a path relative
 to the icon inside the snap.
 

@@ -30,7 +30,7 @@ On a snapd system these features are implemented by:
 
 ![Snaps are self contained, confined applications that can make use of features in other snaps using Interfaces.](../media/snap_in_snappy_system.png "Snaps in the Snapd System")
 
-The snapd system simplifies the development of devices and their software because, with the exception of a limited number of OS features, you're in control of all the components in your application. You simply add everything needed to the snap package. You then make the snap available using [the store](/docs/core/store "the store"), or, if you are the device creator, create your own store.
+The snapd system simplifies the development of devices and their software because, with the exception of a limited number of OS features, you're in control of all the components in your application. You simply add everything needed to the snap package. You then make the snap available using the [Snap Store](/docs/core/store "Snap Store"), or, if you are the device creator, create your own store.
 
 ## OS snaps
 

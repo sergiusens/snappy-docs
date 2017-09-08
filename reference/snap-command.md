@@ -8,8 +8,8 @@ title: "snap: command reference"
 ## Store commands
 
 * [`find`:](#find)       Finds packages to install
-* [`login:`](#login)       Authenticates on snapd and the store
-* [`logout:`](#logout)      Log out of the store
+* [`login:`](#login)       Authenticates on snapd and the Snap Store
+* [`logout:`](#logout)      Log out of the Snap Store
 * [`buy:`](#buy)         Buys a snap
 
 ## Manage snaps on a system
@@ -52,7 +52,7 @@ title: "snap: command reference"
 
 Usage: `snap find <query>`
 
-The find command queries the store for available packages.
+The find command queries the Snap Store for available packages.
 
 #### Command options
  * `--private`:  Search private snaps
@@ -62,7 +62,7 @@ The find command queries the store for available packages.
 
 Usage: `snap login <email>`
 
-The login command authenticates on snapd and the snap store and saves credentials
+The login command authenticates on snapd and the Snap Store and saves credentials
 into the `~/.snap/auth.json` file. Further communication with snapd will then be made using those credentials.
 
 Login only works for local users in the `sudo`, `admin` or `wheel` groups.
@@ -73,13 +73,13 @@ An account can be setup at [https://login.ubuntu.com](https://login.ubuntu.com)
 
 Usage: `snap logout`
 
-This command logs the current user out of the store
+This command logs the current user out of the Snap Store
 
 ### buy
 
 Usage: `snap buy <snap>`
 
-The buy command buys a snap from the store.
+The buy command buys a snap from the Snap Store.
 
 #### Command options
 
