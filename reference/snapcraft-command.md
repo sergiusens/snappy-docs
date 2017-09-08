@@ -102,7 +102,7 @@ Setup the snapcraft examples tour in the specified directory, or `./snapcraft-to
 
 #### upload
 
-Upload a snap to the Ubuntu Store.
+Upload a snap to the Snap Store.
 
   Usage:
 

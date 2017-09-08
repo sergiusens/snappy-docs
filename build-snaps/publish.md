@@ -3,14 +3,11 @@ title: "Publish your snap"
 ---
 
 
-In order to share your snaps with the world, you need to push them to a store, and release them. This page describes the process you will follow for the Ubuntu-hosted Store.
-
-Although, snaps are not tied to a specific type of store and you can host them any way you want, see the [Store](/docs/core/store) page for more details.
+You can share your snaps with the world by publishing them to the Snap Store. Alternatively, you can publish to a [brand store](/docs/core/store).
 
 ## 1. Create a store account
 
-To release snaps in the Ubuntu Store you will need to create an account
-on [dashboard.snapcraft.io](https://myapps.developer.ubuntu.com/). This is your developer portal where you can customize how your snaps are presented, review your uploads, and control the releasing process.
+To release snaps you will need to create an account on the [Snap Store dashboard](https://dashboard.snapcraft.io/). Here you can customize how your snaps are presented, review your uploads, and control the release process.
 
 You'll need to choose a unique "developer namespace" as part of the account creation process. This name will be visible by users and associated with your snaps.
 
@@ -48,7 +45,7 @@ You are now the only developer able to use this name in the store. Note that the
 
 ### Name disputes
 
-The Ubuntu Store can, if needed, rename snaps to ensure they match the expectations of most users. If you're the developer or publisher most users expect for a snap name, then claim it with the [snap name registration](https://dashboard.snapcraft.io/dev/snaps/register-name/) form. If the name is already taken, the form will let you submit a name dispute.
+If needed, snaps can be renamed to ensure they match the expectations of most users. If you're the developer or publisher most users expect for a snap name, you may claim it with the [snap name registration](https://dashboard.snapcraft.io/dev/snaps/register-name/) form.
 
 ## 3. Upload your snap
 
@@ -62,9 +59,10 @@ Before you upload your snap, have a quick look at your `snapcraft.yaml` file aga
 It's worth noting that the user of your snaps will have to use `--devmode` to install a snap using `confinement: devmode`. This means that they have to willingly accept that the snap is breaking out of confinement.
 
 ### Pushing the snap
-Snap upload to the store can be done either from the Ubuntu Store web interface or directly by using the command-line.
 
-Once you have a working snap, you can run `snapcraft push snap-name.snap` to push it to the store.
+Uploading a snap can be done either from the Snap Store dashboard or by using the command-line.
+
+Once you have a working snap, you can run `snapcraft push snap-name.snap` to push it to the Snap Store.
 
 ### Example
 
@@ -98,7 +96,7 @@ The same revision of a snap can be released into several channels at once.
 
 ### Release process
 
-Releasing can be done from the store web interface or directly from the command-line.
+Releasing can be done from the Snap Store dashboard or directly from the command-line.
 
 To release a snap, run `snapcraft release snap-name revision channel`.
 

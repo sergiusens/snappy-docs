@@ -4,9 +4,9 @@ title: Snap stores
 
 There are multiple ways to distribute snaps as the format is not tied to a specific distribution system.
 
-## The Ubuntu Store
+## The Snap Store
 
-The main way of distributing snaps to snapd systems is through [the Ubuntu Store](https://dashboard.snapcraft.io "Ubuntu store"), where you can customize how your snap is presented, review each new pushed snap, and control their release process over several release channels. Here is the model it follows.
+The main way of distributing snaps to snapd systems is through the [Snap Store](https://dashboard.snapcraft.io "Snap Store"), where you can customize how your snap is presented, review each new pushed snap, and control their release process over several release channels. Here is the model it follows.
 
 ### Developer namespace
 
@@ -18,7 +18,7 @@ You can release a snap under any name you have rights to. Names can be registere
 
 ### Pushing
 
-Pushing snaps to the store can be done directly with the [`snapcraft push`](/docs/build-snaps/publish "snapcraft push") command or on the [store website](https://dashboard.snapcraft.io "Ubuntu store") itself. Once pushed, you choose the release channel(s) (`stable`, `candidate`, `beta`, `edge`) that the snap will be released into.
+Pushing snaps to the store can be done directly with the [`snapcraft push`](/docs/build-snaps/publish "snapcraft push") command or on the [Snap Store dashboard](https://dashboard.snapcraft.io "Snap Store dashboard") itself. Once pushed, you choose the release channel(s) (`stable`, `candidate`, `beta`, `edge`) that the snap will be released into.
 
 It's worth noting that when you push a snap, the store assigns it a revision number of 1\. The store then automatically increments this revision number each time you push a new version.
 
@@ -53,4 +53,4 @@ Snaps are not tied to a specific type of store and you can host them any way you
 
 You can find an example implementation of a custom store [here](https://github.com/noise/snapstore/). You can even deploy it locally by running `$ snap install snapstore-example`. See the README of the project for details.
 
-Brands can also take advantage of a [Brand store](https://docs.ubuntu.com/core/en/build-store/index), a white label store offering similar to the Ubuntu Store.
+Brands can also take advantage of a [Brand store](https://docs.ubuntu.com/core/en/build-store/index), a white label store offering similar to the Snap Store.
