@@ -83,7 +83,7 @@ Branches are temporary and created on demand when releasing a snap. Their purpos
 ### Overview
 
 * Branches are created with the `snapcraft release` command. See [command-line usage](#releasing-a-snap) for examples.
-* Branches are automatically closed 30 days after their creation. The expiration date of a branch can be checked at any time by the publisher of a snap using the `snapcraft status <snap>` command, which provides a complete map of tracks, risk levels, branches and their expiration dates.
+* Branches are automatically closed after 30 days without a new revision being released into them. The expiration date of a branch can be checked at any time by the publisher of a snap using the `snapcraft status <snap>` command, which provides a complete map of tracks, risk levels, branches and their expiration dates.
 * Users following a branch will be automatically moved to the risk level the branch is attached to. For example, if you tell users to install your snap with the following command `snap install my-app --channel=beta/fix-for-bug123`, after 30 days, the branch will close and these users will be moved to the `beta` channel, as if they had used `snap install my-app --channel=beta`.
 * Branches are not visible in the `snap info` command output unless you are following one.
 
