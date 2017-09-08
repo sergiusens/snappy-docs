@@ -49,17 +49,17 @@ List the available plugins that handle different types of part.
 
 #### login
 
-Authenticate session against Ubuntu One SSO.
+Authenticate session against Ubuntu One.
 
   Usage:
 
     $ snapcraft login
-    Enter your Ubuntu One SSO credentials.
+    Enter your Ubuntu One credentials.
     Email: foo@bar.com
     Password:
     One-time password (just press enter if you don't use two-factor authentication):
     123456
-    Authenticating against Ubuntu One SSO.
+    Authenticating against Ubuntu One.
     Login successful.
 
 
@@ -71,14 +71,14 @@ Clear session credentials.
   Usage:
 
     $ snapcraft logout
-    Clearing credentials for Ubuntu One SSO.
+    Clearing credentials for Ubuntu One.
     Credentials cleared.
 
 
 
 #### register
 
-Register a package name in the store.
+Register a package name in the Snap Store.
 
   Usage:
 

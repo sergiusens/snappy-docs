@@ -8,7 +8,7 @@ This is an overview of commonly used snap commands. You can find the full comman
 
 Snaps are normally installed from a [store](/docs/core/store). You can interact with a store without signing-in, but signing-in offers a number of advantages. These advantages include the ability to access your private snaps and managing your snaps without requiring root on the device.
 
-Snap stores hold a collection of snaps for delivery to clouds, devices, and private infrastructures. You sign-in to a store as follows, using your [Ubuntu SSO account](https://login.ubuntu.com/+login):
+Snap stores hold a collection of snaps for delivery to clouds, devices, and private infrastructures. You sign-in to a store as follows, using your [Ubuntu One account](https://login.ubuntu.com/+login):
 
     $ sudo snap login me@myself.com
     Password: *********
