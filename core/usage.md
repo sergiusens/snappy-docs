@@ -4,11 +4,11 @@ title: "Use the snap command"
 
 This is an overview of commonly used snap commands. You can find the full command reference [here](/docs/reference/snap-command).
 
-## Log in to a snap store
+## Log in to the Snap Store
 
-Snaps are normally installed from a [store](/docs/core/store). You can interact with a store without signing-in, but signing-in offers a number of advantages. These advantages include the ability to access your private snaps and managing your snaps without requiring root on the device.
+Snaps are normally installed from the Snap Store. You can interact with the Snap Store without signing-in, but signing-in offers a number of advantages. These advantages include the ability to access your private snaps and managing your snaps without requiring root on the device.
 
-Snap stores hold a collection of snaps for delivery to clouds, devices, and private infrastructures. You sign-in to a store as follows, using your [Ubuntu One account](https://login.ubuntu.com/+login):
+The Snap Store holds a collection of snaps for delivery to clouds, devices, and private infrastructures. You sign-in as follows, using your [Ubuntu One account](https://login.ubuntu.com/+login):
 
     $ sudo snap login me@myself.com
     Password: *********
@@ -19,9 +19,9 @@ When you are not logged in, most `snap` commands will require you to run them as
 
 ## Find snaps
 
-A store can contain both public and private snaps.
+The Snap Store contains both public and private snaps.
 
-Anybody can publish a snap, but doing a store search will only find snaps that are published to the `stable` release channel (and therefore have been reviewed and judged to be of good quality -- so users can install them without concerns).
+Anybody can publish a snap, but doing a Snap Store search will only find snaps that are published to the `stable` release channel (and therefore have been reviewed and judged to be of good quality -- so users can install them without concerns).
 
 Searches look for matches in the snap name or description:
 
@@ -31,7 +31,7 @@ Searches look for matches in the snap name or description:
     hello-huge     1.0      noise      -      A really big snap
     hello-world    6.1      canonical  -      Hello world example
 
-Community developer Brian Douglass is also maintaining an [online frontend](https://uappexplorer.com/apps?type=snappy&sort=-last_updated) to browse the main snap store.
+Community developer Brian Douglass is also maintaining an [online frontend](https://uappexplorer.com/apps?type=snappy&sort=-last_updated) to browse the Snap Store.
 
 ## Install snaps
 

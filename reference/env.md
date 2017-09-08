@@ -31,9 +31,9 @@ Typical value `6.3`
 
 ### `SNAP_REVISION`
 
-Revision of the snap, as allocated by the store on upload or as allocated by snapd for locally installed snaps.
+Revision of the snap, as allocated by the Snap Store on upload or as allocated by snapd for locally installed snaps.
 
-The store assigns monotonic revisions to each upload of a given snap. Snapd uses store revisions if accompanying assertions are available or uses a locally generated number. Locally generated numbers are prefixed with `x` to distinguish them from store uploads.
+The Snap Store assigns monotonic revisions to each upload of a given snap. Snapd uses Snap Store revisions if accompanying assertions are available or uses a locally generated number. Locally generated numbers are prefixed with `x` to distinguish them from Snap Store uploads.
 
 Typical value: `27` or `x1`
 

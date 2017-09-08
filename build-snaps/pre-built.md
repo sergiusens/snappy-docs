@@ -47,7 +47,7 @@ apps:
 
 #### Metadata
 
-The `snapcraft.yaml` starts with a small amount of human-readable metadata, which usually can be lifted from the GitHub description or project README.md. This data is used in the presentation of your app in the snap store. The `summary:` can not exceed 79 characters. You can use a pipe with the `description:` to declare a multi-line description.
+The `snapcraft.yaml` starts with a small amount of human-readable metadata, which usually can be lifted from the GitHub description or project README.md. This data is used in the presentation of your app in the Snap Store. The `summary:` can not exceed 79 characters. You can use a pipe with the `description:` to declare a multi-line description.
 
 ```yaml
 name: geekbench4
@@ -86,7 +86,7 @@ parts:
 
 Apps are the commands and services exposed to end users. If your command name matches the snap `name`, users will be able run the command directly. If the names differ, then apps are prefixed with the snap `name` (`geekbench4.command-name`, for example). This is to avoid conflicting with apps defined by other installed snaps.
 
-If you don’t want your command prefixed you can request an alias for it on the [Snapcraft forum](https://forum.snapcraft.io). These are set up automatically when your snap is installed from the snap store.
+If you don’t want your command prefixed you can request an alias for it on the [Snapcraft forum](https://forum.snapcraft.io). These are set up automatically when your snap is installed from the Snap Store.
 
 ```yaml
 apps:
@@ -113,7 +113,7 @@ cd geekbench4
 snapcraft
 ```
 
-The resulting snap can be installed locally. This requires the `--dangerous` flag because the snap is not signed by the snap store. The `--devmode` flag acknowledges that you are installing an unconfined application:
+The resulting snap can be installed locally. This requires the `--dangerous` flag because the snap is not signed by the Snap Store. The `--devmode` flag acknowledges that you are installing an unconfined application:
 
     sudo snap install geekbench4_*.snap --devmode --dangerous
 
@@ -127,11 +127,11 @@ Removing the snap is simple too:
 
 ## Share with your friends
 
-To share your snaps you need to publish them in the snap store. First, create an account on [dashboard.snapcraft.io](https://dashboard.snapcraft.io). Here you can customize how your snaps are presented, review your uploads and control publishing.
+To share your snaps you need to publish them in the Snap Store. First, create an account on [dashboard.snapcraft.io](https://dashboard.snapcraft.io). Here you can customize how your snaps are presented, review your uploads and control publishing.
 
 You’ll need to choose a unique “developer namespace” as part of the account creation process. This name will be visible by users and associated with your published snaps.
 
-Make sure the `snapcraft` command is authenticated using the email address attached to your store account:
+Make sure the `snapcraft` command is authenticated using the email address attached to your Snap Store account:
 ```
 snapcraft login
 ```
@@ -147,7 +147,7 @@ Be sure to update the `name:` in your `snapcraft.yaml` to match this registered 
 
 ### Upload your snap
 
-Use snapcraft to push the snap to the store.
+Use snapcraft to push the snap to the Snap Store.
 
 ```
 snapcraft push --release=edge mysnap_*.snap

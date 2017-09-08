@@ -13,7 +13,7 @@ contain. They are separated by categories to make this document clearer, but can
 
 ### General metadata
 
-The following keys are used to declare the general metadata of your snap: how it will be presented to users, its version, development status and how the store should consider it (ready for a release in the `stable` channel or not).
+The following keys are used to declare the general metadata of your snap: how it will be presented to users, its version, development status and how the Snap Store should consider it (ready for a release in the `stable` channel or not).
 
 * `name` (string)
   The name of the resulting snap.

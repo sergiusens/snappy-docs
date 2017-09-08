@@ -10,7 +10,7 @@ The main way of distributing snaps to snapd systems is through the [Snap Store](
 
 ### Developer namespace
 
-You'll choose a unique developer namespace as part of the store account creation process. This namespace will represent you as a publisher in the store and you won't be able to change it afterwards.
+You'll choose a unique developer namespace as part of the account creation process. This namespace will represent you as a publisher in the Snap Store and you won't be able to change it afterwards.
 
 ### Naming
 
@@ -18,9 +18,9 @@ You can release a snap under any name you have rights to. Names can be registere
 
 ### Pushing
 
-Pushing snaps to the store can be done directly with the [`snapcraft push`](/docs/build-snaps/publish "snapcraft push") command or on the [Snap Store dashboard](https://dashboard.snapcraft.io "Snap Store dashboard") itself. Once pushed, you choose the release channel(s) (`stable`, `candidate`, `beta`, `edge`) that the snap will be released into.
+Pushing to the Snap Store can be done directly with the [`snapcraft push`](/docs/build-snaps/publish "snapcraft push") command or on the [Snap Store dashboard](https://dashboard.snapcraft.io "Snap Store dashboard") itself. Once pushed, you choose the release channel(s) (`stable`, `candidate`, `beta`, `edge`) that the snap will be released into.
 
-It's worth noting that when you push a snap, the store assigns it a revision number of 1\. The store then automatically increments this revision number each time you push a new version.
+It's worth noting that when you push a snap, the Snap Store assigns it a revision number of 1\. The Snap Store then automatically increments this revision number each time you push a new version.
 
 ### Releasing
 
@@ -30,7 +30,7 @@ Once your snap has been reviewed and approved, you can release it when you're re
 
 ### Release channels
 
-On the store, snaps can be published into different channels at the same time: `stable`, `candidate` (release candidate), `beta`, and `edge`. This enables you to engage with users who are willing to test changes, and helps users decide how close to the leading edge of development they want to be.
+On the Snap Store, snaps can be published into different channels at the same time: `stable`, `candidate` (release candidate), `beta`, and `edge`. This enables you to engage with users who are willing to test changes, and helps users decide how close to the leading edge of development they want to be.
 
 By default, snaps are installed from the `stable` channel. Versions of snaps from other channels need to be explicitly selected:
 

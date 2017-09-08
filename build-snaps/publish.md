@@ -5,13 +5,13 @@ title: "Publish your snap"
 
 You can share your snaps with the world by publishing them to the Snap Store. Alternatively, you can publish to a [brand store](/docs/core/store).
 
-## 1. Create a store account
+## 1. Create a Snap Store account
 
 To release snaps you will need to create an account on the [Snap Store dashboard](https://dashboard.snapcraft.io/). Here you can customize how your snaps are presented, review your uploads, and control the release process.
 
 You'll need to choose a unique "developer namespace" as part of the account creation process. This name will be visible by users and associated with your snaps.
 
-Once you've confirmed your account, you're ready to start pushing your snaps to the Store.
+Once you've confirmed your account, you're ready to start pushing your snaps to the Snap Store.
 
 Make sure the `snapcraft` and `snap` commands know about you by logging in using the email address attached to your account.
 
@@ -29,7 +29,7 @@ You can push your own version of a snap, provided you do so under a name you hav
 
 New names can be registered:
 
-* by clicking **New Snap** at the top of the Store
+* by clicking **New Snap** at the top of the Snap Store dashboard
 * by visiting: [the name registration page](https://dashboard.snapcraft.io/dev/snaps/register-name/)
 * or by running `snapcraft register snap-name`
 
@@ -41,7 +41,7 @@ New names can be registered:
     Registering drone-autopilot.
     Congratulations! You're now the publisher for 'drone-autopilot'.
 
-You are now the only developer able to use this name in the store. Note that the store allows you to share snaps management (push and release) with other developers on a per-snap basis.
+You are now the only developer able to use this name in the Snap Store. Note that the Snap Store allows you to share snaps management (push and release) with other developers on a per-snap basis.
 
 ### Name disputes
 
@@ -77,7 +77,7 @@ Note that `snapcraft push` will return an error if you try to push a snap with a
 
 ### Revisions
 
-Each time you upload a snap, the store will assigned a revision number to it, starting at 1. This revision number will be incremented each time you upload a new version of your snap. The revision number also increments when uploading a build for a new architecture. 
+Each time you upload a snap, the Snap Store will assign a revision number to it, starting at 1. This revision number will be incremented each time you upload a new version of your snap. The revision number also increments when uploading a build for a new architecture. 
 
 ## 4. Release your snap
 

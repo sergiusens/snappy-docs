@@ -28,7 +28,7 @@ See the [command-line usage](#command-line-usage) section for practical examples
 
 ### Discoverability of snaps
 
-The snap search API (used by the `snap find` command, the snapweb store UI snap and others) only returns results for snaps in channels with **a "stable" risk level and no branch**. This ensures stability for users.
+The snap search API (used by the `snap find` command) only returns results for snaps in channels with **a "stable" risk level and no branch**. This ensures stability for users.
 
 Nevertheless, if you know the name of a snap, the `snap info <snap>` command will give you its complete tracks and risk levels map.
 

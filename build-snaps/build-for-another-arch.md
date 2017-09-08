@@ -18,7 +18,7 @@ The basic steps are:
      * Select the Ubuntu series to build against and the target CPU architecture to build snaps for
      * Specify a PPA to use for pulling and building dependencies
      * Configure automatic building on branch changes (you can always request a build manually after setup)
-     * Configure the auto build to release on success to a specified store channel
+     * Configure the auto build to release on success to a specified Snap Store channel
 
 Depending on work loads, there may a short delay. For faster iteration, you can build on your target Ubuntu Core device.
 
