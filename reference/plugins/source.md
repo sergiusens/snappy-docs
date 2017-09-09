@@ -44,7 +44,12 @@ code for that part, and how to unpack it if necessary.
 
     Snapcraft will checkout the repository or unpack the archive referred to
     by the `source` keyword into `parts/<part-name>/src/` but it will only
-    copy the specified subdirectory into `parts/<part-name>/build/`
+    copy the specified subdirectory into `parts/<part-name>/build/`.
+
+  - `source-checksum`: `<type>/<checksum>`
+
+    Snapcraft will compare the source pulled with the checksum specified
+    here.  Prepend with checksum type, e.g. `sha256/<checksum>`.
 
 Note that plugins might well define their own semantics for the `source`
 keywords, because they handle specific build systems, and many languages
