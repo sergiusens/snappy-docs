@@ -46,10 +46,12 @@ code for that part, and how to unpack it if necessary.
     by the `source` keyword into `parts/<part-name>/src/` but it will only
     copy the specified subdirectory into `parts/<part-name>/build/`.
 
-  - `source-checksum`: `<type>/<checksum>`
+  - `source-checksum`: `<algorithm>/<checksum>`
 
-    Snapcraft will compare the source pulled with the checksum specified
-    here.  Prepend with checksum type, e.g. `sha256/<checksum>`.
+    Snapcraft will use the checksum specified to verify the integrity of the
+    source. The source-type of the source needs to be a file (`tar`, `zip`, `deb` or `rpm`)
+    and the algorithm either `md5`, `sha1`, `sha224`, `sha256`, `sha384`, `sha512`, `sha3_256`,
+    `sha3_384` or `sha3_512`. Prepend the checksum with its type, e.g. `sha256/<checksum>`.
 
 Note that plugins might well define their own semantics for the `source`
 keywords, because they handle specific build systems, and many languages
