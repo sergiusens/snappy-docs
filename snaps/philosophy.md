@@ -62,7 +62,7 @@ The rule of thumb is to think: “if I revert to previous version of snap, will 
 directories?” If the answer is no, move some of those data to the versioned one. Do not worry, we have a great garbage
 collection keeping only few working versions of your snap!
 
-## Always starts developing your snap in devmode
+## Always start developing your snap in devmode
 
 Proper confinement is challenging topic. Adding on that adjustment you have to make to ensure your code is relocatable,
 while shipping all your dependencies on a read only system is calling for trouble!
