@@ -10,9 +10,9 @@ Hooks are executables shipped by a snap and triggered at various points during i
 
 There are three hooks types:
 
-* [`configure`](#configure): on demand hook to `snap get` or `snap set` a configuration value inside a snap.
-* [`install`](#install): run after a snap is installed on a system.
-* [`remove`](#remove): run before a snap is removed from a system.
+* [`configure`](#configure): run after snap installation, refresh and on demand to `snap get` or `snap set` a configuration value inside a snap.
+* [`install`](#install): run when a snap is installed on the system, before any services contained by the snap have been started.
+* [`remove`](#remove): run before the last revision of a snap is removed from the system.
 
 To create a hook:
 
@@ -50,13 +50,13 @@ hooks:
 [...]
 ```
 
-In this example, we have an application requesting hardware information during install or subsequent configuration. We are therefore granting access to the `hardware-observe` interface to the install and configure hooks, but denying them access to the `x11` one since they don't need to display anything on screen.
+In this example, we have an application requesting hardware information during install or subsequent configuration. We are therefore granting access to the `hardware-observe` interface to the install and configure hooks, but denying them access to the `x11` one since they don't need to display anything on screen. Note that interfaces that are not auto-connected will not be available through hooks until they are connected.
 
 ## Hooks types
 
 ### “configure”
 
-The configure hook is called upon initial install, upgrade, and whenever the user requests a configuration change via the `snap set` command. If the hook exits non-zero, the configuration will not be applied.
+The configure hook is called upon initial snap install (after any services contained by the snap have started), after a refresh, and whenever the user requests a configuration change via the `snap set` command. If the hook exits non-zero, the configuration will not be applied.
 
 #### snap set / snap get
 
@@ -117,7 +117,7 @@ With this example, running `snap set some-app username=foo` results in the creat
 
 ### “install”
 
-The install hook is called upon initial install. If the hook exits non-zero, the installation of the snap will fail.
+The install hook is called upon initial install, before any services contained by the snap are started. If the hook exits non-zero, the installation of the snap will fail.
 
 #### Example
 
@@ -137,7 +137,7 @@ set -e
 
 ### “remove”
 
-The remove hook is called upon snap removal.
+The remove hook is called when the last revision of a snap gets removed.
 
 #### Example
 
