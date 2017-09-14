@@ -11,7 +11,7 @@ Hooks are executables shipped by a snap and triggered at various points during i
 There are three hooks types:
 
 * [`configure`](#configure): run after snap installation, refresh and on demand to `snap get` or `snap set` a configuration value inside a snap.
-* [`install`](#install): run when a snap is installed on the system, before any services contained by the snap have been started.
+* [`install`](#install): run when a snap is installed for the first time on the system, before any services contained by the snap have been started.
 * [`remove`](#remove): run before the last revision of a snap is removed from the system.
 
 To create a hook:
