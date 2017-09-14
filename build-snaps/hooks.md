@@ -44,13 +44,13 @@ apps:
 
 hooks:
   install:
-    plugs: [home, network, hardware-observe]
+    plugs: [home, network, upower-observe]
   configure:
-    plugs: [home, network, hardware-observe]
+    plugs: [home, network, upower-observe]
 [...]
 ```
 
-In this example, we have an application requesting hardware information during install or subsequent configuration. We are therefore granting access to the `hardware-observe` interface to the install and configure hooks, but denying them access to the `x11` one since they don't need to display anything on screen. Note that interfaces that are not auto-connected will not be available through hooks until they are connected.
+In this example, we have an application requesting power status information during install or subsequent configuration. We are therefore granting access to the `upower-observe` interface to the install and configure hooks, but denying them access to the `x11` one since they don't need to display anything on screen. Note that interfaces that are not auto-connected will not be available through hooks until they are connected.
 
 ## Hooks types
 
@@ -123,7 +123,7 @@ The install hook is called upon initial install, before any services contained b
 
 Before running the `snapcraft` command to build your snap, this `install` file should be placed at this location:
 
-`<snap project>/snap/hooks/configure`.
+`<snap project>/snap/hooks/install`.
 
 ``` bash
 #!/bin/sh
