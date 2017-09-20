@@ -7,7 +7,7 @@ Create snaps from your preferred programming language.
 <div class="eight-col">
   <ul class="inline-logos equal-height">
     <li class="inline-logos__item box">
-      <a href="/docs/build-snaps/pre-built"><img class="inline-logos__image" src="{{ site.asset_path }}7af63a6d-workflow-icon04.svg" alt="Pre-built apps" /><br />Pre-built apps</a>
+      <a href="/docs/build-snaps/pre-built"><img class="inline-logos__image" src="{{ site.asset_path }}f14812c7-adwaita-package.png" alt="Pre-built apps" /><br />Pre-built apps</a>
     </li>
     <li class="inline-logos__item box">
       <a href="/docs/build-snaps/go"><img class="inline-logos__image" src="{{ site.asset_path }}c85a212e-go-logo.png" alt="Go" /><br />Go</a>
