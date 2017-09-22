@@ -47,10 +47,6 @@ And a snap can be refreshed from a different channel from the one it was origina
 
 This switches the snap to using this channel for future updates.
 
-## Other stores
+## Brand stores
 
-Snaps are not tied to a specific type of store and you can host them any way you want.
-
-You can find an example implementation of a custom store [here](https://github.com/noise/snapstore/). You can even deploy it locally by running `$ snap install snapstore-example`. See the README of the project for details.
-
-Brands can also take advantage of a [Brand store](https://docs.ubuntu.com/core/en/build-store/index), a white label store offering similar to the Snap Store.
+Brands can also take advantage of white label [brand stores](https://docs.ubuntu.com/core/en/build-store/index), which are branded extensions to the Snap store. Note that this is a commercial offering aimed at companies.
