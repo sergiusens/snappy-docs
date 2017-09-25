@@ -1,4 +1,5 @@
 ---
+layout: base
 title: Build your first snap
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: "Interfaces reference"
+layout: base
+title: Interfaces reference
 ---
 
 [Interfaces documentation](/docs/core/interfaces)

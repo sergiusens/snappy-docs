@@ -1,5 +1,6 @@
 ---
-title: "Build and publish snaps from Git"
+layout: base
+title: Build and publish snaps from Git
 ---
 
 You can build and publish snaps of commits to your Git repository so that other developers or early adopters can try the latest changes to your application.

@@ -1,5 +1,6 @@
 ---
-title: "Hooks"
+layout: base
+title: Hooks
 ---
 
 There are a number of situations where snapd needs to notify a snap that something has happened. For example, when a snap is installed, or before it is removed, you may want to run a set of setup or clean up scripts. These types of situations are handled by hooks.

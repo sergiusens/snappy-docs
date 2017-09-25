@@ -1,5 +1,6 @@
 ---
-title: "Language guides"
+layout: base
+title: Language guides
 ---
 
 Create snaps from your preferred programming language.

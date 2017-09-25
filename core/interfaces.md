@@ -1,5 +1,6 @@
 ---
-title: "Interfaces"
+layout: base
+title: Interfaces
 ---
 
 Interfaces allow snaps to communicate or share resources according to the

@@ -1,5 +1,6 @@
 ---
-title: "Scriptlets"
+layout: base
+title: Scriptlets
 ---
 
 Scriptlets are shell scripts sourced directly from your `snapcraft.yaml`, to change the behaviour of a plugin.

@@ -1,5 +1,6 @@
 ---
-title: "Builders"
+layout: base
+title: Builders
 ---
 
 ## During development

@@ -1,7 +1,8 @@
 ---
+layout: base
 title: Python
 ---
- 
+
 Python has rich tools for packaging, distributing and sandboxing applications. Snapcraft builds on top of these familiar tools such as `pip`, `setup.py` and `requirements.txt` to create snaps for people to install on Linux. 
  
 ## What problems do snaps solve for Python applications?

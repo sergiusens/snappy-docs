@@ -1,5 +1,6 @@
 ---
-title: "Directory structure"
+layout: base
+title: Directory structure
 ---
 
 This section describes the directories found within a snap and details their content.

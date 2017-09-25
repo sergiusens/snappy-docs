@@ -1,5 +1,6 @@
 ---
-title: "Snapcraft plugins reference"
+layout: base
+title: Snapcraft plugins reference
 ---
 
 This section references all the available snapcraft plugins to build your parts.

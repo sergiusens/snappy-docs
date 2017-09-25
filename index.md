@@ -1,4 +1,5 @@
 ---
+layout: base
 title: Snaps and snapcraft documentation
 ---
 

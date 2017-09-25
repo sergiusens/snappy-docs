@@ -1,5 +1,6 @@
 ---
-title: "Build snaps"
+layout: base
+title: Build snaps
 ---
 
 <iframe height="450" src="https://www.youtube.com/embed/ZsUV9xnrkTA?rel=0&showinfo=0" allowfullscreen></iframe>

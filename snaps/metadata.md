@@ -1,5 +1,6 @@
 ---
-title: "The snap format"
+layout: base
+title: The snap format
 ---
 
 <!--- These entries need two spaces at the end of line to be properly formatted. -->

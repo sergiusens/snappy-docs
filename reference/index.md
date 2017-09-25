@@ -1,7 +1,7 @@
 ---
-title: "Reference"
+layout: base
+title: Reference
 ---
-
 
 This section provides reference materials for the following topics:
 

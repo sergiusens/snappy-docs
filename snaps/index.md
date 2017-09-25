@@ -1,5 +1,6 @@
 ---
-title: "Snaps"
+layout: base
+title: Snaps
 ---
 
 <iframe height="450" src="https://www.youtube.com/embed/DLxqdf89hRo?rel=0&showinfo=0" allowfullscreen></iframe>

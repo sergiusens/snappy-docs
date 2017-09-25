@@ -1,5 +1,6 @@
 ---
-title: "Use the snap command"
+layout: base
+title: Use the snap command
 ---
 
 This is an overview of commonly used snap commands. You can find the full command reference [here](/docs/reference/snap-command).

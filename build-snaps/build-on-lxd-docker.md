@@ -1,7 +1,7 @@
 ---
-title: "Build on LXD or Docker"
+layout: base
+title: Build on LXD or Docker
 ---
-
 
 In the near future, snapcraft will be offered as a snap, giving you the same experience regardless of Linux distribution or release. Until then, you can build snaps using LXD or Docker.
 

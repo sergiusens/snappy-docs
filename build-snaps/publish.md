@@ -1,7 +1,7 @@
 ---
-title: "Publish your snap"
+layout: base
+title: Publish your snap
 ---
-
 
 You can share your snaps with the world by publishing them to the Snap Store. Alternatively, you can publish to a [brand store](/docs/core/store).
 
