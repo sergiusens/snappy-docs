@@ -3,6 +3,8 @@ exclude: [
   'LICENCE',
   'README.md',
   'Gulpfile.js',
+  'Gemfile',
+  'Gemfile.lock',
   'package.json',
   'node_modules',
   'translate-html',
