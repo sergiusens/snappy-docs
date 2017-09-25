@@ -1,0 +1,22 @@
+asset_path: https://assets.ubuntu.com/v1/
+exclude: [
+  'LICENCE',
+  'README.md',
+  'Gulpfile.js',
+  'package.json',
+  'node_modules',
+  'translate-html',
+  'import-docs.sh',
+  'update-docs-layout.py',
+  'po-html',
+  'vendor/bundle'
+]
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# only build incrementally
+incremental: true
+
