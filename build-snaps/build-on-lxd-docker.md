@@ -7,7 +7,7 @@ In the near future, snapcraft will be offered as a snap, giving you the same exp
 
 The following instructions are targeted at Ubuntu 14.04, but you should be able to easily adapt them to your own use case.
 
-If you're already running Ubuntu 16.04 or later, you can skip this guide and [run snapcraft directly](/docs/build-snaps/your-first-snap).
+If you're already running Ubuntu 16.04 or later, you can skip this guide and [run snapcraft directly](/build-snaps/your-first-snap).
 
 ### LXD
 

@@ -50,5 +50,3 @@ env[23]/
 *.css
 
 # Project-specific ignores
-docs/
-_includes/docs-navigation.html

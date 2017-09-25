@@ -137,7 +137,7 @@ apps:
 
 Interfaces allow snaps to communicate or share resources according to the
 protocol established by the interface and play an important part in security
-policy configuration. See [Interfaces](/docs/core/interfaces) for details.
+policy configuration. See [Interfaces](/core/interfaces) for details.
 
 
 ## Desktop files

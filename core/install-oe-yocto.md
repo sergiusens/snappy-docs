@@ -13,7 +13,7 @@ meta-snappy layer.
 
 To keep things simple we only show here how you can include meta-snappy in a
 generic Yocto build targetting the QEMU emulator. More information about how
-to start with Yocto can be found [here](https://www.yoctoproject.org/docs/2.2/yocto-project-qs/yocto-project-qs.html).
+to start with Yocto can be found [here](https://www.yoctoproject.org/2.2/yocto-project-qs/yocto-project-qs.html).
 
 First, setup the Yocto build environment based on the 2.2 (morty) release:
 
