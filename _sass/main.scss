@@ -1,32 +1,32 @@
 @charset "utf-8";
 
-// import global settings
-@import 'global-settings';
-
-
 // Import the vanilla framework - https://github.com/ubuntudesign/vanilla-framework
 @import "../node_modules/vanilla-framework/scss/vanilla";
 
 // Run the vanilla framework
 @include vanilla;
 
-@import
-'base',
-'box',
-'command-line',
-'footer',
-'header',
-'highlight',
-'inline-logos',
-'hero',
-'social-link',
-'responsive-tabs';
+// Custom options
+$site-max-width:   auto;
+$navigation-width: 270px;
+$light-mid-grey:   #d4d4d4;
+$ubuntu-orange:    #dd4814;
 
-// Patterns
-@import
-'patterns_buttons',
-'patterns_links';
+@import "helpers";
+@import "base";
+@import "header";
+@import "documentation";
+@import "footer";
 
-// Patterns
-@include snapcraft-p-buttons;
-@include snapcraft-p-links;
+@import "command-line";
+
+.documentation__content pre {
+  @extend .code-block !optional;
+  @extend .command-line !optional;
+
+  border: 1px solid #cdcdcd;
+
+  code {
+    color: inherit;
+  }
+}
