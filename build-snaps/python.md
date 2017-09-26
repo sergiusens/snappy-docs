@@ -98,7 +98,7 @@ If your application is intended to run as a service, add the line `daemon: simpl
  
 ### Building the snap
  
-You’ll first need to [install snap support](https://snapcraft.io/core/install), and then install the snapcraft tool:
+You’ll first need to [install snap support](/core/install), and then install the snapcraft tool:
 ```
 sudo snap install --beta --classic snapcraft
 ```
