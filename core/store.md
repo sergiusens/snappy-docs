@@ -1,4 +1,5 @@
 ---
+layout: base
 title: Snap stores
 ---
 
@@ -18,13 +19,13 @@ You can release a snap under any name you have rights to. Names can be registere
 
 ### Pushing
 
-Pushing to the Snap Store can be done directly with the [`snapcraft push`](/docs/build-snaps/publish "snapcraft push") command or on the [Snap Store dashboard](https://dashboard.snapcraft.io "Snap Store dashboard") itself. Once pushed, you choose the release channel(s) (`stable`, `candidate`, `beta`, `edge`) that the snap will be released into.
+Pushing to the Snap Store can be done directly with the [`snapcraft push`](/build-snaps/publish "snapcraft push") command or on the [Snap Store dashboard](https://dashboard.snapcraft.io "Snap Store dashboard") itself. Once pushed, you choose the release channel(s) (`stable`, `candidate`, `beta`, `edge`) that the snap will be released into.
 
 It's worth noting that when you push a snap, the Snap Store assigns it a revision number of 1\. The Snap Store then automatically increments this revision number each time you push a new version.
 
 ### Releasing
 
-After you've chosen a channel, your application is sent for review. Most apps are reviewed by way of automated checks, but if your app uses sensitive [interfaces](/docs/core/interfaces), it may be manually reviewed -- you can find more details on the review process [here](https://developer.ubuntu.com/en/publish/application-states/).
+After you've chosen a channel, your application is sent for review. Most apps are reviewed by way of automated checks, but if your app uses sensitive [interfaces](/core/interfaces), it may be manually reviewed -- you can find more details on the review process [here](https://developer.ubuntu.com/en/publish/application-states/).
 
 Once your snap has been reviewed and approved, you can release it when you're ready, instantly making the snap available to users.
 

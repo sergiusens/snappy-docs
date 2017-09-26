@@ -1,5 +1,6 @@
 ---
-title: "Common keywords"
+layout: base
+title: Common keywords
 ---
 
 There are several builtin keywords which can be used in any part regardless

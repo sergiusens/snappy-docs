@@ -1,4 +1,5 @@
 ---
+layout: base
 title: Install snapd
 ---
 
@@ -43,7 +44,7 @@ listed distributions.
 | Yocto               | Unsupported | 2.23.5  | _devmode_               |
 
 _devmode_: confinement technology is not fully supported and all snaps are
-installed in [development mode](/docs/reference/confinement).
+installed in [development mode](/reference/confinement).
 
 _no-classic_: because of distribution policy to remove the `/snap` directory, snaps
-using [classic confinement](/docs/reference/confinement) are not supported.
+using [classic confinement](/reference/confinement) are not supported.

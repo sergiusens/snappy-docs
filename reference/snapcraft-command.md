@@ -1,7 +1,7 @@
 ---
-title: "snapcraft: command reference"
+layout: base
+title: 'snapcraft: command reference'
 ---
-
 
 ## General commands
 
