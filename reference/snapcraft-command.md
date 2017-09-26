@@ -127,7 +127,7 @@ Create a snap, by running the complete lifecycle: pull, build, stage, prime, sna
 
 Remove content - cleans downloads, builds or install artifacts.
 
-Whe used with  `-s <step>` or `--step <step>`, only cleans the specified step and those that depend upon it. <step> can be one of: pull, build, stage or prime.
+When used with  `-s <step>` or `--step <step>`, only cleans the specified step and those that depend upon it. <step> can be one of: pull, build, stage or prime.
 
 
 
