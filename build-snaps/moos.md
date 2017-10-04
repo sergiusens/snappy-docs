@@ -18,7 +18,7 @@ Here are some snap advantages that will benefit many MOOS projects:
 
 ## Getting started
 
-Let's take a look at ping/pong MOOS example application, and show how simple it is to snap.
+Let's take a look at the ping pong MOOS example application, and show how simple it is to snap.
 
 ### MOOS examples
 
