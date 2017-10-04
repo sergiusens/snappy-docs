@@ -13,6 +13,8 @@ instructions for each of these distributions.
  * [Debian](install-debian)
  * [Fedora](install-fedora)
  * [Gentoo](install-gentoo)
+ * [Linux Mint](install-linux-mint)
+ * [Manjaro](install-manjaro)
  * [OpenEmbedded/Yocto](install-oe-yocto)
  * [openSUSE](install-opensuse)
  * [OpenWrt](install-openwrt)
