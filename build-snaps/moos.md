@@ -234,25 +234,6 @@ You can view them locally by running:
 snapcraft help cmake
 ```
 
-### Extending and overriding behaviour
-
-You can [extend the behaviour](/build-snaps/scriptlets) of any part in your `snapcraft.yaml` with shell commands. These can be run after pulling the source code but before building by using the `prepare` keyword. The build process can be overridden entirely using the `build` keyword and shell commands. The `install` keyword is used to run shell commands after building your code, useful for making post build modifications such as relocating build assets.
-
-For example, let's pretend that the MOOS examples contained a suite of tests (they don't, so this won't actually work). We could run that test suite at the end of the build. If these tests failed, the snap creation would be terminated:
-
-```yaml
-  moos-examples:
-    source: https://github.com/themoos/examples-docs-moos.git
-    source-subdir: docs/examples/AppExamples
-    source-depth: 1
-    plugin: cmake
-    after: [moos]
-    artifacts:
-      - bin/ex1010
-    install: |
-      make test
-```
-
 <!--
 ## Next steps
 
