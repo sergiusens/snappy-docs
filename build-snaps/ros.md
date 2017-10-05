@@ -251,6 +251,26 @@ You can view them locally by running:
 snapcraft help catkin
 ```
 
+### Extending and overriding behaviour
+
+You can [extend the behaviour](/build-snaps/scriptlets) of any part in your `snapcraft.yaml` with shell commands. These can be run after pulling the source code but before building by using the `prepare` keyword. The build process can be overridden entirely using the `build` keyword and shell commands. The `install` keyword is used to run shell commands after building your code, useful for making post build modifications such as relocating build assets.
+
+For example, say you were creating a snap of an upstream ROS application that didn't have suitable install rules, and you want a launch file out of it. You could make use of the `install` keyword as a poor man's install rule:
+
+```yaml
+parts:
+  ros-tutorials:
+    source: https://github.com/ros/ros_tutorials.git
+    source-branch: kinetic-devel
+    plugin: catkin
+    rosdistro: kinetic
+    source-space: roscpp_tutorials/
+    catkin-packages: [roscpp_tutorials]
+    install: |
+      mkdir -p "$SNAPCRAFT_PART_INSTALL/opt/ros/kinetic/share/roscpp_tutorials/launch"
+      cp roscpp_tutorials/launch/talker_listener.launch "$SNAPCRAFT_PART_INSTALL/opt/ros/kinetic/share/roscpp_tutorials/launch/"
+```
+
 <!--
 ## Next steps
 
