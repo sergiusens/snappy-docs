@@ -7,7 +7,7 @@ Snapcraft builds on top of the `catkin` tool, familiar to any ROS developer, to 
 
 ## What problems do snaps solve for ROS applications?
 
-ROS itself is distributed via the OSRF's own Debian archive, along with many community-supported tools. It's possible to get one's own application into their archive as well, but it requires that the application is open-source. One is also left with the question of how to update ROS and one's own application on a robotic platform that has already been shipped. With snapcraft it's just one command to bundle a specific ROS version along with one's own application into a snap that works anywhere and can be automatically updated.
+ROS itself is distributed via the OSRF's own Debian archive, along with many community-supported tools. It's possible to get your own application into their archive as well, but it requires that the application is open-source. You're also left with the question of how to update ROS and your application on a robotic platform that has already been shipped. With snapcraft it's just one command to bundle a specific ROS version along with your application into a snap that works anywhere and can be automatically updated.
 
 Here are some snap advantages that will benefit many ROS projects:
 
