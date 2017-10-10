@@ -74,7 +74,7 @@ Parts define how to build your app. Parts can be anything: programs, libraries, 
 
 The Catkin plugin will bundle `roscore` in the snap. It will also use `rosdep` to determine the dependencies of the `catkin-packages` provided, download them from the ROS archive, and unpack them into the snap. Finally, it will build the `catkin-packages` specified.
 
-**Important note:** Most ROS developers run out of the `devel` space. As a result, it's easy to forget the importance of good install rules. The Catkin packages you're building must have good install rules, or Snapcraft won't know which components to place into the snap. Make sure you install binaries, libraries, launch files, etc.
+**Important note:** Most ROS developers run out of the `devel` space. As a result, it's easy to forget the importance of good install rules, i.e. rules for installing every component of the package necessary to run. The Catkin packages you're building must have good install rules, or Snapcraft won't know which components to place into the snap. Make sure you install binaries, libraries, launch files, etc.
 
 ```yaml
 parts:
@@ -255,7 +255,7 @@ snapcraft help catkin
 
 You can [extend the behaviour](/build-snaps/scriptlets) of any part in your `snapcraft.yaml` with shell commands. These can be run after pulling the source code but before building by using the `prepare` keyword. The build process can be overridden entirely using the `build` keyword and shell commands. The `install` keyword is used to run shell commands after building your code, useful for making post build modifications such as relocating build assets.
 
-For example, while the ros_tutorials have proper install rules, say you were creating a snap of an upstream ROS application that didn't, and you wanted a launch file out of it. You could make use of the `install` keyword as a poor man's install rule:
+For example, while the ros_tutorials have proper install rules, say you were creating a snap of an upstream ROS application that didn't, and you wanted a launch file out of it. You could make use of the `install` keyword to get around the lack of install rules:
 
 ```yaml
 parts:
