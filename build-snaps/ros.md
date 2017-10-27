@@ -74,7 +74,7 @@ Parts define how to build your app. Parts can be anything: programs, libraries, 
 
 The Catkin plugin will bundle `roscore` in the snap. It will also use `rosdep` to determine the dependencies of the `catkin-packages` provided, download them from the ROS archive, and unpack them into the snap. Finally, it will build the `catkin-packages` specified.
 
-**Important note:** Most ROS developers run out of the `devel` space. As a result, it's easy to forget the importance of good install rules, i.e. rules for installing every component of the package necessary to run. The Catkin packages you're building must have good install rules, or Snapcraft won't know which components to place into the snap. Make sure you install binaries, libraries, launch files, etc.
+**Important note:** Most ROS developers run out of the `devel` space. As a result, it's easy to forget the importance of good install rules, i.e. rules for installing every component of the package necessary to run, or every component necessary to use a given library. The Catkin packages you're building must have good install rules, or Snapcraft won't know which components to place into the snap. Make sure you install binaries, libraries, header files, launch files, etc.
 
 ```yaml
 parts:
