@@ -7,13 +7,16 @@ title: DN6
 
 _introduced in snapcraft 2.35_
 
-With the introduction of vesion 2.35, `snapcraft snap` has been reserved as a step
-for snapping up a snapcraft project itself as the use of `snapcraft snap <directory>`
-was confusing from the point of view of someone working on an actual snapcraft
+The `snap` command originally served two purposes:
+
+1. `snapcraft snap` walked through the entire lifecycle for each part of the project (pull, build, stage, and prime) before finally creating the snap, and
+2. `snapcraft snap <directory>` simply created a snap of the provided directory (without involving the lifecycle at all).
+
+This ended up being confusing from the point of view of someone working on an actual snapcraft
 project.
 
 The new command `pack` is much more explicit in that snapcraft is just focusing
-on assembling the final snap from a valid layout for a given directory, such that
-the new way to create a snap from a directory has the following syntax:
+on assembling the final snap from a valid layout for a given directory.
+The new way to create a snap from a directory has the following syntax:
 
     snapcraft pack <directory>
